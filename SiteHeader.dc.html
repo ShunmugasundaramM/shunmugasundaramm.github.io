@@ -143,7 +143,7 @@ class Component extends DCLogic {
   }
   renderVals() {
     const home = !!this.props.home;
-    const base = home ? '' : 'Portfolio.dc.html';
+    const base = home ? '' : './';
     const cur = this.props.current || (home ? 'Home' : 'Projects');
     const { theme, w } = this.state;
     const isDesktop = w >= 1200;
@@ -154,7 +154,7 @@ class Component extends DCLogic {
     const nP = ci >= 0 ? PP[(ci + 1) % PP.length] : {}, pP = ci >= 0 ? PP[(ci - 1 + PP.length) % PP.length] : {};
     return {
       inCase: ci >= 0, nextHref: nP.href || 'Projects.dc.html', nextTitle: nP.title || '', prevHref: pP.href || 'Projects.dc.html', prevTitle: pP.title || '',
-      homeHref: base + '#home', contactHref: base + '#contact',
+      homeHref: home ? '#home' : './', contactHref: base + '#contact',
       navLinks: links.map(([label, h, icon]) => ({ label, href: label === 'Projects' ? 'Projects.dc.html' : base + h, icon, current: label === cur ? 'page' : undefined, color: label === cur ? 'var(--pf-ink)' : 'var(--pf-mute)' })),
       isDesktop, isMobile: !isDesktop, showToggle: home || !!this.props.toggle,
       drawerOpen: this.state.drawer && !isDesktop,

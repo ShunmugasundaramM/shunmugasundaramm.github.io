@@ -417,6 +417,23 @@ class Component extends DCLogic {
     this.restartStep();
     this.onHash = () => { if (location.hash === '#motion' && this.state.filter !== 'All' && this.state.filter !== 'Motion') this.setState({ filter: 'All' }, () => document.getElementById('motion') && window.scrollTo({ top: document.getElementById('motion').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' })); };
     window.addEventListener('hashchange', this.onHash);
+    if (this.props.mode !== 'projects') {
+      const path = () => location.pathname.replace(/Portfolio\.dc\.html$/, '');
+      const clean = () => history.replaceState(null, '', path() + location.search);
+      const go = (id, smooth) => { const el = document.getElementById(id); if (!el) return false; window.scrollTo({ top: id === 'home' ? 0 : el.getBoundingClientRect().top + window.scrollY - 80, behavior: smooth ? 'smooth' : 'auto' }); return true; };
+      const h = decodeURIComponent(location.hash.slice(1));
+      if (h) { let n = 0; const t = setInterval(() => { if (go(h, false) || ++n > 60) { clearInterval(t); clean(); } }, 100); } else clean();
+      this.onLinkClick = e => {
+        const a = e.target.closest && e.target.closest('a[href]');
+        if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        const u = new URL(a.getAttribute('href'), location.href);
+        if (u.origin !== location.origin || !u.hash || u.pathname.replace(/Portfolio\.dc\.html$/, '') !== path()) return;
+        const id = decodeURIComponent(u.hash.slice(1));
+        if (id === 'motion' && this.state.filter !== 'All' && this.state.filter !== 'Motion') this.setState({ filter: 'All' });
+        if (go(id, !this.reduce)) e.preventDefault();
+      };
+      document.addEventListener('click', this.onLinkClick);
+    }
   }
   componentDidUpdate(p) { if (p.accent !== this.props.accent) this.applyRoot(this.state.theme); }
   restartStep() { clearInterval(this.stepT); this.stepT = setInterval(() => { if (!this.state.stepStop && !this.state.stepHover && !this.reduce && !document.hidden) this.setState(s => ({ step: ((s.step || 0) + 1) % 4, stepRun: (s.stepRun || 0) + 1 })); }, 4600); }
