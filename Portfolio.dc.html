@@ -14,7 +14,7 @@
 <meta name="description" content="Senior UI/UX designer building design systems and end-to-end product experiences across fintech, insurance and SaaS.">
 <meta property="og:title" content="Shunmugasundaram M · Senior UI/UX Designer">
 <meta property="og:description" content="Case studies in product design, design systems, motion and branding.">
-<meta property="og:image" content="covers/leadsquared.png">
+<meta property="og:image" content="covers/leadsquared.jpg">
 <meta name="theme-color" content="#0D0E12">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -344,11 +344,12 @@ a{color:var(--pf-acc);text-decoration:none}a:hover{color:var(--pf-ink)}
 <label style="display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600">Email<input type="email" value="{{ formEmail }}" onChange="{{ setEmail }}" autoComplete="email" style="height:50px;padding:0 16px;border-radius:12px;border:1px solid var(--pf-line);background:var(--pf-bg);color:var(--pf-ink);font:400 16px 'Inter Tight',sans-serif;outline:none" style-focus="border-color:var(--pf-acc);box-shadow:0 0 0 3px var(--pf-glow)"></label>
 <label style="display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600">Project or role<textarea value="{{ formMsg }}" onChange="{{ setMsg }}" rows="5" style="padding:14px 16px;border-radius:12px;border:1px solid var(--pf-line);background:var(--pf-bg);color:var(--pf-ink);font:400 16px/1.5 'Inter Tight',sans-serif;outline:none;resize:vertical" style-focus="border-color:var(--pf-acc);box-shadow:0 0 0 3px var(--pf-glow)"></textarea></label>
 <sc-if value="{{ hasErr }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:14px;color:#FF8A80">{{ formErr }}</p></sc-if>
-<button type="submit" style="align-self:flex-start;height:52px;padding:0 28px;border:0;border-radius:999px;background:var(--pf-acc);color:var(--pf-accInk);font:600 15px 'Inter Tight',sans-serif;cursor:pointer;display:flex;align-items:center;gap:10px;transition:transform .15s" style-active="transform:scale(.98)">Send message<i class="ph ph-paper-plane-tilt"></i></button>
+<button type="submit" style="align-self:flex-start;height:52px;padding:0 28px;border:0;border-radius:999px;background:var(--pf-acc);color:var(--pf-accInk);font:600 15px 'Inter Tight',sans-serif;cursor:pointer;display:flex;align-items:center;gap:10px;transition:transform .15s" style-active="transform:scale(.98)">Write email<i class="ph ph-envelope-simple"></i></button>
+<p style="margin:-6px 0 0;font-size:14px;color:var(--pf-mute)">Opens your email app with this message filled in. Use webmail? Write to <a href="mailto:sundaram6252@gmail.com">sundaram6252@gmail.com</a>.</p>
 </form>
 </sc-if>
 <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-<div style="display:flex;flex-direction:column;gap:12px;justify-content:center"><i class="ph ph-check-circle" style="font-size:40px;color:var(--pf-acc)"></i><span style="font-family:Michroma,sans-serif;font-weight:400;font-size:19px">Your message is ready in your email app.</span><span style="color:var(--pf-mute);font-size:16px">Press send there and it reaches me directly.</span></div>
+<div style="display:flex;flex-direction:column;gap:12px;justify-content:center"><i class="ph ph-check-circle" style="font-size:40px;color:var(--pf-acc)"></i><span style="font-family:Michroma,sans-serif;font-weight:400;font-size:19px">Your email app should now be open.</span><span style="color:var(--pf-mute);font-size:16px">Press send there to reach me. If nothing opened, write to <a href="mailto:sundaram6252@gmail.com">sundaram6252@gmail.com</a>.</span></div>
 </sc-if>
 </div>
 </section>

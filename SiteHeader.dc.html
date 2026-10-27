@@ -26,7 +26,7 @@ html[data-theme="light"] img[src*="wordmark-white"]{filter:brightness(0)}
 </helmet>
 <header style="position:sticky;top:0;z-index:1000;backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);background:color-mix(in oklab,var(--pf-bg) 78%,transparent);border-bottom:1px solid var(--pf-line);font-family:'Inter Tight',system-ui,sans-serif;color:var(--pf-ink)">
 <div style="max-width:1280px;margin:0 auto;height:68px;padding:0 clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:24px">
-<a href="{{ homeHref }}" aria-label="Shunmugasundaram, home" style="display:flex;align-items:center;min-height:44px;flex-shrink:0"><img src="brand/wordmark-white-2400.png" alt="Shunmugasundaram" style="height:14px;width:auto;filter:var(--pf-logo)"></a>
+<a href="{{ homeHref }}" aria-label="Shunmugasundaram, home" style="display:flex;align-items:center;min-height:44px;flex-shrink:1;min-width:0"><img src="brand/wordmark-white-2400.png" alt="Shunmugasundaram" style="width:min(323px,calc(100vw - 168px));height:auto;display:block;filter:var(--pf-logo)"></a>
 <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
 <nav aria-label="Primary" style="display:flex;align-items:center;gap:2px">
 <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="5">
