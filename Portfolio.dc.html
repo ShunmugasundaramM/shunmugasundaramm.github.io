@@ -110,7 +110,7 @@ a{color:var(--pf-acc);text-decoration:none}a:hover{color:var(--pf-ink)}
 <div aria-hidden="true" style="position:absolute;inset:-10% -8% -6%;background:radial-gradient(closest-side,rgba(90,169,255,.16),transparent 75%);pointer-events:none"></div>
 <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px">
 <span style="font:600 12px/1 'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--pf-mute)">Selected work</span>
-<a href="Projects.dc.html" style="min-height:44px;display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--pf-ink)" style-hover="color:var(--pf-acc)">All projects<i class="ph ph-arrow-right"></i></a>
+<a href="/projects/" style="min-height:44px;display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--pf-ink)" style-hover="color:var(--pf-acc)">All projects<i class="ph ph-arrow-right"></i></a>
 </div>
 <div style="position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.4vw,16px)">
 <sc-for list="{{ heroWork }}" as="w" hint-placeholder-count="3">
@@ -182,7 +182,7 @@ a{color:var(--pf-acc);text-decoration:none}a:hover{color:var(--pf-ink)}
 <section id="projects" data-screen-label="Projects" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,4vw,40px);display:flex;flex-direction:column;gap:40px">
 <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px">
 <h2 data-reveal style="margin:0;font-family:Michroma,sans-serif;font-weight:400;font-size:clamp(24px,2.8vw,36px);line-height:1.18;letter-spacing:-.01em">{{ worksTitle }}</h2>
-<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}"><a href="Projects.dc.html" style="min-height:44px;padding:0 22px;border-radius:999px;border:1px solid var(--pf-line);background:var(--pf-card);color:var(--pf-ink);font-weight:600;font-size:15px;display:flex;align-items:center;gap:10px;transition:border-color .2s" style-hover="border-color:var(--pf-acc);color:var(--pf-acc)">View all projects<i class="ph ph-arrow-right"></i></a></sc-if>
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}"><a href="/projects/" style="min-height:44px;padding:0 22px;border-radius:999px;border:1px solid var(--pf-line);background:var(--pf-card);color:var(--pf-ink);font-weight:600;font-size:15px;display:flex;align-items:center;gap:10px;transition:border-color .2s" style-hover="border-color:var(--pf-acc);color:var(--pf-acc)">View all projects<i class="ph ph-arrow-right"></i></a></sc-if>
 <sc-if value="{{ isAll }}" hint-placeholder-val="{{ false }}">
 <div role="tablist" aria-label="Filter projects" style="display:flex;flex-wrap:wrap;gap:6px;padding:5px;border:1px solid var(--pf-line);border-radius:999px;background:var(--pf-card)">
 <sc-for list="{{ filters }}" as="f" hint-placeholder-count="4">
@@ -312,7 +312,7 @@ a{color:var(--pf-acc);text-decoration:none}a:hover{color:var(--pf-ink)}
 <div style="display:flex;flex-wrap:wrap;gap:8px">
 <sc-for list="{{ d.skills }}" as="s" hint-placeholder-count="3"><span style="font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--pf-line);background:var(--pf-card);color:var(--pf-ink)">{{ s }}</span></sc-for>
 </div>
-<a href="Projects.dc.html" style="align-self:flex-start;min-height:44px;display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--pf-acc)" style-hover="gap:12px">See the work<i class="ph ph-arrow-right"></i></a>
+<a href="/projects/" style="align-self:flex-start;min-height:44px;display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--pf-acc)" style-hover="gap:12px">See the work<i class="ph ph-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -504,7 +504,7 @@ class Component extends DCLogic {
     const toolsLit = (D.tools || []).map(t => { const on = cur2.tools.some(n => t.name.toLowerCase().includes(n.toLowerCase())); return { ...t, op: on ? 1 : .32, sc: on ? 1 : .96, ring: on ? 'var(--pf-acc)' : 'var(--pf-line)' }; });
     const creds = [...(D.education || []).map(x => ({ ...x, icon: 'ph ph-graduation-cap' })), ...(D.certs || []).map(x => ({ ...x, when: x.when || 'Certification', icon: 'ph ph-seal-check' }))];
     const WS = (D.projects || []).filter(x => x.cat === 'UI/UX' && x.screen).concat((D.projects || []).filter(x => x.cat !== 'UI/UX' && x.img));
-    const wallCols = [0,1,2,3,4].map(c => { const base = WS.map((_, k) => WS[(k * 2 + c * 3) % (WS.length || 1)]).slice(0, 4); const items = [...base, ...base].map((x, k) => ({ url: 'url("' + (x.screen || x.img) + '")', href: x.href || 'Projects.dc.html', title: x.title, tab: k < 4 ? '0' : '-1' })); return { items, anim: (c % 2 ? 'pf-down ' : 'pf-up ') + (46 + c * 7) + 's linear infinite' }; });
+    const wallCols = [0,1,2,3,4].map(c => { const base = WS.map((_, k) => WS[(k * 2 + c * 3) % (WS.length || 1)]).slice(0, 4); const items = [...base, ...base].map((x, k) => ({ url: 'url("' + (x.screen || x.img) + '")', href: x.href || '/projects/', title: x.title, tab: k < 4 ? '0' : '-1' })); return { items, anim: (c % 2 ? 'pf-down ' : 'pf-up ') + (46 + c * 7) + 's linear infinite' }; });
     const GI = (D.projects || []).filter(x => x.img).map(x => 'url("' + x.img + '")');
     const ghostCols = [0,1,2].map(c => { const base = GI.map((_, k) => GI[(k + c * 4) % (GI.length || 1)]).slice(0, 6); return { items: [...base, ...base].map(u => ({ url: u })), anim: (c % 2 ? 'pf-down ' : 'pf-up ') + (52 + c * 9) + 's linear infinite' }; });
     const hs = this.props.heroShowcase ?? 'Work grid';
@@ -525,7 +525,7 @@ class Component extends DCLogic {
     const shipSrc = ((D.projects || []).find(x => x.screen) || {}).screen;
     const vis = k => A(k) ? 1 : 0;
     return {
-      showProcess: hs === 'How I work', showPortrait: hs === 'Portrait', portraitMargin: (this.state.w || 1280) >= 900 ? '0 0 0 auto' : '0', showShowcase: hs !== 'How I work' && hs !== 'Portrait' && hs !== 'Work grid', showWork: hs === 'Work grid', heroWork: [['LeadSquared Healthcare CRM','Healthcare CRM'],['Pocket Mobile App','Trading app'],['Clear Cover Insurance','InsurTech platform']].map(([t, kind], i) => { const p = (D.projects || []).find(x => x.title === t) || {}; return { title: t, kind, href: p.href || 'Projects.dc.html', bg: 'url("' + (p.img || '') + '")', label: t + ', open case study', span: i === 0 ? '1 / -1' : 'auto', ar: i === 0 ? '16/10' : '4/3', fs: i === 0 ? 'clamp(16px,1.5vw,20px)' : 'clamp(14px,1.15vw,16px)', delay: (0.2 + i * 0.1).toFixed(2) + 's' }; }), steps, notes, ...pcs,
+      showProcess: hs === 'How I work', showPortrait: hs === 'Portrait', portraitMargin: (this.state.w || 1280) >= 900 ? '0 0 0 auto' : '0', showShowcase: hs !== 'How I work' && hs !== 'Portrait' && hs !== 'Work grid', showWork: hs === 'Work grid', heroWork: [['LeadSquared Healthcare CRM','Healthcare CRM'],['Pocket Mobile App','Trading app'],['Clear Cover Insurance','InsurTech platform']].map(([t, kind], i) => { const p = (D.projects || []).find(x => x.title === t) || {}; return { title: t, kind, href: p.href || '/projects/', bg: 'url("' + (p.img || '') + '")', label: t + ', open case study', span: i === 0 ? '1 / -1' : 'auto', ar: i === 0 ? '16/10' : '4/3', fs: i === 0 ? 'clamp(16px,1.5vw,20px)' : 'clamp(14px,1.15vw,16px)', delay: (0.2 + i * 0.1).toFixed(2) + 's' }; }), steps, notes, ...pcs,
       ...(() => { const C = 238.76, Q = C / 4, run = !stopped, ps = this.state.stepHover ? 'paused' : 'running', key = si + '-' + (this.state.stepRun || 0);
         const CH = [['Interviews', 'Audits', 'Journey maps'], ['Tokens', 'Components', 'Docs'], ['Figma flows', 'Usability tests', 'Motion specs'], ['Dev handoff', 'Design QA', 'Iteration']];
         const POS = [['50%', '12%'], ['88%', '50%'], ['50%', '88%'], ['12%', '50%']];

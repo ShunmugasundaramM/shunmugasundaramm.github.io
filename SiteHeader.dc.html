@@ -49,7 +49,7 @@ html[data-theme="light"] img[src*="wordmark-white"]{filter:brightness(0)}
 <sc-if value="{{ inCase }}" hint-placeholder-val="{{ false }}">
 <nav aria-label="Project navigation" style="border-top:1px solid var(--pf-line)">
 <div style="max-width:1280px;margin:0 auto;padding:0 clamp(12px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px">
-<a href="Projects.dc.html" style="min-height:44px;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--pf-ink);white-space:nowrap" style-hover="color:var(--pf-acc)"><i class="ph ph-arrow-left"></i>All projects</a>
+<a href="/projects/" style="min-height:44px;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--pf-ink);white-space:nowrap" style-hover="color:var(--pf-acc)"><i class="ph ph-arrow-left"></i>All projects</a>
 <div style="display:flex;align-items:center;gap:4px;min-width:0">
 <a href="{{ prevHref }}" aria-label="Previous project: {{ prevTitle }}" style="width:44px;height:44px;flex:none;border-radius:999px;display:grid;place-items:center;color:var(--pf-mute)" style-hover="color:var(--pf-ink);background:var(--pf-card)"><i class="ph ph-caret-left"></i></a>
 <a href="{{ nextHref }}" aria-label="Next project: {{ nextTitle }}" style="min-height:44px;min-width:0;display:flex;align-items:center;gap:8px;padding:0 4px 0 12px;font-size:14px;font-weight:600;color:var(--pf-ink)" style-hover="color:var(--pf-acc)"><span style="color:var(--pf-mute);font-weight:500;white-space:nowrap">Next</span><span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw">{{ nextTitle }}</span><i class="ph ph-arrow-right" style="flex:none"></i></a>
@@ -149,13 +149,13 @@ class Component extends DCLogic {
     const isDesktop = w >= 1200;
     const links = [['Home', '#home', 'ph ph-house'], ['Projects', '#projects', 'ph ph-squares-four'], ['Motion', '#motion', 'ph ph-play-circle'], ['Experience', '#experience', 'ph ph-briefcase'], ['About', '#about', 'ph ph-user']];
     const PP = (window.PF_DATA && window.PF_DATA.projects) || [];
-    const here = decodeURIComponent(location.pathname.split('/').pop() || '');
+    const here = location.pathname.replace(/index\.html$/, '').replace(/([^/])$/, '$1/');
     const ci = home ? -1 : PP.findIndex(x => x.href === here);
     const nP = ci >= 0 ? PP[(ci + 1) % PP.length] : {}, pP = ci >= 0 ? PP[(ci - 1 + PP.length) % PP.length] : {};
     return {
-      inCase: ci >= 0, nextHref: nP.href || 'Projects.dc.html', nextTitle: nP.title || '', prevHref: pP.href || 'Projects.dc.html', prevTitle: pP.title || '',
+      inCase: ci >= 0, nextHref: nP.href || '/projects/', nextTitle: nP.title || '', prevHref: pP.href || '/projects/', prevTitle: pP.title || '',
       homeHref: home ? '#home' : './', contactHref: base + '#contact',
-      navLinks: links.map(([label, h, icon]) => ({ label, href: label === 'Projects' ? 'Projects.dc.html' : base + h, icon, current: label === cur ? 'page' : undefined, color: label === cur ? 'var(--pf-ink)' : 'var(--pf-mute)' })),
+      navLinks: links.map(([label, h, icon]) => ({ label, href: label === 'Projects' ? '/projects/' : base + h, icon, current: label === cur ? 'page' : undefined, color: label === cur ? 'var(--pf-ink)' : 'var(--pf-mute)' })),
       isDesktop, isMobile: !isDesktop, showToggle: home || !!this.props.toggle,
       drawerOpen: this.state.drawer && !isDesktop,
       openDrawer: () => this.setState({ drawer: true }),
