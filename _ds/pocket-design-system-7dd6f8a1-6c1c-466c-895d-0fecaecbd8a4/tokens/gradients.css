@@ -1,0 +1,45 @@
+/* Gradients: used for atmosphere (hero, portfolio card, charts, promo). Never on text, icons or buttons except --grad-accent on one promo CTA. */
+:root{
+  --grad-accent:linear-gradient(135deg,#E6FF5C 0%,#C8FF00 45%,#6BF5A8 100%); /* @kind color */
+  --grad-accent-soft:linear-gradient(135deg,rgba(200,255,0,.22) 0%,rgba(107,245,168,.10) 100%); /* @kind color */
+  --grad-card:radial-gradient(120% 90% at 0% 0%,rgba(200,255,0,.16) 0%,rgba(200,255,0,0) 55%),linear-gradient(180deg,#171717 0%,#111111 100%); /* @kind color */
+  --grad-page:radial-gradient(80% 50% at 50% 0%,rgba(200,255,0,.08) 0%,rgba(200,255,0,0) 70%),#050505; /* @kind color */
+  --grad-sheet:linear-gradient(180deg,#1A1A1A 0%,#141414 40%); /* @kind color */
+  --grad-chart-accent-from:rgba(200,255,0,.30); --grad-chart-accent-to:rgba(200,255,0,0);
+  --grad-chart-gain-from:rgba(0,230,118,.28);   --grad-chart-gain-to:rgba(0,230,118,0);
+  --grad-chart-loss-from:rgba(255,59,48,.26);   --grad-chart-loss-to:rgba(255,59,48,0);
+  --bg-page:#050505;
+  --frame:#1C1C1C;
+}
+[data-theme="light"]{
+  --grad-accent-soft:linear-gradient(135deg,rgba(200,255,0,.45) 0%,rgba(107,245,168,.22) 100%); /* @kind color */
+  --grad-card:radial-gradient(120% 90% at 0% 0%,rgba(200,255,0,.38) 0%,rgba(200,255,0,0) 55%),linear-gradient(180deg,#FFFFFF 0%,#F5F5F3 100%); /* @kind color */
+  --grad-page:radial-gradient(80% 50% at 50% 0%,rgba(200,255,0,.25) 0%,rgba(200,255,0,0) 70%),#ECECE8; /* @kind color */
+  --grad-sheet:linear-gradient(180deg,#FFFFFF 0%,#FAFAF8 40%); /* @kind color */
+  --grad-chart-accent-from:rgba(122,160,0,.28); --grad-chart-accent-to:rgba(122,160,0,0);
+  --grad-chart-gain-from:rgba(0,138,69,.22);    --grad-chart-gain-to:rgba(0,138,69,0);
+  --grad-chart-loss-from:rgba(217,45,32,.20);   --grad-chart-loss-to:rgba(217,45,32,0);
+  --bg-page:#ECECE8;
+  --frame:#D4D4D0;
+  --chart-accent:#7AA000;
+}
+:root{--chart-accent:#C8FF00}
+
+/* 2a brand gradients (Sept 2026) — brand and hero surfaces only. */
+:root{
+  --grad-lime-glow:radial-gradient(100% 120% at 0% 0%, rgba(200,255,0,.35) 0%, rgba(200,255,0,0) 55%), #0A0A0A;
+  --grad-dusk:url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27220%27%20height%3D%27220%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.1%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url(%23n)%27%2F%3E%3C%2Fsvg%3E'), linear-gradient(180deg,#000000 0%,#0E1018 35%,#3A3F55 72%,#8E95AC 100%);
+  --grad-warm-ink:url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27220%27%20height%3D%27220%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.1%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url(%23n)%27%2F%3E%3C%2Fsvg%3E'), radial-gradient(90% 70% at 50% 0%,#2E2A1F 0%,#1C1A14 55%,#12110D 100%);
+  --grad-lime-field:url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27220%27%20height%3D%27220%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.08%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url(%23n)%27%2F%3E%3C%2Fsvg%3E'), radial-gradient(120% 100% at 0% 0%,#D9FF4D 0%,#C8FF00 55%,#B8EB00 100%);
+  --grad-violet-arc:url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27220%27%20height%3D%27220%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.1%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url(%23n)%27%2F%3E%3C%2Fsvg%3E'), radial-gradient(80% 70% at 50% 110%,rgba(155,92,255,.55) 0%,rgba(155,92,255,0) 70%), #000000;
+  --grad-lime-line:linear-gradient(180deg,rgba(200,255,0,.16) 0%,rgba(200,255,0,0) 60%), #000000;
+  --color-pitch:#000000; --color-warm-ink:#1C1A14; --color-stone:#D6D2CB; --color-paper:#F4F3F0; --color-dusk-slate:#4A5068; --color-steel-mist:#A7B4CC; --color-violet:#9B5CFF;
+}
+[data-theme="light"]{
+  --grad-lime-glow:radial-gradient(100% 120% at 0% 0%, #E0FF7A 0%, rgba(224,255,122,0) 60%), #FFFFFF;
+  --grad-dusk:url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27220%27%20height%3D%27220%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.14%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url(%23n)%27%2F%3E%3C%2Fsvg%3E'), linear-gradient(180deg,#FFFFFF 0%,#EEF0F5 40%,#C9CFDD 80%,#A7B0C6 100%);
+  --grad-stone:url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27220%27%20height%3D%27220%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.14%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url(%23n)%27%2F%3E%3C%2Fsvg%3E'), radial-gradient(90% 80% at 30% 0%,#ECE9E4 0%,#D6D2CB 70%,#C9C4BC 100%);
+  --grad-lime-field:url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27220%27%20height%3D%27220%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.1%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url(%23n)%27%2F%3E%3C%2Fsvg%3E'), radial-gradient(120% 100% at 0% 0%,#D9FF4D 0%,#C8FF00 55%,#B8EB00 100%);
+  --grad-steel-mist:url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27220%27%20height%3D%27220%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.18%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url(%23n)%27%2F%3E%3C%2Fsvg%3E'), linear-gradient(160deg,#8FA1BF 0%,#A7B4CC 50%,#BCC7DA 100%);
+  --grad-violet-arc:url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27220%27%20height%3D%27220%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.14%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url(%23n)%27%2F%3E%3C%2Fsvg%3E'), radial-gradient(80% 70% at 50% 110%,rgba(155,92,255,.35) 0%,rgba(155,92,255,0) 70%), #FFFFFF;
+}

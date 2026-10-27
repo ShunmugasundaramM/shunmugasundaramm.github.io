@@ -1,0 +1,60 @@
+:root{
+  color-scheme:dark;
+  /* Lime — the one accent */
+  --pk-lime-50:#F7FFE0; --pk-lime-100:#EEFFB8; --pk-lime-200:#E0FF7A; --pk-lime-300:#D4FF3D;
+  --pk-lime-400:#C8FF00; --pk-lime-500:#B8EB00; --pk-lime-600:#A8D600; --pk-lime-800:#4D6600; --pk-lime-900:#263300;
+  /* Ink — dark-first neutrals */
+  --pk-black:#000000; --pk-ink-950:#0A0A0A; --pk-ink-900:#141414; --pk-ink-850:#1A1A1A; --pk-ink-800:#1F1F1F;
+  --pk-ink-750:#262626; --pk-ink-700:#2E2E2E; --pk-ink-600:#3F3F46; --pk-ink-500:#52525B; --pk-ink-400:#71717A;
+  --pk-ink-300:#A1A1AA; --pk-ink-200:#D4D4D8; --pk-ink-100:#EDEDEA; --pk-paper:#F5F5F3; --pk-white:#FFFFFF;
+  /* Market */
+  --pk-bull-400:#00E676; --pk-bull-700:#008A45; --pk-bear-400:#FF3B30; --pk-bear-700:#D92D20;
+  --pk-amber-400:#FFB020; --pk-sky-400:#3DA9FC;
+
+  /* Semantic — dark theme (default) */
+  --bg-app:var(--pk-ink-950);
+  --surface-1:var(--pk-ink-900);
+  --surface-2:var(--pk-ink-800);
+  --surface-hover:var(--pk-ink-750);
+  --surface-sunken:var(--pk-ink-950);
+  --border-subtle:var(--pk-ink-800);
+  --border-default:var(--pk-ink-700);
+  --text-primary:var(--pk-white);
+  --text-secondary:var(--pk-ink-300);
+  --text-tertiary:var(--pk-ink-400);
+  --text-disabled:var(--pk-ink-500);
+  --text-on-accent:var(--pk-ink-950);
+  --accent:var(--pk-lime-400);
+  --accent-hover:var(--pk-lime-500);
+  --accent-pressed:var(--pk-lime-600);
+  --accent-tint:rgba(200,255,0,.14);
+  --accent-text:var(--pk-lime-400);
+  --gain:var(--pk-bull-400);
+  --gain-tint:rgba(0,230,118,.12);
+  --loss:var(--pk-bear-400);
+  --loss-tint:rgba(255,59,48,.14);
+  --on-loss:var(--pk-ink-950);
+  --warning:var(--pk-amber-400);
+  --info:var(--pk-sky-400);
+  --scrim:rgba(0,0,0,.62);
+}
+[data-theme="light"]{
+  color-scheme:light;
+  --bg-app:var(--pk-white);
+  --surface-1:var(--pk-paper);
+  --surface-2:var(--pk-ink-100);
+  --surface-hover:#E5E5E1;
+  --surface-sunken:var(--pk-paper);
+  --border-subtle:var(--pk-ink-100);
+  --border-default:#DCDCD7;
+  --text-primary:var(--pk-ink-950);
+  --text-secondary:var(--pk-ink-500);
+  --text-tertiary:var(--pk-ink-400);
+  --text-disabled:var(--pk-ink-300);
+  --accent-text:var(--pk-lime-800);
+  --gain:var(--pk-bull-700);
+  --gain-tint:rgba(0,138,69,.10);
+  --loss:var(--pk-bear-700);
+  --loss-tint:rgba(217,45,32,.10);
+  --scrim:rgba(10,10,10,.40);
+}

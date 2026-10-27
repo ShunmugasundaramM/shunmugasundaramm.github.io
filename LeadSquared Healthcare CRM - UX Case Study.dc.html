@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#0D63F3">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0D63F3"/>
+    <g fill="#ffffff">
+      <rect x="530" y="300" width="140" height="48" rx="10"/>
+      <rect x="576" y="254" width="48" height="140" rx="10"/>
+    </g>
+    <text x="600" y="520" font-family="Geist, system-ui, sans-serif" font-size="58" font-weight="800" fill="#ffffff" text-anchor="middle">LeadSquared</text>
+    <text x="600" y="580" font-family="monospace" font-size="26" letter-spacing="6" fill="#BFD6FF" text-anchor="middle">HEALTHCARE CRM</text>
+  </svg>
+</template>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#FFFFFF; }
+  * { box-sizing:border-box; }
+  ::selection { background:#0D63F3; color:#fff; }
+  @keyframes lsRise { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:none; } }
+  @keyframes lsFade { from { opacity:0; } to { opacity:1; } }
+  @keyframes lsMock { from { opacity:0; transform:translateY(64px) scale(.975); } to { opacity:1; transform:none; } }
+  @keyframes lsFloat { from { opacity:0; transform:translateY(18px) scale(.94); } to { opacity:1; transform:none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; } }
+</style>
+</helmet>
+<dc-import name="SiteHeader" current="Projects" hint-size="100%,68px"></dc-import>
+
+<div data-ls-root style="font-family:'Geist', system-ui, -apple-system, sans-serif; background:#FFFFFF; color:#0B1536; width:100%; overflow-x:hidden; -webkit-font-smoothing:antialiased; line-height:1.5;">
+
+  <!-- ░░░ STICKY NAV ░░░ -->
+  <div style="position:sticky; top:68px; z-index:90; background:rgba(255,255,255,0.86); backdrop-filter:saturate(160%) blur(14px); border-bottom:1px solid #ECEFF6;">
+    <div style="max-width:1240px; margin:0 auto; padding:15px 64px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <div style="display:flex; align-items:center; gap:11px;">
+        <div style="width:26px; height:26px; border-radius:6px; background:#0D63F3; display:flex; align-items:center; justify-content:center;"><div style="width:11px; height:11px; background:#fff; position:relative;"><div style="position:absolute; left:0; bottom:0; border-left:5px solid transparent; border-bottom:5px solid #0D63F3;"></div></div></div>
+        <span style="font-size:15px; font-weight:600; letter-spacing:-0.01em; color:#0B1536;">LeadSquared · Healthcare CRM</span>
+      </div>
+      <div style="font-family:'Geist Mono',monospace; display:flex; align-items:center; gap:26px; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#8A94AD;">
+        <span>UI/UX Case Study</span><span style="color:#0D63F3;">2024</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ░░░ 01 · HERO COVER ░░░ -->
+  <section data-screen-label="Cover" style="position:relative; padding:104px 0 0; overflow:hidden; background:radial-gradient(125% 90% at 50% -12%, #E6EFFE 0%, #F4F8FF 38%, #FFFFFF 74%);">
+    <!-- ambient glows -->
+    <div style="position:absolute; top:-160px; left:-120px; width:560px; height:560px; border-radius:50%; background:radial-gradient(closest-side, rgba(13,99,243,0.16), transparent 70%); z-index:0;"></div>
+    <div style="position:absolute; top:-60px; right:-140px; width:520px; height:520px; border-radius:50%; background:radial-gradient(closest-side, rgba(111,160,255,0.18), transparent 70%); z-index:0;"></div>
+
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px; position:relative; z-index:1; text-align:center;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:#0D63F3; margin-bottom:30px; animation:lsRise .8s cubic-bezier(0,0,.2,1) both; animation-delay:.05s;">Healthcare SaaS · Landing Page Design</div>
+      <h1 style="font-size:104px; line-height:0.9; letter-spacing:-0.05em; font-weight:800; color:#0B1536; margin:0 auto 26px; max-width:1080px; animation:lsRise .9s cubic-bezier(0,0,.2,1) both; animation-delay:.13s;">LeadSquared<br>Healthcare CRM</h1>
+      <p style="font-size:24px; line-height:1.5; color:#56607E; font-weight:500; margin:0 auto 38px; max-width:680px; text-wrap:pretty; animation:lsRise .85s cubic-bezier(0,0,.2,1) both; animation-delay:.24s;">A landing page for hospitals, clinics, and diagnostic chains, designed to turn a cautious first visit into a booked demo.</p>
+
+      <!-- tag chips -->
+      <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:72px; animation:lsRise .85s cubic-bezier(0,0,.2,1) both; animation-delay:.34s;">
+        <div style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid #DCE6F8; border-radius:100px; padding:9px 18px; font-size:13.5px; font-weight:600; color:#33415E; box-shadow:0 4px 14px -8px rgba(13,30,68,0.2);"><span style="width:7px; height:7px; border-radius:50%; background:#0D63F3;"></span>Landing Page Design</div>
+        <div style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid #DCE6F8; border-radius:100px; padding:9px 18px; font-size:13.5px; font-weight:600; color:#33415E; box-shadow:0 4px 14px -8px rgba(13,30,68,0.2);"><span style="width:7px; height:7px; border-radius:50%; background:#1E9E63;"></span>Interview Assignment</div>
+        <div style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid #DCE6F8; border-radius:100px; padding:9px 18px; font-size:13.5px; font-weight:600; color:#33415E; box-shadow:0 4px 14px -8px rgba(13,30,68,0.2);"><span style="width:7px; height:7px; border-radius:50%; background:#6B4FD6;"></span>Adobe XD</div>
+        <div style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid #DCE6F8; border-radius:100px; padding:9px 18px; font-size:13.5px; font-weight:600; color:#33415E; box-shadow:0 4px 14px -8px rgba(13,30,68,0.2);"><span style="width:7px; height:7px; border-radius:50%; background:#E08A2B;"></span>Responsive Website</div>
+      </div>
+    </div>
+
+    <!-- hero mockup + floating cards -->
+    <div style="position:relative; z-index:1; max-width:1140px; margin:0 auto; padding:0 64px 130px;">
+      <div style="position:absolute; left:50%; top:-10px; transform:translateX(-50%); width:780px; height:560px; background:radial-gradient(closest-side, rgba(13,99,243,0.2), transparent 72%); z-index:0;"></div>
+
+      <div style="position:relative; z-index:1; border-radius:16px; overflow:hidden; box-shadow:0 60px 120px -42px rgba(13,30,68,0.46); border:1px solid #E1E8F4; background:#fff; animation:lsMock 1.05s cubic-bezier(0,0,.2,1) both; animation-delay:.42s;">
+        <div style="height:44px; display:flex; align-items:center; gap:8px; padding:0 18px; background:#F4F6FB; border-bottom:1px solid #E6EAF2;">
+          <div style="width:11px; height:11px; border-radius:50%; background:#FF5F57;"></div><div style="width:11px; height:11px; border-radius:50%; background:#FEBC2E;"></div><div style="width:11px; height:11px; border-radius:50%; background:#28C840;"></div>
+          <div style="margin-left:16px; flex:1; max-width:440px; height:25px; border-radius:7px; background:#fff; border:1px solid #E6EAF2; display:flex; align-items:center; padding:0 12px; font-family:'Geist Mono',monospace; font-size:12px; color:#8A94AD;">leadsquared.com/healthcare-crm</div>
+        </div>
+        <img src="img/v2-hero.jpg" alt="Final landing page hero" style="width:100%; display:block;">
+      </div>
+
+      <!-- float: new lead toast (top-left) -->
+      <div style="position:absolute; z-index:3; top:74px; left:6px; width:230px; animation:lsFloat .7s cubic-bezier(0,0,.2,1) both; animation-delay:1.05s; background:#fff; border:1px solid #E6EAF2; border-radius:14px; padding:14px 16px; box-shadow:0 22px 44px -18px rgba(13,30,68,0.34); display:flex; gap:12px; align-items:flex-start;">
+        <div style="width:34px; height:34px; border-radius:9px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; flex:none;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3a4 4 0 014 4v2.5c0 1.2.4 2.3 1.2 3.2l.8.9H6l.8-.9A4.8 4.8 0 008 9.5V7a4 4 0 014-4z" stroke="#0D63F3" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 18a2 2 0 004 0" stroke="#0D63F3" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <div><div style="font-size:13px; font-weight:700; color:#0B1536; margin-bottom:2px;">New lead assigned</div><div style="font-size:11.5px; line-height:1.4; color:#8A94AD;">Form submitted · Campaign page</div></div>
+      </div>
+
+      <!-- float: conversion stat (right) -->
+      <div style="position:absolute; z-index:3; top:210px; right:-6px; width:188px; animation:lsFloat .7s cubic-bezier(0,0,.2,1) both; animation-delay:1.2s; background:#fff; border:1px solid #E6EAF2; border-radius:14px; padding:18px; box-shadow:0 22px 44px -18px rgba(13,30,68,0.34);">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;"><span style="font-family:'Geist Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:#8A94AD;">Conversions</span><span style="display:inline-flex; align-items:center; gap:3px; font-size:11px; font-weight:700; color:#1E9E63;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-6 4 3 6-7" stroke="#1E9E63" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>5X</span></div>
+        <div style="font-size:34px; line-height:1; font-weight:800; color:#0D63F3; letter-spacing:-0.03em;">+412%</div>
+        <div style="display:flex; gap:3px; align-items:flex-end; height:24px; margin-top:12px;"><div style="flex:1; height:32%; background:#DCE6F8; border-radius:2px;"></div><div style="flex:1; height:48%; background:#DCE6F8; border-radius:2px;"></div><div style="flex:1; height:40%; background:#DCE6F8; border-radius:2px;"></div><div style="flex:1; height:66%; background:#BFD3F6; border-radius:2px;"></div><div style="flex:1; height:82%; background:#0D63F3; border-radius:2px;"></div><div style="flex:1; height:100%; background:#0D63F3; border-radius:2px;"></div></div>
+      </div>
+
+      <!-- float: appointment chip (bottom-left) -->
+      <div style="position:absolute; z-index:3; bottom:158px; left:34px; animation:lsFloat .7s cubic-bezier(0,0,.2,1) both; animation-delay:1.35s; background:#fff; border:1px solid #E6EAF2; border-radius:100px; padding:10px 16px 10px 12px; box-shadow:0 22px 44px -18px rgba(13,30,68,0.34); display:flex; gap:10px; align-items:center;">
+        <div style="width:30px; height:30px; border-radius:50%; background:#E6F6ED; display:flex; align-items:center; justify-content:center; flex:none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="#1E9E63" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><div style="font-size:12.5px; font-weight:700; color:#0B1536;">Appointment confirmed</div><div style="font-size:11px; color:#8A94AD;">Apr 12 · 10:30 AM</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 02 · OVERVIEW ░░░ -->
+  <section data-screen-label="Overview" style="padding:120px 0; border-top:1px solid #ECEFF6;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px;">01 · Project Overview</div>
+      <div style="display:grid; grid-template-columns:0.82fr 1.18fr; gap:80px; align-items:start;">
+        <!-- meta facts -->
+        <div style="border-top:1px solid #E6EAF2;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:18px 0; border-bottom:1px solid #E6EAF2;"><span style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8A94AD;">Project</span><span style="font-size:16px; font-weight:600; color:#0B1536; text-align:right;">Healthcare CRM Landing Page</span></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:18px 0; border-bottom:1px solid #E6EAF2;"><span style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8A94AD;">Role</span><span style="font-size:16px; font-weight:600; color:#0B1536; text-align:right;">UI/UX Designer · End-to-end</span></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:18px 0; border-bottom:1px solid #E6EAF2;"><span style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8A94AD;">Timeline</span><span style="font-size:16px; font-weight:600; color:#0B1536; text-align:right;">3-day sprint · 2024</span></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:18px 0; border-bottom:1px solid #E6EAF2;"><span style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8A94AD;">Platform</span><span style="font-size:16px; font-weight:600; color:#0B1536; text-align:right;">Responsive Web · Desktop &amp; Mobile</span></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:18px 0; border-bottom:1px solid #E6EAF2;"><span style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8A94AD;">Tools</span><span style="font-size:16px; font-weight:600; color:#0B1536; text-align:right;">Adobe XD</span></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:18px 0; border-bottom:1px solid #E6EAF2;"><span style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8A94AD;">Industry</span><span style="font-size:16px; font-weight:600; color:#0B1536; text-align:right;">Healthcare SaaS</span></div>
+        </div>
+        <!-- description -->
+        <div>
+          <h2 style="font-size:50px; line-height:1.04; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 28px;">A complex product, made simple to evaluate.</h2>
+          <p style="font-size:20px; line-height:1.7; color:#3D465F; margin:0 0 22px; text-wrap:pretty;">LeadSquared's Healthcare CRM does a lot, intake, appointments, EHR/EMR integration, marketing automation, analytics. But the hard part was never the feature list. It was making a hospital decision-maker feel the platform is <strong style="color:#0B1536; font-weight:600;">built for healthcare, safe to adopt, and worth a conversation.</strong></p>
+          <p style="font-size:20px; line-height:1.7; color:#3D465F; margin:0 0 34px; text-wrap:pretty;">So I leaned on storytelling and structure: open with a real outcome, back it with proof people already trust, keep every feature easy to skim, and point all of it at one ask.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:14px;">
+            <div style="flex:1; min-width:150px; background:#F5F8FE; border:1px solid #E6EAF2; border-radius:14px; padding:20px 22px;"><div style="font-size:30px; font-weight:800; color:#0D63F3; letter-spacing:-0.03em; margin-bottom:4px;">14</div><div style="font-size:13.5px; color:#5C6680; line-height:1.4;">page sections designed, desktop &amp; mobile</div></div>
+            <div style="flex:1; min-width:150px; background:#F5F8FE; border:1px solid #E6EAF2; border-radius:14px; padding:20px 22px;"><div style="font-size:30px; font-weight:800; color:#0D63F3; letter-spacing:-0.03em; margin-bottom:4px;">6</div><div style="font-size:13.5px; color:#5C6680; line-height:1.4;">core product modules communicated</div></div>
+            <div style="flex:1; min-width:150px; background:#F5F8FE; border:1px solid #E6EAF2; border-radius:14px; padding:20px 22px;"><div style="font-size:30px; font-weight:800; color:#0D63F3; letter-spacing:-0.03em; margin-bottom:4px;">1</div><div style="font-size:13.5px; color:#5C6680; line-height:1.4;">single repeated call to action</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 03 · DESIGN PROCESS ░░░ -->
+  <section data-screen-label="Process" style="padding:118px 0; background:#F5F8FE;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px;">02 · Process &amp; Strategy</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 54px; max-width:680px;">From references to a responsive system.</h2>
+      <div style="display:flex; align-items:stretch; gap:0; flex-wrap:wrap;">
+
+        <div style="flex:1; min-width:178px; background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:28px 24px;">
+          <div style="width:46px; height:46px; border-radius:12px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="#0D63F3" stroke-width="1.9"/><path d="M16 16l4 4" stroke="#0D63F3" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; color:#0D63F3; margin-bottom:8px;">STEP 01</div>
+          <div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:9px;">Research</div>
+          <p style="font-size:13.5px; line-height:1.6; color:#5C6680; margin:0;">I went through LeadSquared and competitors, Salesforce Health, Zoho, Freshworks, to learn the tone and conventions of healthcare SaaS.</p>
+        </div>
+        <div style="flex:none; width:34px; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 7l5 5-5 5" stroke="#B9CCEC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+        <div style="flex:1; min-width:178px; background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:28px 24px;">
+          <div style="width:46px; height:46px; border-radius:12px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5" stroke="#0D63F3" stroke-width="1.9"/><path d="M3.5 9h17M9 9v11.5" stroke="#0D63F3" stroke-width="1.9"/></svg></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; color:#0D63F3; margin-bottom:8px;">STEP 02</div>
+          <div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:9px;">Wireframes</div>
+          <p style="font-size:13.5px; line-height:1.6; color:#5C6680; margin:0;">Sketched a low-fi layout to settle the content order and hierarchy before touching any visuals.</p>
+        </div>
+        <div style="flex:none; width:34px; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 7l5 5-5 5" stroke="#B9CCEC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+        <div style="flex:1; min-width:178px; background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:28px 24px;">
+          <div style="width:46px; height:46px; border-radius:12px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.4 5 5.5.6-4.1 3.7 1.2 5.4L12 20.4 6.9 21.7l1.2-5.4L4 12.6 9.6 12 12 3z" stroke="#0D63F3" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; color:#0D63F3; margin-bottom:8px;">STEP 03</div>
+          <div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:9px;">Visual Design</div>
+          <p style="font-size:13.5px; line-height:1.6; color:#5C6680; margin:0;">Designed in Adobe XD around a clean, brand-led type and colour system that simply reads as trustworthy.</p>
+        </div>
+        <div style="flex:none; width:34px; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 7l5 5-5 5" stroke="#B9CCEC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+        <div style="flex:1; min-width:178px; background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:28px 24px;">
+          <div style="width:46px; height:46px; border-radius:12px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="3.5" width="16" height="17" rx="2.5" stroke="#0D63F3" stroke-width="1.9"/><path d="M9.5 9.5l4 2.5-4 2.5V9.5z" fill="#0D63F3"/></svg></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; color:#0D63F3; margin-bottom:8px;">STEP 04</div>
+          <div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:9px;">Prototype</div>
+          <p style="font-size:13.5px; line-height:1.6; color:#5C6680; margin:0;">Linked the screens into a clickable flow to walk the path the way a real visitor would.</p>
+        </div>
+        <div style="flex:none; width:34px; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 7l5 5-5 5" stroke="#B9CCEC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+        <div style="flex:1; min-width:178px; background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:28px 24px;">
+          <div style="width:46px; height:46px; border-radius:12px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="4.5" width="13" height="10" rx="1.5" stroke="#0D63F3" stroke-width="1.9"/><rect x="16.5" y="8.5" width="5" height="11" rx="1.3" stroke="#0D63F3" stroke-width="1.9"/></svg></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; color:#0D63F3; margin-bottom:8px;">STEP 05</div>
+          <div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:9px;">Responsive Design</div>
+          <p style="font-size:13.5px; line-height:1.6; color:#5C6680; margin:0;">Re-flowed every section for mobile without losing the single-CTA path.</p>
+        </div>
+      </div>
+
+      <!-- conversion funnel strategy -->
+      <div style="margin-top:64px; padding-top:56px; border-top:1px solid #E0E7F4;">
+        <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:56px; align-items:end; margin-bottom:44px;">
+          <div>
+            <div style="font-family:'Geist Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#0D63F3; margin-bottom:14px;">Strategic Objective</div>
+            <h3 style="font-size:34px; line-height:1.08; letter-spacing:-0.025em; font-weight:800; color:#0B1536; margin:0;">The whole page works as one funnel.</h3>
+          </div>
+          <p style="font-size:17.5px; line-height:1.7; color:#3D465F; margin:0; text-wrap:pretty;">The goal was simple: get the right people, Heads of Patient Experience and Marketing Directors, to <strong style="color:#0B1536; font-weight:600;">book a demo</strong>. Each section nudges them one step closer, from the first promise to the final click.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:12px;">
+          <div style="background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:26px 22px;"><div style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:8px; background:#0D63F3; color:#fff; font-size:14px; font-weight:700; margin-bottom:18px;">1</div><div style="font-size:16px; font-weight:700; color:#0B1536; margin-bottom:8px;">Immediate Value</div><p style="font-size:13.5px; line-height:1.55; color:#5C6680; margin:0;">A hero that opens with one number worth caring about, 5X conversions.</p></div>
+          <div style="background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:26px 22px;"><div style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:8px; background:#0D63F3; color:#fff; font-size:14px; font-weight:700; margin-bottom:18px;">2</div><div style="font-size:16px; font-weight:700; color:#0B1536; margin-bottom:8px;">Credibility</div><p style="font-size:13.5px; line-height:1.55; color:#5C6680; margin:0;">A trusted-by bar and HIPAA assurance to ease the natural &ldquo;can I trust this?&rdquo; doubt.</p></div>
+          <div style="background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:26px 22px;"><div style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:8px; background:#0D63F3; color:#fff; font-size:14px; font-weight:700; margin-bottom:18px;">3</div><div style="font-size:16px; font-weight:700; color:#0B1536; margin-bottom:8px;">Solutions</div><p style="font-size:13.5px; line-height:1.55; color:#5C6680; margin:0;">The features that answer the audience's real pain points, integration, compliance, mobile care.</p></div>
+          <div style="background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:26px 22px;"><div style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:8px; background:#0D63F3; color:#fff; font-size:14px; font-weight:700; margin-bottom:18px;">4</div><div style="font-size:16px; font-weight:700; color:#0B1536; margin-bottom:8px;">Proof</div><p style="font-size:13.5px; line-height:1.55; color:#5C6680; margin:0;">Client stories and testimonials that back up everything claimed above.</p></div>
+          <div style="background:linear-gradient(180deg,#0D63F3,#0B53D4); border:1px solid #0D63F3; border-radius:16px; padding:26px 22px;"><div style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:8px; background:rgba(255,255,255,0.22); color:#fff; font-size:14px; font-weight:700; margin-bottom:18px;">5</div><div style="font-size:16px; font-weight:700; color:#fff; margin-bottom:8px;">Action</div><p style="font-size:13.5px; line-height:1.55; color:#D5E4FF; margin:0;">One clear, high-contrast CTA to finish the job.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 04 · CHALLENGE ░░░ -->
+  <section data-screen-label="Challenge" style="padding:120px 0;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px;">03 · The Challenge</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 16px; max-width:760px;">From problem, to decision, to outcome.</h2>
+      <p style="font-size:19px; line-height:1.65; color:#5C6680; margin:0 0 56px; max-width:640px; text-wrap:pretty;">Three tensions shaped the brief. Each one led to a specific design call, and the outcome I wanted it to land.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;">
+
+        <!-- track 1 -->
+        <div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#E0533B; margin-bottom:12px; display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:50%; background:#E0533B;"></span>Problem</div>
+          <div style="background:#FFF4F1; border:1px solid #FBDDD4; border-radius:16px; padding:24px;"><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:7px;">A new vendor feels risky.</div><p style="font-size:14px; line-height:1.6; color:#8A6B62; margin:0;">In a HIPAA-regulated world, hospital buyers don't take chances on an unproven platform.</p></div>
+          <div style="display:flex; justify-content:center; padding:14px 0;"><div style="width:34px; height:34px; border-radius:50%; background:#EAF1FE; display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M6 13l6 6 6-6" stroke="#0D63F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#0D63F3; margin-bottom:12px; display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:50%; background:#0D63F3;"></span>Design Decision</div>
+          <div style="background:#EEF4FE; border:1px solid #CFE0FF; border-radius:16px; padding:24px;"><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:7px;">Lead with proof.</div><p style="font-size:14px; line-height:1.6; color:#54678F; margin:0;">Put Gartner and G2 recognition, plus HIPAA assurance, right after the hero.</p></div>
+          <div style="display:flex; justify-content:center; padding:14px 0;"><div style="width:34px; height:34px; border-radius:50%; background:#E6F6ED; display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M6 13l6 6 6-6" stroke="#1E9E63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#1E9E63; margin-bottom:12px; display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:50%; background:#1E9E63;"></span>Expected Outcome</div>
+          <div style="background:#EAF7F0; border:1px solid #C7E9D5; border-radius:16px; padding:24px;"><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:7px;">Safe to evaluate.</div><p style="font-size:14px; line-height:1.6; color:#4C7A60; margin:0;">Doubt eases early, so starting a conversation feels low-risk.</p></div>
+        </div>
+
+        <!-- track 2 -->
+        <div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#E0533B; margin-bottom:12px; display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:50%; background:#E0533B;"></span>Problem</div>
+          <div style="background:#FFF4F1; border:1px solid #FBDDD4; border-radius:16px; padding:24px;"><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:7px;">Too much to absorb.</div><p style="font-size:14px; line-height:1.6; color:#8A6B62; margin:0;">Six overlapping modules could overwhelm a first-time visitor and bury the value.</p></div>
+          <div style="display:flex; justify-content:center; padding:14px 0;"><div style="width:34px; height:34px; border-radius:50%; background:#EAF1FE; display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M6 13l6 6 6-6" stroke="#0D63F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#0D63F3; margin-bottom:12px; display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:50%; background:#0D63F3;"></span>Design Decision</div>
+          <div style="background:#EEF4FE; border:1px solid #CFE0FF; border-radius:16px; padding:24px;"><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:7px;">Give it rhythm.</div><p style="font-size:14px; line-height:1.6; color:#54678F; margin:0;">Colour-coded feature cards, each with a real screenshot, in a steady two-column rhythm.</p></div>
+          <div style="display:flex; justify-content:center; padding:14px 0;"><div style="width:34px; height:34px; border-radius:50%; background:#E6F6ED; display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M6 13l6 6 6-6" stroke="#1E9E63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#1E9E63; margin-bottom:12px; display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:50%; background:#1E9E63;"></span>Expected Outcome</div>
+          <div style="background:#EAF7F0; border:1px solid #C7E9D5; border-radius:16px; padding:24px;"><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:7px;">Scannable in seconds.</div><p style="font-size:14px; line-height:1.6; color:#4C7A60; margin:0;">A complex platform that reads as a handful of clear capabilities.</p></div>
+        </div>
+
+        <!-- track 3 -->
+        <div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#E0533B; margin-bottom:12px; display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:50%; background:#E0533B;"></span>Problem</div>
+          <div style="background:#FFF4F1; border:1px solid #FBDDD4; border-radius:16px; padding:24px;"><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:7px;">Diluted intent.</div><p style="font-size:14px; line-height:1.6; color:#8A6B62; margin:0;">Scattered, competing CTAs would split attention across the page.</p></div>
+          <div style="display:flex; justify-content:center; padding:14px 0;"><div style="width:34px; height:34px; border-radius:50%; background:#EAF1FE; display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M6 13l6 6 6-6" stroke="#0D63F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#0D63F3; margin-bottom:12px; display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:50%; background:#0D63F3;"></span>Design Decision</div>
+          <div style="background:#EEF4FE; border:1px solid #CFE0FF; border-radius:16px; padding:24px;"><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:7px;">One repeated action.</div><p style="font-size:14px; line-height:1.6; color:#54678F; margin:0;">A single &ldquo;Book a Demo&rdquo; CTA anchors every section, top to bottom.</p></div>
+          <div style="display:flex; justify-content:center; padding:14px 0;"><div style="width:34px; height:34px; border-radius:50%; background:#E6F6ED; display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M6 13l6 6 6-6" stroke="#1E9E63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#1E9E63; margin-bottom:12px; display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:50%; background:#1E9E63;"></span>Expected Outcome</div>
+          <div style="background:#EAF7F0; border:1px solid #C7E9D5; border-radius:16px; padding:24px;"><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:7px;">Concentrated conversion.</div><p style="font-size:14px; line-height:1.6; color:#4C7A60; margin:0;">Every section points at the same goal.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 05 · USER NEEDS ░░░ -->
+  <section data-screen-label="User Needs" style="padding:120px 0; background:#F5F8FE;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px;">04 · User Needs</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 16px; max-width:720px;">What hospital teams actually need.</h2>
+      <p style="font-size:19px; line-height:1.65; color:#5C6680; margin:0 0 50px; max-width:600px; text-wrap:pretty;">Six jobs came up again and again in research, and they shaped which capabilities the page leads with.</p>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:30px;"><div style="width:44px; height:44px; border-radius:11px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5.5h16v10H7l-3 3v-13z" stroke="#0D63F3" stroke-width="1.8" stroke-linejoin="round"/></svg></div><div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:8px;">Patient Communication</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">Reach patients on their channel, consistently and on time.</p></div>
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:30px;"><div style="width:44px; height:44px; border-radius:11px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="15" rx="2" stroke="#0D63F3" stroke-width="1.8"/><path d="M3.5 9.5h17M8 3v4M16 3v4" stroke="#0D63F3" stroke-width="1.8" stroke-linecap="round"/></svg></div><div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:8px;">Appointment Management</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">Self-scheduling, reminders, and fewer no-shows.</p></div>
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:30px;"><div style="width:44px; height:44px; border-radius:11px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 19V5M4 19h16M8 15l3.5-4 3 2.5L20 8" stroke="#0D63F3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:8px;">Lead Tracking</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">Capture every inquiry and follow it to a booked visit.</p></div>
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:30px;"><div style="width:44px; height:44px; border-radius:11px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#0D63F3" stroke-width="1.8"/><path d="M12 4a8 8 0 018 8h-8V4z" fill="#0D63F3"/></svg></div><div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:8px;">Data Visibility</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">One dashboard for the full patient journey and drop-off.</p></div>
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:30px;"><div style="width:44px; height:44px; border-radius:11px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18" stroke="#0D63F3" stroke-width="1.8" stroke-linecap="round"/></svg></div><div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:8px;">Automation</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">Workflows that run intake and outreach without manual work.</p></div>
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:16px; padding:30px;"><div style="width:44px; height:44px; border-radius:11px; background:#EAF1FE; display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke="#0D63F3" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#0D63F3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div style="font-size:18px; font-weight:700; color:#0B1536; margin-bottom:8px;">Compliance</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">HIPAA-grade security patients and providers can trust.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 06 · WIREFRAMES ░░░ -->
+  <section data-screen-label="Wireframes" style="padding:118px 0;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px;">05 · Wireframes</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 16px; max-width:720px;">Structure before style.</h2>
+      <p style="font-size:19px; line-height:1.65; color:#5C6680; margin:0 0 50px; max-width:620px; text-wrap:pretty;">I wireframed the full page first to lock the order, hero, trusted-by, awards, features, proof, so every visual choice later served the funnel instead of fighting it.</p>
+      <div style="display:grid; grid-template-columns:1.35fr 1fr; gap:48px; align-items:start;">
+        <div style="border:1px solid #E6EAF2; border-radius:14px; overflow:hidden; background:#fff; box-shadow:0 26px 60px -30px rgba(13,30,68,0.22);">
+          <div style="height:38px; display:flex; align-items:center; gap:7px; padding:0 16px; background:#F4F6FB; border-bottom:1px solid #E6EAF2;"><div style="width:10px; height:10px; border-radius:50%; background:#D5DAE6;"></div><div style="width:10px; height:10px; border-radius:50%; background:#D5DAE6;"></div><div style="width:10px; height:10px; border-radius:50%; background:#D5DAE6;"></div><div style="margin-left:14px; font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">wireframe · full page schematic</div></div>
+
+          <!-- compact hand-built wireframe -->
+          <div style="padding:26px 30px 30px; display:flex; flex-direction:column; gap:20px; background:#FCFDFF;">
+
+            <!-- A · hero -->
+            <div style="position:relative; border:1px dashed #CFD7E6; border-radius:8px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; gap:10px;">
+              <span style="position:absolute; top:8px; left:10px; font-family:'Geist Mono',monospace; font-size:9px; letter-spacing:0.1em; color:#0D63F3;">A</span>
+              <div style="height:13px; width:150px; border-radius:3px; background:#C4CCDC;"></div>
+              <div style="height:8px; width:200px; border-radius:3px; background:#DFE4EE;"></div>
+              <div style="height:22px; width:96px; border-radius:100px; border:1.5px solid #B7C2D6; margin-top:2px;"></div>
+              <div style="margin-top:8px; width:100%; height:74px; border:1px solid #DDE3EE; border-radius:6px; background:linear-gradient(to top right, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px)), linear-gradient(to top left, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px)); display:flex; align-items:center; justify-content:center;"><span style="font-family:'Geist Mono',monospace; font-size:9px; color:#9AA3BC; background:#FCFDFF; padding:0 5px;">Hero visual</span></div>
+            </div>
+
+            <!-- B · trusted by + award -->
+            <div style="position:relative; border:1px dashed #CFD7E6; border-radius:8px; padding:20px 18px 18px;">
+              <span style="position:absolute; top:8px; left:10px; font-family:'Geist Mono',monospace; font-size:9px; letter-spacing:0.1em; color:#0D63F3;">B</span>
+              <div style="height:9px; width:84px; border-radius:3px; background:#C4CCDC; margin:0 auto 14px;"></div>
+              <div style="display:flex; gap:8px; margin-bottom:16px;"><div style="flex:1; height:24px; border-radius:4px; background:#EAEEF6;"></div><div style="flex:1; height:24px; border-radius:4px; background:#EAEEF6;"></div><div style="flex:1; height:24px; border-radius:4px; background:#EAEEF6;"></div><div style="flex:1; height:24px; border-radius:4px; background:#EAEEF6;"></div><div style="flex:1; height:24px; border-radius:4px; background:#EAEEF6;"></div><div style="flex:1; height:24px; border-radius:4px; background:#EAEEF6;"></div></div>
+              <div style="height:60px; border-radius:6px; background:#EEF1F7; border:1px solid #E2E7F1; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Geist Mono',monospace; font-size:9px; color:#9AA3BC;">Award recognition</span></div>
+            </div>
+
+            <!-- C · key features -->
+            <div style="position:relative; border:1px dashed #CFD7E6; border-radius:8px; padding:20px 18px 18px;">
+              <span style="position:absolute; top:8px; left:10px; font-family:'Geist Mono',monospace; font-size:9px; letter-spacing:0.1em; color:#0D63F3;">C</span>
+              <div style="height:11px; width:96px; border-radius:3px; background:#C4CCDC; margin:0 auto 16px;"></div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px;">
+                <div style="height:48px; border:1px solid #DDE3EE; border-radius:6px; background:linear-gradient(to top right, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px)), linear-gradient(to top left, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px));"></div>
+                <div style="height:48px; border:1px solid #DDE3EE; border-radius:6px; background:linear-gradient(to top right, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px)), linear-gradient(to top left, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px));"></div>
+                <div style="height:48px; border:1px solid #DDE3EE; border-radius:6px; background:linear-gradient(to top right, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px)), linear-gradient(to top left, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px));"></div>
+                <div style="height:48px; border:1px solid #DDE3EE; border-radius:6px; background:linear-gradient(to top right, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px)), linear-gradient(to top left, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px));"></div>
+                <div style="height:48px; border:1px solid #DDE3EE; border-radius:6px; background:linear-gradient(to top right, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px)), linear-gradient(to top left, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px));"></div>
+                <div style="height:48px; border:1px solid #DDE3EE; border-radius:6px; background:linear-gradient(to top right, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px)), linear-gradient(to top left, transparent calc(50% - 0.6px), #DDE3EE calc(50% - 0.6px), #DDE3EE calc(50% + 0.6px), transparent calc(50% + 0.6px));"></div>
+              </div>
+              <div style="height:20px; width:88px; border-radius:100px; border:1.5px solid #B7C2D6; margin:0 auto;"></div>
+            </div>
+
+            <!-- D · testimonials & results -->
+            <div style="position:relative; border:1px dashed #CFD7E6; border-radius:8px; padding:20px 18px 18px;">
+              <span style="position:absolute; top:8px; left:10px; font-family:'Geist Mono',monospace; font-size:9px; letter-spacing:0.1em; color:#0D63F3;">D</span>
+              <div style="height:10px; width:116px; border-radius:3px; background:#C4CCDC; margin:0 auto 16px;"></div>
+              <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+                <div style="border:1px solid #E2E7F1; border-radius:6px; padding:10px; background:#fff;"><div style="height:26px; border-radius:4px; background:#EEF1F7; margin-bottom:8px;"></div><div style="height:6px; width:70%; border-radius:2px; background:#DFE4EE; margin-bottom:4px;"></div><div style="height:6px; width:45%; border-radius:2px; background:#E7EBF3;"></div></div>
+                <div style="border:1px solid #E2E7F1; border-radius:6px; padding:10px; background:#fff;"><div style="height:26px; border-radius:4px; background:#EEF1F7; margin-bottom:8px;"></div><div style="height:6px; width:70%; border-radius:2px; background:#DFE4EE; margin-bottom:4px;"></div><div style="height:6px; width:45%; border-radius:2px; background:#E7EBF3;"></div></div>
+                <div style="border:1px solid #E2E7F1; border-radius:6px; padding:10px; background:#fff;"><div style="height:26px; border-radius:4px; background:#EEF1F7; margin-bottom:8px;"></div><div style="height:6px; width:70%; border-radius:2px; background:#DFE4EE; margin-bottom:4px;"></div><div style="height:6px; width:45%; border-radius:2px; background:#E7EBF3;"></div></div>
+              </div>
+            </div>
+
+            <!-- E · final CTA + footer -->
+            <div style="position:relative; border:1px dashed #CFD7E6; border-radius:8px; padding:22px 18px 18px;">
+              <span style="position:absolute; top:8px; left:10px; font-family:'Geist Mono',monospace; font-size:9px; letter-spacing:0.1em; color:#0D63F3;">E</span>
+              <div style="border-radius:6px; background:#E7ECF5; padding:18px; display:flex; flex-direction:column; align-items:center; gap:8px; margin-bottom:12px;"><div style="height:11px; width:140px; border-radius:3px; background:#C4CCDC;"></div><div style="height:7px; width:180px; border-radius:3px; background:#D6DCE8;"></div><div style="height:20px; width:84px; border-radius:100px; background:#B7C2D6; margin-top:2px;"></div></div>
+              <div style="height:30px; border-radius:6px; background:#EEF1F7; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Geist Mono',monospace; font-size:9px; color:#9AA3BC;">Footer</span></div>
+            </div>
+
+          </div>
+        </div>
+        <div style="position:sticky; top:96px; display:flex; flex-direction:column; gap:20px;">
+          <div style="display:flex; gap:16px;"><div style="font-family:'Geist Mono',monospace; font-size:13px; font-weight:500; color:#0D63F3; flex:none; width:24px;">A</div><div><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:5px;">Outcome-led hero</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">Headline, sub-head, one CTA above the fold. The promise lands first.</p></div></div>
+          <div style="display:flex; gap:16px;"><div style="font-family:'Geist Mono',monospace; font-size:13px; font-weight:500; color:#0D63F3; flex:none; width:24px;">B</div><div><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:5px;">Trusted-by &amp; award proof</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">A logo bar and analyst badges ease doubt right after the hero.</p></div></div>
+          <div style="display:flex; gap:16px;"><div style="font-family:'Geist Mono',monospace; font-size:13px; font-weight:500; color:#0D63F3; flex:none; width:24px;">C</div><div><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:5px;">Scannable feature grid</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">A 2 + 3 card rhythm lets a multi-feature product breathe.</p></div></div>
+          <div style="display:flex; gap:16px;"><div style="font-family:'Geist Mono',monospace; font-size:13px; font-weight:500; color:#0D63F3; flex:none; width:24px;">D</div><div><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:5px;">Testimonials &amp; results</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">Client stories and outcomes sit near the close, where buyer doubt peaks.</p></div></div>
+          <div style="display:flex; gap:16px;"><div style="font-family:'Geist Mono',monospace; font-size:13px; font-weight:500; color:#0D63F3; flex:none; width:24px;">E</div><div><div style="font-size:17px; font-weight:700; color:#0B1536; margin-bottom:5px;">Final CTA &amp; footer</div><p style="font-size:14.5px; line-height:1.6; color:#5C6680; margin:0;">The single &ldquo;Book a Demo&rdquo; ask repeats one last time before the footer.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 07 · VISUAL DESIGN SYSTEM ░░░ -->
+  <section data-screen-label="Design System" style="padding:118px 0; background:#F5F8FE;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px;">06 · Visual Design System</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 54px; max-width:720px;">A clinical, confident system.</h2>
+
+      <div style="display:grid; grid-template-columns:1.1fr 1fr; gap:18px; margin-bottom:18px;">
+        <!-- typography -->
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:18px; padding:38px;">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#9AA3BC; margin-bottom:24px;">Typography</div>
+          <div style="display:flex; align-items:flex-end; gap:24px; margin-bottom:24px;">
+            <div style="font-size:96px; line-height:0.8; font-weight:800; color:#0B1536; letter-spacing:-0.04em;">Aa</div>
+            <div style="padding-bottom:8px;"><div style="font-size:22px; font-weight:700; color:#0B1536;">Graphik</div><div style="font-size:14px; color:#5C6680;">Display &amp; text typeface</div></div>
+          </div>
+          <div style="display:flex; gap:26px; flex-wrap:wrap; border-top:1px solid #EDF0F7; padding-top:20px;">
+            <div style="font-size:19px; font-weight:700; color:#0B1536;">Bold</div>
+            <div style="font-size:19px; font-weight:600; color:#3D465F;">Semibold</div>
+            <div style="font-size:19px; font-weight:500; color:#5C6680;">Medium</div>
+            <div style="font-size:19px; font-weight:400; color:#5C6680;">Regular</div>
+          </div>
+        </div>
+        <!-- buttons + forms -->
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:18px; padding:38px;">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#9AA3BC; margin-bottom:24px;">Buttons &amp; Forms</div>
+          <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-bottom:26px;">
+            <div style="background:#0D63F3; color:#fff; font-size:15px; font-weight:600; padding:13px 26px; border-radius:100px; box-shadow:0 10px 22px rgba(13,99,243,0.32);">Book a Demo</div>
+            <div style="background:#fff; color:#0D63F3; font-size:15px; font-weight:600; padding:12px 25px; border-radius:100px; border:1.5px solid #C9DBFC;">Learn More</div>
+            <div style="color:#0D63F3; font-size:15px; font-weight:600; border-bottom:1.5px solid #0D63F3; padding-bottom:2px;">Talk to Sales →</div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="height:46px; border:1.5px solid #E0E0E0; border-radius:10px; display:flex; align-items:center; padding:0 16px; font-size:15px; color:#9AA3BC;">Work email</div>
+            <div style="height:46px; border:1.5px solid #0D63F3; border-radius:10px; display:flex; align-items:center; justify-content:space-between; padding:0 16px; font-size:15px; color:#0B1536; box-shadow:0 0 0 4px rgba(13,99,243,0.1);">Hospital<svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#0D63F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- color palette -->
+      <div style="background:#fff; border:1px solid #E6EAF2; border-radius:18px; padding:38px;">
+        <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#9AA3BC; margin-bottom:24px;">Colour Palette · Brand</div>
+        <div style="display:grid; grid-template-columns:repeat(7,1fr); gap:14px;">
+          <div><div style="height:84px; border-radius:12px; background:#0D63F3; margin-bottom:12px; box-shadow:0 8px 18px rgba(13,99,243,0.28);"></div><div style="font-size:13px; font-weight:600; color:#0B1536;">Primary</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#0D63F3</div></div>
+          <div><div style="height:84px; border-radius:12px; background:#0B1536; margin-bottom:12px;"></div><div style="font-size:13px; font-weight:600; color:#0B1536;">Ink Navy</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#0B1536</div></div>
+          <div><div style="height:84px; border-radius:12px; background:#6F7B9A; margin-bottom:12px;"></div><div style="font-size:13px; font-weight:600; color:#0B1536;">Slate</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#6F7B9A</div></div>
+          <div><div style="height:84px; border-radius:12px; background:#666666; margin-bottom:12px;"></div><div style="font-size:13px; font-weight:600; color:#0B1536;">Graphite</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#666666</div></div>
+          <div><div style="height:84px; border-radius:12px; background:#EAF1FE; border:1px solid #E6EAF2; margin-bottom:12px;"></div><div style="font-size:13px; font-weight:600; color:#0B1536;">Tint</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#EAF1FE</div></div>
+          <div><div style="height:84px; border-radius:12px; background:#E0E0E0; margin-bottom:12px;"></div><div style="font-size:13px; font-weight:600; color:#0B1536;">Border</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#E0E0E0</div></div>
+          <div><div style="height:84px; border-radius:12px; background:#FEFFFE; border:1px solid #E6EAF2; margin-bottom:12px;"></div><div style="font-size:13px; font-weight:600; color:#0B1536;">White</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#FEFFFE</div></div>
+        </div>
+
+        <!-- category surfaces (applied tints) -->
+        <div style="margin-top:34px; padding-top:26px; border-top:1px solid #EDF0F7;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:20px;">
+            <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#9AA3BC;">Category Surfaces</div>
+            <div style="font-size:13px; color:#8A94AD;">Soft tints that colour-code the six feature modules</div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:14px;">
+            <div><div style="height:62px; border-radius:12px; background:#D5EBF7; border:1px solid #E6EAF2; margin-bottom:11px;"></div><div style="font-size:12.5px; font-weight:600; color:#0B1536;">Intake</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#D5EBF7</div></div>
+            <div><div style="height:62px; border-radius:12px; background:#FBEFD6; border:1px solid #E6EAF2; margin-bottom:11px;"></div><div style="font-size:12.5px; font-weight:600; color:#0B1536;">Patient Mgmt</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#FBEFD6</div></div>
+            <div><div style="height:62px; border-radius:12px; background:#D9E9D2; border:1px solid #E6EAF2; margin-bottom:11px;"></div><div style="font-size:12.5px; font-weight:600; color:#0B1536;">Operations</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#D9E9D2</div></div>
+            <div><div style="height:62px; border-radius:12px; background:#DCE1F4; border:1px solid #E6EAF2; margin-bottom:11px;"></div><div style="font-size:12.5px; font-weight:600; color:#0B1536;">Field / Mobile</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#DCE1F4</div></div>
+            <div><div style="height:62px; border-radius:12px; background:#FBE3D3; border:1px solid #E6EAF2; margin-bottom:11px;"></div><div style="font-size:12.5px; font-weight:600; color:#0B1536;">Marketing</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#FBE3D3</div></div>
+            <div><div style="height:62px; border-radius:12px; background:#FBF3CE; border:1px solid #E6EAF2; margin-bottom:11px;"></div><div style="font-size:12.5px; font-weight:600; color:#0B1536;">Reporting</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#FBF3CE</div></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:24px; margin-top:24px; flex-wrap:wrap;">
+            <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#9AA3BC;">Accent Nodes</div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="width:22px; height:22px; border-radius:50%; background:#F4D33D; box-shadow:0 2px 6px rgba(0,0,0,0.12);"></span><div style="font-size:13px; font-weight:600; color:#0B1536;">CRM</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#F4D33D</div></div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="width:22px; height:22px; border-radius:50%; background:#F08A2B; box-shadow:0 2px 6px rgba(0,0,0,0.12);"></span><div style="font-size:13px; font-weight:600; color:#0B1536;">EMR / EHR</div><div style="font-family:'Geist Mono',monospace; font-size:11px; color:#9AA3BC;">#F08A2B</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 08 · DESKTOP EXPERIENCE ░░░ -->
+  <section data-screen-label="Desktop Experience" style="padding:118px 0;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px 30px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px;">07 · Desktop Experience</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 16px; max-width:760px;">The finished page, section by section.</h2>
+      <p style="font-size:19px; line-height:1.65; color:#5C6680; margin:0; max-width:640px; text-wrap:pretty;">Each screen earns its place in the funnel: from promise, to proof, to a single action.</p>
+    </div>
+
+    <!-- row 1 -->
+    <div style="max-width:1240px; margin:0 auto; padding:56px 64px;">
+      <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:56px; align-items:center;">
+        <div style="border-radius:14px; overflow:hidden; box-shadow:0 30px 64px -30px rgba(13,30,68,0.3); border:1px solid #E6EAF2; background:#fff;"><div style="height:38px; display:flex; align-items:center; gap:7px; padding:0 16px; background:#F4F6FB; border-bottom:1px solid #E6EAF2;"><div style="width:10px;height:10px;border-radius:50%;background:#FF5F57;"></div><div style="width:10px;height:10px;border-radius:50%;background:#FEBC2E;"></div><div style="width:10px;height:10px;border-radius:50%;background:#28C840;"></div></div><img src="img/v2-hero.jpg" style="width:100%; display:block;" alt="Hero section"></div>
+        <div><div style="font-family:'Geist Mono',monospace; font-size:12px; color:#0D63F3; margin-bottom:14px;">01 · Hero</div><h3 style="font-size:27px; font-weight:700; color:#0B1536; margin:0 0 14px; letter-spacing:-0.02em;">Lead with the outcome.</h3><p style="font-size:16.5px; line-height:1.7; color:#5C6680; margin:0;">The fold opens on one result, “5X conversions,” next to a single CTA. No feature dump, just the promise and the way to a demo.</p></div>
+      </div>
+    </div>
+
+    <!-- row 2 (reverse) -->
+    <div style="max-width:1240px; margin:0 auto; padding:56px 64px;">
+      <div style="display:grid; grid-template-columns:1fr 1.5fr; gap:56px; align-items:center;">
+        <div style="order:2; border-radius:14px; overflow:hidden; box-shadow:0 30px 64px -30px rgba(13,30,68,0.3); border:1px solid #E6EAF2; background:#fff;"><div style="height:38px; display:flex; align-items:center; gap:7px; padding:0 16px; background:#F4F6FB; border-bottom:1px solid #E6EAF2;"><div style="width:10px;height:10px;border-radius:50%;background:#FF5F57;"></div><div style="width:10px;height:10px;border-radius:50%;background:#FEBC2E;"></div><div style="width:10px;height:10px;border-radius:50%;background:#28C840;"></div></div><img src="img/panel-awards.png" style="width:100%; display:block;" alt="Trusted by leading healthcare providers worldwide: Gartner and G2 recognition"></div>
+        <div style="order:1;"><div style="font-family:'Geist Mono',monospace; font-size:12px; color:#0D63F3; margin-bottom:14px;">02 · Proof</div><h3 style="font-size:27px; font-weight:700; color:#0B1536; margin:0 0 14px; letter-spacing:-0.02em;">Earn trust early.</h3><p style="font-size:16.5px; line-height:1.7; color:#5C6680; margin:0;">Gartner and G2 recognition sit high on the page. In a cautious, regulated category, proof from names people already trust makes a new vendor feel safe.</p></div>
+      </div>
+    </div>
+
+    <!-- row 3 -->
+    <div style="max-width:1240px; margin:0 auto; padding:56px 64px;">
+      <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:56px; align-items:center;">
+        <div style="border-radius:14px; overflow:hidden; box-shadow:0 30px 64px -30px rgba(13,30,68,0.3); border:1px solid #E6EAF2; background:#fff;"><div style="height:38px; display:flex; align-items:center; gap:7px; padding:0 16px; background:#F4F6FB; border-bottom:1px solid #E6EAF2;"><div style="width:10px;height:10px;border-radius:50%;background:#FF5F57;"></div><div style="width:10px;height:10px;border-radius:50%;background:#FEBC2E;"></div><div style="width:10px;height:10px;border-radius:50%;background:#28C840;"></div></div><img src="img/v2-features.png" style="width:100%; display:block;" alt="Feature grid"></div>
+        <div><div style="font-family:'Geist Mono',monospace; font-size:12px; color:#0D63F3; margin-bottom:14px;">03 · Features</div><h3 style="font-size:27px; font-weight:700; color:#0B1536; margin:0 0 14px; letter-spacing:-0.02em;">Six workflows, one rhythm.</h3><p style="font-size:16.5px; line-height:1.7; color:#5C6680; margin:0;">Colour-coded cards break the platform into modules you can skim, each with a real screenshot, so the capability is shown, not just claimed.</p></div>
+      </div>
+    </div>
+
+    <!-- row 4 (reverse) -->
+    <div style="max-width:1240px; margin:0 auto; padding:56px 64px;">
+      <div style="display:grid; grid-template-columns:1fr 1.5fr; gap:56px; align-items:center;">
+        <div style="order:2; border-radius:14px; overflow:hidden; box-shadow:0 30px 64px -30px rgba(13,30,68,0.3); border:1px solid #E6EAF2; background:#fff;"><div style="height:38px; display:flex; align-items:center; gap:7px; padding:0 16px; background:#F4F6FB; border-bottom:1px solid #E6EAF2;"><div style="width:10px;height:10px;border-radius:50%;background:#FF5F57;"></div><div style="width:10px;height:10px;border-radius:50%;background:#FEBC2E;"></div><div style="width:10px;height:10px;border-radius:50%;background:#28C840;"></div></div><img src="img/panel-results.png" style="width:100%; display:block;" alt="Proven results: outcomes for every practice size"></div>
+        <div style="order:1;"><div style="font-family:'Geist Mono',monospace; font-size:12px; color:#0D63F3; margin-bottom:14px;">04 · Results</div><h3 style="font-size:27px; font-weight:700; color:#0B1536; margin:0 0 14px; letter-spacing:-0.02em;">Make outcomes believable.</h3><p style="font-size:16.5px; line-height:1.7; color:#5C6680; margin:0;">Three plain-language cards turn the platform into business impact, conversion lift, faster turnaround, a leaner call centre.</p></div>
+      </div>
+    </div>
+
+    <!-- row 5 -->
+    <div style="max-width:1240px; margin:0 auto; padding:56px 64px;">
+      <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:56px; align-items:center;">
+        <div style="border-radius:14px; overflow:hidden; box-shadow:0 30px 64px -30px rgba(13,30,68,0.3); border:1px solid #E6EAF2; background:#fff;"><div style="height:38px; display:flex; align-items:center; gap:7px; padding:0 16px; background:#F4F6FB; border-bottom:1px solid #E6EAF2;"><div style="width:10px;height:10px;border-radius:50%;background:#FF5F57;"></div><div style="width:10px;height:10px;border-radius:50%;background:#FEBC2E;"></div><div style="width:10px;height:10px;border-radius:50%;background:#28C840;"></div></div><img src="img/panel-crm.png" style="width:100%; display:block;" alt="The healthcare CRM you need: compliance and connectivity"></div>
+        <div><div style="font-family:'Geist Mono',monospace; font-size:12px; color:#0D63F3; margin-bottom:14px;">05 · Differentiators</div><h3 style="font-size:27px; font-weight:700; color:#0B1536; margin:0 0 14px; letter-spacing:-0.02em;">Why us, not a generic CRM.</h3><p style="font-size:16.5px; line-height:1.7; color:#5C6680; margin:0;">Healthcare-specific fields, EHR/EMR interoperability, and HIPAA by default answer the “why not a generic CRM?” question head-on.</p></div>
+      </div>
+    </div>
+
+    <!-- row 6 (reverse) -->
+    <div style="max-width:1240px; margin:0 auto; padding:56px 64px 0;">
+      <div style="display:grid; grid-template-columns:1fr 1.5fr; gap:56px; align-items:center;">
+        <div style="order:2; border-radius:14px; overflow:hidden; box-shadow:0 30px 64px -30px rgba(13,30,68,0.3); border:1px solid #E6EAF2; background:#fff;"><div style="height:38px; display:flex; align-items:center; gap:7px; padding:0 16px; background:#F4F6FB; border-bottom:1px solid #E6EAF2;"><div style="width:10px;height:10px;border-radius:50%;background:#FF5F57;"></div><div style="width:10px;height:10px;border-radius:50%;background:#FEBC2E;"></div><div style="width:10px;height:10px;border-radius:50%;background:#28C840;"></div></div><img src="img/panel-cta.png" style="width:100%; display:block;" alt="Final call to action"></div>
+        <div style="order:1;"><div style="font-family:'Geist Mono',monospace; font-size:12px; color:#0D63F3; margin-bottom:14px;">06 · Conversion</div><h3 style="font-size:27px; font-weight:700; color:#0B1536; margin:0 0 14px; letter-spacing:-0.02em;">One repeated action.</h3><p style="font-size:16.5px; line-height:1.7; color:#5C6680; margin:0;">Every section ends on the same ask, book a demo. Sticking to one CTA keeps attention from leaking away.</p></div>
+      </div>
+    </div>
+
+    <!-- row 7 -->
+    <div style="max-width:1240px; margin:0 auto; padding:56px 64px 0;">
+      <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:56px; align-items:center;">
+        <div style="border-radius:14px; overflow:hidden; box-shadow:0 30px 64px -30px rgba(13,30,68,0.3); border:1px solid #E6EAF2; background:#fff;"><div style="height:38px; display:flex; align-items:center; gap:7px; padding:0 16px; background:#F4F6FB; border-bottom:1px solid #E6EAF2;"><div style="width:10px;height:10px;border-radius:50%;background:#FF5F57;"></div><div style="width:10px;height:10px;border-radius:50%;background:#FEBC2E;"></div><div style="width:10px;height:10px;border-radius:50%;background:#28C840;"></div></div><img src="img/panel-testimonials.png" style="width:100%; display:block;" alt="Customer testimonials"></div>
+        <div><div style="font-family:'Geist Mono',monospace; font-size:12px; color:#0D63F3; margin-bottom:14px;">07 · Social proof</div><h3 style="font-size:27px; font-weight:700; color:#0B1536; margin:0 0 14px; letter-spacing:-0.02em;">Let customers close it.</h3><p style="font-size:16.5px; line-height:1.7; color:#5C6680; margin:0;">Real, named voices from healthcare teams, VP, marketing, operations, make the claims above feel earned, not just asserted.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 09 · FEATURE HIGHLIGHTS ░░░ -->
+  <section data-screen-label="Feature Highlights" style="padding:118px 0; background:#F5F8FE;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px;">08 · Feature Highlights</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 54px; max-width:720px;">Each module, on its own terms.</h2>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:24px;">
+
+        <div style="border-radius:22px; overflow:hidden; box-shadow:0 24px 60px -34px rgba(13,30,68,0.32);"><img src="img/panel-intake.png" style="width:100%; display:block;" alt="Patient Intake Automation and Lead Capture"></div>
+
+        <div style="border-radius:22px; overflow:hidden; box-shadow:0 24px 60px -34px rgba(13,30,68,0.32);"><img src="img/panel-360.png" style="width:100%; display:block;" alt="360-Degree Patient View and EHR/EMR Integration"></div>
+
+        <div style="border-radius:22px; overflow:hidden; box-shadow:0 24px 60px -34px rgba(13,30,68,0.32);"><img src="img/panel-appt.png" style="width:100%; display:block;" alt="Appointment Booking Automation and Reminders"></div>
+
+        <div style="border-radius:22px; overflow:hidden; box-shadow:0 24px 60px -34px rgba(13,30,68,0.32);"><img src="img/panel-mobile.png" style="width:100%; display:block;" alt="Mobile CRM for Onsite Care"></div>
+
+        <div style="border-radius:22px; overflow:hidden; box-shadow:0 24px 60px -34px rgba(13,30,68,0.32);"><img src="img/panel-marketing.png" style="width:100%; display:block;" alt="HIPAA-Compliant Marketing Automation and Patient Engagement"></div>
+
+        <div style="border-radius:22px; overflow:hidden; box-shadow:0 24px 60px -34px rgba(13,30,68,0.32);"><img src="img/panel-reporting.png" style="width:100%; display:block;" alt="Healthcare Analytics and Drop-Off Dashboards"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 10 · MOBILE EXPERIENCE ░░░ -->
+  <section data-screen-label="Mobile Experience" style="padding:118px 0 130px; background:#0B1536; color:#fff; position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; background:radial-gradient(60% 50% at 18% 0%, rgba(13,99,243,0.34), transparent 60%);"></div>
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px; position:relative;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#6FA0FF; margin-bottom:22px;">09 · Mobile Experience</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#fff; margin:0 0 16px; max-width:680px;">Responsive, not reduced.</h2>
+      <p style="font-size:19px; line-height:1.65; color:#AEB9D4; margin:0 0 64px; max-width:600px; text-wrap:pretty;">Every section re-flows for small screens without losing the hierarchy, the imagery, or the single-CTA path.</p>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px; align-items:start;">
+        <div style="border-radius:30px; background:#05101F; padding:8px; box-shadow:0 40px 90px -30px rgba(0,0,0,0.7); border:1px solid rgba(255,255,255,0.12);"><div style="border-radius:24px; overflow:hidden; background:#fff;"><img src="img/mob-col1.jpg" style="width:100%; display:block;" alt="Responsive mobile page: hero, trust, and key features"></div></div>
+        <div style="border-radius:30px; background:#05101F; padding:8px; box-shadow:0 40px 90px -30px rgba(0,0,0,0.7); border:1px solid rgba(255,255,255,0.12);"><div style="border-radius:24px; overflow:hidden; background:#fff;"><img src="img/mob-col2.jpg" style="width:100%; display:block;" alt="Responsive mobile page: proven results, differentiators, and testimonials"></div></div>
+        <div style="border-radius:30px; background:#05101F; padding:8px; box-shadow:0 40px 90px -30px rgba(0,0,0,0.7); border:1px solid rgba(255,255,255,0.12);"><div style="border-radius:24px; overflow:hidden; background:#fff;"><img src="img/mob-col3.jpg" style="width:100%; display:block;" alt="Responsive mobile page: final CTA and footer"></div></div>
+      </div>
+      <div style="text-align:center; font-family:'Geist Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#6FA0FF; margin-top:30px;">The full responsive page, top to bottom</div>
+    </div>
+  </section>
+
+  <!-- ░░░ 11 · OUTCOMES ░░░ -->
+  <section data-screen-label="Outcomes" style="padding:118px 0;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px;">10 · Outcomes</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 16px; max-width:720px;">Designed for impact.</h2>
+      <p style="font-size:18px; line-height:1.65; color:#5C6680; margin:0 0 50px; max-width:640px; text-wrap:pretty;">This was a three-day exercise, so nothing here was shipped or measured. These are conceptual outcomes, shown to demonstrate the potential business impact the page is built to drive.</p>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
+        <div style="background:#EEF4FE; border:1px solid #CFE0FF; border-radius:18px; padding:42px 38px;"><div style="font-size:70px; line-height:1; font-weight:800; color:#0D63F3; letter-spacing:-0.04em; margin-bottom:16px;">5X</div><div style="font-size:19px; font-weight:700; color:#0B1536; margin-bottom:8px;">Conversion potential</div><p style="font-size:15px; line-height:1.6; color:#54678F; margin:0;">A focused, single-CTA funnel keeps people pointed at one thing, booking a demo.</p></div>
+        <div style="background:#EAF7F0; border:1px solid #C7E9D5; border-radius:18px; padding:42px 38px;"><div style="font-size:70px; line-height:1; font-weight:800; color:#1E9E63; letter-spacing:-0.04em; margin-bottom:16px;">20<span style="font-size:30px; font-weight:600;">min</span></div><div style="font-size:19px; font-weight:700; color:#0B1536; margin-bottom:8px;">Faster response</div><p style="font-size:15px; line-height:1.6; color:#4C7A60; margin:0;">Smart routing and automated intake shorten patient turnaround time.</p></div>
+        <div style="background:#F1EFFB; border:1px solid #DAD4F4; border-radius:18px; padding:42px 38px;"><div style="font-size:70px; line-height:1; font-weight:800; color:#6B4FD6; letter-spacing:-0.04em; margin-bottom:16px;">60<span style="font-size:30px; font-weight:600;">%</span></div><div style="font-size:19px; font-weight:700; color:#0B1536; margin-bottom:8px;">Process efficiency</div><p style="font-size:15px; line-height:1.6; color:#5E519A; margin:0;">Workflow automation lifts call-centre and operational efficiency.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 12 · REFLECTION ░░░ -->
+  <section data-screen-label="Reflection" style="padding:118px 0; background:#F5F8FE;">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px;">11 · Reflection</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 54px; max-width:560px;">Looking back.</h2>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:18px;">
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:18px; padding:36px;"><div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#1E9E63; margin-bottom:16px;">What worked</div><p style="font-size:16px; line-height:1.7; color:#3D465F; margin:0;">Opening on a real outcome and backing it with analyst proof made a big product feel ambitious and believable at once. Sticking to one CTA kept the whole page pointed at a single decision.</p></div>
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:18px; padding:36px;"><div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#E0533B; margin-bottom:16px;">Challenges</div><p style="font-size:16px; line-height:1.7; color:#3D465F; margin:0;">The tricky part was showing six overlapping modules without burying the reader. Colour-coding and a steady card rhythm did more for clarity than dense paragraphs ever could.</p></div>
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:18px; padding:36px;"><div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#0D63F3; margin-bottom:16px;">What I'd improve</div><p style="font-size:16px; line-height:1.7; color:#3D465F; margin:0;">Given more time, I'd test the outcome-led hero against a calmer, more empathetic one, and design the demo form itself so the funnel actually closes.</p></div>
+        <div style="background:#fff; border:1px solid #E6EAF2; border-radius:18px; padding:36px;"><div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6B4FD6; margin-bottom:16px;">What I learned</div><p style="font-size:16px; line-height:1.7; color:#3D465F; margin:0;">In a cautious, regulated space, a concrete outcome backed by outside proof earns far more trust than a soft, feature-first opener.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 13 · FINAL SHOWCASE ░░░ -->
+  <section data-screen-label="Final Showcase" style="padding:118px 0 130px; position:relative; overflow:hidden; background:linear-gradient(180deg,#FFFFFF,#F2F7FF);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 64px; position:relative;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#0D63F3; margin-bottom:22px; text-align:center;">12 · Final Showcase</div>
+      <h2 style="font-size:52px; line-height:1.02; letter-spacing:-0.03em; font-weight:800; color:#0B1536; margin:0 0 64px; text-align:center;">Desktop &amp; mobile, together.</h2>
+      <div style="position:relative; max-width:1040px; margin:0 auto;">
+        <div style="border-radius:14px; overflow:hidden; box-shadow:0 50px 110px -40px rgba(13,30,68,0.4); border:1px solid #E6EAF2; background:#fff;"><div style="height:40px; display:flex; align-items:center; gap:8px; padding:0 18px; background:#F4F6FB; border-bottom:1px solid #E6EAF2;"><div style="width:11px;height:11px;border-radius:50%;background:#FF5F57;"></div><div style="width:11px;height:11px;border-radius:50%;background:#FEBC2E;"></div><div style="width:11px;height:11px;border-radius:50%;background:#28C840;"></div><div style="margin-left:16px; flex:1; max-width:400px; height:24px; border-radius:7px; background:#fff; border:1px solid #E6EAF2; display:flex; align-items:center; padding:0 12px; font-family:'Geist Mono',monospace; font-size:12px; color:#8A94AD;">leadsquared.com/healthcare-crm</div></div><img src="img/v2-hero.jpg" style="width:100%; display:block;" alt="Final desktop showcase"></div>
+        <div style="position:absolute; right:-26px; bottom:-48px; width:184px; border-radius:30px; background:#05101F; padding:8px; box-shadow:0 40px 80px -24px rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.12);"><div style="border-radius:24px; overflow:hidden; background:#fff; position:relative;"><div style="position:absolute; top:9px; left:50%; transform:translateX(-50%); width:48px; height:5px; background:#05101F; border-radius:3px; z-index:2;"></div><img src="img/mob-hero.png" style="width:100%; display:block;" alt="Final mobile showcase"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ 14 · THANK YOU ░░░ -->
+  <section data-screen-label="Thank You" style="padding:140px 0 120px; background:#0B1536; color:#fff; text-align:center; position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; background:radial-gradient(60% 70% at 50% 0%, rgba(13,99,243,0.34), transparent 62%);"></div>
+    <div style="max-width:860px; margin:0 auto; padding:0 64px; position:relative;">
+      <div style="font-family:'Geist Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#6FA0FF; margin-bottom:30px;">Thank you</div>
+      <h2 style="font-size:90px; line-height:0.96; letter-spacing:-0.04em; font-weight:800; margin:0 0 56px;">Let's build something<br>great together.</h2>
+      <div style="font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#3E4D77; margin-top:8px;">LeadSquared Healthcare CRM · UI/UX Case Study · 2024</div>
+    </div>
+  </section>
+
+</div>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;scrollMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    if (this.props.scrollMotion === false) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    clearTimeout(this._t);
+    this._t = setTimeout(() => this.arm(), 280);
+  }
+  componentWillUnmount() { clearTimeout(this._t); }
+
+  arm() {
+    const root = document.querySelector('[data-ls-root]');
+    if (!root || root.hasAttribute('data-ls-armed')) return;
+    root.setAttribute('data-ls-armed', '1');
+    const SHOWN = 'data-ls-shown';
+
+    // skip the sticky nav and the cover (both have their own load animation)
+    const sections = Array.from(root.querySelectorAll(':scope > section')).slice(1);
+    const groups = [];
+    sections.forEach(sec => {
+      Array.from(sec.children).forEach(child => {
+        const inner = child.children.length === 1 ? child.children[0] : child;
+        Array.from(inner.children).forEach(node => {
+          const cs = getComputedStyle(node);
+          const row = (cs.display === 'grid' || (cs.display === 'flex' && cs.flexWrap !== 'wrap' && node.children.length < 9)) && node.children.length > 1;
+          groups.push(row ? Array.from(node.children) : [node]);
+        });
+      });
+    });
+
+    const show = el => {
+      if (el.hasAttribute(SHOWN)) return;
+      el.setAttribute(SHOWN, '1');
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      setTimeout(() => { el.style.willChange = ''; }, 800);
+    };
+
+    const pending = new Set();
+    const delays = new WeakMap();
+    groups.forEach(g => g.forEach((el, i) => {
+      if (el.hasAttribute(SHOWN)) return;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity .7s cubic-bezier(0,0,.2,1), transform .7s cubic-bezier(0,0,.2,1)';
+      el.style.willChange = 'opacity, transform';
+      delays.set(el, Math.min(i * 65, 420));
+      pending.add(el);
+    }));
+
+    let io = null, iv = 0, done = false;
+    const teardown = () => {
+      if (done) return;
+      done = true;
+      if (io) io.disconnect();
+      clearInterval(iv);
+      window.removeEventListener('scroll', sweep, true);
+    };
+    const fire = el => {
+      if (!pending.has(el)) return;
+      pending.delete(el);
+      if (io) io.unobserve(el);
+      setTimeout(() => show(el), delays.get(el) || 0);
+    };
+    function sweep() {
+      const h = window.innerHeight || 800;
+      Array.from(pending).forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top < h * 1.05 && r.bottom > -h) fire(el);
+      });
+      if (!pending.size) teardown();
+    }
+
+    io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) fire(e.target); }); },
+      { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+    pending.forEach(el => io.observe(el));
+    window.addEventListener('scroll', sweep, true);
+    window.addEventListener('resize', sweep);
+    // a document hidden at arm time gets no observer callbacks, no scroll events and
+    // throttled intervals — resolve everything the instant it becomes visible
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) sweep(); });
+    window.addEventListener('load', sweep);
+    iv = setInterval(sweep, 400);
+    sweep();
+
+    // unconditional floor: nothing this system touched may stay invisible
+    setTimeout(() => { teardown(); Array.from(pending).forEach(show); pending.clear(); }, 8000);
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

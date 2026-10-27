@@ -1,0 +1,651 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="1834" viewBox="0 0 1366 1834" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpiMDU0YWNjNC0wYzgyLTQ4MDQtYjNhNi1jZWQ4MGEyMzQ2ZjIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaA8TdWM2vQr/YlYgASy+B8AAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5NTA4YjAxMy1kMTI2LTRhM2UtYjFhYy0wMDI3NmY0ZDMyZjJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNocHgEWXo9dpccfnW0tSMS+AAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggcd8Drnsg5wIn+yWlOmp00pFnSUz5yQiSUnlv+riAfhKkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaKchNwdVD2q48qTYnkFBXn4AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDivSSuiy4dYH6aNhAJ96gPb0jLfTZ044NDhhkimxtXE2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjFZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmIwNTRhY2M0LTBjODItNDgwNC1iM2E2LWNlZDgwYTIzNDZmMi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjdkYTBlYzYxLTdiZmUtNGY1ZC1iODhkLTE2Mzk3Njc4ZjIzM3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBx3wOueyDnAif7JaU6anTSkWdJTPnJCJJSeW/6uIB+EqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggpKJl6wj95fWbNtyyaJejHzOPt5yEViVnOT7jhPZSC2SiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg5FVeAi+PQmV9P2yOXt7FJqfJQVRJVuKuflIVg+FBkIB0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQMYXdd8RqTRL9eip9bQpZeYNi6FB+23xh+TZ3sli6Jk+ePq+UYJoB0low94ErRxOvL1wyvMCf3ZsWAbvYQUIaSQ=</c2pa:manifest></metadata>
+  <defs>
+    <filter id="Rectangle_26" x="304" y="147" width="758" height="183" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+      <feFlood flood-opacity="0.102"></feFlood>
+      <feComposite operator="in" in2="blur"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_26-2" x="304" y="332" width="758" height="183" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3" result="blur-2"></feGaussianBlur>
+      <feFlood flood-opacity="0.102"></feFlood>
+      <feComposite operator="in" in2="blur-2"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 150 34">
+      <image width="150" height="34"></image>
+    </pattern>
+    <filter id="Rectangle_26-3" x="304" y="517" width="758" height="183" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3" result="blur-3"></feGaussianBlur>
+      <feFlood flood-opacity="0.102"></feFlood>
+      <feComposite operator="in" in2="blur-3"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <pattern id="pattern-2" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 132 32">
+      <image width="132" height="32"></image>
+    </pattern>
+    <filter id="Rectangle_26-4" x="304" y="702" width="758" height="183" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3" result="blur-4"></feGaussianBlur>
+      <feFlood flood-opacity="0.102"></feFlood>
+      <feComposite operator="in" in2="blur-4"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <pattern id="pattern-3" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 227 97">
+      <image width="227" height="97"></image>
+    </pattern>
+    <filter id="Rectangle_26-5" x="304" y="887" width="758" height="183" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3" result="blur-5"></feGaussianBlur>
+      <feFlood flood-opacity="0.102"></feFlood>
+      <feComposite operator="in" in2="blur-5"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <pattern id="pattern-4" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 120 38">
+      <image width="120" height="38"></image>
+    </pattern>
+    <filter id="Rectangle_26-6" x="304" y="1072" width="758" height="183" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3" result="blur-6"></feGaussianBlur>
+      <feFlood flood-opacity="0.102"></feFlood>
+      <feComposite operator="in" in2="blur-6"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <pattern id="pattern-5" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 85 48">
+      <image width="85" height="48"></image>
+    </pattern>
+    <filter id="Rectangle_26-7" x="304" y="1257" width="758" height="183" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3" result="blur-7"></feGaussianBlur>
+      <feFlood flood-opacity="0.102"></feFlood>
+      <feComposite operator="in" in2="blur-7"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <pattern id="pattern-6" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 116 40">
+      <image width="116" height="40"></image>
+    </pattern>
+    <filter id="Rectangle_26-8" x="304" y="1442" width="758" height="183" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3" result="blur-8"></feGaussianBlur>
+      <feFlood flood-opacity="0.102"></feFlood>
+      <feComposite operator="in" in2="blur-8"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <pattern id="pattern-7" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 120 38">
+      <image width="120" height="38"></image>
+    </pattern>
+    <filter id="Rectangle_26-9" x="304" y="1627" width="758" height="183" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3" result="blur-9"></feGaussianBlur>
+      <feFlood flood-opacity="0.102"></feFlood>
+      <feComposite operator="in" in2="blur-9"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <pattern id="pattern-8" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 166 81">
+      <image width="166" height="81"></image>
+    </pattern>
+    <clipPath id="clip-Web_1366_48">
+      <rect width="1366" height="1834"></rect>
+    </clipPath>
+  </defs>
+  <g id="Web_1366_48" data-name="Web 1366 – 48" clip-path="url(#clip-Web_1366_48)">
+    <rect width="1366" height="1834" fill="#fff"></rect>
+    <g id="LOGO" transform="translate(139.889 5.077)">
+      <g id="Title" transform="translate(45.111 42.923)">
+        <text id="insurance" transform="translate(-3 22.774)" fill="#414042" font-size="10" font-family="BebasNeue-Regular, Bebas Neue" letter-spacing="0.6em"><tspan x="0" y="0">insurance</tspan></text>
+        <text id="Clear_Cover" data-name="Clear Cover" transform="translate(-3 7)" fill="#3b3a3c" font-size="14" font-family="Montserrat-ExtraBold, Montserrat" font-weight="800"><tspan x="0" y="0">Clear </tspan><tspan y="0" font-family="Montserrat-Light, Montserrat" font-weight="300">Cover</tspan></text>
+      </g>
+      <g id="Ion" transform="translate(-0.889 36.923)">
+        <path id="_Path_" data-name="&lt;Path&gt;" d="M601.717,546.931a16.387,16.387,0,1,1,12.321-27.192,3.7,3.7,0,0,1,.851,3.179A3.758,3.758,0,0,1,608.4,524.7a8.879,8.879,0,1,0-.446,12.168,1.136,1.136,0,1,0-1.581-1.633,6.6,6.6,0,1,1,1.349-7.448A1.332,1.332,0,0,1,605.3,528.9a3.944,3.944,0,1,0-.806,4.445,3.8,3.8,0,1,1,5.328,5.418,11.445,11.445,0,0,1-8.572,3.316,11.541,11.541,0,1,1,9.149-19.136,1.071,1.071,0,0,0,1.285.237,1.1,1.1,0,0,0,.592-.776,1.043,1.043,0,0,0-.24-.906,13.722,13.722,0,1,0,1.751,15.588,1.331,1.331,0,1,1,2.339,1.273A16.387,16.387,0,0,1,601.717,546.931Z" transform="translate(-585.33 -514.156)" fill="#34a853" fill-rule="evenodd"></path>
+        <path id="_Path_2" data-name="&lt;Path&gt;" d="M887.576,687.771a1.315,1.315,0,0,1-.217-.018,1.332,1.332,0,0,1-1.1-1.529l.237-1.448a1.331,1.331,0,1,1,2.628.43l-.237,1.447A1.332,1.332,0,0,1,887.576,687.771Z" transform="translate(-856.564 -666.942)" fill="#34a853" fill-rule="evenodd"></path>
+      </g>
+    </g>
+    <line id="Line_1" data-name="Line 1" x2="1366" transform="translate(0.5 80.5)" fill="none" stroke="#aaa" stroke-width="0.2"></line>
+    <g id="Get_quote_" data-name="Get quote " transform="translate(516)">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="102" height="35" transform="translate(608 46)" fill="#34a853"></rect>
+      <text id="Get_quote" data-name="Get quote" transform="translate(622 69)" fill="#fff" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Get quote</tspan></text>
+    </g>
+    <g id="Coverage_details_of_employees" data-name="Coverage &amp; details of employees" transform="translate(-457 -330)">
+      <g id="Reliance" transform="translate(-15630 -655)">
+        <g transform="matrix(1, 0, 0, 1, 16087, 985)" filter="url(#Rectangle_26)">
+          <rect id="Rectangle_26-10" data-name="Rectangle 26" width="740" height="165" rx="5" transform="translate(313 156)" fill="#fff"></rect>
+        </g>
+        <g id="Care" transform="translate(-56.711 -19)">
+          <image id="Reliance-2" data-name="Reliance" width="63.137" height="23" transform="translate(16469.711 1175)"></image>
+          <text id="Reliance_Workmen_Compensation_Bronze" data-name="Reliance Workmen Compensation Bronze" transform="translate(16583.711 1191)" fill="#3b3a3c" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Reliance Workmen Compensation</tspan><tspan x="0" y="15">Bronze</tspan></text>
+          <g id="best_quotes" data-name="best quotes" transform="translate(16470.711 1129)">
+            <rect id="Rectangle_1-2" data-name="Rectangle 1" width="121" height="35" rx="5" transform="translate(593 46)" fill="#34a853"></rect>
+            <text id="best_quotes-2" data-name="best quotes" transform="translate(613 69)" fill="#fff" font-size="15" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Best Quotes</tspan></text>
+          </g>
+        </g>
+        <g id="Key_Features:_" data-name="Key Features: " transform="translate(0 -5)">
+          <g id="Accidental_Death" data-name="Accidental Death" transform="translate(0 1)">
+            <g id="Succes_" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Accidental_Death-2" data-name="Accidental Death" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Accidental Death</tspan></text>
+          </g>
+          <g id="Room_Rent" data-name="Room Rent" transform="translate(150 1)">
+            <g id="Succes_2" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-2" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-2" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-2" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-2" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Total_Disability" data-name="Permanent Total Disability" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Total Disability</tspan></text>
+          </g>
+          <text id="View_All_Features" data-name="View All Features" transform="translate(17014 1255)" fill="#34a853" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">View All Features</tspan></text>
+          <text id="Key_Features:_2" data-name="Key Features: " transform="translate(16413 1221)" fill="#f8981d" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Key Features: </tspan></text>
+          <g id="Permanent_Total_Disability_PTD_" data-name="Permanent Total Disability(PTD)" transform="translate(346.999 1)">
+            <g id="Succes_3" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-3" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-3" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-3" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-3" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Partial_Disability_PPD_" data-name="Permanent Partial Disability(PPD)" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Partial Disability(PPD)</tspan></text>
+          </g>
+          <g id="_2_more" data-name="2 more" transform="translate(301 51)">
+            <g id="Succes_4" data-name="Succes " transform="translate(16360.642 1165.943)">
+              <path id="Path_303-4" data-name="Path 303" d="M81.523,75.61a6.082,6.082,0,1,1-6.082-6.082,6.082,6.082,0,0,1,6.082,6.082Zm0,0" transform="translate(-1 -0.471)" fill="#34a853"></path>
+              <path id="Icon_feather-chevron-down" data-name="Icon feather-chevron-down" d="M9,13.5l3.732,3.732L16.465,13.5" transform="translate(61.887 60.557)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+            </g>
+            <text id="_2_More_Plans" data-name="2 More Plans" transform="translate(16445 1245)" fill="#34a853" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">2 More Plans</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="Universal" transform="translate(-15630 -470)">
+        <g transform="matrix(1, 0, 0, 1, 16087, 800)" filter="url(#Rectangle_26-2)">
+          <rect id="Rectangle_26-11" data-name="Rectangle 26" width="740" height="165" rx="5" transform="translate(313 341)" fill="#fff"></rect>
+        </g>
+        <g id="Universal-2" data-name="Universal" transform="translate(-56.711 -19)">
+          <rect id="universal-sompo-general-insurance-company-ltd" width="101" height="23" transform="translate(16469.711 1175)" fill="url(#pattern)"></rect>
+          <text id="UniversalSompo_Workmen_Compensation_Bronze" data-name="UniversalSompo Workmen Compensation Bronze" transform="translate(16583.711 1191)" fill="#3b3a3c" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">UniversalSompo Workmen Compensation</tspan><tspan x="0" y="15">Bronze</tspan></text>
+          <g id="best_quotes-3" data-name="best quotes" transform="translate(16470.711 1129)">
+            <rect id="Rectangle_1-3" data-name="Rectangle 1" width="121" height="35" rx="5" transform="translate(593 46)" fill="#34a853"></rect>
+            <text id="best_quotes-4" data-name="best quotes" transform="translate(613 69)" fill="#fff" font-size="15" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Best Quotes</tspan></text>
+          </g>
+        </g>
+        <g id="Key_Features:_3" data-name="Key Features: " transform="translate(0 -5)">
+          <g id="Accidental_Death-3" data-name="Accidental Death" transform="translate(0 1)">
+            <g id="Succes_5" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-4" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-5" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-4" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-4" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Accidental_Death-4" data-name="Accidental Death" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Accidental Death</tspan></text>
+          </g>
+          <g id="Room_Rent-2" data-name="Room Rent" transform="translate(150 1)">
+            <g id="Succes_6" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-5" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-6" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-5" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-5" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Total_Disability-2" data-name="Permanent Total Disability" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Total Disability</tspan></text>
+          </g>
+          <text id="View_All_Features-2" data-name="View All Features" transform="translate(17014 1255)" fill="#34a853" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">View All Features</tspan></text>
+          <text id="Key_Features:_4" data-name="Key Features: " transform="translate(16413 1221)" fill="#f8981d" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Key Features: </tspan></text>
+          <g id="Permanent_Total_Disability_PTD_2" data-name="Permanent Total Disability(PTD)" transform="translate(346.999 1)">
+            <g id="Succes_7" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-6" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-7" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-6" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-6" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Partial_Disability_PPD_2" data-name="Permanent Partial Disability(PPD)" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Partial Disability(PPD)</tspan></text>
+          </g>
+          <g id="_2_more-2" data-name="2 more" transform="translate(301 51)">
+            <g id="Succes_8" data-name="Succes " transform="translate(16360.642 1165.943)">
+              <path id="Path_303-8" data-name="Path 303" d="M81.523,75.61a6.082,6.082,0,1,1-6.082-6.082,6.082,6.082,0,0,1,6.082,6.082Zm0,0" transform="translate(-1 -0.471)" fill="#34a853"></path>
+              <path id="Icon_feather-chevron-down-2" data-name="Icon feather-chevron-down" d="M9,13.5l3.732,3.732L16.465,13.5" transform="translate(61.887 60.557)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+            </g>
+            <text id="_2_More_Plans-2" data-name="2 More Plans" transform="translate(16445 1245)" fill="#34a853" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">2 More Plans</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="ICICI" transform="translate(-15630 -285)">
+        <g transform="matrix(1, 0, 0, 1, 16087, 615)" filter="url(#Rectangle_26-3)">
+          <rect id="Rectangle_26-12" data-name="Rectangle 26" width="740" height="165" rx="5" transform="translate(313 526)" fill="#fff"></rect>
+        </g>
+        <g id="Universal-3" data-name="Universal" transform="translate(-56.711 -19)">
+          <rect id="icici-2" data-name="icici" width="103" height="25" transform="translate(16469.711 1173)" fill="url(#pattern-2)"></rect>
+          <text id="Workmen_Compensation_Bronze" data-name="Workmen Compensation Bronze" transform="translate(16583.711 1189)" fill="#3b3a3c" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Workmen Compensation</tspan><tspan x="0" y="15">Bronze</tspan></text>
+          <g id="best_quotes-5" data-name="best quotes" transform="translate(16470.711 1129)">
+            <rect id="Rectangle_1-4" data-name="Rectangle 1" width="121" height="35" rx="5" transform="translate(593 46)" fill="#34a853"></rect>
+            <text id="best_quotes-6" data-name="best quotes" transform="translate(613 69)" fill="#fff" font-size="15" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Best Quotes</tspan></text>
+          </g>
+        </g>
+        <g id="Key_Features:_5" data-name="Key Features: " transform="translate(0 -5)">
+          <g id="Accidental_Death-5" data-name="Accidental Death" transform="translate(0 1)">
+            <g id="Succes_9" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-7" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-9" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-7" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-7" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Accidental_Death-6" data-name="Accidental Death" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Accidental Death</tspan></text>
+          </g>
+          <g id="Room_Rent-3" data-name="Room Rent" transform="translate(150 1)">
+            <g id="Succes_10" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-8" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-10" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-8" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-8" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Total_Disability-3" data-name="Permanent Total Disability" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Total Disability</tspan></text>
+          </g>
+          <text id="View_All_Features-3" data-name="View All Features" transform="translate(17014 1255)" fill="#34a853" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">View All Features</tspan></text>
+          <text id="Key_Features:_6" data-name="Key Features: " transform="translate(16413 1221)" fill="#f8981d" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Key Features: </tspan></text>
+          <g id="Permanent_Total_Disability_PTD_3" data-name="Permanent Total Disability(PTD)" transform="translate(346.999 1)">
+            <g id="Succes_11" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-9" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-11" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-9" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-9" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Partial_Disability_PPD_3" data-name="Permanent Partial Disability(PPD)" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Partial Disability(PPD)</tspan></text>
+          </g>
+          <g id="_2_more-3" data-name="2 more" transform="translate(301 51)">
+            <g id="Succes_12" data-name="Succes " transform="translate(16360.642 1165.943)">
+              <path id="Path_303-12" data-name="Path 303" d="M81.523,75.61a6.082,6.082,0,1,1-6.082-6.082,6.082,6.082,0,0,1,6.082,6.082Zm0,0" transform="translate(-1 -0.471)" fill="#34a853"></path>
+              <path id="Icon_feather-chevron-down-3" data-name="Icon feather-chevron-down" d="M9,13.5l3.732,3.732L16.465,13.5" transform="translate(61.887 60.557)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+            </g>
+            <text id="_2_More_Plans-3" data-name="2 More Plans" transform="translate(16445 1245)" fill="#34a853" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">2 More Plans</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="Bajaj" transform="translate(-15630 -100)">
+        <g transform="matrix(1, 0, 0, 1, 16087, 430)" filter="url(#Rectangle_26-4)">
+          <rect id="Rectangle_26-13" data-name="Rectangle 26" width="740" height="165" rx="5" transform="translate(313 711)" fill="#fff"></rect>
+        </g>
+        <g id="Universal-4" data-name="Universal" transform="translate(-56.711 -19)">
+          <text id="Bajaj_Workmen_Compensation_Bronze" data-name="Bajaj Workmen Compensation Bronze" transform="translate(16583.711 1189)" fill="#3b3a3c" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Bajaj Workmen Compensation</tspan><tspan x="0" y="15">Bronze</tspan></text>
+          <g id="best_quotes-7" data-name="best quotes" transform="translate(16470.711 1129)">
+            <rect id="Rectangle_1-5" data-name="Rectangle 1" width="121" height="35" rx="5" transform="translate(593 46)" fill="#34a853"></rect>
+            <text id="best_quotes-8" data-name="best quotes" transform="translate(613 69)" fill="#fff" font-size="15" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Best Quotes</tspan></text>
+          </g>
+          <rect id="BajajAllianz" width="66" height="28" transform="translate(16469.711 1173)" fill="url(#pattern-3)"></rect>
+        </g>
+        <g id="Key_Features:_7" data-name="Key Features: " transform="translate(0 -5)">
+          <g id="Accidental_Death-7" data-name="Accidental Death" transform="translate(0 1)">
+            <g id="Succes_13" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-10" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-13" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-10" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-10" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Accidental_Death-8" data-name="Accidental Death" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Accidental Death</tspan></text>
+          </g>
+          <g id="Room_Rent-4" data-name="Room Rent" transform="translate(150 1)">
+            <g id="Succes_14" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-11" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-14" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-11" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-11" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Total_Disability-4" data-name="Permanent Total Disability" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Total Disability</tspan></text>
+          </g>
+          <text id="View_All_Features-4" data-name="View All Features" transform="translate(17014 1255)" fill="#34a853" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">View All Features</tspan></text>
+          <text id="Key_Features:_8" data-name="Key Features: " transform="translate(16413 1221)" fill="#f8981d" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Key Features: </tspan></text>
+          <g id="Permanent_Total_Disability_PTD_4" data-name="Permanent Total Disability(PTD)" transform="translate(346.999 1)">
+            <g id="Succes_15" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-12" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-15" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-12" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-12" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Partial_Disability_PPD_4" data-name="Permanent Partial Disability(PPD)" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Partial Disability(PPD)</tspan></text>
+          </g>
+          <g id="_2_more-4" data-name="2 more" transform="translate(301 51)">
+            <g id="Succes_16" data-name="Succes " transform="translate(16360.642 1165.943)">
+              <path id="Path_303-16" data-name="Path 303" d="M81.523,75.61a6.082,6.082,0,1,1-6.082-6.082,6.082,6.082,0,0,1,6.082,6.082Zm0,0" transform="translate(-1 -0.471)" fill="#34a853"></path>
+              <path id="Icon_feather-chevron-down-4" data-name="Icon feather-chevron-down" d="M9,13.5l3.732,3.732L16.465,13.5" transform="translate(61.887 60.557)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+            </g>
+            <text id="_2_More_Plans-4" data-name="2 More Plans" transform="translate(16445 1245)" fill="#34a853" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">2 More Plans</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="Future" transform="translate(-15630 85)">
+        <g transform="matrix(1, 0, 0, 1, 16087, 245)" filter="url(#Rectangle_26-5)">
+          <rect id="Rectangle_26-14" data-name="Rectangle 26" width="740" height="165" rx="5" transform="translate(313 896)" fill="#fff"></rect>
+        </g>
+        <g id="Universal-5" data-name="Universal" transform="translate(-56.711 -19)">
+          <rect id="future-generali" width="86" height="27" transform="translate(16469.711 1173)" fill="url(#pattern-4)"></rect>
+          <text id="Future_Generali_Workmen_Compensation_Bronze" data-name="Future Generali Workmen Compensation Bronze" transform="translate(16583.711 1189)" fill="#3b3a3c" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Future Generali Workmen Compensation</tspan><tspan x="0" y="15">Bronze</tspan></text>
+          <g id="best_quotes-9" data-name="best quotes" transform="translate(16470.711 1129)">
+            <rect id="Rectangle_1-6" data-name="Rectangle 1" width="121" height="35" rx="5" transform="translate(593 46)" fill="#34a853"></rect>
+            <text id="best_quotes-10" data-name="best quotes" transform="translate(613 69)" fill="#fff" font-size="15" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Best Quotes</tspan></text>
+          </g>
+        </g>
+        <g id="Key_Features:_9" data-name="Key Features: " transform="translate(0 -5)">
+          <g id="Accidental_Death-9" data-name="Accidental Death" transform="translate(0 1)">
+            <g id="Succes_17" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-13" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-17" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-13" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-13" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Accidental_Death-10" data-name="Accidental Death" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Accidental Death</tspan></text>
+          </g>
+          <g id="Room_Rent-5" data-name="Room Rent" transform="translate(150 1)">
+            <g id="Succes_18" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-14" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-18" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-14" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-14" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Total_Disability-5" data-name="Permanent Total Disability" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Total Disability</tspan></text>
+          </g>
+          <text id="View_All_Features-5" data-name="View All Features" transform="translate(17014 1255)" fill="#34a853" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">View All Features</tspan></text>
+          <text id="Key_Features:_10" data-name="Key Features: " transform="translate(16413 1221)" fill="#f8981d" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Key Features: </tspan></text>
+          <g id="Permanent_Total_Disability_PTD_5" data-name="Permanent Total Disability(PTD)" transform="translate(346.999 1)">
+            <g id="Succes_19" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-15" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-19" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-15" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-15" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Partial_Disability_PPD_5" data-name="Permanent Partial Disability(PPD)" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Partial Disability(PPD)</tspan></text>
+          </g>
+          <g id="_2_more-5" data-name="2 more" transform="translate(301 51)">
+            <g id="Succes_20" data-name="Succes " transform="translate(16360.642 1165.943)">
+              <path id="Path_303-20" data-name="Path 303" d="M81.523,75.61a6.082,6.082,0,1,1-6.082-6.082,6.082,6.082,0,0,1,6.082,6.082Zm0,0" transform="translate(-1 -0.471)" fill="#34a853"></path>
+              <path id="Icon_feather-chevron-down-5" data-name="Icon feather-chevron-down" d="M9,13.5l3.732,3.732L16.465,13.5" transform="translate(61.887 60.557)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+            </g>
+            <text id="_2_More_Plans-5" data-name="2 More Plans" transform="translate(16445 1245)" fill="#34a853" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">2 More Plans</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="Shiriram" transform="translate(-15630 270)">
+        <g transform="matrix(1, 0, 0, 1, 16087, 60)" filter="url(#Rectangle_26-6)">
+          <rect id="Rectangle_26-15" data-name="Rectangle 26" width="740" height="165" rx="5" transform="translate(313 1081)" fill="#fff"></rect>
+        </g>
+        <g id="Universal-6" data-name="Universal" transform="translate(-56.711 -19)">
+          <text id="Shriram_Workmen_Compensation_Bronze" data-name="Shriram Workmen Compensation Bronze" transform="translate(16583.711 1189)" fill="#3b3a3c" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Shriram Workmen Compensation</tspan><tspan x="0" y="15">Bronze</tspan></text>
+          <g id="best_quotes-11" data-name="best quotes" transform="translate(16470.711 1129)">
+            <rect id="Rectangle_1-7" data-name="Rectangle 1" width="121" height="35" rx="5" transform="translate(593 46)" fill="#34a853"></rect>
+            <text id="best_quotes-12" data-name="best quotes" transform="translate(613 69)" fill="#fff" font-size="15" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Best Quotes</tspan></text>
+          </g>
+          <rect id="shriram" width="48" height="27" transform="translate(16470.711 1173)" fill="url(#pattern-5)"></rect>
+        </g>
+        <g id="Key_Features:_11" data-name="Key Features: " transform="translate(0 -5)">
+          <g id="Accidental_Death-11" data-name="Accidental Death" transform="translate(0 1)">
+            <g id="Succes_21" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-16" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-21" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-16" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-16" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Accidental_Death-12" data-name="Accidental Death" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Accidental Death</tspan></text>
+          </g>
+          <g id="Room_Rent-6" data-name="Room Rent" transform="translate(150 1)">
+            <g id="Succes_22" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-17" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-22" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-17" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-17" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Total_Disability-6" data-name="Permanent Total Disability" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Total Disability</tspan></text>
+          </g>
+          <text id="View_All_Features-6" data-name="View All Features" transform="translate(17014 1255)" fill="#34a853" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">View All Features</tspan></text>
+          <text id="Key_Features:_12" data-name="Key Features: " transform="translate(16413 1221)" fill="#f8981d" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Key Features: </tspan></text>
+          <g id="Permanent_Total_Disability_PTD_6" data-name="Permanent Total Disability(PTD)" transform="translate(346.999 1)">
+            <g id="Succes_23" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-18" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-23" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-18" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-18" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Partial_Disability_PPD_6" data-name="Permanent Partial Disability(PPD)" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Partial Disability(PPD)</tspan></text>
+          </g>
+          <g id="_2_more-6" data-name="2 more" transform="translate(301 51)">
+            <g id="Succes_24" data-name="Succes " transform="translate(16360.642 1165.943)">
+              <path id="Path_303-24" data-name="Path 303" d="M81.523,75.61a6.082,6.082,0,1,1-6.082-6.082,6.082,6.082,0,0,1,6.082,6.082Zm0,0" transform="translate(-1 -0.471)" fill="#34a853"></path>
+              <path id="Icon_feather-chevron-down-6" data-name="Icon feather-chevron-down" d="M9,13.5l3.732,3.732L16.465,13.5" transform="translate(61.887 60.557)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+            </g>
+            <text id="_2_More_Plans-6" data-name="2 More Plans" transform="translate(16445 1245)" fill="#34a853" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">2 More Plans</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="Raheja" transform="translate(-15630 455)">
+        <g transform="matrix(1, 0, 0, 1, 16087, -125)" filter="url(#Rectangle_26-7)">
+          <rect id="Rectangle_26-16" data-name="Rectangle 26" width="740" height="165" rx="5" transform="translate(313 1266)" fill="#fff"></rect>
+        </g>
+        <g id="Universal-7" data-name="Universal" transform="translate(-56.711 -19)">
+          <text id="Raheja_Workmen_Compensation_Bronze" data-name="Raheja Workmen Compensation Bronze" transform="translate(16583.711 1189)" fill="#3b3a3c" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Raheja Workmen Compensation</tspan><tspan x="0" y="15">Bronze</tspan></text>
+          <g id="best_quotes-13" data-name="best quotes" transform="translate(16470.711 1129)">
+            <rect id="Rectangle_1-8" data-name="Rectangle 1" width="121" height="35" rx="5" transform="translate(593 46)" fill="#34a853"></rect>
+            <text id="best_quotes-14" data-name="best quotes" transform="translate(613 69)" fill="#fff" font-size="15" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Best Quotes</tspan></text>
+          </g>
+          <rect id="rahejaqbe" width="78" height="27" transform="translate(16470.711 1173)" fill="url(#pattern-6)"></rect>
+        </g>
+        <g id="Key_Features:_13" data-name="Key Features: " transform="translate(0 -5)">
+          <g id="Accidental_Death-13" data-name="Accidental Death" transform="translate(0 1)">
+            <g id="Succes_25" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-19" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-25" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-19" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-19" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Accidental_Death-14" data-name="Accidental Death" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Accidental Death</tspan></text>
+          </g>
+          <g id="Room_Rent-7" data-name="Room Rent" transform="translate(150 1)">
+            <g id="Succes_26" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-20" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-26" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-20" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-20" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Total_Disability-7" data-name="Permanent Total Disability" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Total Disability</tspan></text>
+          </g>
+          <text id="View_All_Features-7" data-name="View All Features" transform="translate(17014 1255)" fill="#34a853" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">View All Features</tspan></text>
+          <text id="Key_Features:_14" data-name="Key Features: " transform="translate(16413 1221)" fill="#f8981d" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Key Features: </tspan></text>
+          <g id="Permanent_Total_Disability_PTD_7" data-name="Permanent Total Disability(PTD)" transform="translate(346.999 1)">
+            <g id="Succes_27" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-21" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-27" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-21" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-21" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Partial_Disability_PPD_7" data-name="Permanent Partial Disability(PPD)" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Partial Disability(PPD)</tspan></text>
+          </g>
+          <g id="_2_more-7" data-name="2 more" transform="translate(301 51)">
+            <g id="Succes_28" data-name="Succes " transform="translate(16360.642 1165.943)">
+              <path id="Path_303-28" data-name="Path 303" d="M81.523,75.61a6.082,6.082,0,1,1-6.082-6.082,6.082,6.082,0,0,1,6.082,6.082Zm0,0" transform="translate(-1 -0.471)" fill="#34a853"></path>
+              <path id="Icon_feather-chevron-down-7" data-name="Icon feather-chevron-down" d="M9,13.5l3.732,3.732L16.465,13.5" transform="translate(61.887 60.557)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+            </g>
+            <text id="_2_More_Plans-7" data-name="2 More Plans" transform="translate(16445 1245)" fill="#34a853" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">2 More Plans</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="Royal_Sundaram" data-name="Royal Sundaram" transform="translate(-15630 640)">
+        <g transform="matrix(1, 0, 0, 1, 16087, -310)" filter="url(#Rectangle_26-8)">
+          <rect id="Rectangle_26-17" data-name="Rectangle 26" width="740" height="165" rx="5" transform="translate(313 1451)" fill="#fff"></rect>
+        </g>
+        <g id="Sundaram" transform="translate(-56.711 -19)">
+          <text id="Royal_Sundaram_Workmen_Compensation_Bronze" data-name="Royal Sundaram Workmen Compensation Bronze" transform="translate(16583.711 1189)" fill="#3b3a3c" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Royal Sundaram Workmen Compensation</tspan><tspan x="0" y="15">Bronze</tspan></text>
+          <g id="best_quotes-15" data-name="best quotes" transform="translate(16470.711 1129)">
+            <rect id="Rectangle_1-9" data-name="Rectangle 1" width="121" height="35" rx="5" transform="translate(593 46)" fill="#34a853"></rect>
+            <text id="best_quotes-16" data-name="best quotes" transform="translate(613 69)" fill="#fff" font-size="15" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Best Quotes</tspan></text>
+          </g>
+          <rect id="Royal_Sundaram-2" data-name="Royal_Sundaram" width="80" height="25" transform="translate(16470.711 1173)" fill="url(#pattern-7)"></rect>
+        </g>
+        <g id="Key_Features:_15" data-name="Key Features: " transform="translate(0 -5)">
+          <g id="Accidental_Death-15" data-name="Accidental Death" transform="translate(0 1)">
+            <g id="Succes_29" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-22" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-29" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-22" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-22" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Accidental_Death-16" data-name="Accidental Death" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Accidental Death</tspan></text>
+          </g>
+          <g id="Room_Rent-8" data-name="Room Rent" transform="translate(150 1)">
+            <g id="Succes_30" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-23" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-30" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-23" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-23" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Total_Disability-8" data-name="Permanent Total Disability" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Total Disability</tspan></text>
+          </g>
+          <text id="View_All_Features-8" data-name="View All Features" transform="translate(17014 1255)" fill="#34a853" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">View All Features</tspan></text>
+          <text id="Key_Features:_16" data-name="Key Features: " transform="translate(16413 1221)" fill="#f8981d" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Key Features: </tspan></text>
+          <g id="Permanent_Total_Disability_PTD_8" data-name="Permanent Total Disability(PTD)" transform="translate(346.999 1)">
+            <g id="Succes_31" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-24" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-31" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-24" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-24" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Partial_Disability_PPD_8" data-name="Permanent Partial Disability(PPD)" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Partial Disability(PPD)</tspan></text>
+          </g>
+          <g id="_2_more-8" data-name="2 more" transform="translate(301 51)">
+            <g id="Succes_32" data-name="Succes " transform="translate(16360.642 1165.943)">
+              <path id="Path_303-32" data-name="Path 303" d="M81.523,75.61a6.082,6.082,0,1,1-6.082-6.082,6.082,6.082,0,0,1,6.082,6.082Zm0,0" transform="translate(-1 -0.471)" fill="#34a853"></path>
+              <path id="Icon_feather-chevron-down-8" data-name="Icon feather-chevron-down" d="M9,13.5l3.732,3.732L16.465,13.5" transform="translate(61.887 60.557)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+            </g>
+            <text id="_2_More_Plans-8" data-name="2 More Plans" transform="translate(16445 1245)" fill="#34a853" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">2 More Plans</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="Digit" transform="translate(-15630 825)">
+        <g transform="matrix(1, 0, 0, 1, 16087, -495)" filter="url(#Rectangle_26-9)">
+          <rect id="Rectangle_26-18" data-name="Rectangle 26" width="740" height="165" rx="5" transform="translate(313 1636)" fill="#fff"></rect>
+        </g>
+        <g id="Digit-2" data-name="Digit" transform="translate(-56.711 -19)">
+          <text id="DIGIT_Workmen_Compensation_Bronze" data-name="DIGIT Workmen Compensation Bronze" transform="translate(16583.711 1189)" fill="#3b3a3c" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">DIGIT Workmen Compensation</tspan><tspan x="0" y="15">Bronze</tspan></text>
+          <g id="best_quotes-17" data-name="best quotes" transform="translate(16470.711 1129)">
+            <rect id="Rectangle_1-10" data-name="Rectangle 1" width="121" height="35" rx="5" transform="translate(593 46)" fill="#34a853"></rect>
+            <text id="best_quotes-18" data-name="best quotes" transform="translate(613 69)" fill="#fff" font-size="15" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Best Quotes</tspan></text>
+          </g>
+          <rect id="DIGIT-General-Insurance" width="49" height="24" transform="translate(16470.711 1174)" fill="url(#pattern-8)"></rect>
+        </g>
+        <g id="Key_Features:_17" data-name="Key Features: " transform="translate(0 -5)">
+          <g id="Accidental_Death-17" data-name="Accidental Death" transform="translate(0 1)">
+            <g id="Succes_33" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-25" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-33" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-25" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-25" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Accidental_Death-18" data-name="Accidental Death" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Accidental Death</tspan></text>
+          </g>
+          <g id="Room_Rent-9" data-name="Room Rent" transform="translate(150 1)">
+            <g id="Succes_34" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-26" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-34" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-26" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-26" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Total_Disability-9" data-name="Permanent Total Disability" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Total Disability</tspan></text>
+          </g>
+          <text id="View_All_Features-9" data-name="View All Features" transform="translate(17014 1255)" fill="#34a853" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">View All Features</tspan></text>
+          <text id="Key_Features:_18" data-name="Key Features: " transform="translate(16413 1221)" fill="#f8981d" font-size="13" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Key Features: </tspan></text>
+          <g id="Permanent_Total_Disability_PTD_9" data-name="Permanent Total Disability(PTD)" transform="translate(346.999 1)">
+            <g id="Succes_35" data-name="Succes " transform="translate(16360.642 1176.943)">
+              <g id="Layer_1-27" data-name="Layer 1" transform="translate(69.359 69.057)">
+                <path id="Path_303-35" data-name="Path 303" d="M78.358,74.028a4.5,4.5,0,1,1-4.5-4.5,4.5,4.5,0,0,1,4.5,4.5Zm0,0" transform="translate(-69.358 -69.528)" fill="#34a853" stroke="#34a853" stroke-miterlimit="10" stroke-width="4.229"></path>
+              </g>
+              <g id="Layer_2-27" data-name="Layer 2" transform="translate(70.359 70.057)">
+                <path id="Path_304-27" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+              </g>
+            </g>
+            <text id="Permanent_Partial_Disability_PPD_9" data-name="Permanent Partial Disability(PPD)" transform="translate(16445 1254)" fill="#707070" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Permanent Partial Disability(PPD)</tspan></text>
+          </g>
+          <g id="_2_more-9" data-name="2 more" transform="translate(301 51)">
+            <g id="Succes_36" data-name="Succes " transform="translate(16360.642 1165.943)">
+              <path id="Path_303-36" data-name="Path 303" d="M81.523,75.61a6.082,6.082,0,1,1-6.082-6.082,6.082,6.082,0,0,1,6.082,6.082Zm0,0" transform="translate(-1 -0.471)" fill="#34a853"></path>
+              <path id="Icon_feather-chevron-down-9" data-name="Icon feather-chevron-down" d="M9,13.5l3.732,3.732L16.465,13.5" transform="translate(61.887 60.557)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+            </g>
+            <text id="_2_More_Plans-9" data-name="2 More Plans" transform="translate(16445 1245)" fill="#34a853" font-size="11" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">2 More Plans</tspan></text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text id="Medical_Extension_" data-name="Medical Extension " transform="translate(313 140)" fill="#3b3a3c" font-size="14" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Medical Extension </tspan></text>
+    <g id="_25000" data-name="25000" transform="translate(-25 -32)">
+      <rect id="Rectangle_42" data-name="Rectangle 42" width="15" height="15" rx="3" transform="translate(488 160)" fill="#34a853"></rect>
+      <text id="_25_000" data-name="₹ 25,000" transform="translate(512 172)" fill="#3b3a3c" font-size="13" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">₹ 25,000</tspan></text>
+      <g id="Succes_37" data-name="Succes " transform="translate(421.641 93.943)">
+        <g id="Layer_2-28" data-name="Layer 2" transform="translate(70.359 70.057)">
+          <path id="Path_304-28" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+        </g>
+      </g>
+    </g>
+    <g id="_50_000" data-name="₹ 50,000" transform="translate(82 -32)">
+      <rect id="Rectangle_42-2" data-name="Rectangle 42" width="15" height="15" rx="3" transform="translate(488 160)" fill="#34a853"></rect>
+      <text id="_50_000-2" data-name="₹ 50,000" transform="translate(512 172)" fill="#3b3a3c" font-size="13" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">₹ 50,000</tspan></text>
+      <g id="Layer_2-29" data-name="Layer 2" transform="translate(491 164)">
+        <path id="Path_304-29" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+      </g>
+    </g>
+    <g id="_1_00_000" data-name="₹ 1,00,000" transform="translate(188 -32)">
+      <rect id="Rectangle_42-3" data-name="Rectangle 42" width="15" height="15" rx="3" transform="translate(488 160)" fill="#34a853"></rect>
+      <text id="_1_00_000-2" data-name="₹ 1,00,000" transform="translate(512 172)" fill="#3b3a3c" font-size="13" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">₹ 1,00,000</tspan></text>
+      <g id="Layer_2-30" data-name="Layer 2" transform="translate(491 164)">
+        <path id="Path_304-30" data-name="Path 304" d="M83.434,89.255a.748.748,0,0,1-.518-.208L80.69,86.912a.749.749,0,0,1,1.036-1.08l1.652,1.585,3.937-4.622a.749.749,0,1,1,1.14.971L84,88.992a.749.749,0,0,1-.532.262Zm0,0" transform="translate(-80.46 -82.524)" fill="#fff"></path>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Michroma&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#E6E8EB;font-family:'Inter Tight',system-ui,sans-serif;color:#111214;-webkit-font-smoothing:antialiased}
+a{color:#111214}a:hover{color:#2447F5}
+</style>
+</helmet>
+
+<section data-screen-label="Logo" style="padding:72px;display:flex;flex-direction:column;gap:28px">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:760px">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5A5E66">Logo</div>
+    <div style="font-size:30px;font-weight:600;letter-spacing:-0.02em">SHUNMUGASUNDARAM wordmark</div>
+    <div style="font-size:16px;line-height:1.55;color:#4A4E56">The letters are now vector shapes, not live text, so the logo looks identical everywhere and needs no font installed. All files are in the brand/ folder.</div>
+  </div>
+  <div id="2a" style="width:1548px;flex:none;background:#FFFFFF;border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(17,18,20,.06),0 12px 32px -16px rgba(17,18,20,.18)">
+    <div style="display:flex;align-items:center;gap:12px;padding:18px 24px;border-bottom:1px solid #ECEEF0">
+      <span style="font-size:12px;font-weight:600;background:#111214;color:#FFFFFF;padding:4px 9px;border-radius:5px">2a</span>
+      <span style="font-size:15px;font-weight:600">Engineered wordmark</span>
+      <span style="font-size:14px;color:#5A5E66">Michroma, letter spacing 0.04em, ink #111214</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr">
+      <div style="height:260px;display:flex;align-items:center;justify-content:center;background:#FFFFFF;padding:0 64px">
+        <img src="brand/wordmark-dark.svg" alt="Shunmugasundaram wordmark" style="width:100%;max-width:620px;display:block">
+      </div>
+      <div style="height:260px;display:flex;align-items:center;justify-content:center;background:#111214;padding:0 64px">
+        <img src="brand/wordmark-white.svg" alt="Shunmugasundaram wordmark, white" style="width:100%;max-width:620px;display:block">
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid #ECEEF0">
+      <div style="padding:28px;display:flex;flex-direction:column;gap:16px;border-right:1px solid #ECEEF0">
+        <div style="font-size:13px;font-weight:600;color:#5A5E66">In a site header</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px;padding:0 20px;border:1px solid #ECEEF0;border-radius:10px">
+          <img src="brand/wordmark-dark.svg" alt="Shunmugasundaram" style="height:12px;display:block">
+          <div style="display:flex;gap:22px;font-size:14px;font-weight:500;color:#111214"><span>Work</span><span>About</span><span>Contact</span></div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px;padding:0 20px;border-radius:10px;background:#111214">
+          <img src="brand/wordmark-white.svg" alt="Shunmugasundaram" style="height:12px;display:block">
+          <div style="display:flex;gap:22px;font-size:14px;font-weight:500;color:#FFFFFF"><span>Work</span><span>About</span><span>Contact</span></div>
+        </div>
+      </div>
+      <div style="padding:28px;display:flex;flex-direction:column;gap:16px;border-right:1px solid #ECEEF0">
+        <div style="font-size:13px;font-weight:600;color:#5A5E66">Monogram and favicon</div>
+        <div style="display:flex;align-items:flex-end;gap:14px">
+          <img src="brand/monogram-dark.svg" alt="S monogram" style="width:80px;display:block">
+          <img src="brand/monogram-light.svg" alt="S monogram, light" style="width:80px;display:block">
+          <img src="brand/favicon.svg" alt="Favicon" style="width:32px;display:block">
+          <img src="brand/favicon.svg" alt="Favicon, 16px" style="width:16px;display:block">
+        </div>
+      </div>
+      <div style="padding:28px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:13px;font-weight:600;color:#5A5E66">Rules</div>
+        <div style="font-size:14px;line-height:1.55;color:#2B2E33">Smallest size: 10px tall on screen. Below that, use the monogram.</div>
+        <div style="font-size:14px;line-height:1.55;color:#2B2E33">Clear space: the height of the letters on every side.</div>
+        <div style="font-size:14px;line-height:1.55;color:#2B2E33">Ink #111214 on light, white on dark. Don't recolour, stretch or re-space it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

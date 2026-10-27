@@ -1,0 +1,14 @@
+:root{
+  --shadow-sheet:0 -24px 64px rgba(0,0,0,.55);
+  --shadow-device:0 40px 120px rgba(0,0,0,.8);
+  --shadow-pop:0 12px 32px rgba(0,0,0,.45);
+  --ring-focus:0 0 0 3px rgba(200,255,0,.45);
+  --ease-out:cubic-bezier(.32,.72,0,1); /* @kind other */
+  --ease-standard:cubic-bezier(.2,0,0,1); /* @kind other */
+  --dur-instant:100ms; /* @kind other */
+  --dur-fast:150ms; /* @kind other */
+  --dur-base:250ms; /* @kind other */
+  --dur-slow:450ms; /* @kind other */
+  --dur-tick:1600ms; /* @kind other */
+  --press-scale:0.98; /* @kind other */
+}

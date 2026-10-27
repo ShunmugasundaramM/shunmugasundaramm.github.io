@@ -1,0 +1,474 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1057" viewBox="0 0 1920 1057" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2ZTc2OWU5Yy0wMDdmLTRmOGYtOGZlNS1mZmMxZTQxNGI3M2YAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaJV4C66tv6SaOtJruYTFYB8AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1ZmRjMzg2My0wNjk3LTQzMjItODhhOS0xYjg5M2E3YTUxNjRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoCt/r8suH/Q5l+nJfDoRKPQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg1AIUnZqHqhm2hCmuOAU3Ga5M+xPfQYt5QvS59DqPBySkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaAdlf5GKGn5Y65SHuhyfGJ4AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCAo2mcMDiP4mPQvG08oQKDzSeT2IlKtc6vG/FRcGMB1kmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjFZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjZlNzY5ZTljLTAwN2YtNGY4Zi04ZmU1LWZmYzFlNDE0YjczZi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmQzN2RkZjdmLWZmZDQtNDg4MC05MDI1LTM0YjE4ZTkzZjg2ZHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDUAhSdmoeqGbaEKa44BTcZrkz7E99Bi3lC9Ln0Oo8HJKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggnUSLgv0TCkP8utcUBgMlBq0loql8KAmB33wFeqqAn7SiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggmbz4E2gA6JqXtRfwdq51offb4K4/nsore9meZadpw7x0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQAISnsnlujaLLvQav0qRT67kyXtpZ0ZdtCOnickwypcV7mDJh7wrb/CYQrias/UH8JwpAsuNh8xlGQrcJNHhhXM=</c2pa:manifest></metadata>
+  <defs>
+    <filter id="Rectangle_2" x="241" y="125" width="1438" height="877" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="7" result="blur"></feGaussianBlur>
+      <feFlood flood-color="#bfbfbf" flood-opacity="0.541"></feFlood>
+      <feComposite operator="in" in2="blur"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_78" x="413.772" y="736.552" width="29.845" height="29.569" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-2"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-2"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_238" x="443.957" y="766.656" width="28.818" height="28.818" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-3"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-3"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_79" x="470.437" y="793.217" width="35.374" height="35.097" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-4"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-4"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_239" x="499.868" y="822.667" width="35.854" height="35.854" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-5"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-5"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_240" x="529.263" y="852.062" width="36.637" height="36.636" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-6"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-6"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_80" x="561.653" y="884.434" width="30.951" height="30.951" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-7"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-7"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_241" x="591.41" y="914.128" width="31.164" height="31.164" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-8"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-8"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_242" x="621.069" y="943.732" width="30.967" height="30.969" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-9"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-9"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_250" x="384.142" y="766.376" width="29.6" height="29.6" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-10"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-10"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_82" x="414.324" y="796.257" width="28.74" height="29.016" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-11"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-11"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_251" x="440.808" y="823.155" width="35.072" height="35.073" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-12"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-12"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_252" x="470.29" y="852.533" width="35.854" height="35.854" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-13"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-13"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_83" x="499.46" y="881.669" width="36.756" height="36.479" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-14"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-14"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_253" x="532.098" y="914.121" width="31.164" height="31.164" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-15"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-15"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_84" x="561.653" y="943.863" width="30.951" height="30.951" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-16"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-16"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_87" x="266.72" y="708.358" width="26.805" height="26.805" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-17"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-17"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_88" x="296.572" y="737.934" width="26.805" height="26.805" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-18"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-18"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_262" x="325.48" y="766.855" width="28.427" height="28.427" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-19"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-19"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_263" x="350.058" y="791.638" width="38.591" height="38.591" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-20"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-20"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_264" x="373.998" y="815.578" width="49.927" height="49.927" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-21"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-21"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_265" x="409.489" y="850.96" width="38.591" height="38.591" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-22"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-22"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_266" x="439.325" y="880.826" width="38.2" height="38.2" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-23"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-23"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_267" x="471.684" y="912.956" width="33.118" height="33.118" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-24"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-24"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_268" x="492.043" y="933.932" width="51.295" height="51.295" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-25"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-25"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_279" x="266.993" y="767.787" width="26.863" height="26.864" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-26"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-26"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_91" x="295.742" y="796.81" width="28.188" height="28.187" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-27"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-27"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_280" x="320.726" y="821.548" width="37.809" height="37.809" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-28"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-28"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_281" x="345.962" y="847.231" width="46.019" height="46.018" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-29"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-29"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_282" x="373.125" y="874.401" width="51.295" height="51.295" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-30"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-30"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_283" x="400.52" y="901.513" width="56.573" height="56.573" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-31"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-31"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_284" x="426.328" y="927.471" width="63.805" height="63.804" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-32"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-32"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_97" x="266.443" y="826.663" width="27.634" height="27.634" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-33"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-33"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_295" x="287.767" y="848.156" width="44.063" height="44.064" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-34"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-34"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_98" x="316.751" y="877.247" width="45.601" height="45.324" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-35"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-35"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_296" x="329.746" y="890.185" width="79.246" height="79.246" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-36"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-36"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_297" x="376.069" y="936.433" width="46.019" height="46.018" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-37"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-37"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_305" x="253.935" y="873.631" width="52.469" height="52.468" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-38"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-38"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_306" x="275.978" y="895.665" width="67.909" height="67.909" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-39"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-39"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Rectangle_307" x="314.445" y="930.636" width="51.041" height="51.042" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-40"></feGaussianBlur>
+      <feFlood flood-opacity="0.161"></feFlood>
+      <feComposite operator="in" in2="blur-40"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <filter id="Path_116" x="251.24" y="925.318" width="58.039" height="57.763" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"></feOffset>
+      <feGaussianBlur stdDeviation="3.5" result="blur-41"></feGaussianBlur>
+      <feFlood flood-opacity="0.349"></feFlood>
+      <feComposite operator="in" in2="blur-41"></feComposite>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 3178 1403">
+      <image width="3178" height="1403"></image>
+    </pattern>
+    <clipPath id="clip-Web_1920_3">
+      <rect width="1920" height="1057"></rect>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_3" data-name="Web 1920 – 3" clip-path="url(#clip-Web_1920_3)">
+    <rect width="1920" height="1057" fill="#fff"></rect>
+    <line id="Line_21" data-name="Line 21" x2="1920" transform="translate(0.5 85.5)" fill="none" stroke="#707070" stroke-width="0.3" opacity="0.5"></line>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_2)">
+      <rect id="Rectangle_2-2" data-name="Rectangle 2" width="1396" height="835" transform="translate(262 143)" fill="#f8f9fa"></rect>
+    </g>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="402" height="835" transform="translate(262 143)" fill="#fff"></rect>
+    <g id="Abstract" transform="translate(261.74 715.858)" opacity="0.58">
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_78)">
+        <path id="Path_78-2" data-name="Path 78" d="M34.45,36.643l4.423,4.146L43.3,36.643,38.873,32.22Z" transform="translate(389.82 711.83)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_238)">
+        <rect id="Rectangle_238-2" data-name="Rectangle 238" width="5.528" height="5.528" transform="translate(454.46 778.06) rotate(-45)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_79)">
+        <path id="Path_79-2" data-name="Path 79" d="M36.5,41.457l7.187,6.91,7.187-6.91L43.687,34.27Z" transform="translate(444.44 766.45)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_239)">
+        <rect id="Rectangle_239-2" data-name="Rectangle 239" width="10.504" height="10.504" transform="translate(510.37 837.6) rotate(-45.01)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_240)">
+        <rect id="Rectangle_240-2" data-name="Rectangle 240" width="11.057" height="11.057" transform="matrix(0.71, -0.71, 0.71, 0.71, 539.76, 867.39)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_80)">
+        <path id="Path_80-2" data-name="Path 80" d="M39.8,42.545l4.976,4.975,4.975-4.975L44.776,37.57Z" transform="translate(532.35 854.36)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_241)">
+        <rect id="Rectangle_241-2" data-name="Rectangle 241" width="7.187" height="7.187" transform="matrix(0.71, -0.71, 0.71, 0.71, 601.91, 926.72)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_242)">
+        <rect id="Rectangle_242-2" data-name="Rectangle 242" width="6.91" height="7.187" transform="translate(631.57 956.09) rotate(-44.7)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_250)">
+        <rect id="Rectangle_250-2" data-name="Rectangle 250" width="6.081" height="6.081" transform="translate(394.64 778.16) rotate(-44.83)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_82)">
+        <path id="Path_82-2" data-name="Path 82" d="M34.47,38.526l3.87,3.87,3.87-3.87L38.34,34.38Z" transform="translate(390.35 769.38)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_251)">
+        <rect id="Rectangle_251-2" data-name="Rectangle 251" width="9.951" height="9.951" transform="translate(451.31 837.72) rotate(-45.22)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_252)">
+        <rect id="Rectangle_252-2" data-name="Rectangle 252" width="10.504" height="10.504" transform="matrix(0.71, -0.71, 0.71, 0.71, 480.79, 867.47)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_83)">
+        <path id="Path_83-2" data-name="Path 83" d="M37.55,45.21l7.74,7.74,8.016-7.74L45.29,37.47Z" transform="translate(472.41 851.7)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_253)">
+        <rect id="Rectangle_253-2" data-name="Rectangle 253" width="7.187" height="7.187" transform="translate(542.6 926.7) rotate(-45)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_84)">
+        <path id="Path_84-2" data-name="Path 84" d="M39.8,44.7l4.976,4.975L49.751,44.7,44.776,39.72Z" transform="translate(532.35 911.64)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_87)">
+        <path id="Path_87-2" data-name="Path 87" d="M29.13,33.964,32.171,37l2.764-3.041L32.171,31.2Z" transform="translate(248.09 684.66)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_88)">
+        <path id="Path_88-2" data-name="Path 88" d="M30.21,35.311l2.764,2.764,3.041-2.764L32.974,32.27Z" transform="translate(276.86 713.16)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_262)">
+        <rect id="Rectangle_262-2" data-name="Rectangle 262" width="5.252" height="5.252" transform="matrix(0.71, -0.71, 0.71, 0.71, 335.98, 778.07)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_263)">
+        <rect id="Rectangle_263-2" data-name="Rectangle 263" width="12.439" height="12.439" transform="translate(360.56 807.93) rotate(-45)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_264)">
+        <rect id="Rectangle_264-2" data-name="Rectangle 264" width="20.455" height="20.455" transform="translate(384.5 837.55) rotate(-45.05)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_265)">
+        <rect id="Rectangle_265-2" data-name="Rectangle 265" width="12.439" height="12.439" transform="translate(419.99 867.25) rotate(-44.99)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_266)">
+        <rect id="Rectangle_266-2" data-name="Rectangle 266" width="12.162" height="12.162" transform="matrix(0.71, -0.71, 0.71, 0.71, 449.83, 896.94)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_267)">
+        <rect id="Rectangle_267-2" data-name="Rectangle 267" width="8.569" height="8.569" transform="translate(482.18 926.52) rotate(-45)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_268)">
+        <rect id="Rectangle_268-2" data-name="Rectangle 268" width="21.284" height="21.56" transform="translate(502.54 956.47) rotate(-44.95)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_279)">
+        <rect id="Rectangle_279-2" data-name="Rectangle 279" width="4.146" height="4.146" transform="matrix(0.71, -0.7, 0.7, 0.71, 277.49, 778.2)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_91)">
+        <path id="Path_91-2" data-name="Path 91" d="M30.18,37.993l3.593,3.593,3.593-3.593L33.773,34.4Z" transform="translate(276.06 769.91)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_280)">
+        <rect id="Rectangle_280-2" data-name="Rectangle 280" width="11.886" height="11.886" transform="matrix(0.71, -0.71, 0.71, 0.71, 331.23, 837.47)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_281)">
+        <rect id="Rectangle_281-2" data-name="Rectangle 281" width="17.69" height="17.69" transform="translate(356.46 867.25) rotate(-45.06)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_282)">
+        <rect id="Rectangle_282-2" data-name="Rectangle 282" width="21.284" height="21.56" transform="translate(383.63 896.94) rotate(-44.95)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_283)">
+        <rect id="Rectangle_283-2" data-name="Rectangle 283" width="25.154" height="25.154" transform="translate(411.02 926.8) rotate(-45)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_284)">
+        <rect id="Rectangle_284-2" data-name="Rectangle 284" width="30.129" height="30.406" transform="matrix(0.71, -0.71, 0.71, 0.71, 436.83, 956.26)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_97)">
+        <path id="Path_97-2" data-name="Path 97" d="M29.12,38.8l3.317,3.317L35.754,38.8,32.437,35.48Z" transform="translate(247.82 798.68)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_295)">
+        <rect id="Rectangle_295-2" data-name="Rectangle 295" width="16.308" height="16.308" transform="translate(298.27 867.18) rotate(-44.94)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_98)">
+        <path id="Path_98-2" data-name="Path 98" d="M30.94,49.472,43.379,61.634,55.541,49.472,43.379,37.31Z" transform="translate(296.31 847.44)" fill="#dadada"></path>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_296)">
+        <rect id="Rectangle_296-2" data-name="Rectangle 296" width="41.186" height="41.186" transform="translate(340.25 926.81) rotate(-45)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_297)">
+        <rect id="Rectangle_297-2" data-name="Rectangle 297" width="17.69" height="17.69" transform="translate(386.57 956.46) rotate(-45.06)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_305)">
+        <rect id="Rectangle_305-2" data-name="Rectangle 305" width="22.39" height="22.113" transform="translate(264.43 896.96) rotate(-45)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_306)">
+        <rect id="Rectangle_306-2" data-name="Rectangle 306" width="33.17" height="33.17" transform="translate(286.48 926.62) rotate(-45)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Rectangle_307)">
+        <rect id="Rectangle_307-2" data-name="Rectangle 307" width="20.831" height="21.654" transform="matrix(0.71, -0.71, 0.71, 0.71, 324.95, 952.86)" fill="#dadada"></rect>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -261.74, -715.86)" filter="url(#Path_116)">
+        <path id="Path_116-2" data-name="Path 116" d="M28.57,57.75,47.09,75.993,65.609,57.75,47.09,39.23Z" transform="translate(233.17 893.59)" fill="#dadada"></path>
+      </g>
+    </g>
+    <rect id="LOGO_PNG" data-name="LOGO PNG" width="112" height="49" transform="translate(307 174)" fill="url(#pattern)"></rect>
+    <g id="previous_step" data-name="previous step" transform="translate(-479 512)">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="192" height="51" rx="3" transform="translate(1229 356)" fill="#fff"></rect>
+      <text id="previous_step-2" data-name="previous step" transform="translate(1252 389)" fill="#bfbfbf" font-size="20" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">PREVIOUS STEP</tspan></text>
+    </g>
+    <g id="Next" transform="translate(192 512)">
+      <rect id="Rectangle_4-2" data-name="Rectangle 4" width="154" height="51" rx="3" transform="translate(1229 356)" fill="#34a853"></rect>
+      <text id="NEXT-2" data-name="NEXT" transform="translate(1263.9 388.5)" fill="#fff" font-size="20" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">NEXT</tspan></text>
+      <path id="Icon_open-arrow-right" data-name="Icon open-arrow-right" d="M14.5,0V5.8H0V8.7H14.5v5.8l8.7-7.337Z" transform="translate(1323.9 373.5)" fill="#fff"></path>
+    </g>
+    <text id="Having_troubles_Get_Help" data-name="Having troubles? Get Help" transform="translate(1379 193)" fill="#707070" font-size="18" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Having troubles? </tspan><tspan y="0" fill="#34a853" font-family="Poppins-SemiBold, Poppins" font-weight="600">Get Help</tspan></text>
+    <g id="Personal_Details" data-name="Personal Details" transform="translate(-32 33)">
+      <text id="PAN_Details" data-name="PAN Details" transform="translate(382 240)" fill="#3c4043" font-size="20" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">Pan Details</tspan></text>
+      <path id="Icon_ionic-md-checkmark-circle" data-name="Icon ionic-md-checkmark-circle" d="M18,3.375A14.625,14.625,0,1,0,32.625,18,14.668,14.668,0,0,0,18,3.375ZM15,25.8,7.5,18.3l2.1-2.1L15,21.6,26.4,10.2l2.1,2.1Z" transform="translate(332.625 214.625)" fill="#34a853"></path>
+    </g>
+    <g id="KYC_Details" data-name="KYC Details" transform="translate(-32 91)">
+      <text id="Add_your_KYC_Details" data-name="Add your KYC Details" transform="translate(382 241)" fill="#34a853" font-size="20" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">Add Your KYC Details</tspan></text>
+      <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(339 220)" fill="#fff" stroke="#34a853" stroke-width="1.5">
+        <circle cx="14.625" cy="14.625" r="14.625" stroke="none"></circle>
+        <circle cx="14.625" cy="14.625" r="13.875" fill="none"></circle>
+      </g>
+      <text id="_2" data-name="2" transform="translate(350 221)" fill="#34a853" font-size="20" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="-1.74" y="21">2</tspan></text>
+    </g>
+    <text id="personal_details-2" data-name="personal details" transform="translate(350 386)" fill="#707070" font-size="20" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">Personal Details</tspan></text>
+    <text id="About_you" data-name="About you" transform="translate(350 433)" fill="#3c4043" font-size="20" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">About you</tspan></text>
+    <text id="A_bit_about_you" data-name="A bit about you" transform="translate(750 272)" fill="#3c4043" font-size="20" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">A Bit About You</tspan></text>
+    <text id="Share_some_more_information_about_you_as_per_SEBI_guidelines" data-name="Share some more information about you as per SEBI guidelines" transform="translate(750 308)" fill="#707070" font-size="18" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Share some more information about you as per SEBI guidelines</tspan></text>
+    <g id="Name" transform="translate(23 23)">
+      <text id="Name-2" data-name="Name" transform="translate(727 343)" fill="#3c4043" font-size="20" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Name</tspan></text>
+      <rect id="Rectangle_4-3" data-name="Rectangle 4" width="825" height="51" rx="3" transform="translate(727 356)" fill="#fff"></rect>
+      <text id="John_Wick" data-name="John Wick" transform="translate(754 388)" fill="#3c4043" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">John Wick</tspan></text>
+    </g>
+    <g id="DOB" transform="translate(23 135)">
+      <text id="Date_of_Birth" data-name="Date of Birth" transform="translate(727 343)" fill="#3c4043" font-size="20" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Date of Birth</tspan></text>
+      <rect id="Rectangle_4-4" data-name="Rectangle 4" width="311" height="51" rx="3" transform="translate(727 356)" fill="#fff"></rect>
+      <text id="_02-09-1964" data-name="02-09-1964" transform="translate(754 389)" fill="#3c4043" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">02-09-1964</tspan></text>
+      <g id="Email" transform="translate(356)">
+        <text id="Email-2" data-name="Email" transform="translate(727 343)" fill="#3c4043" font-size="20" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Email</tspan></text>
+        <rect id="Rectangle_4-5" data-name="Rectangle 4" width="453" height="51" rx="3" transform="translate(743 356)" fill="#fff"></rect>
+        <text id="johnwick_gmail.com" data-name="johnwick@gmail.com" transform="translate(754 389)" fill="#3c4043" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">johnwick@gmail.com</tspan></text>
+      </g>
+    </g>
+    <g id="Address" transform="translate(23 246)">
+      <text id="Address-2" data-name="Address" transform="translate(727 343)" fill="#3c4043" font-size="20" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Address</tspan></text>
+      <rect id="Rectangle_4-6" data-name="Rectangle 4" width="825" height="137" rx="3" transform="translate(727 356)" fill="#fff"></rect>
+      <text id="Dalia_Industrial_Estate_Lotus_Business_Park_off_New_Link_Road_near_Fun_Republic_Road_Veera_Desai_Industrial_Estate_Andheri_West_Mumbai_Maharashtra_400053" data-name="Dalia Industrial Estate, Lotus Business Park, off New Link Road, near Fun Republic Road, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053" transform="translate(754 392)" fill="#3c4043" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Dalia Industrial Estate, Lotus Business Park, Off New Link Road,</tspan><tspan x="0" y="30">Near Fun Republic Road, Veera Desai Industrial Estate, Andheri West,</tspan><tspan x="0" y="60">Mumbai, Maharashtra 400053</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#0A1826; }
+  * { box-sizing:border-box; }
+  ::selection { background:#1BB8D6; color:#0A1826; }
+  a { color:#1BB8D6; text-decoration:none; }
+  a:hover { color:#0A1826; }
+  @keyframes cbRise { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:none; } }
+  @keyframes cbFade { from { opacity:0; } to { opacity:1; } }
+  @keyframes cbMotif { from { opacity:0; transform:translateX(50px); } to { opacity:0.13; transform:none; } }
+  @keyframes cbDeck { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+  @keyframes cbPier { from { transform:scaleY(0); } to { transform:scaleY(1); } }
+  @keyframes cbDot { 0% { opacity:0; transform:scale(0); } 62% { opacity:1; transform:scale(1.32); } 100% { opacity:1; transform:scale(1); } }
+  @keyframes cbCardA { from { opacity:0; transform:rotate(-9deg) translateY(72px); } to { opacity:1; transform:rotate(-9deg); } }
+  @keyframes cbCardB { from { opacity:0; transform:rotate(5deg) translateY(72px); } to { opacity:1; transform:rotate(5deg); } }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; } }
+  [data-cb-lift] { transition:transform .3s cubic-bezier(.22,.7,.3,1), box-shadow .3s ease; }
+  [data-cb-lift]:hover { transform:translateY(-6px); box-shadow:0 40px 74px -34px rgba(10,24,38,0.42); }
+</style>
+</helmet>
+<dc-import name="SiteHeader" current="Projects" hint-size="100%,68px"></dc-import>
+
+<div data-cb-root style="width:1440px; margin:0 auto; background:#FFFFFF; font-family:'Open Sans', system-ui, sans-serif; color:#0A1826; -webkit-font-smoothing:antialiased; line-height:1.5; overflow:hidden;">
+
+  <section data-screen-label="Cover" style="position:relative; height:1080px; background:#0A1826; overflow:hidden;">
+    <div style="position:absolute; top:-280px; right:-220px; width:900px; height:900px; border-radius:50%; background:radial-gradient(closest-side, rgba(27,184,214,0.30), transparent 72%);"></div>
+    <div style="position:absolute; bottom:-300px; left:-260px; width:820px; height:820px; border-radius:50%; background:radial-gradient(closest-side, rgba(27,184,214,0.16), transparent 72%);"></div>
+
+    <sc-if value="{{ showBridgeMotif }}" hint-placeholder-val="{{ true }}">
+      <img src="cb/motif-arch.png" alt="" style="position:absolute; top:56px; right:-170px; width:780px; aspect-ratio:672 / 268; display:block; opacity:0.13; animation:cbMotif 1.6s cubic-bezier(.22,.7,.3,1) both; animation-delay:.18s;">
+    </sc-if>
+
+    <div style="position:absolute; top:76px; left:100px; right:100px; animation:cbFade .9s linear both; animation-delay:.5s; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="width:26px; height:2px; background:#1BB8D6;"></div>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:#8FB3C2;">Capital Bridge Pvt. Ltd.</span>
+      </div>
+    </div>
+
+    <div style="position:absolute; left:38px; bottom:230px; animation:cbFade .9s linear both; animation-delay:.7s; writing-mode:vertical-rl; transform:rotate(180deg); font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.26em; text-transform:uppercase; color:#8FB3C2;">Case Study</div>
+
+    <div style="position:absolute; top:206px; left:100px; width:780px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.22em; text-transform:uppercase; color:#1BB8D6; margin-bottom:34px; animation:cbRise .8s cubic-bezier(.22,.7,.3,1) both; animation-delay:.05s;">Brand Identity &amp; Website · Case Study</div>
+      <h1 style="font-family:'Archivo',sans-serif; font-size:132px; line-height:0.92; letter-spacing:-0.045em; font-weight:800; color:#FFFFFF; margin:0; animation:cbRise .9s cubic-bezier(.22,.7,.3,1) both; animation-delay:.14s;">Capital<br>Bridge<span style="display:inline-block; width:19px; height:19px; border-radius:50%; background:#1BB8D6; margin-left:9px; animation:cbDot .7s cubic-bezier(.22,.7,.3,1) both; animation-delay:.72s;"></span></h1>
+      <p style="font-size:21px; line-height:1.65; color:#A9C0CC; margin:40px 0 0; max-width:560px; animation:cbRise .85s cubic-bezier(.22,.7,.3,1) both; animation-delay:.3s; font-weight:300; text-wrap:pretty;">Building a credible digital face for a research and technology firm selling to brokers, wealth managers and investment banks.</p>
+      <div style="display:flex; margin-top:54px; animation:cbRise .85s cubic-bezier(.22,.7,.3,1) both; animation-delay:.42s;">
+        <div style="padding-right:40px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8FB3C2; margin-bottom:9px;">Scope</div>
+          <div style="font-size:16px; font-weight:600; color:#FFFFFF;">Identity + 5-page site</div>
+        </div>
+        <div style="padding:0 40px; border-left:1px solid rgba(255,255,255,0.14);">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8FB3C2; margin-bottom:9px;">Role</div>
+          <div style="font-size:16px; font-weight:600; color:#FFFFFF;">UI/UX &amp; Visual Design</div>
+        </div>
+        <div style="padding-left:40px; border-left:1px solid rgba(255,255,255,0.14);">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8FB3C2; margin-bottom:9px;">Year</div>
+          <div style="font-size:16px; font-weight:600; color:#FFFFFF;">2022</div>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ coverStacked }}" hint-placeholder-val="{{ true }}">
+      <div style="position:absolute; right:-60px; bottom:150px; width:640px; height:660px;">
+        <div style="position:absolute; right:150px; bottom:200px; width:430px; border-radius:10px; overflow:hidden; box-shadow:0 50px 90px -30px rgba(0,0,0,0.65); border:1px solid rgba(255,255,255,0.14); transform:rotate(-9deg); animation:cbCardA 1s cubic-bezier(.22,.7,.3,1) both; animation-delay:.3s;">
+          <div style="height:26px; background:#F4F7F9; display:flex; align-items:center; gap:5px; padding:0 11px;"><div style="width:7px; height:7px; border-radius:50%; background:#D6DEE3;"></div><div style="width:7px; height:7px; border-radius:50%; background:#D6DEE3;"></div><div style="width:7px; height:7px; border-radius:50%; background:#D6DEE3;"></div></div>
+          <img src="cb/home-hero.jpg" alt="Capital Bridge home page hero" style="width:100%; aspect-ratio:1300 / 447; display:block;">
+        </div>
+        <div style="position:absolute; right:20px; bottom:10px; width:430px; border-radius:10px; overflow:hidden; box-shadow:0 50px 90px -30px rgba(0,0,0,0.7); border:1px solid rgba(255,255,255,0.14); transform:rotate(5deg); animation:cbCardB 1s cubic-bezier(.22,.7,.3,1) both; animation-delay:.44s;">
+          <div style="height:26px; background:#F4F7F9; display:flex; align-items:center; gap:5px; padding:0 11px;"><div style="width:7px; height:7px; border-radius:50%; background:#D6DEE3;"></div><div style="width:7px; height:7px; border-radius:50%; background:#D6DEE3;"></div><div style="width:7px; height:7px; border-radius:50%; background:#D6DEE3;"></div></div>
+          <img src="cb/about-hero.jpg" alt="Capital Bridge about page hero" style="width:100%; aspect-ratio:1300 / 445; display:block;">
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ coverTypeLed }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute; right:100px; bottom:190px; width:420px; text-align:right;">
+        <div style="font-family:'Archivo',sans-serif; font-size:200px; line-height:0.8; font-weight:900; color:rgba(27,184,214,0.22); letter-spacing:-0.05em;">CB</div>
+      </div>
+    </sc-if>
+
+    <div style="position:absolute; left:0; right:0; bottom:56px; height:1px; background:linear-gradient(to right, rgba(27,184,214,0.85), rgba(27,184,214,0.14)); transform-origin:left center; animation:cbDeck 1.25s cubic-bezier(.22,.7,.3,1) both; animation-delay:.55s;"></div>
+    <div style="position:absolute; left:0; right:0; bottom:34px; height:22px; display:flex; align-items:flex-start; gap:96px; padding-left:100px;">
+      <div style="width:3px; height:22px; background:rgba(27,184,214,0.62); transform-origin:top center; animation:cbPier .5s cubic-bezier(.22,.7,.3,1) both; animation-delay:1.05s;"></div>
+      <div style="width:3px; height:16px; background:rgba(27,184,214,0.54); transform-origin:top center; animation:cbPier .5s cubic-bezier(.22,.7,.3,1) both; animation-delay:1.13s;"></div>
+      <div style="width:3px; height:22px; background:rgba(27,184,214,0.46); transform-origin:top center; animation:cbPier .5s cubic-bezier(.22,.7,.3,1) both; animation-delay:1.20s;"></div>
+      <div style="width:3px; height:14px; background:rgba(27,184,214,0.38); transform-origin:top center; animation:cbPier .5s cubic-bezier(.22,.7,.3,1) both; animation-delay:1.28s;"></div>
+      <div style="width:3px; height:22px; background:rgba(27,184,214,0.30); transform-origin:top center; animation:cbPier .5s cubic-bezier(.22,.7,.3,1) both; animation-delay:1.35s;"></div>
+      <div style="width:3px; height:16px; background:rgba(27,184,214,0.24); transform-origin:top center; animation:cbPier .5s cubic-bezier(.22,.7,.3,1) both; animation-delay:1.43s;"></div>
+      <div style="width:3px; height:22px; background:rgba(27,184,214,0.18); transform-origin:top center; animation:cbPier .5s cubic-bezier(.22,.7,.3,1) both; animation-delay:1.50s;"></div>
+      <div style="width:3px; height:14px; background:rgba(27,184,214,0.12); transform-origin:top center; animation:cbPier .5s cubic-bezier(.22,.7,.3,1) both; animation-delay:1.58s;"></div>
+    </div>
+    <div style="position:absolute; left:0; right:0; bottom:0; height:34px; animation:cbFade 1s linear both; animation-delay:1.7s; display:flex; align-items:center; justify-content:center; gap:26px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color:#8FB3C2;">
+      <span>Broking Solution</span><span style="color:#1BB8D6;">·</span><span>Research &amp; Information</span><span style="color:#1BB8D6;">·</span><span>Content Creation</span><span style="color:#1BB8D6;">·</span><span>Technology Solution</span><span style="color:#1BB8D6;">·</span><span>Other Tech Solution</span>
+    </div>
+  </section>
+
+  <section data-screen-label="Overview" style="padding:130px 100px; background:#FFFFFF;">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:90px; align-items:start;">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E7C93; margin-bottom:26px;">01 · Overview</div>
+        <h2 style="font-family:'Archivo',sans-serif; font-size:64px; line-height:1.0; letter-spacing:-0.035em; font-weight:800; margin:0 0 34px;">A young firm<br>selling to<br>institutions.</h2>
+      </div>
+      <div style="padding-top:78px;">
+        <p style="font-size:19px; line-height:1.72; color:#55666F; margin:0 0 26px; text-wrap:pretty;">Established in 2020, Capital Bridge provides Research and Information, Content Creation and Management and Technology Solution. Its customers are brokers, wealth managers, investment banks, and other financial institutions.</p>
+        <p style="font-size:19px; line-height:1.72; color:#55666F; margin:0 0 44px; text-wrap:pretty;">The company works as an extension of its clients' teams, equity research reports, sector reports, intraday calls, morning reports, blogging services, video creation, website design and FAQ content.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:#E2E9ED; border:1px solid #E2E9ED;">
+          <div style="background:#fff; padding:24px 26px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#55666F; margin-bottom:8px;">Sector</div><div style="font-size:16px; font-weight:600;">Financial services B2B</div></div>
+          <div style="background:#fff; padding:24px 26px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#55666F; margin-bottom:8px;">Audience</div><div style="font-size:16px; font-weight:600;">Brokers &amp; banks</div></div>
+          <div style="background:#fff; padding:24px 26px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#55666F; margin-bottom:8px;">Deliverables</div><div style="font-size:16px; font-weight:600;">Logo, type, colour, 5 pages</div></div>
+          <div style="background:#fff; padding:24px 26px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#55666F; margin-bottom:8px;">Typeface</div><div style="font-size:16px; font-weight:600;">Open Sans</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Challenge" style="padding:130px 100px; background:#0A1826; color:#fff;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#1BB8D6; margin-bottom:26px;">02 · The Challenge</div>
+    <h2 style="font-family:'Archivo',sans-serif; font-size:64px; line-height:1.02; letter-spacing:-0.035em; font-weight:800; margin:0 0 22px; max-width:900px;">Nobody buys research from a company that looks new.</h2>
+    <p style="font-size:19px; line-height:1.72; color:#A9C0CC; margin:0 0 76px; max-width:720px; font-weight:300; text-wrap:pretty;">Three problems shaped every decision that followed.</p>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;">
+      <div style="border-top:2px solid #1BB8D6; padding-top:30px;">
+        <div style="font-family:'Archivo',sans-serif; font-size:15px; font-weight:700; color:#1BB8D6; margin-bottom:18px;">01</div>
+        <h3 style="font-family:'Archivo',sans-serif; font-size:27px; line-height:1.2; font-weight:700; margin:0 0 16px; letter-spacing:-0.02em;">No track record to show</h3>
+        <p style="font-size:16.5px; line-height:1.7; color:#8FB3C2; margin:0; text-wrap:pretty;">Founded in 2020, with no client logos, case studies or press to lean on. Credibility had to come from craft and clarity instead of proof.</p>
+      </div>
+      <div style="border-top:2px solid #1BB8D6; padding-top:30px;">
+        <div style="font-family:'Archivo',sans-serif; font-size:15px; font-weight:700; color:#1BB8D6; margin-bottom:18px;">02</div>
+        <h3 style="font-family:'Archivo',sans-serif; font-size:27px; line-height:1.2; font-weight:700; margin:0 0 16px; letter-spacing:-0.02em;">Five service lines, one story</h3>
+        <p style="font-size:16.5px; line-height:1.7; color:#8FB3C2; margin:0; text-wrap:pretty;">Research, content, technology, broking and managed services. Listed flat, the offer reads as a vendor for hire rather than a specialist partner.</p>
+      </div>
+      <div style="border-top:2px solid #1BB8D6; padding-top:30px;">
+        <div style="font-family:'Archivo',sans-serif; font-size:15px; font-weight:700; color:#1BB8D6; margin-bottom:18px;">03</div>
+        <h3 style="font-family:'Archivo',sans-serif; font-size:27px; line-height:1.2; font-weight:700; margin:0 0 16px; letter-spacing:-0.02em;">A cautious audience</h3>
+        <p style="font-size:16.5px; line-height:1.7; color:#8FB3C2; margin:0; text-wrap:pretty;">Compliance-minded buyers scanning for competence. The site needed to feel measured and institutional, not like a startup landing page.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Brand Mark" style="padding:130px 0 0; background:#FFFFFF;">
+    <div style="padding:0 100px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E7C93; margin-bottom:26px;">03 · The Mark</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:90px; align-items:end; margin-bottom:70px;">
+        <h2 style="font-family:'Archivo',sans-serif; font-size:64px; line-height:1.0; letter-spacing:-0.035em; font-weight:800; margin:0;">A bridge,<br>drawn on<br>a grid.</h2>
+        <p style="font-size:19px; line-height:1.72; color:#55666F; margin:0 0 8px; text-wrap:pretty;">The name is the idea. An arch with even piers reads as a bridge at any size, and the same arc splits to hold the wordmark, the enclosing circle doubles as the span. Built on a fixed grid so the mark stays true from a favicon to a trade-show banner.</p>
+      </div>
+    </div>
+    <div style="background:#F4F7F9; padding:70px 100px;">
+      <img src="cb/logo-mnemonic.svg" alt="Logo mnemonic construction grid" style="width:100%; aspect-ratio:2 / 1; display:block; border:1px solid #E2E9ED; background:#fff;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F; margin-top:22px; text-align:center;">Construction, arc, nine piers, deck</div>
+    </div>
+  </section>
+
+  <section data-screen-label="Logo Variations" style="padding:110px 100px 130px; background:#FFFFFF;">
+    <h3 style="font-family:'Archivo',sans-serif; font-size:34px; line-height:1.1; letter-spacing:-0.025em; font-weight:700; margin:0 0 12px;">Three grounds, one weight</h3>
+    <p style="font-size:18px; line-height:1.7; color:#55666F; margin:0 0 50px; max-width:640px; text-wrap:pretty;">Dark on white for documents and reports, white on teal for the brand's own surfaces, and light on black where the mark sits over imagery.</p>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+      <div>
+        <img src="cb/logo-dark.svg" alt="Logo variation on white" style="width:100%; aspect-ratio:2 / 1; display:block; border:1px solid #E2E9ED;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F; margin-top:14px;">Dark · on white</div>
+      </div>
+      <div>
+        <img src="cb/logo-white.svg" alt="Logo variation on brand teal" style="width:100%; aspect-ratio:2 / 1; display:block; border:1px solid #E2E9ED;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F; margin-top:14px;">White · on teal</div>
+      </div>
+      <div>
+        <img src="cb/logo-light.svg" alt="Logo variation on black" style="width:100%; aspect-ratio:2 / 1; display:block; border:1px solid #E2E9ED;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F; margin-top:14px;">Light · on black</div>
+      </div>
+    </div>
+    <div style="margin-top:22px; border:1px solid #E2E9ED;">
+      <img src="cb/brand-photo.jpg" alt="Brand mark applied over a duotone photograph" style="width:100%; aspect-ratio:1600 / 800; display:block;">
+    </div>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F; margin-top:14px;">Mnemonic alone · duotone imagery</div>
+  </section>
+
+  <section data-screen-label="Type &amp; Colour" style="padding:130px 100px; background:#F4F7F9;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E7C93; margin-bottom:26px;">04 · Type &amp; Colour</div>
+    <h2 style="font-family:'Archivo',sans-serif; font-size:64px; line-height:1.0; letter-spacing:-0.035em; font-weight:800; margin:0 0 60px;">Plain type,<br>one loud colour.</h2>
+    <div style="display:grid; grid-template-columns:1.35fr 1fr; gap:28px; align-items:start;">
+      <div style="background:#fff; border:1px solid #E2E9ED; padding:46px;">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:1px solid #E2E9ED; padding-bottom:22px; margin-bottom:34px;">
+          <div style="font-family:'Archivo',sans-serif; font-size:44px; font-weight:800; letter-spacing:-0.03em;">Open Sans</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F;">Six weights</div>
+        </div>
+        <div style="display:grid; gap:26px;">
+          <div style="display:flex; align-items:baseline; gap:26px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em; color:#55666F; width:134px; flex:none;">BOLD / H1</div><div style="font-size:34px; font-weight:700; letter-spacing:-0.02em;">Research &amp; Information</div></div>
+          <div style="display:flex; align-items:baseline; gap:26px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em; color:#55666F; width:134px; flex:none;">SEMIBOLD / H2</div><div style="font-size:27px; font-weight:600; letter-spacing:-0.015em;">What We Provide</div></div>
+          <div style="display:flex; align-items:baseline; gap:26px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em; color:#55666F; width:134px; flex:none;">REGULAR / H3</div><div style="font-size:21px; font-weight:400;">Equity Research Report</div></div>
+          <div style="display:flex; align-items:baseline; gap:26px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em; color:#55666F; width:134px; flex:none;">LIGHT / BODY</div><div style="font-size:17px; font-weight:300; line-height:1.6; color:#55666F;">Capital Bridge offers full-fledged Sell-Side Research services to broker firms across multiple asset classes.</div></div>
+        </div>
+        <p style="font-size:16.5px; line-height:1.7; color:#55666F; margin:38px 0 0; border-top:1px solid #E2E9ED; padding-top:26px; text-wrap:pretty;">A humanist sans keeps dense report copy readable at small sizes and carries no personality of its own, which is what a research firm wants.</p>
+      </div>
+      <div style="display:grid; gap:22px;">
+        <div style="background:#1BB8D6; padding:38px; color:#fff;">
+          <div style="font-family:'Archivo',sans-serif; font-size:30px; font-weight:800; letter-spacing:-0.02em; margin-bottom:26px;">Bridge Teal</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; line-height:2; letter-spacing:0.06em;">HEX #1BB8D6<br>RGB 27 184 214<br>CMYK 74 3 8 0</div>
+        </div>
+        <div style="background:#0A1826; padding:38px; color:#fff;">
+          <div style="font-family:'Archivo',sans-serif; font-size:30px; font-weight:800; letter-spacing:-0.02em; margin-bottom:26px;">Ink</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; line-height:2; letter-spacing:0.06em; color:#A9C0CC;">HEX #0A1826<br>RGB 10 24 38<br>CMYK 84 62 42 79</div>
+        </div>
+        <div style="background:#fff; border:1px solid #E2E9ED; padding:38px;">
+          <div style="font-family:'Archivo',sans-serif; font-size:30px; font-weight:800; letter-spacing:-0.02em; margin-bottom:26px;">Paper</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; line-height:2; letter-spacing:0.06em; color:#55666F;">HEX #F4F7F9<br>RGB 244 247 249<br>CMYK 3 1 1 0</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Components" style="padding:130px 100px; background:#FFFFFF;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E7C93; margin-bottom:26px;">05 · Components</div>
+    <h2 style="font-family:'Archivo',sans-serif; font-size:64px; line-height:1.0; letter-spacing:-0.035em; font-weight:800; margin:0 0 18px;">The parts that repeat.</h2>
+    <p style="font-size:19px; line-height:1.72; color:#55666F; margin:0 0 60px; max-width:660px; text-wrap:pretty;">A small kit does the whole site: a banner, a service card, a form field, one filled button.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:26px; align-items:start;">
+      <div style="border:1px solid #E2E9ED;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F; padding:18px 26px; border-bottom:1px solid #E2E9ED;">Page banner</div>
+        <div style="padding:40px 26px; background:linear-gradient(120deg,#4FCBE3,#12A9CB); text-align:center;">
+          <div style="font-size:27px; font-weight:700; color:#fff; letter-spacing:0.01em; margin-bottom:12px;">TECHNOLOGY SOLUTION</div>
+          <div style="font-size:15px; line-height:1.6; color:#EAFAFE; max-width:420px; margin:0 auto;">Capital Bridge offers you a comprehensive suite of solutions engineered for performance, reliability, scale and high availability, designed to work seamlessly with each other.</div>
+        </div>
+      </div>
+      <div style="border:1px solid #E2E9ED;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F; padding:18px 26px; border-bottom:1px solid #E2E9ED;">Service card</div>
+        <div style="padding:36px 26px; background:#F4F7F9; display:flex; justify-content:center;">
+          <div style="background:#fff; border:1px solid #EDF1F4; padding:30px 26px; width:260px; text-align:center; box-shadow:0 18px 40px -26px rgba(10,24,38,0.22);">
+            <div style="width:62px; height:62px; border-radius:50%; background:#1BB8D6; margin:0 auto 22px; display:flex; align-items:center; justify-content:center;">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="#fff"><g><rect height="12" rx="2" width="8" x="12" y="18"></rect><rect height="9" rx="2" width="8" x="2" y="21"></rect><rect height="17" rx="2" width="8" x="22" y="13"></rect><path d="m6 17a1.007 1.007 0 0 0 .247-.031 42.138 42.138 0 0 0 10.243-4.1 42.055 42.055 0 0 0 9.51-7.346v2.477a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1-1h-5a1 1 0 0 0 0 2h2.676a40.026 40.026 0 0 1 -9.166 7.128 40.115 40.115 0 0 1 -9.757 3.9 1 1 0 0 0 .247 1.972z"></path></g></svg>
+            </div>
+            <div style="font-size:17px; font-weight:700; margin-bottom:12px;">Equity Research Report</div>
+            <div style="font-size:14.5px; line-height:1.65; color:#55666F;">A pool of experienced analysts with 100 years of combined experience.</div>
+          </div>
+        </div>
+      </div>
+      <div style="border:1px solid #E2E9ED;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F; padding:18px 26px; border-bottom:1px solid #E2E9ED;">Form field</div>
+        <div style="padding:36px 26px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:22px;">
+            <div>
+              <div style="font-size:14.5px; margin-bottom:9px;">First Name <span style="color:#E0533B;">*</span></div>
+              <div style="height:42px; border:1px solid #E2E9ED; display:flex; align-items:center; padding:0 13px; font-size:14.5px; color:#B7C3CA;">First Name (Mandatory)</div>
+            </div>
+            <div>
+              <div style="font-size:14.5px; margin-bottom:9px;">Phone No <span style="color:#E0533B;">*</span></div>
+              <div style="height:42px; border:1px solid #E2E9ED; display:flex; align-items:center; padding:0 13px; font-size:14.5px; color:#B7C3CA;">Phone No. (Mandatory)</div>
+            </div>
+          </div>
+          <div style="font-size:14.5px; margin-bottom:9px;">Enter Message <span style="color:#E0533B;">*</span></div>
+          <div style="height:84px; border:1px solid #E2E9ED; padding:12px 13px; font-size:14.5px; color:#B7C3CA;">Enter Message</div>
+        </div>
+      </div>
+      <div style="border:1px solid #E2E9ED;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F; padding:18px 26px; border-bottom:1px solid #E2E9ED;">Buttons &amp; nav</div>
+        <div style="padding:36px 26px;">
+          <div style="display:flex; gap:16px; margin-bottom:34px;">
+            <div style="background:#1BB8D6; color:#fff; padding:14px 34px; font-size:16px;">REGISTER NOW</div>
+            <div style="background:#1BB8D6; color:#fff; padding:14px 30px; font-size:16px;">Reset</div>
+            <div style="background:#1BB8D6; color:#fff; padding:14px 30px; font-size:16px;">Submit</div>
+          </div>
+          <div style="border-top:1px solid #E2E9ED; padding-top:26px; display:flex; align-items:center; gap:28px; font-size:14.5px; color:#55666F; letter-spacing:0.04em;">
+            <span style="color:#0A1826; font-weight:600;">HOME</span><span>SERVICES</span><span>ABOUT US</span><span>BLOG</span><span>CONTACT US</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border:1px solid #E2E9ED; margin-top:26px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#55666F; padding:18px 26px; border-bottom:1px solid #E2E9ED;">Service icons</div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#E2E9ED;">
+        <div style="background:#fff; padding:40px 26px; text-align:center;">
+          <div style="width:62px; height:62px; border-radius:50%; background:#1BB8D6; margin:0 auto 20px; display:flex; align-items:center; justify-content:center;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="#fff"><g><rect height="12" rx="2" width="8" x="12" y="18"></rect><rect height="9" rx="2" width="8" x="2" y="21"></rect><rect height="17" rx="2" width="8" x="22" y="13"></rect><path d="m6 17a1.007 1.007 0 0 0 .247-.031 42.138 42.138 0 0 0 10.243-4.1 42.055 42.055 0 0 0 9.51-7.346v2.477a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1-1h-5a1 1 0 0 0 0 2h2.676a40.026 40.026 0 0 1 -9.166 7.128 40.115 40.115 0 0 1 -9.757 3.9 1 1 0 0 0 .247 1.972z"></path></g></svg>
+          </div>
+          <div style="font-size:16px; font-weight:700;">Equity Research</div>
+        </div>
+        <div style="background:#fff; padding:40px 26px; text-align:center;">
+          <div style="width:62px; height:62px; border-radius:50%; background:#1BB8D6; margin:0 auto 20px; display:flex; align-items:center; justify-content:center;">
+            <svg width="27" height="27" viewBox="-31 0 512 512" fill="#fff"><path d="m213 127c5.699219-7.5 18.300781-7.5 24 0l18 24h165v-121h15c8.289062 0 15-6.710938 15-15s-6.710938-15-15-15c-128.160156 0-292.34375 0-420 0-8.289062 0-15 6.710938-15 15s6.710938 15 15 15h15v121h165zm0 0"></path><path d="m120 286c0-22.800781 7.199219-44.699219 21-63l31.5-42h-142.5v150h100.199219c-6.597657-13.800781-10.199219-29.101562-10.199219-45zm0 0"></path><path d="m15 482c-8.289062 0-15 6.710938-15 15s6.710938 15 15 15h420c8.289062 0 15-6.710938 15-15s-6.710938-15-15-15h-15v-121h-121.5c-14.699219 14.398438-33.601562 24.601562-54.601562 28.199219-34.207032 6.511719-69.140626-5.242188-92.097657-28.199219h-121.800781v121zm0 0"></path><path d="m309 223c17.101562 22.800781 24 51 19.800781 79.800781-1.800781 9.898438-4.800781 19.5-9 28.199219h100.199219v-150h-142.5zm0 0"></path><path d="m238.800781 359.800781c31.328125-5.421875 55.84375-31.875 60.296875-61.800781 3.003906-20.402344-1.796875-40.800781-14.097656-57l-60-80.101562-60 80.101562c-9.902344 13.199219-15 28.5-15 45 0 45.359375 39.953125 82.152344 88.800781 73.800781zm-13.800781-58.800781c8.402344 0 15-6.601562 15-15 0-8.402344 6.597656-15 15-15s15 6.597656 15 15c0 24.898438-20.097656 45-45 45-8.402344 0-15-6.601562-15-15 0-8.402344 6.597656-15 15-15zm0 0"></path><path d="m15 151c-8.402344 0-15 6.597656-15 15 0 8.398438 6.597656 15 15 15h15v-30zm0 0"></path><path d="m435 181c8.402344 0 15-6.601562 15-15 0-8.402344-6.597656-15-15-15h-15v30zm0 0"></path><path d="m15 331c-8.402344 0-15 6.597656-15 15 0 8.398438 6.597656 15 15 15h15v-30zm0 0"></path><path d="m435 361c8.402344 0 15-6.601562 15-15 0-8.402344-6.597656-15-15-15h-15v30zm0 0"></path></svg>
+          </div>
+          <div style="font-size:16px; font-weight:700;">Commodity</div>
+        </div>
+        <div style="background:#fff; padding:40px 26px; text-align:center;">
+          <div style="width:62px; height:62px; border-radius:50%; background:#1BB8D6; margin:0 auto 20px; display:flex; align-items:center; justify-content:center;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="#fff"><path d="m21.386 10c-1.055-4.9-3.305-8-5.386-8s-4.331 3.1-5.386 8z"></path><path d="m10 16a30.013 30.013 0 0 0 .267 4h11.466a30.013 30.013 0 0 0 .267-4 30.013 30.013 0 0 0 -.267-4h-11.466a30.013 30.013 0 0 0 -.267 4z"></path><path d="m10.614 22c1.055 4.9 3.305 8 5.386 8s4.331-3.1 5.386-8z"></path><path d="m23.434 10h6.3a15.058 15.058 0 0 0 -10.449-8.626c1.897 1.669 3.385 4.755 4.149 8.626z"></path><path d="m30.453 12h-6.7a32.332 32.332 0 0 1 .247 4 32.332 32.332 0 0 1 -.248 4h6.7a14.9 14.9 0 0 0 0-8z"></path><path d="m19.285 30.626a15.058 15.058 0 0 0 10.451-8.626h-6.3c-.766 3.871-2.254 6.957-4.151 8.626z"></path><path d="m8.566 22h-6.3a15.058 15.058 0 0 0 10.451 8.626c-1.899-1.669-3.387-4.755-4.151-8.626z"></path><path d="m12.715 1.374a15.058 15.058 0 0 0 -10.451 8.626h6.3c.766-3.871 2.254-6.957 4.151-8.626z"></path><path d="m8 16a32.332 32.332 0 0 1 .248-4h-6.7a14.9 14.9 0 0 0 0 8h6.7a32.332 32.332 0 0 1 -.248-4z"></path></svg>
+          </div>
+          <div style="font-size:16px; font-weight:700;">SEO &amp; SMO</div>
+        </div>
+        <div style="background:#fff; padding:40px 26px; text-align:center;">
+          <div style="width:62px; height:62px; border-radius:50%; background:#1BB8D6; margin:0 auto 20px; display:flex; align-items:center; justify-content:center;">
+            <svg width="26" height="26" viewBox="0 0 88 88" fill="#fff"><g><path d="M79,36H76.9766a32.8015,32.8015,0,0,0-21.6-30H72.142a4,4,0,1,0,0-2H48V2a1,1,0,0,0-1-1H41a1,1,0,0,0-1,1V4H15.858a4,4,0,1,0,0,2H32.6232a32.8015,32.8015,0,0,0-21.6,30H9a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V37a1,1,0,0,0-1-1H13.0234A30.815,30.815,0,0,1,40,6.2631V8a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V6.2631A30.815,30.815,0,0,1,74.9766,36H73a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V37A1,1,0,0,0,79,36Z"></path><path d="M46.8945,13.5527A1,1,0,0,0,45,14V46.41a1,1,0,0,0,.5947.914,4,4,0,1,1-3.1894,0A1,1,0,0,0,43,46.41V14a1,1,0,0,0-1.8945-.4473l-19,38a1.0008,1.0008,0,0,0,0,.8946L29.3818,67H58.6182l7.2763-14.5527a1.0008,1.0008,0,0,0,0-.8946Z"></path><rect x="26" y="69" width="36" height="8" rx="1" ry="1"></rect><path d="M29,86a1,1,0,0,0,1,1H58a1,1,0,0,0,1-1V79H29Z"></path></g></svg>
+          </div>
+          <div style="font-size:16px; font-weight:700;">Web Designing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Structure" style="padding:130px 100px; background:#F4F7F9;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E7C93; margin-bottom:26px;">06 · Structure</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:90px; align-items:end; margin-bottom:74px;">
+      <h2 style="font-family:'Archivo',sans-serif; font-size:64px; line-height:1.0; letter-spacing:-0.035em; font-weight:800; margin:0;">Five pages,<br>one path.</h2>
+      <p style="font-size:19px; line-height:1.72; color:#55666F; margin:0 0 8px; text-wrap:pretty;">Rather than a single page carrying all five service lines, each got its own room with a consistent shape: banner statement, plain-language explanation, then the products inside it. Every page ends in the same contact form, so intent is never more than one scroll from an enquiry.</p>
+    </div>
+    <div style="border:1px solid #E2E9ED;">
+      <div style="display:flex; align-items:center; gap:16px; padding:26px 34px; border-bottom:1px solid #E2E9ED; background:#F4F7F9;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#55666F;">Sitemap</div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:#E2E9ED;">
+        <div style="background:#fff; padding:34px 28px 40px;">
+          <div style="width:36px; height:36px; background:#1BB8D6; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:13px; margin-bottom:22px;">01</div>
+          <div style="font-size:18px; font-weight:700; margin-bottom:12px;">Home</div>
+          <div style="font-size:14.5px; line-height:1.65; color:#55666F;">Hero statement, the five services, who we are, contact</div>
+        </div>
+        <div style="background:#fff; padding:34px 28px 40px;">
+          <div style="width:36px; height:36px; background:#1BB8D6; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:13px; margin-bottom:22px;">02</div>
+          <div style="font-size:18px; font-weight:700; margin-bottom:12px;">Research</div>
+          <div style="font-size:14.5px; line-height:1.65; color:#55666F;">White-labelled products, reports, tools</div>
+        </div>
+        <div style="background:#fff; padding:34px 28px 40px;">
+          <div style="width:36px; height:36px; background:#1BB8D6; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:13px; margin-bottom:22px;">03</div>
+          <div style="font-size:18px; font-weight:700; margin-bottom:12px;">Content</div>
+          <div style="font-size:14.5px; line-height:1.65; color:#55666F;">Digital presence, web, SEO, video, FAQ</div>
+        </div>
+        <div style="background:#fff; padding:34px 28px 40px;">
+          <div style="width:36px; height:36px; background:#1BB8D6; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:13px; margin-bottom:22px;">04</div>
+          <div style="font-size:18px; font-weight:700; margin-bottom:12px;">Technology</div>
+          <div style="font-size:14.5px; line-height:1.65; color:#55666F;">Broking stack, feeds, hosting, data centre</div>
+        </div>
+        <div style="background:#fff; padding:34px 28px 40px;">
+          <div style="width:36px; height:36px; background:#0A1826; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:13px; margin-bottom:22px;">05</div>
+          <div style="font-size:18px; font-weight:700; margin-bottom:12px;">About</div>
+          <div style="font-size:14.5px; line-height:1.65; color:#55666F;">Mission, team, directors</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Home Page" style="padding:130px 100px; background:#0A1826; color:#fff;">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:90px; align-items:end; margin-bottom:70px;">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#1BB8D6; margin-bottom:26px;">07 · Home</div>
+        <h2 style="font-family:'Archivo',sans-serif; font-size:64px; line-height:1.0; letter-spacing:-0.035em; font-weight:800; margin:0;">Lead with<br>the work,<br>not the pitch.</h2>
+      </div>
+      <p style="font-size:19px; line-height:1.72; color:#A9C0CC; margin:0 0 8px; font-weight:300; text-wrap:pretty;">The hero names the service and the asset classes in one line, sell-side research across equity, commodity and fixed income, then a single call to action. Below it, the five service lines get equal weight on a light ground, so a visitor can find their own reason to stay before any persuasion begins.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-bottom:62px;">
+      <div style="border-top:2px solid #1BB8D6; padding-top:22px;">
+        <div style="font-size:18px; font-weight:700; margin-bottom:10px;">One statement, one action</div>
+        <div style="font-size:15.5px; line-height:1.7; color:#8FB3C2;">Headline, two short paragraphs, Register Now. Nothing competes with it.</div>
+      </div>
+      <div style="border-top:2px solid #1BB8D6; padding-top:22px;">
+        <div style="font-size:18px; font-weight:700; margin-bottom:10px;">Services as a flat grid</div>
+        <div style="font-size:15.5px; line-height:1.7; color:#8FB3C2;">Five lines, equal weight, no ranking, buyers self-select.</div>
+      </div>
+      <div style="border-top:2px solid #1BB8D6; padding-top:22px;">
+        <div style="font-size:18px; font-weight:700; margin-bottom:10px;">Who we are, then contact</div>
+        <div style="font-size:15.5px; line-height:1.7; color:#8FB3C2;">Credibility before the form, and the form on every page.</div>
+      </div>
+    </div>
+    <div style="width:880px; margin:0 auto; border-radius:8px; overflow:hidden; box-shadow:0 50px 100px -44px rgba(0,0,0,0.62); border:1px solid rgba(255,255,255,0.12);">
+      <div style="height:32px; background:#F4F7F9; display:flex; align-items:center; gap:6px; padding:0 13px;"><div style="width:8px; height:8px; border-radius:50%; background:#D6DEE3;"></div><div style="width:8px; height:8px; border-radius:50%; background:#D6DEE3;"></div><div style="width:8px; height:8px; border-radius:50%; background:#D6DEE3;"></div><div style="margin-left:13px; flex:1; max-width:280px; height:20px; border-radius:5px; background:#fff; border:1px solid #E2E9ED;"></div></div>
+      <img src="cb/page-home-hd.png" alt="Capital Bridge home page, full length" style="width:100%; aspect-ratio:1700 / 2925; display:block;">
+    </div>
+  </section>
+
+  <section data-screen-label="Service Pages" style="padding:130px 100px; background:#FFFFFF;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E7C93; margin-bottom:26px;">08 · Service Pages</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:90px; align-items:end; margin-bottom:70px;">
+      <h2 style="font-family:'Archivo',sans-serif; font-size:64px; line-height:1.0; letter-spacing:-0.035em; font-weight:800; margin:0;">Same shape,<br>three times.</h2>
+      <p style="font-size:19px; line-height:1.72; color:#55666F; margin:0 0 8px; text-wrap:pretty;">Each service page opens with a teal banner carrying the promise, explains the thinking in plain paragraphs, then breaks the offer into a card grid. Repetition is the point, once a visitor learns one page, they can read all three.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:26px;">
+      <div>
+        <div data-cb-lift style="border:1px solid #E2E9ED; border-radius:6px; overflow:hidden; height:582px; box-shadow:0 30px 60px -34px rgba(10,24,38,0.28);">
+          <img src="cb/page-research.jpg" alt="Research and Information Service page" style="width:100%; height:100%; display:block; object-fit:cover; object-position:top;">
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#0E7C93; margin-top:20px; margin-bottom:8px;">01 · Research</div>
+        <div style="font-size:17px; font-weight:700; margin-bottom:8px;">White-labelled products</div>
+        <div style="font-size:15px; line-height:1.65; color:#55666F;">Seven report and tool types, each a card a broker can point at.</div>
+      </div>
+      <div>
+        <div data-cb-lift style="border:1px solid #E2E9ED; border-radius:6px; overflow:hidden; height:582px; box-shadow:0 30px 60px -34px rgba(10,24,38,0.28);">
+          <img src="cb/page-content.jpg" alt="Content Creation and Management page" style="width:100%; height:100%; display:block; object-fit:cover; object-position:top;">
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#0E7C93; margin-top:20px; margin-bottom:8px;">02 · Content</div>
+        <div style="font-size:17px; font-weight:700; margin-bottom:8px;">Digital presence</div>
+        <div style="font-size:15px; line-height:1.65; color:#55666F;">Opens with a question rather than a claim, then eight capabilities.</div>
+      </div>
+      <div>
+        <div data-cb-lift style="border:1px solid #E2E9ED; border-radius:6px; overflow:hidden; height:582px; box-shadow:0 30px 60px -34px rgba(10,24,38,0.28);">
+          <img src="cb/page-tech.jpg" alt="Technology Solution page" style="width:100%; height:100%; display:block; object-fit:cover; object-position:top;">
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#0E7C93; margin-top:20px; margin-bottom:8px;">03 · Technology</div>
+        <div style="font-size:17px; font-weight:700; margin-bottom:8px;">The broking stack</div>
+        <div style="font-size:15px; line-height:1.65; color:#55666F;">Frames the shift to online-first clients before listing the products.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="About" style="padding:130px 100px; background:#F4F7F9;">
+    <div style="display:grid; grid-template-columns:420px 1fr; gap:70px; align-items:start;">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E7C93; margin-bottom:26px;">09 · About</div>
+        <h2 style="font-family:'Archivo',sans-serif; font-size:58px; line-height:1.02; letter-spacing:-0.035em; font-weight:800; margin:0 0 30px;">Put faces<br>to it.</h2>
+        <p style="font-size:18px; line-height:1.72; color:#55666F; margin:0 0 30px; text-wrap:pretty;">For a firm with no track record, the people are the track record. The About page states the mission on a full-width teal band, then shows the whole team and the directors by name.</p>
+        <p style="font-size:18px; line-height:1.72; color:#55666F; margin:0; text-wrap:pretty;">It is the one page where the brand raises its voice, everywhere else, the teal is an accent.</p>
+      </div>
+      <div data-cb-lift style="border:1px solid #E2E9ED; border-radius:6px; overflow:hidden; box-shadow:0 40px 80px -40px rgba(10,24,38,0.3); background:#fff;">
+        <div style="height:36px; background:#fff; border-bottom:1px solid #E2E9ED; display:flex; align-items:center; gap:6px; padding:0 14px;"><div style="width:9px; height:9px; border-radius:50%; background:#E2E9ED;"></div><div style="width:9px; height:9px; border-radius:50%; background:#E2E9ED;"></div><div style="width:9px; height:9px; border-radius:50%; background:#E2E9ED;"></div></div>
+        <img src="cb/page-about.jpg" alt="Capital Bridge About Us page, full length" style="width:100%; aspect-ratio:1200 / 2566; display:block;">
+      </div>
+    </div>
+  </section>
+
+
+  <section data-screen-label="Outcomes" style="padding:130px 100px; background:#0A1826; color:#fff;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#1BB8D6; margin-bottom:26px;">10 · Where It Landed</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:90px; align-items:end; margin-bottom:76px;">
+      <h2 style="font-family:'Archivo',sans-serif; font-size:64px; line-height:1.0; letter-spacing:-0.035em; font-weight:800; margin:0;">A firm that<br>reads as<br>established.</h2>
+      <p style="font-size:19px; line-height:1.72; color:#A9C0CC; margin:0 0 8px; font-weight:300; text-wrap:pretty;">The identity and the site shipped together, which meant the mark, the type and the colour all arrived in the same first impression.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;">
+      <div style="border:1px solid rgba(255,255,255,0.14); padding:38px 32px;">
+        <div style="font-family:'Archivo',sans-serif; font-size:15px; font-weight:700; color:#1BB8D6; margin-bottom:20px;">A</div>
+        <div style="font-size:20px; font-weight:700; margin-bottom:14px;">One mark, every surface</div>
+        <div style="font-size:16px; line-height:1.7; color:#8FB3C2;">Three ready variations meant the team could put the logo on a report, a banner or a video without asking for a new file.</div>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.14); padding:38px 32px;">
+        <div style="font-family:'Archivo',sans-serif; font-size:15px; font-weight:700; color:#1BB8D6; margin-bottom:20px;">B</div>
+        <div style="font-size:20px; font-weight:700; margin-bottom:14px;">Five offers, separately sellable</div>
+        <div style="font-size:16px; line-height:1.7; color:#8FB3C2;">Giving each service line its own page turned a flat list into pages the sales team could send on their own.</div>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.14); padding:38px 32px;">
+        <div style="font-family:'Archivo',sans-serif; font-size:15px; font-weight:700; color:#1BB8D6; margin-bottom:20px;">C</div>
+        <div style="font-size:20px; font-weight:700; margin-bottom:14px;">An enquiry on every page</div>
+        <div style="font-size:16px; line-height:1.7; color:#8FB3C2;">The same contact block closes all five pages, so no route through the site ends without a way to get in touch.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Reflection" style="padding:130px 100px; background:#FFFFFF;">
+    <div style="display:grid; grid-template-columns:420px 1fr; gap:90px; align-items:start;">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E7C93; margin-bottom:26px;">11 · Reflection</div>
+        <h2 style="font-family:'Archivo',sans-serif; font-size:58px; line-height:1.02; letter-spacing:-0.035em; font-weight:800; margin:0;">What I'd<br>change.</h2>
+      </div>
+      <div style="padding-top:70px;">
+        <p style="font-size:19px; line-height:1.72; color:#55666F; margin:0 0 26px; text-wrap:pretty;">The service pages carry a lot of copy in centred columns. Left-aligning the body text and tightening the measure would make them faster to scan, and several cards repeat the same sentence about combined analyst experience, that space would be better spent on what each product actually contains.</p>
+        <p style="font-size:19px; line-height:1.72; color:#55666F; margin:0 0 26px; text-wrap:pretty;">I would also push the stock illustrations out in favour of the firm's own report layouts. Screenshots of real output would do more for credibility than any illustration can.</p>
+        <p style="font-size:19px; line-height:1.72; color:#55666F; margin:0; text-wrap:pretty;">The mark is the part I would keep untouched. It survives at a favicon, works in one colour, and the idea is legible without explanation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Thank You" style="position:relative; padding:150px 100px 130px; background:#0A1826; color:#fff; overflow:hidden; text-align:center;">
+    <div style="position:absolute; top:-200px; left:50%; margin-left:-400px; width:800px; height:800px; border-radius:50%; background:radial-gradient(closest-side, rgba(27,184,214,0.26), transparent 70%);"></div>
+    <div style="position:relative;">
+      <img src="cb/lockup-white.svg" alt="Capital Bridge logo" style="width:150px; aspect-ratio:129.083 / 119.639; display:block; margin:0 auto 40px;">
+      <h2 style="font-family:'Archivo',sans-serif; font-size:88px; line-height:1.0; letter-spacing:-0.04em; font-weight:800; margin:0 0 26px;">Thank you.</h2>
+      <p style="font-size:20px; line-height:1.7; color:#A9C0CC; margin:0 auto 54px; max-width:520px; font-weight:300;">Capital Bridge Pvt. Ltd.</p>
+      <div style="display:flex; justify-content:center; gap:56px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#1BB8D6;">
+        <span>Brand Identity</span><span>UI / UX</span><span>Web Design</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;coverStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Stacked screens&quot;,&quot;Type-led&quot;],&quot;default&quot;:&quot;Stacked screens&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Cover&quot;},&quot;showBridgeMotif&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cover&quot;},&quot;scrollMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    if (this.props.scrollMotion === false) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    clearTimeout(this._t);
+    // geometry must be real before anything is primed: un-sized images collapse the
+    // document, and every element then looks "already scrolled to"
+    this.whenLaidOut().then(() => { this._t = setTimeout(() => this.arm(), 120); });
+  }
+
+  whenLaidOut() {
+    const imgs = Array.from(document.images).filter(i => !i.complete);
+    const waits = imgs.map(i => new Promise(res => {
+      i.addEventListener('load', res, { once: true });
+      i.addEventListener('error', res, { once: true });
+    }));
+    if (document.readyState !== 'complete') {
+      waits.push(new Promise(res => window.addEventListener('load', res, { once: true })));
+    }
+    return Promise.race([Promise.all(waits), new Promise(res => setTimeout(res, 6000))]);
+  }
+  componentWillUnmount() {
+    clearTimeout(this._t);
+    (this._guards || []).forEach(clearInterval);
+  }
+
+  arm() {
+    this._guards = this._guards || [];
+    // "near enough to have been scrolled to" — the one condition every safety net checks
+    const nearView = el => {
+      const r = el.getBoundingClientRect();
+      return r.top < (window.innerHeight || 800) * 1.4 && r.bottom > -200;
+    };
+    const root = document.querySelector('[data-cb-root]');
+    if (!root || root.hasAttribute('data-cb-armed')) return;
+    root.setAttribute('data-cb-armed', '1');
+    const SHOWN = 'data-cb-shown';
+
+    const groups = [];
+    Array.from(root.querySelectorAll(':scope > section')).slice(1).forEach(sec => {
+      Array.from(sec.children).forEach(child => {
+        const cs = getComputedStyle(child);
+        const row = (cs.display === 'grid' || (cs.display === 'flex' && cs.flexWrap !== 'wrap' && child.children.length < 9)) && child.children.length > 1;
+        groups.push(row ? Array.from(child.children) : [child]);
+      });
+    });
+
+    const show = el => {
+      if (el.hasAttribute(SHOWN)) return;
+      el.setAttribute(SHOWN, '1');
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      setTimeout(() => { el.style.willChange = ''; }, 800);
+    };
+
+    const pending = new Set();
+    const delays = new WeakMap();
+    groups.forEach(g => g.forEach((el, i) => {
+      if (el.hasAttribute(SHOWN)) return;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity .7s cubic-bezier(.22,.7,.3,1), transform .7s cubic-bezier(.22,.7,.3,1)';
+      el.style.willChange = 'opacity, transform';
+      delays.set(el, Math.min(i * 70, 420));
+      pending.add(el);
+    }));
+
+    let io = null, iv = 0, done = false;
+    const teardown = () => {
+      if (done) return;
+      done = true;
+      if (io) io.disconnect();
+      clearInterval(iv);
+      window.removeEventListener('scroll', sweep, true);
+    };
+    const fire = el => {
+      if (!pending.has(el)) return;
+      pending.delete(el);
+      if (io) io.unobserve(el);
+      setTimeout(() => show(el), delays.get(el) || 0);
+    };
+    function sweep() {
+      const h = window.innerHeight || 800;
+      Array.from(pending).forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top < h * 1.05 && r.bottom > -h) fire(el);
+      });
+      if (!pending.size) teardown();
+    }
+
+    io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) fire(e.target); }); },
+      { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+    pending.forEach(el => io.observe(el));
+    window.addEventListener('scroll', sweep, true);
+    window.addEventListener('resize', sweep);
+    // a document hidden at arm time gets no observer callbacks, no scroll events and
+    // throttled intervals — resolve everything the instant it becomes visible
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) sweep(); });
+    window.addEventListener('load', sweep);
+    iv = setInterval(sweep, 400);
+    sweep();
+
+    // the floor is scroll-conditioned: anything still far below stays primed and observed,
+    // so no entrance is ever spent off-screen on a wall-clock timer
+    const floor = setInterval(() => {
+      if (!pending.size) return clearInterval(floor);
+      Array.from(pending).forEach(el => { if (nearView(el)) fire(el); });
+    }, 600);
+    this._guards.push(floor);
+  }
+
+  renderVals() {
+    const cover = this.props.coverStyle ?? "Stacked screens";
+    return {
+      coverStacked: cover === "Stacked screens",
+      coverTypeLed: cover === "Type-led",
+      showBridgeMotif: this.props.showBridgeMotif ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>

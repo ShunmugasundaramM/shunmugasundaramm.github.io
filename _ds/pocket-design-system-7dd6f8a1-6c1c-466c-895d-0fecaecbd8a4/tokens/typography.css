@@ -1,0 +1,30 @@
+:root{
+  --font-display:'Archivo',system-ui,sans-serif; --stretch-display:125%;
+  --font-sans:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif; --stretch-sans:100%;
+  --font-mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  /* Wordmark: Archivo Expanded Black (wght 900, wdth 125) */
+  --font-wordmark:'Archivo',system-ui,sans-serif; --stretch-wordmark:125%;
+
+  --weight-regular:400; --weight-medium:500; --weight-semibold:600; --weight-bold:700; --weight-heavy:800; --weight-black:900;
+
+  /* Display + headings — Archivo Expanded, tight */
+  --text-display-xl:56px; --lh-display-xl:56px; --ls-display-xl:-0.035em;
+  --text-display:40px;    --lh-display:44px;    --ls-display:-0.03em;
+  --text-h1:32px;         --lh-h1:36px;         --ls-h1:-0.03em;
+  --text-h2:24px;         --lh-h2:28px;         --ls-h2:-0.02em;
+  --text-h3:20px;         --lh-h3:24px;         --ls-h3:-0.02em;
+  /* Body */
+  --text-body-lg:17px; --lh-body-lg:26px;
+  --text-body:15px;    --lh-body:22px;
+  --text-body-sm:13px; --lh-body-sm:18px;
+  --text-caption:12px; --lh-caption:16px; --ls-caption:0.12em;
+  /* Numerals — IBM Plex Mono, tabular */
+  --text-num-hero:52px; --text-num-xl:34px; --text-num-lg:24px; --text-num:15px; --text-num-sm:12px;
+  --ls-num-hero:-0.03em;
+
+  /* Semantic */
+  --type-heading:var(--weight-heavy) var(--text-h1)/var(--lh-h1) var(--font-display);
+  --type-body:var(--weight-regular) var(--text-body)/var(--lh-body) var(--font-sans);
+  --type-label:var(--weight-semibold) var(--text-body-sm)/var(--lh-body-sm) var(--font-sans);
+  --type-price:var(--weight-semibold) var(--text-num)/1.2 var(--font-mono);
+}

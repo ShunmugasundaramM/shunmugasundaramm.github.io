@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pocket | Designed by Pull Logic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   TOKENS
+   Pocket = dark ink + lime. Mockup cards keep their own brand
+   colours (ATS green, LeadSquared blue, Pull Logic amber).
+   ========================================================= */
+:root{
+  --bg:#0D0E12; --bg-2:#15171D; --line:#262A33; --ink:#F2F4F7; --mute:#A0A6B2;
+  /* portfolio accent (electric blue) + the deeper field it sits on in the stage */
+  --accent:#5AA9FF; --accent-ink:#0D0E12; --field:#1E5FE0; --field-deep:#1749B8;
+  --lime:#C8FF00; --lime-ink:#0A0A0A; --up:#00E676; --down:#FF3B30;
+  --ats:#2E9E44; --ls:#1F6FEB; --ls-bg:#E3EEFF; --pl:#F5A623; --pl-navy:#0B2A4A; --pl-rust:#E8602C; --paper:#F5F1EB;
+  --f-display:'Archivo',system-ui,sans-serif; --f-mono:'IBM Plex Mono',ui-monospace,monospace; --f-ui:'Inter',system-ui,sans-serif;
+  --stage-h:520px; --slot-h:440px; --slot-w:300px; --frame-w:750px; --side-w:40%; --card-r:16px; --gap:16px; --loop:25s;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-display);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:#8CC4FF}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+.hero{overflow:hidden;padding:88px 0 0}
+.hero__copy{max-width:880px;margin:0 auto;padding:0 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px}
+.badge{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 14px;border:1px solid var(--line);border-radius:999px;font:500 13px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.badge b{color:var(--accent);font-weight:600}
+.hero h1{margin:0;font-weight:800;font-stretch:118%;font-size:clamp(36px,5.4vw,64px);line-height:1.02;letter-spacing:-.035em;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{margin:0;max-width:56ch;font-size:18px;line-height:1.55;color:var(--mute);text-wrap:pretty}
+.ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 24px;border-radius:999px;font:600 15px/1 var(--f-display);white-space:nowrap;transition:transform .2s var(--ease),background-color .2s,border-color .2s}
+.btn:active{transform:scale(.98)}
+.btn--primary{background:var(--accent);color:var(--accent-ink)}
+.btn--primary:hover{background:#8CC4FF;color:var(--accent-ink)}
+.btn--ghost{border:1px solid #3F3F46;color:var(--ink)}
+.btn--ghost:hover{border-color:var(--accent);color:var(--ink)}
+
+/* =========================================================
+   STAGE
+   ========================================================= */
+/* own glass stage: obsidian base lit by two soft electric-blue light pools, hairline top + bottom edges */
+.stage{position:relative;height:var(--stage-h);margin-top:64px;overflow:hidden;
+  background:
+    radial-gradient(60% 90% at 50% 0%,rgba(90,169,255,.22),transparent 70%),
+    radial-gradient(40% 70% at 12% 100%,rgba(90,169,255,.12),transparent 70%),
+    radial-gradient(40% 70% at 88% 100%,rgba(106,242,200,.07),transparent 70%),
+    var(--bg);
+  border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.glow{position:absolute;left:50%;top:0;width:1000px;height:1000px;transform:translate(-50%,-32%);border-radius:50%;
+  background:radial-gradient(circle,rgba(90,169,255,.18) 0%,rgba(90,169,255,.05) 40%,transparent 62%);pointer-events:none}
+.ring{position:absolute;left:50%;top:0;width:820px;height:820px;transform:translate(-50%,-34%);border:1px solid rgba(140,196,255,.14);border-radius:50%;pointer-events:none}
+
+/* ---- side columns ---- */
+/* ghosted columns: cards at ~60% opacity, seen through a frosted-glass pane (web approximation, not Apple Liquid Glass) */
+.side{position:absolute;top:0;bottom:0;width:var(--side-w);overflow:hidden;display:flex;align-items:center}
+.side::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.015) 40%,rgba(13,14,18,.35));
+  -webkit-backdrop-filter:blur(3px) saturate(140%);backdrop-filter:blur(3px) saturate(140%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10)}
+.side--left::after{-webkit-mask-image:linear-gradient(90deg,#000 70%,transparent);mask-image:linear-gradient(90deg,#000 70%,transparent)}
+.side--right::after{-webkit-mask-image:linear-gradient(270deg,#000 70%,transparent);mask-image:linear-gradient(270deg,#000 70%,transparent)}
+.side .strip{opacity:.6;filter:brightness(.85)}
+@media (prefers-reduced-transparency:reduce){.side::after{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(13,14,18,.4)}}
+.side--left{left:0}
+.side--right{right:0}
+.strip{display:flex;align-items:center;gap:var(--gap);width:max-content;padding-right:var(--gap);animation:drift var(--loop) linear infinite;will-change:transform}
+.side--left .strip{animation-direction:reverse}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---- slots: one tall card, or two cards stacked ---- */
+.slot{flex:none;width:var(--slot-w);height:var(--slot-h);display:flex;flex-direction:column;gap:var(--gap)}
+.slot--wide{width:340px}
+.slot--center{justify-content:center}
+
+/* ---- shared mini-card shell ---- */
+.card{flex:1 1 0;min-height:0;border-radius:var(--card-r);overflow:hidden;border:1px solid rgba(255,255,255,.10);box-shadow:0 24px 48px -28px rgba(0,0,0,.8)}
+.card--slide{flex:none;aspect-ratio:16/9}   /* 16:9 */
+
+/* ---- centre browser frame ---- */
+.frame{position:absolute;left:50%;top:40px;z-index:10;width:min(var(--frame-w),calc(100% - 48px));transform:translateX(-50%);border-radius:16px;overflow:hidden;
+  background:#111;border:1px solid #2A2A2A;box-shadow:0 40px 90px -30px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.04),0 0 0 8px rgba(255,255,255,.03)}
+.frame__bar{display:flex;align-items:center;gap:8px;height:40px;padding:0 14px;background:#161616;border-bottom:1px solid #222}
+.frame__bar i{width:10px;height:10px;border-radius:50%;background:#3A3A3A}
+.frame__url{margin:0 auto;transform:translateX(-26px);height:24px;padding:0 40px;border-radius:999px;background:#222;display:flex;align-items:center;font:400 12px/1 var(--f-mono);color:#9A9A9A}
+.frame__body{position:relative}
+.frame__view{transition:filter .4s var(--ease)}
+.frame__cta{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.96);opacity:0;transition:opacity .3s var(--ease),transform .3s var(--ease);
+  height:48px;padding:0 26px;border-radius:999px;background:#0A0A0A;color:#fff;border:1px solid #3A3A3A;display:inline-flex;align-items:center;gap:10px;font:600 15px/1 var(--f-display)}
+.frame:hover .frame__view,.frame:focus-within .frame__view{filter:brightness(.55)}
+.frame:hover .frame__cta,.frame:focus-within .frame__cta{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.frame__cta:hover{color:#fff;border-color:var(--accent)}
+
+/* =========================================================
+   MOCKUP: POCKET WEB (centre)
+   ========================================================= */
+.pk{background:#0A0A0A;color:#F5F5F5;font-family:var(--f-display);font-size:12px}
+.pk-nav{display:flex;align-items:center;gap:22px;height:50px;padding:0 22px;border-bottom:1px solid #1E1E1E}
+.pk-logo{font-weight:900;font-stretch:125%;font-size:17px;letter-spacing:-.01em;display:inline-flex;align-items:center}
+.pk-logo .o{display:inline-block;width:.74em;height:.74em;margin:0 .02em;border:.18em solid currentColor;border-radius:50%;position:relative}
+.pk-logo .o::after{content:"";position:absolute;inset:50% auto auto 50%;width:.2em;height:.2em;transform:translate(-50%,-50%);border-radius:50%;background:var(--lime)}
+.pk-nav a{color:#A1A1AA;font-size:12.5px}
+.pk-nav a.on{color:#fff;font-weight:600}
+.pk-search{margin-left:auto;width:190px;height:30px;border-radius:999px;border:1px solid #2A2A2A;display:flex;align-items:center;padding:0 12px;color:#71717A;font-size:11.5px}
+.pk-avatar{width:30px;height:30px;border-radius:50%;background:var(--lime);color:#0A0A0A;display:grid;place-items:center;font-weight:800;font-size:11px}
+.pk-ticker{display:flex;gap:22px;height:30px;align-items:center;padding:0 22px;background:#111;border-bottom:1px solid #1E1E1E;font:400 10.5px/1 var(--f-mono);color:#A1A1AA;white-space:nowrap;overflow:hidden}
+.pk-ticker b{color:#fff;font-weight:500;margin:0 4px}
+.dn{color:var(--down)} .up{color:var(--up)}
+.pk-main{padding:18px 22px 22px;display:grid;gap:16px}
+.pk-top{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pk-port{border-radius:14px;border:1px solid #232323;padding:16px;background:radial-gradient(120% 120% at 0 0,rgba(200,255,0,.12),transparent 55%),#121212}
+.pk-port__head{display:flex;justify-content:space-between;align-items:center;color:#A1A1AA}
+.pk-seg{display:flex;padding:3px;border-radius:999px;background:#1C1C1C;font-size:10.5px}
+.pk-seg span{padding:4px 9px;border-radius:999px;color:#A1A1AA}
+.pk-seg span.on{background:#2A2A2A;color:#fff;font-weight:600}
+.pk-val{margin-top:10px;font:600 30px/1 var(--f-mono);letter-spacing:-.03em}
+.pk-chg{margin-top:8px;font:500 11px/1 var(--f-mono)}
+.pk-inv{margin-top:6px;font:400 10.5px/1 var(--f-mono);color:#71717A}
+.pk-cats{border-radius:14px;border:1px solid #232323;background:#121212;padding:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px 6px;text-align:center;font-size:10.5px;font-weight:600}
+.pk-cat i{display:block;width:26px;height:26px;margin:0 auto 6px;border-radius:7px;background:linear-gradient(145deg,#3A3A3A,#1A1A1A);box-shadow:inset 0 0 0 1px #444;position:relative}
+.pk-cat i::after{content:"";position:absolute;right:4px;top:4px;width:8px;height:8px;border-radius:2px;background:var(--lime)}
+.pk-row-h{display:flex;justify-content:space-between;align-items:baseline}
+.pk-row-h h4{margin:0;font-size:13px;font-weight:700}
+.pk-row-h a{font-size:11px;font-weight:600}
+.pk-most{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.pk-stock{border-radius:12px;background:#151515;border:1px solid #222;padding:10px 12px}
+.pk-stock b{display:block;font-size:11.5px}
+.pk-stock small{display:block;color:#71717A;font-size:10px;margin-top:2px}
+.pk-stock span{display:block;margin-top:8px;font:500 12px/1 var(--f-mono)}
+.pk-stock em{display:block;margin-top:5px;font:500 10px/1 var(--f-mono);font-style:normal}
+.pk-movers{margin-top:10px;display:grid}
+.pk-mv{display:grid;grid-template-columns:1.2fr 1fr .8fr .6fr;align-items:center;height:32px;border-top:1px solid #1E1E1E;font-size:11.5px;font-weight:700}
+.pk-mv svg{width:80px;height:18px}
+.pk-mv span{font:500 11px/1 var(--f-mono);text-align:right}
+.pk-chips{display:flex;gap:6px}
+.pk-chips span{padding:3px 9px;border-radius:999px;border:1px solid #2A2A2A;font-size:10px;color:#A1A1AA}
+.pk-chips span.on{background:#2A2A2A;color:#fff;border-color:#2A2A2A}
+
+/* =========================================================
+   MOCKUP: ATS WEBSITE (card)
+   ========================================================= */
+.ats{background:#fff;color:#1E1E1E;font-family:'Poppins',var(--f-ui);height:100%;display:flex;flex-direction:column}
+.ats-nav{display:flex;align-items:center;gap:10px;height:30px;padding:0 12px;border-bottom:1px solid #EEE;font-size:7.5px;color:#555}
+.ats-logo{font:900 13px/1 var(--f-display);letter-spacing:-.06em;color:#7A4A3A}
+.ats-nav .on{color:var(--ats);border-bottom:1.5px solid var(--ats);padding:9px 0 7px}
+.ats-nav .sp{margin-left:auto;background:var(--ats);color:#fff;padding:4px 7px;border-radius:2px}
+.ats-tick{display:flex;justify-content:flex-end;gap:12px;padding:3px 12px;background:#F6F6F6;font-size:6.5px;color:#333}
+.ats-tick b{color:var(--ats);font-weight:600}
+.ats-hero{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 12px 10px;align-items:center}
+.ats-hero h5{margin:0;font:700 13px/1.25 var(--f-ui);color:#2A2A2A}
+.ats-hero p{margin:5px 0 0;font-size:8px;line-height:1.35;color:#444}
+.ats-form{display:flex;gap:5px;margin-top:9px}
+.ats-form span{flex:1;height:16px;border:1px solid #DDD;border-radius:2px;font-size:6.5px;color:#999;display:flex;align-items:center;padding:0 5px}
+.ats-form b{height:16px;padding:0 7px;background:var(--ats);color:#fff;font-size:7px;display:flex;align-items:center;border-radius:2px}
+.ats-laptop{height:70px;border-radius:5px 5px 0 0;border:3px solid #DADADA;border-bottom-width:5px;background:#fff;position:relative;overflow:hidden}
+.ats-laptop svg{position:absolute;inset:8px 6px 6px}
+.ats-feat{margin-top:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:10px 12px 12px;background:#F6F6F6}
+.ats-feat div{background:#fff;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.08);padding:7px 4px;text-align:center;font-size:7.5px;font-weight:600}
+.ats-feat i{display:block;width:12px;height:12px;margin:0 auto 4px;border-radius:2px;background:#2A2A2A}
+
+/* =========================================================
+   MOCKUP: LEADSQUARED CRM (card) — lead list
+   ========================================================= */
+.ls{background:#F7F9FC;color:#14213D;font-family:var(--f-ui);height:100%;display:flex;font-size:9px}
+.ls-rail{width:34px;background:#0F1E3D;display:flex;flex-direction:column;align-items:center;gap:10px;padding-top:12px}
+.ls-rail i{width:14px;height:14px;border-radius:4px;background:#2B3F66}
+.ls-rail i.on{background:var(--ls)}
+.ls-main{flex:1;min-width:0;padding:12px}
+.ls-head{display:flex;justify-content:space-between;align-items:center}
+.ls-head b{font-size:12px}
+.ls-head span{background:var(--ls);color:#fff;font-weight:600;padding:4px 8px;border-radius:5px;font-size:8.5px}
+.ls-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.ls-kpi{background:#fff;border:1px solid #E3E8F0;border-radius:7px;padding:7px}
+.ls-kpi small{display:block;color:#5B6B86;font-size:7.5px}
+.ls-kpi b{display:block;margin-top:3px;font-size:13px}
+.ls-table{margin-top:10px;background:#fff;border:1px solid #E3E8F0;border-radius:7px;overflow:hidden}
+.ls-tr{display:grid;grid-template-columns:1.4fr 1fr .9fr;align-items:center;gap:6px;height:26px;padding:0 8px;border-top:1px solid #EEF1F6}
+.ls-tr:first-child{border-top:0;background:#F2F5FA;color:#5B6B86;font-weight:600;font-size:7.5px;height:22px}
+.ls-tr em{font-style:normal;justify-self:start;padding:2px 6px;border-radius:999px;font-size:7.5px;font-weight:600}
+.st-new{background:var(--ls-bg);color:var(--ls)} .st-bk{background:#DFF6E7;color:#16803C} .st-fu{background:#FFF1D6;color:#9A5B00}
+
+/* =========================================================
+   MOCKUP: PULL LOGIC WEBSITE (card) — homepage hero
+   ========================================================= */
+.plw{height:100%;color:#fff;font-family:var(--f-ui);display:flex;flex-direction:column;
+  background:linear-gradient(rgba(6,10,20,.55),rgba(6,10,20,.85)),repeating-linear-gradient(45deg,rgba(80,110,160,.12) 0 1px,transparent 1px 22px),repeating-linear-gradient(-45deg,rgba(80,110,160,.12) 0 1px,transparent 1px 22px),#0B1220}
+.plw-nav{display:flex;align-items:center;gap:9px;height:30px;padding:0 12px;background:#000;font-size:6.5px;letter-spacing:.04em}
+.plw-logo{display:inline-flex;align-items:center;gap:4px;font:700 11px/1 Georgia,serif;letter-spacing:-.01em}
+.plw-mark{width:8px;height:8px;background:linear-gradient(90deg,var(--pl) 50%,transparent 50%),linear-gradient(var(--pl) 50%,#8A5A1A 50%);background-size:100% 100%;border-radius:1px}
+.plw-nav .on{color:var(--pl);margin-left:12px}
+.plw-nav .demo{margin-left:auto;background:var(--pl);color:#111;font-weight:700;padding:4px 7px;border-radius:3px}
+.plw-hero{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px 18px;gap:7px}
+.plw-pill{border:1px solid rgba(245,166,35,.6);color:var(--pl);font-size:6px;letter-spacing:.18em;font-weight:700;padding:3px 7px;border-radius:2px}
+.plw-hero h5{margin:0;font:800 15px/1.15 var(--f-ui);letter-spacing:-.01em}
+.plw-hero p{margin:0;font-size:7.5px;line-height:1.45;color:#C7CCD6;max-width:34ch}
+.plw-btns{display:flex;gap:6px;margin-top:3px}
+.plw-btns span{font-size:7.5px;font-weight:700;padding:5px 9px;border-radius:4px}
+.plw-btns .a{background:var(--pl);color:#111}
+.plw-btns .b{border:1px solid #fff}
+
+/* =========================================================
+   MOCKUP: POCKET DESIGN SYSTEM (card)
+   ========================================================= */
+.ds{height:100%;background:#0F0F0F;color:#F5F5F5;font-family:var(--f-display);padding:14px;display:grid;grid-template-rows:auto auto 1fr;gap:10px}
+.ds-sw{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:5px;height:58px}
+.ds-sw div{border-radius:8px;padding:5px;display:flex;align-items:flex-end;font:600 7px/1 var(--f-mono);color:#0A0A0A}
+.ds-type{display:flex;align-items:baseline;gap:10px;border-top:1px solid #222;padding-top:8px}
+.ds-type b{font-weight:900;font-stretch:125%;font-size:22px;letter-spacing:-.035em}
+.ds-type span{font-weight:700;font-stretch:125%;font-size:13px;letter-spacing:-.02em}
+.ds-type small{font-size:9px;color:#A1A1AA}
+.ds-comp{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start}
+.ds-btn{height:26px;border-radius:999px;display:grid;place-items:center;font-size:9px;font-weight:700}
+.ds-input{grid-column:1/-1;height:28px;border-radius:8px;border:1px solid #333;display:flex;align-items:center;justify-content:space-between;padding:0 9px;font-size:9px;color:#A1A1AA}
+.ds-input b{font:500 9px/1 var(--f-mono);color:#F5F5F5}
+
+/* =========================================================
+   MOCKUP: PPT SLIDES (16:9 cards)
+   ========================================================= */
+.sl{position:relative;height:100%;background:var(--paper);color:var(--pl-navy);font-family:var(--f-ui);padding:14px 16px}
+.sl-num{position:absolute;right:10px;bottom:8px;font:600 8px/1 var(--f-mono);letter-spacing:.12em;color:var(--pl-rust)}
+.sl-eyebrow{font-size:6px;letter-spacing:.22em;color:#6B6B6B}
+.sl-cover{display:grid;grid-template-columns:1fr 1fr;gap:12px;height:100%}
+.sl-cover h5{margin:8px 0 0;font:800 26px/1 var(--f-ui);letter-spacing:-.04em}
+.sl-cover h6{margin:2px 0 0;font:italic 400 26px/1 Georgia,serif;color:var(--pl-rust);letter-spacing:-.02em}
+.sl-cover p{margin:8px 0 0;font-size:6.5px;line-height:1.45;color:#444}
+.sl-photo{margin:6px -16px 18px 0;border-radius:6px 0 0 6px;background:linear-gradient(180deg,#5B4A7A 0%,#C77A5E 38%,#F2A04E 58%,#3A3540 60%,#2A2A30 100%)}
+.sl-why h5{margin:6px 0 0;font:800 18px/1 var(--f-ui);letter-spacing:-.03em}
+.sl-why .bar{width:22px;height:2px;background:var(--pl-rust);margin-top:5px}
+.sl-why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.sl-why-grid div{border:1px solid #F0B49A;border-radius:4px;background:#fff;padding:6px;min-height:46px}
+.sl-why-grid b{display:block;font-size:7px;color:var(--pl-rust)}
+.sl-why-grid small{display:block;margin-top:3px;font-size:5.5px;line-height:1.35;color:#333}
+
+/* =========================================================
+   RESPONSIVE + MOTION PREFERENCES
+   ========================================================= */
+@media (max-width:1023px){
+  .side{display:none}
+  .hero{padding-top:64px}
+  :root{--stage-h:auto}
+  .stage{padding:32px 0 0;max-height:560px}
+  .frame{position:relative;left:auto;top:auto;transform:none;margin:0 auto}
+  .ring{display:none}
+}
+@media (max-width:640px){
+  .pk-top{grid-template-columns:1fr}
+  .pk-most{grid-template-columns:repeat(2,1fr)}
+  .pk-nav a:not(.on),.pk-search{display:none}
+  .pk-mv svg{display:none}
+  .pk-mv{grid-template-columns:1.3fr .9fr .6fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .strip{animation:none}
+  .frame__view,.frame__cta,.btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<section class="hero" aria-labelledby="hero-title">
+
+  <!-- ===== HERO TEXT ===== -->
+  <div class="hero__copy">
+    <span class="badge"><b>New</b> Pocket trading platform</span>
+    <h1 id="hero-title">Trade stocks, funds and IPOs from <em>one pocket</em></h1>
+    <p>Pocket brings markets, portfolio and orders into a single dark-first app for web and mobile, designed and built with Pull Logic.</p>
+    <div class="ctas">
+      <a class="btn btn--primary" href="#">Explore Pocket</a>
+      <a class="btn btn--ghost" href="#">Read the case study</a>
+    </div>
+  </div>
+
+  <!-- ===== STAGE ===== -->
+  <div class="stage">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="ring" aria-hidden="true"></div>
+
+    <!-- ---------- LEFT STRIP (moves right) ---------- -->
+    <div class="side side--left" aria-hidden="true">
+      <div class="strip" data-strip>
+
+        <div class="slot">
+        <!-- CARD: ATS website -->
+          <div class="card">
+            <div class="ats">
+              <div class="ats-nav"><span class="ats-logo">ATS</span><span class="on">Trade &amp; Invest</span><span>Advisory</span><span>Pricing</span><span class="sp">Create Account</span></div>
+              <div class="ats-tick"><span>NIFTY 50 <b>17,976.55</b></span><span>SENSEX <b>60,449.97</b></span></div>
+              <div class="ats-hero">
+                <div>
+                  <h5>Join 1 Lac + Investors &amp; Traders</h5>
+                  <p>India's Most Trusted Broker for 19 Years Straight</p>
+                  <div class="ats-form"><span>+91 Enter Mobile Number</span><b>Get Started</b></div>
+                </div>
+                <div class="ats-laptop"><svg viewBox="0 0 100 40" preserveAspectRatio="none"><polyline points="0,30 10,26 18,28 26,18 34,22 42,12 50,16 58,8 66,14 74,6 82,18 90,10 100,14" fill="none" stroke="#2E7BEA" stroke-width="1.5"/></svg></div>
+              </div>
+              <div class="ats-feat"><div><i></i>Stocks</div><div><i></i>IPOs</div><div><i></i>Mutual Funds</div><div><i></i>F&amp;O</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot">
+        <!-- CARD: Pocket design system -->
+          <div class="card">
+            <div class="ds">
+              <div class="ds-sw">
+                <div style="background:#C8FF00">Lime</div><div style="background:#00E676">Up</div><div style="background:#FF3B30">Down</div><div style="background:#FFB020">Warn</div><div style="background:#3DA9FC">Info</div>
+              </div>
+              <div class="ds-type"><b>Aa</b><span>Buy RELIANCE</span><small>Archivo 125%</small></div>
+              <div class="ds-comp">
+                <span class="ds-btn" style="background:#C8FF00;color:#0A0A0A">Buy</span>
+                <span class="ds-btn" style="border:1px solid #3F3F46">Sell</span>
+                <span class="ds-input">Quantity <b>5</b></span>
+              </div>
+            </div>
+          </div>
+
+        <!-- CARD: PPT slide 01 (cover) -->
+          <div class="card card--slide">
+            <div class="sl">
+              <div class="sl-cover">
+                <div>
+                  <div class="sl-eyebrow">VOL. 07 / DESIGN REVIEW</div>
+                  <h5>Platform</h5>
+                  <h6>CoreSync.</h6>
+                  <p>The logistics automation platform's first ML-driven module for route planning and fleet coordination.</p>
+                </div>
+                <div class="sl-photo"></div>
+              </div>
+              <span class="sl-num">01</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot slot--wide">
+        <!-- CARD: LeadSquared lead list -->
+          <div class="card">
+            <div class="ls">
+              <div class="ls-rail"><i class="on"></i><i></i><i></i><i></i></div>
+              <div class="ls-main">
+                <div class="ls-head"><b>Patient leads</b><span>+ Add lead</span></div>
+                <div class="ls-kpis">
+                  <div class="ls-kpi"><small>New today</small><b>38</b></div>
+                  <div class="ls-kpi"><small>Booked</small><b>21</b></div>
+                  <div class="ls-kpi"><small>Follow-up</small><b>14</b></div>
+                </div>
+                <div class="ls-table">
+                  <div class="ls-tr"><span>Name</span><span>Specialty</span><span>Stage</span></div>
+                  <div class="ls-tr"><span>Patient A-1042</span><span>Cardiology</span><em class="st-new">New</em></div>
+                  <div class="ls-tr"><span>Patient B-2187</span><span>Orthopaedics</span><em class="st-bk">Booked</em></div>
+                  <div class="ls-tr"><span>Patient C-3305</span><span>Dermatology</span><em class="st-fu">Follow-up</em></div>
+                  <div class="ls-tr"><span>Patient D-4419</span><span>Oncology</span><em class="st-new">New</em></div>
+                  <div class="ls-tr"><span>Patient E-5526</span><span>Paediatrics</span><em class="st-bk">Booked</em></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot">
+        <!-- CARD: Pull Logic website -->
+          <div class="card">
+            <div class="plw">
+              <div class="plw-nav"><span class="plw-logo"><i class="plw-mark"></i>Pull Logic</span><span class="on">HOME</span><span>SOLUTIONS</span><span>VERTICALS</span><span class="demo">BOOK A DEMO</span></div>
+              <div class="plw-hero">
+                <span class="plw-pill">AI NATIVE SUPPLY CHAIN DECISION PLATFORM</span>
+                <h5>Predictive. Autonomous. Always Available.</h5>
+                <p>Pull Logic uses multi-agent AI to anticipate demand shifts and supply risk.</p>
+                <div class="plw-btns"><span class="a">How it Works</span><span class="b">Book A Demo</span></div>
+              </div>
+            </div>
+          </div>
+
+        <!-- CARD: PPT slide 04 (why participate) -->
+          <div class="card card--slide">
+            <div class="sl sl-why">
+              <div class="sl-eyebrow" style="color:var(--pl-rust)">WHY PARTICIPATE</div>
+              <h5>Manufacturers.</h5>
+              <div class="bar"></div>
+              <div class="sl-why-grid">
+                <div><b>Real-time Visibility</b><small>Monitor stock levels across your chain.</small></div>
+                <div><b>Faster Updates</b><small>Cut lag time with automated check-ins.</small></div>
+                <div><b>ERP Integration</b><small>Connect with your WMS and tools.</small></div>
+              </div>
+              <span class="sl-num">04</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ---------- RIGHT STRIP (moves left) ---------- -->
+    <div class="side side--right" aria-hidden="true">
+      <div class="strip" data-strip>
+
+        <div class="slot">
+        <!-- CARD: LeadSquared dashboard -->
+          <div class="card">
+            <div class="ls">
+              <div class="ls-rail"><i></i><i class="on"></i><i></i></div>
+              <div class="ls-main">
+                <div class="ls-head"><b>Appointments</b><span>This week</span></div>
+                <div class="ls-kpis">
+                  <div class="ls-kpi"><small>Scheduled</small><b>126</b></div>
+                  <div class="ls-kpi"><small>No-shows</small><b>9</b></div>
+                  <div class="ls-kpi"><small>Referrals</small><b>42</b></div>
+                </div>
+                <div class="ls-table">
+                  <div class="ls-tr"><span>Clinic</span><span>Slots</span><span>Status</span></div>
+                  <div class="ls-tr"><span>North Clinic</span><span>24 / 30</span><em class="st-bk">Open</em></div>
+                  <div class="ls-tr"><span>City Centre</span><span>30 / 30</span><em class="st-fu">Full</em></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- CARD: PPT slide 04 -->
+          <div class="card card--slide">
+            <div class="sl sl-why">
+              <div class="sl-eyebrow" style="color:var(--pl-rust)">WHY PARTICIPATE</div>
+              <h5>Manufacturers.</h5>
+              <div class="bar"></div>
+              <div class="sl-why-grid">
+                <div><b>Better Forecasting</b><small>Use live demand signals to reduce waste.</small></div>
+                <div><b>Fewer Support Calls</b><small>Partners get insights on demand.</small></div>
+                <div><b>Stronger Partnerships</b><small>Shared visibility for all.</small></div>
+              </div>
+              <span class="sl-num">04</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot slot--wide">
+        <!-- CARD: Pull Logic website -->
+          <div class="card">
+            <div class="plw">
+              <div class="plw-nav"><span class="plw-logo"><i class="plw-mark"></i>Pull Logic</span><span class="on">HOME</span><span>ABOUT US</span><span>RESOURCES</span><span class="demo">BOOK A DEMO</span></div>
+              <div class="plw-hero">
+                <span class="plw-pill">AI NATIVE SUPPLY CHAIN DECISION PLATFORM</span>
+                <h5>Predictive. Autonomous.<br>Always Available.</h5>
+                <p>Pull Logic uses multi-agent AI to anticipate demand shifts and supply risk, then acts ahead of disruption.</p>
+                <div class="plw-btns"><span class="a">How it Works</span><span class="b">Book A Demo</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot">
+        <!-- CARD: ATS website -->
+          <div class="card">
+            <div class="ats">
+              <div class="ats-nav"><span class="ats-logo">ATS</span><span class="on">Trade &amp; Invest</span><span class="sp">Sign In</span></div>
+              <div class="ats-hero" style="grid-template-columns:1fr">
+                <div>
+                  <h5>Lowest Brokerage, No Hidden Charges</h5>
+                  <div class="ats-form"><span>+91 Enter Mobile Number</span><b>Get Started</b></div>
+                </div>
+              </div>
+              <div class="ats-feat"><div><i></i>Stocks</div><div><i></i>IPOs</div><div><i></i>Funds</div><div><i></i>F&amp;O</div></div>
+            </div>
+          </div>
+
+        <!-- CARD: Pocket design system -->
+          <div class="card">
+            <div class="ds">
+              <div class="ds-sw">
+                <div style="background:#C8FF00">C8FF00</div><div style="background:#00E676">Up</div><div style="background:#FF3B30">Down</div><div style="background:#FFB020">Warn</div><div style="background:#3DA9FC">Info</div>
+              </div>
+              <div class="ds-type"><b>Your portfolio</b><small>Display / 32</small></div>
+              <div class="ds-comp">
+                <span class="ds-btn" style="background:#C8FF00;color:#0A0A0A">Place order</span>
+                <span class="ds-btn" style="background:#1F1F1F">Add to watchlist</span>
+                <span class="ds-input">Limit price <b>₹1,248.00</b></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot slot--center">
+        <!-- CARD: PPT slide 01 -->
+          <div class="card card--slide">
+            <div class="sl">
+              <div class="sl-cover">
+                <div>
+                  <div class="sl-eyebrow">VOL. 07 / DESIGN REVIEW</div>
+                  <h5>Platform</h5>
+                  <h6>CoreSync.</h6>
+                  <p>Route planning and fleet coordination, built on Pull Logic.</p>
+                </div>
+                <div class="sl-photo"></div>
+              </div>
+              <span class="sl-num">01</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ---------- CENTRE: POCKET WEBSITE IN BROWSER FRAME ---------- -->
+    <div class="frame">
+      <div class="frame__bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame__url">pocket.in</span></div>
+      <div class="frame__body">
+        <div class="frame__view">
+          <div class="pk" role="img" aria-label="Pocket web app home screen showing portfolio value, categories and top movers">
+            <div class="pk-nav">
+              <span class="pk-logo">P<span class="o"></span>CKET</span>
+              <a class="on">Home</a><a>Watchlist</a><a>Portfolio</a><a>Orders</a><a>Account</a>
+              <span class="pk-search">Search stocks, funds, IPOs</span>
+              <span class="pk-avatar">AB</span>
+            </div>
+            <div class="pk-ticker">
+              <span>NIFTY 50<b>24,342.00</b><span class="dn">▼ -0.22%</span></span>
+              <span>SENSEX<b>77,838</b><span class="dn">▼ -0.31%</span></span>
+              <span>BANKNIFTY<b>52,104.60</b><span class="dn">▼ -0.18%</span></span>
+              <span>MIDCPNIFTY<b>12,880.25</b><span class="up">▲ +0.64%</span></span>
+            </div>
+            <div class="pk-main">
+              <div class="pk-top">
+                <div class="pk-port">
+                  <div class="pk-port__head"><span>Portfolio value</span><span class="pk-seg"><span class="on">Holdings</span><span>Positions</span></span></div>
+                  <div class="pk-val">₹55,738</div>
+                  <div class="pk-chg up">▲ +₹415  +0.75% today</div>
+                  <div class="pk-inv">Invested ₹55,323</div>
+                </div>
+                <div class="pk-cats">
+                  <div class="pk-cat"><i></i>Stocks</div><div class="pk-cat"><i></i>F&amp;O</div><div class="pk-cat"><i></i>Mutual Funds</div><div class="pk-cat"><i></i>IPO</div>
+                  <div class="pk-cat"><i></i>ETF</div><div class="pk-cat"><i></i>Gold</div><div class="pk-cat"><i></i>FD</div><div class="pk-cat"><i></i>Bonds</div>
+                </div>
+              </div>
+              <div>
+                <div class="pk-row-h"><h4>Most bought</h4><a>View all</a></div>
+                <div class="pk-most">
+                  <div class="pk-stock"><b>HDFCBANK</b><small>HDFC Bank</small><span>₹726.30</span><em class="up">▲ +0.18%</em></div>
+                  <div class="pk-stock"><b>SUZLON</b><small>Suzlon Energy</small><span>₹47.29</span><em class="dn">▼ -0.67%</em></div>
+                  <div class="pk-stock"><b>IDEA</b><small>Vodafone Idea</small><span>₹14.06</span><em class="up">▲ +4.07%</em></div>
+                  <div class="pk-stock"><b>TATASTEEL</b><small>Tata Steel</small><span>₹151.80</span><em class="up">▲ +0.94%</em></div>
+                </div>
+              </div>
+              <div>
+                <div class="pk-row-h"><h4 style="display:flex;align-items:center;gap:10px">Top movers <span class="pk-chips"><span class="on">Gainers</span><span>Losers</span><span>Large cap</span></span></h4><a>View all</a></div>
+                <div class="pk-movers">
+                  <div class="pk-mv">APOLLOHOSP<svg viewBox="0 0 80 18"><polyline points="0,14 14,12 26,13 38,7 52,8 64,5 80,2" fill="none" stroke="#00E676" stroke-width="1.5"/></svg><span>₹8,874.00</span><span class="up">▲ +3.19%</span></div>
+                  <div class="pk-mv">BHARTIARTL<svg viewBox="0 0 80 18"><polyline points="0,15 14,12 26,10 38,11 52,9 64,6 80,3" fill="none" stroke="#00E676" stroke-width="1.5"/></svg><span>₹1,996.70</span><span class="up">▲ +2.97%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="frame__cta" href="#">Explore Pocket <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+// Duplicate each strip's slots once so translateX(-50%) loops seamlessly.
+document.querySelectorAll('[data-strip]').forEach(function (strip) {
+  Array.from(strip.children).forEach(function (card) {
+    var copy = card.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    strip.appendChild(copy);
+  });
+});
+</script>
+</body>
+</html>

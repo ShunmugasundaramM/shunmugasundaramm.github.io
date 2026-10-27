@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="pf-data.js"></script>
+<style>
+:root{--pf-bg:#0D0E12;--pf-bg2:#14161C;--pf-card:rgba(255,255,255,.035);--pf-line:rgba(255,255,255,.09);--pf-ink:#F2F4F7;--pf-mute:#A0A6B2;--pf-acc:#6AF2C5;--pf-accInk:#06261C;--pf-glow:rgba(106,242,197,.16);--pf-logo:none}
+html[data-accent="blue"]{--pf-acc:#5AA9FF;--pf-accInk:#04172E;--pf-glow:rgba(90,169,255,.18)}
+html[data-theme="light"]{--pf-bg:#F8F9FA;--pf-bg2:#FFFFFF;--pf-card:rgba(13,14,18,.025);--pf-line:rgba(13,14,18,.1);--pf-ink:#0D0E12;--pf-mute:#4A505C;--pf-acc:#00785A;--pf-accInk:#FFFFFF;--pf-glow:rgba(0,120,90,.12);--pf-logo:invert(1)}
+html[data-theme="light"][data-accent="blue"]{--pf-acc:#0057D9;--pf-glow:rgba(0,87,217,.12)}
+html{scroll-padding-top:80px}
+html[data-theme="light"] img[src*="wordmark-white"]{filter:brightness(0)}
+@keyframes pf-rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes pf-slide{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+</style>
+</helmet>
+<header style="position:sticky;top:0;z-index:1000;backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);background:color-mix(in oklab,var(--pf-bg) 78%,transparent);border-bottom:1px solid var(--pf-line);font-family:'Inter Tight',system-ui,sans-serif;color:var(--pf-ink)">
+<div style="max-width:1280px;margin:0 auto;height:68px;padding:0 clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+<a href="{{ homeHref }}" aria-label="Shunmugasundaram, home" style="display:flex;align-items:center;min-height:44px;flex-shrink:0"><img src="brand/wordmark-white-2400.png" alt="Shunmugasundaram" style="height:14px;width:auto;filter:var(--pf-logo)"></a>
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+<nav aria-label="Primary" style="display:flex;align-items:center;gap:2px">
+<sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="5">
+<a href="{{ l.href }}" aria-current="{{ l.current }}" style="min-height:44px;display:flex;align-items:center;padding:0 14px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:{{ l.color }};white-space:nowrap;transition:color .2s,background .2s" style-hover="color:var(--pf-ink);background:var(--pf-card)">{{ l.label }}</a>
+</sc-for>
+</nav>
+</sc-if>
+<div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+<sc-if value="{{ showToggle }}" hint-placeholder-val="{{ false }}">
+<button onClick="{{ toggleTheme }}" aria-label="{{ themeLabel }}" style="width:44px;height:44px;border-radius:999px;border:1px solid var(--pf-line);background:var(--pf-card);color:var(--pf-ink);display:grid;place-items:center;cursor:pointer;font-size:18px;transition:border-color .2s,transform .15s" style-hover="border-color:var(--pf-acc)" style-active="transform:scale(.94)"><i class="{{ themeIcon }}"></i></button>
+</sc-if>
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+<a href="{{ contactHref }}" style="height:44px;padding:0 20px;border-radius:999px;background:var(--pf-ink);color:var(--pf-bg);font-size:14px;font-weight:600;display:flex;align-items:center;white-space:nowrap;transition:transform .15s" style-hover="color:var(--pf-bg)" style-active="transform:scale(.97)">Get in touch</a>
+</sc-if>
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+<button onClick="{{ openDrawer }}" aria-label="Open menu" aria-expanded="{{ drawerOpen }}" style="width:44px;height:44px;border-radius:999px;border:1px solid var(--pf-line);background:var(--pf-card);color:var(--pf-ink);display:grid;place-items:center;cursor:pointer;font-size:20px"><i class="ph ph-list"></i></button>
+</sc-if>
+</div>
+</div>
+<sc-if value="{{ inCase }}" hint-placeholder-val="{{ false }}">
+<nav aria-label="Project navigation" style="border-top:1px solid var(--pf-line)">
+<div style="max-width:1280px;margin:0 auto;padding:0 clamp(12px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px">
+<a href="Projects.dc.html" style="min-height:44px;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--pf-ink);white-space:nowrap" style-hover="color:var(--pf-acc)"><i class="ph ph-arrow-left"></i>All projects</a>
+<div style="display:flex;align-items:center;gap:4px;min-width:0">
+<a href="{{ prevHref }}" aria-label="Previous project: {{ prevTitle }}" style="width:44px;height:44px;flex:none;border-radius:999px;display:grid;place-items:center;color:var(--pf-mute)" style-hover="color:var(--pf-ink);background:var(--pf-card)"><i class="ph ph-caret-left"></i></a>
+<a href="{{ nextHref }}" aria-label="Next project: {{ nextTitle }}" style="min-height:44px;min-width:0;display:flex;align-items:center;gap:8px;padding:0 4px 0 12px;font-size:14px;font-weight:600;color:var(--pf-ink)" style-hover="color:var(--pf-acc)"><span style="color:var(--pf-mute);font-weight:500;white-space:nowrap">Next</span><span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw">{{ nextTitle }}</span><i class="ph ph-arrow-right" style="flex:none"></i></a>
+</div>
+</div>
+</nav>
+</sc-if>
+</header>
+<sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ closeDrawer }}" style="position:fixed;inset:0;z-index:1001;background:rgba(5,6,8,.55);backdrop-filter:blur(6px)"></div>
+<aside aria-label="Menu" style="position:fixed;top:0;right:0;bottom:0;z-index:1002;width:min(86vw,340px);background:var(--pf-bg2);border-left:1px solid var(--pf-line);padding:12px 20px 28px;display:flex;flex-direction:column;gap:4px;font-family:'Inter Tight',system-ui,sans-serif;color:var(--pf-ink);animation:pf-slide .3s cubic-bezier(.16,1,.3,1)">
+<div style="display:flex;justify-content:flex-end"><button onClick="{{ closeDrawer }}" aria-label="Close menu" style="width:44px;height:44px;border-radius:999px;border:1px solid var(--pf-line);background:transparent;color:var(--pf-ink);display:grid;place-items:center;cursor:pointer;font-size:20px"><i class="ph ph-x"></i></button></div>
+<sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="5">
+<a href="{{ l.href }}" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;gap:14px;min-height:56px;padding:0 8px;border-bottom:1px solid var(--pf-line);color:var(--pf-ink);font-family:Michroma,sans-serif;font-size:15px"><i class="{{ l.icon }}" style="font-size:20px;color:var(--pf-acc)"></i>{{ l.label }}</a>
+</sc-for>
+<sc-if value="{{ showToggle }}" hint-placeholder-val="{{ false }}">
+<button onClick="{{ toggleTheme }}" style="margin-top:12px;min-height:48px;border-radius:999px;border:1px solid var(--pf-line);background:var(--pf-card);color:var(--pf-ink);font:600 14px 'Inter Tight',sans-serif;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer"><i class="{{ themeIcon }}" style="font-size:18px"></i>{{ themeLabel }}</button>
+</sc-if>
+<a href="{{ contactHref }}" onClick="{{ closeDrawer }}" style="margin-top:auto;min-height:52px;border-radius:999px;background:var(--pf-acc);color:var(--pf-accInk);font-weight:600;font-size:15px;display:flex;align-items:center;justify-content:center">Get in touch</a>
+</aside>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;1280px&quot;,&quot;height&quot;:&quot;80px&quot;},&quot;home&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;current&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Projects&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { theme: 'dark', drawer: false, w: typeof window !== 'undefined' ? window.innerWidth : 1280 };
+  componentDidMount() {
+    const tk = () => { if (window.PF_DATA && window.PF_DATA.projects) { clearInterval(this.pfPoll); this.forceUpdate(); return true; } return false; };
+    if (!tk()) this.pfPoll = setInterval(tk, 60);
+    const r = document.documentElement;
+    r.setAttribute('data-accent', localStorage.getItem('pf-accent') || 'mint');
+    if (this.props.home || this.props.toggle) {
+      const t = localStorage.getItem('pf-theme') || 'dark';
+      r.setAttribute('data-theme', t);
+      this.setState({ theme: t });
+    }
+    this.setupReveal();
+    this.fit();
+    this.fitT = setTimeout(() => this.fit(), 800);
+    if ('ResizeObserver' in window) { this.ro = new ResizeObserver(() => this.fit()); this.ro.observe(document.documentElement); }
+    this.onResize = () => { this.setState({ w: window.innerWidth }); this.fit(); };
+    this.onKey = e => { if (e.key === 'Escape') this.setState({ drawer: false }); };
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('keydown', this.onKey);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize); window.removeEventListener('keydown', this.onKey);
+    clearTimeout(this.fitT); this.io && this.io.disconnect(); this.mo && this.mo.disconnect(); this.ro && this.ro.disconnect();
+    window.removeEventListener('scroll', this.onSettle); window.removeEventListener('hashchange', this.onSettle);
+  }
+  fit() {
+    const sel = '[style*="width:1440px"],[style*="width: 1440px"]';
+    const vw = document.documentElement.clientWidth || window.innerWidth;
+    if (!vw) { requestAnimationFrame(() => this.fit()); return; }
+    document.querySelectorAll(sel).forEach(el => {
+      if (el.parentElement && el.parentElement.closest(sel)) return;
+      const z = Math.min(1, vw / 1440);
+      el.style.zoom = z < 1 ? String(z) : '';
+    });
+  }
+  setupReveal() {
+    if (!('IntersectionObserver' in window) || !Element.prototype.animate) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const ease = 'cubic-bezier(.16,1,.3,1)';
+    this.io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (!en.isIntersecting && en.boundingClientRect.top >= 0) return;
+        const el = en.target; this.io.unobserve(el);
+        const sibs = el.parentElement ? [...el.parentElement.children].filter(c => c.hasAttribute('data-reveal')) : [];
+        const i = Math.max(0, sibs.indexOf(el));
+        setTimeout(() => el._rv && el._rv.play(), Math.min(i, 6) * 70);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    const prime = root => {
+      (root.querySelectorAll ? root.querySelectorAll('[data-reveal]') : []).forEach(el => {
+        if (el._rv) return;
+        const a = el.animate([{ opacity: 0, translate: '0 28px' }, { opacity: 1, translate: '0 0' }], { duration: 850, easing: ease, fill: 'backwards' });
+        a.pause(); el._rv = a; this.io.observe(el);
+      });
+    };
+    prime(document);
+    let st;
+    this.onSettle = () => { clearTimeout(st); st = setTimeout(() => {
+      document.querySelectorAll('[data-reveal]').forEach(el => {
+        if (el._rv && el._rv.playState === 'paused' && el.getBoundingClientRect().top < window.innerHeight) { this.io.unobserve(el); el._rv.play(); }
+      });
+    }, 120); };
+    window.addEventListener('scroll', this.onSettle, { passive: true });
+    window.addEventListener('hashchange', this.onSettle);
+    this.mo = new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(n => { if (n.nodeType === 1) { if (n.hasAttribute('data-reveal')) prime(n.parentElement || document); else prime(n); } })));
+    this.mo.observe(document.body, { childList: true, subtree: true });
+  }
+  renderVals() {
+    const home = !!this.props.home;
+    const base = home ? '' : 'Portfolio.dc.html';
+    const cur = this.props.current || (home ? 'Home' : 'Projects');
+    const { theme, w } = this.state;
+    const isDesktop = w >= 1200;
+    const links = [['Home', '#home', 'ph ph-house'], ['Projects', '#projects', 'ph ph-squares-four'], ['Motion', '#motion', 'ph ph-play-circle'], ['Experience', '#experience', 'ph ph-briefcase'], ['About', '#about', 'ph ph-user']];
+    const PP = (window.PF_DATA && window.PF_DATA.projects) || [];
+    const here = decodeURIComponent(location.pathname.split('/').pop() || '');
+    const ci = home ? -1 : PP.findIndex(x => x.href === here);
+    const nP = ci >= 0 ? PP[(ci + 1) % PP.length] : {}, pP = ci >= 0 ? PP[(ci - 1 + PP.length) % PP.length] : {};
+    return {
+      inCase: ci >= 0, nextHref: nP.href || 'Projects.dc.html', nextTitle: nP.title || '', prevHref: pP.href || 'Projects.dc.html', prevTitle: pP.title || '',
+      homeHref: base + '#home', contactHref: base + '#contact',
+      navLinks: links.map(([label, h, icon]) => ({ label, href: label === 'Projects' ? 'Projects.dc.html' : base + h, icon, current: label === cur ? 'page' : undefined, color: label === cur ? 'var(--pf-ink)' : 'var(--pf-mute)' })),
+      isDesktop, isMobile: !isDesktop, showToggle: home || !!this.props.toggle,
+      drawerOpen: this.state.drawer && !isDesktop,
+      openDrawer: () => this.setState({ drawer: true }),
+      closeDrawer: () => this.setState({ drawer: false }),
+      themeIcon: theme === 'dark' ? 'ph ph-sun' : 'ph ph-moon',
+      themeLabel: theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme',
+      toggleTheme: () => { const t = theme === 'dark' ? 'light' : 'dark'; localStorage.setItem('pf-theme', t); document.documentElement.setAttribute('data-theme', t); this.setState({ theme: t }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
