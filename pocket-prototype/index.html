@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pocket Prototype and Usability Test · Shunmugasundaram M</title>
+<!-- Social previews -->
+<meta name="description" content="From 276 hi-fi screens to a working Android app on live NSE data, then an eight-persona usability test that found 12 issues before launch.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shunmugasundaram M">
+<meta property="og:title" content="Pocket Prototype and Usability Test · Shunmugasundaram M">
+<meta property="og:description" content="From 276 hi-fi screens to a working Android app on live NSE data, then an eight-persona usability test that found 12 issues before launch.">
+<meta property="og:url" content="https://shunmugasundaramm.github.io/pocket-prototype/">
+<meta property="og:image" content="https://shunmugasundaramm.github.io/og/pocket-prototype.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/site-shell.css">
+<script src="/site-shell.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/pocket-design-system-7dd6f8a1-6c1c-466c-895d-0fecaecbd8a4/fonts.css">
+<link rel="stylesheet" href="_ds/pocket-design-system-7dd6f8a1-6c1c-466c-895d-0fecaecbd8a4/tokens/colors.css">
+<link rel="stylesheet" href="_ds/pocket-design-system-7dd6f8a1-6c1c-466c-895d-0fecaecbd8a4/tokens/typography.css">
+<link rel="stylesheet" href="_ds/pocket-design-system-7dd6f8a1-6c1c-466c-895d-0fecaecbd8a4/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/pocket-design-system-7dd6f8a1-6c1c-466c-895d-0fecaecbd8a4/tokens/effects.css">
+<script src="_ds/pocket-design-system-7dd6f8a1-6c1c-466c-895d-0fecaecbd8a4/_ds_bundle.js"></script>
+<title>Pocket Prototype and Usability Test, Shunmugasundaram M</title>
+<style>
+html,body{margin:0;padding:0;background:#0A0A0A;color:#FFFFFF;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+*{box-sizing:border-box}
+img{display:block;max-width:100%}
+a{color:#C8FF00;text-decoration:none}
+a:hover{color:#B8EB00}
+a:focus-visible,button:focus-visible{outline:2px solid #C8FF00;outline-offset:3px}
+.pt-root{max-width:1440px;margin:0 auto}
+.pt-sec{position:relative;padding:130px 80px;border-top:1px solid #1B1B1E;overflow:hidden}
+.pt-mono{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#71717A}
+.pt-small{font-size:14px;line-height:1.6;color:#A1A1AA}
+.pt-h2{margin:0;font-weight:500;font-stretch:125%;font-size:32px;line-height:1.1;letter-spacing:-0.02em}
+.pt-list{font-size:15px;line-height:1.9;color:#D4D4D8}
+.pt-phone{display:block;width:100%;height:auto;border-radius:11.2%/5.2%;border:5px solid #1B1B1E;box-shadow:0 0 0 1px #34343A,0 50px 120px rgba(0,0,0,0.65);background:#0A0A0A}
+.pt-light .pt-phone{border-color:#D9D9D6;box-shadow:0 0 0 1px #C4C4C0,0 40px 90px rgba(0,0,0,0.18)}
+.pt-glow{position:absolute;left:50%;top:50%;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(200,255,0,0.26),rgba(200,255,0,0.06) 60%,transparent 72%)}
+.pt-ghost{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;font-weight:900;font-stretch:125%;letter-spacing:0.02em;line-height:1;color:rgba(255,255,255,0.045);-webkit-text-stroke:1px rgba(255,255,255,0.09);pointer-events:none;user-select:none}
+.pt-head{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:40px;max-width:1200px;margin:0 auto}
+.pt-head p{margin:0;max-width:38ch;justify-self:end}
+.pt-feat{position:relative;display:grid;grid-template-columns:1fr minmax(300px,340px) 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto}
+.pt-trio{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px;max-width:1040px;margin:96px auto 0}
+.pt-trio > figure:nth-child(2){margin-top:-64px !important}
+.pt-quad{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px;max-width:1200px;margin:96px auto 0}
+.pt-quad > figure:nth-child(even){margin-top:56px !important}
+.pt-cap{margin-top:20px}
+.pt-scroll{position:relative;display:flex;gap:28px;overflow-x:auto;padding:12px 4px 28px;margin:96px auto 0;max-width:1240px;scroll-snap-type:x proximity}
+.pt-scroll > *{flex:1 0 200px;scroll-snap-align:start}
+.pt-scroll::-webkit-scrollbar{height:6px}.pt-scroll::-webkit-scrollbar-thumb{background:#2A2A30;border-radius:3px}
+.pt-tall{position:relative;max-height:1100px;overflow:hidden;border-radius:28px}
+.pt-tall::after{content:"";position:absolute;left:0;right:0;bottom:0;height:260px;background:linear-gradient(to bottom,rgba(10,10,10,0),#0A0A0A);pointer-events:none}
+.pt-tall img{width:100%;height:auto;border-radius:28px;border:1px solid #2A2A30}
+.pt-bar{border-radius:18px;background:#16161A;border:1px solid #26262C;padding:16px 22px;display:flex;flex-direction:column;gap:3px;min-height:68px;justify-content:center}
+.pt-bar b{font-size:17px;font-weight:600}
+.pt-bar span{font-size:13px;color:#71717A}
+@keyframes ptRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes ptFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media (max-width:1100px){.pt-quad{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+  .pt-sec{padding:96px 24px !important}
+  [data-pt-pad]{padding-left:24px !important;padding-right:24px !important}
+  [data-pt-hero]{grid-template-columns:1fr !important;grid-template-rows:auto !important;row-gap:36px !important}
+  [data-pt-hero] > *{grid-column:1 !important;grid-row:auto !important;justify-self:start !important;text-align:left !important}
+  [data-pt-hero] > div:nth-child(2){width:min(300px,78vw) !important;justify-self:center !important}
+  [data-pt-hero] h1{max-width:none !important;margin-top:24px !important}
+  [data-pt-hero] p{max-width:34ch !important;margin-top:0 !important}
+  [data-pt-meta]{grid-template-columns:1fr 1fr !important;row-gap:10px !important}
+  [data-pt-meta] > *:nth-child(even){text-align:right !important}
+  .pt-head,.pt-feat{grid-template-columns:1fr !important;gap:48px !important}
+  .pt-head p,.pt-feat > div{justify-self:start !important}
+  .pt-feat > figure{width:min(320px,100%);margin:0 auto !important}
+  .pt-trio{grid-template-columns:1fr !important;gap:48px !important;margin-top:56px}
+  .pt-trio > figure{margin-top:0 !important;max-width:320px;margin-left:auto !important;margin-right:auto !important;width:100%}
+  .pt-quad{gap:24px !important;margin-top:56px}
+  .pt-quad > figure:nth-child(even){margin-top:0 !important}
+  .pt-scroll{margin-top:56px}
+  [data-pt-stats]{grid-template-columns:repeat(2,minmax(0,1fr)) !important;row-gap:40px !important}
+  [data-pt-split]{grid-template-columns:1fr !important}
+  [data-pt-bar]{margin-left:0 !important;width:100% !important}
+  [data-pt-found]{grid-template-columns:1fr !important}
+  .pt-ghost{top:34% !important}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+</style>
+</helmet>
+<dc-import name="SiteHeader" current="Projects" hint-size="100%,68px"></dc-import>
+
+<div data-pt-root class="pt-root">
+
+<!-- HERO -->
+<section data-screen-label="Cover" data-pt-pad style="position:relative;overflow:hidden;padding:40px 80px 72px;min-height:1000px;display:flex;flex-direction:column">
+  <div class="pt-glow" style="width:900px;height:900px;top:54%;animation:ptRise 1.2s ease both"></div>
+  <div class="pt-ghost" aria-hidden="true" style="top:22%;font-size:clamp(110px,19vw,290px)">POCKET</div>
+
+  <div data-pt-meta style="position:relative;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;align-items:center;animation:ptRise .8s cubic-bezier(.16,1,.3,1) both">
+    <x-import component-from-global-scope="PocketDesignSystem_7dd6f8.Wordmark" size="{{ n24 }}" hint-size="120px,26px"></x-import>
+    <span class="pt-mono" style="text-align:center">Mobile app</span>
+    <span class="pt-mono" style="text-align:center">Fintech · India</span>
+    <span class="pt-mono" style="text-align:right">2026</span>
+  </div>
+
+  <div data-pt-hero style="position:relative;flex:1;display:grid;grid-template-columns:1fr minmax(300px,350px) 1fr;grid-template-rows:1fr auto;column-gap:40px;align-items:center;margin-top:40px">
+    <h1 style="grid-column:1;grid-row:1;align-self:start;margin:70px 0 0;max-width:9ch;font-weight:500;font-stretch:125%;font-size:clamp(44px,5vw,72px);line-height:1.02;letter-spacing:-0.035em;animation:ptRise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.1s">Made to be tapped.</h1>
+
+    <div style="grid-column:2;grid-row:1 / span 2;align-self:center;animation:ptRise 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.2s">
+      <div style="animation:ptFloat 7s ease-in-out infinite"><img class="pt-phone" src="pocket-prototype/home.jpg" alt="Pocket Home screen: portfolio value, products and most bought stocks" width="786" height="1704"></div>
+    </div>
+
+    <p class="pt-small" style="grid-column:3;grid-row:1;align-self:start;margin:80px 0 0;max-width:28ch;justify-self:end;animation:ptRise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.3s">Pocket is a stock and mutual fund app for India. 276 hi-fi screens, now a working prototype on live market data.</p>
+
+    <div style="grid-column:1;grid-row:2;align-self:end;animation:ptRise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.4s"><div class="pt-mono">Project type</div><div style="margin-top:8px;font-size:15px;color:#D4D4D8">Prototype and usability test</div></div>
+    <div style="grid-column:3;grid-row:2;align-self:end;justify-self:end;animation:ptRise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.45s"><div class="pt-mono">Main features</div><div style="margin-top:8px;font-size:15px;line-height:1.7;color:#D4D4D8">Live NSE prices<br>Paper trading, no real money<br>Nine key flows<br>Readable at 200% text</div></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="pt-sec" data-screen-label="01 Process" data-pt-pad>
+  <div data-rv class="pt-head">
+    <h2 class="pt-h2">Process</h2>
+    <p class="pt-small">Research to a tappable app, in seven steps. This case study covers the last one.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:12px;margin:72px auto 0;max-width:1200px">
+    <div data-rv data-pt-bar class="pt-bar" style="width:46%;margin-left:0"><b>Research</b><span>Seven brokers · two personas</span></div>
+    <div data-rv data-pt-bar class="pt-bar" style="width:38%;margin-left:10%"><b>Brand and content rules</b><span>Wordmark · lime accent · plain voice</span></div>
+    <div data-rv data-pt-bar class="pt-bar" style="width:40%;margin-left:18%"><b>Flows and wireframes</b><span>19 rounds · shorter KYC</span></div>
+    <div data-rv data-pt-bar class="pt-bar" style="width:40%;margin-left:30%"><b>Design system</b><span>17 components · WCAG AA built in</span></div>
+    <div data-rv data-pt-bar class="pt-bar" style="width:36%;margin-left:42%"><b>Hi-fi screens</b><span>276 screens · dark and light</span></div>
+    <div data-rv data-pt-bar class="pt-bar" style="width:46%;margin-left:54%;background:linear-gradient(120deg,#1E2A05,#4F6B00 60%,#C8FF00);border-color:#6B8F00"><b style="color:#fff">Prototype and test</b><span style="color:#E4F6A8">Live data · 8 personas · 12 issues found</span></div>
+  </div>
+</section>
+
+<!-- STOCK OVERVIEW -->
+<section class="pt-sec" data-screen-label="02 Stock overview" data-pt-pad style="background:#050506">
+  <div class="pt-glow" style="width:780px;height:780px;opacity:.9"></div>
+  <div class="pt-feat">
+    <div data-rv><div class="pt-mono">02 / Stock overview</div><h2 class="pt-h2" style="margin-top:16px">Every price,<br>one tap deep</h2><p class="pt-small" style="margin:20px 0 0;max-width:30ch">A live price, a chart you can drag across to read any day, and the day's range at a glance.</p></div>
+    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/stock-overview.jpg" alt="Pocket stock overview with live price and chart" width="786" height="1704" loading="lazy"></figure>
+    <div data-rv style="justify-self:end"><div class="pt-mono">Main features</div><div class="pt-list" style="margin-top:12px">Live NSE price<br>Drag to scrub the chart<br>Hear chart as a list<br>Day and 52-week range</div></div>
+  </div>
+</section>
+
+<!-- OPTIONS -->
+<section class="pt-sec" data-screen-label="03 Options" data-pt-pad>
+  <div class="pt-glow" style="width:780px;height:780px;opacity:.8"></div>
+  <div class="pt-feat">
+    <div data-rv><div class="pt-mono">03 / Options</div><h2 class="pt-h2" style="margin-top:16px">The option chain,<br>readable</h2><p class="pt-small" style="margin:20px 0 0;max-width:30ch">A spot line, the at-the-money row highlighted, and a basket to place several legs together.</p></div>
+    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/option-chain.jpg" alt="Pocket NIFTY option chain with spot line" width="786" height="1704" loading="lazy"></figure>
+    <div data-rv style="justify-self:end"><div class="pt-mono">Main features</div><div class="pt-list" style="margin-top:12px">Spot line<br>OI, IV and Greeks views<br>Add strikes to a basket<br>The SEBI risk line, up front</div></div>
+  </div>
+</section>
+
+<!-- TRADE -->
+<section class="pt-sec" data-screen-label="04 Trade" data-pt-pad style="background:#050506">
+  <div data-rv class="pt-head"><h2 class="pt-h2">Say what it costs,<br>before it costs</h2><p class="pt-small">MTF shows interest per day before you buy. Order types explain themselves. A waiting order says how far the price is from filling.</p></div>
+  <div class="pt-trio">
+    <div class="pt-glow" style="width:900px;height:600px;opacity:.5"></div>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/buy-pad-mtf.jpg" alt="Pocket buy pad with MTF and interest per day" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">01 / Buy pad, MTF</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/order-types.jpg" alt="Pocket order types explained in plain language" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">02 / Order types</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/order-placed.jpg" alt="Pocket order placed screen explaining that a limit order is waiting to fill" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">03 / Placed is not filled</figcaption></figure>
+  </div>
+</section>
+
+<!-- MUTUAL FUNDS -->
+<section class="pt-sec" data-screen-label="05 Mutual funds" data-pt-pad>
+  <div data-rv class="pt-head"><h2 class="pt-h2">Funds and SIPs,<br>without the jargon</h2><p class="pt-small">Browse by collection, read a fund's three-year story on one chart, and see what a monthly SIP could become.</p></div>
+  <div class="pt-trio">
+    <div class="pt-glow" style="width:900px;height:600px;opacity:.5"></div>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/mf-discover.jpg" alt="Pocket mutual funds discover screen" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">01 / Discover</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/mf-fund.jpg" alt="Pocket mutual fund page with a three-year chart" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">02 / Fund page</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/calc-sip.jpg" alt="Pocket SIP calculator with sliders and donut" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">03 / SIP calculator</figcaption></figure>
+  </div>
+</section>
+
+<!-- ACCOUNT OPENING -->
+<section class="pt-sec" data-screen-label="06 Open an account" data-pt-pad style="background:#050506">
+  <div data-rv class="pt-head"><h2 class="pt-h2">Ten steps<br>to an account</h2><p class="pt-small">Mobile number, DigiLocker, a ₹1 UPI bank check and Aadhaar eSign. A shorter KYC, one step per screen.</p></div>
+  <div class="pt-scroll">
+    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/sign-in.jpg" alt="Pocket sign in" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Sign in</figcaption></figure>
+    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/kyc-mobile.jpg" alt="Pocket KYC step 1, mobile number" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Step 1 · Mobile</figcaption></figure>
+    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/kyc-digilocker.jpg" alt="Pocket KYC step 4, DigiLocker" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Step 4 · DigiLocker</figcaption></figure>
+    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/kyc-bank.jpg" alt="Pocket KYC step 6, bank check by 1 rupee UPI" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Step 6 · Bank by ₹1</figcaption></figure>
+    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/kyc-esign.jpg" alt="Pocket KYC step 10, Aadhaar eSign" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Step 10 · eSign</figcaption></figure>
+  </div>
+</section>
+
+<!-- RISK CONTROLS -->
+<section class="pt-sec" data-screen-label="07 Risk controls" data-pt-pad>
+  <div data-rv class="pt-head"><h2 class="pt-h2">Exit fast.<br>Stop when you need to.</h2><p class="pt-small">Exit all sits at the top of Positions. The kill switch pauses trading for a day, a week or until you say.</p></div>
+  <div class="pt-trio">
+    <div class="pt-glow" style="width:900px;height:600px;opacity:.5"></div>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/positions.jpg" alt="Pocket positions with Exit all" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">01 / Positions</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/exit-all.jpg" alt="Pocket exit all positions" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">02 / Exit all</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/kill-switch.jpg" alt="Pocket kill switch to pause trading" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">03 / Kill switch</figcaption></figure>
+  </div>
+</section>
+
+<!-- MORE TO INVEST IN -->
+<section class="pt-sec" data-screen-label="08 IPOs and research" data-pt-pad style="background:#050506">
+  <div data-rv class="pt-head"><h2 class="pt-h2">IPOs and<br>research calls</h2><p class="pt-small">An IPO timeline you can read at a glance, and research calls that show the track record, including the losses.</p></div>
+  <div class="pt-quad">
+    <div class="pt-glow" style="width:1000px;height:600px;opacity:.45"></div>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/ipo-list.jpg" alt="Pocket IPO list" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">IPOs</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/ipo-detail.jpg" alt="Pocket IPO detail with timeline" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">IPO detail</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/research-call.jpg" alt="Pocket research call with entry, target and stop loss" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Research call</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/track-record.jpg" alt="Pocket research track record" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Track record</figcaption></figure>
+  </div>
+</section>
+
+<!-- PORTFOLIO AND MONEY -->
+<section class="pt-sec" data-screen-label="09 Portfolio and money" data-pt-pad>
+  <div data-rv class="pt-head"><h2 class="pt-h2">Know what you have.<br>Move money simply.</h2><p class="pt-small">Returns after charges with XIRR beside them. Cash, collateral and where every rupee moved today.</p></div>
+  <div class="pt-trio">
+    <div class="pt-glow" style="width:900px;height:600px;opacity:.5"></div>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/portfolio.jpg" alt="Pocket Portfolio with holdings and XIRR" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">01 / Portfolio</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/funds.jpg" alt="Pocket Funds with available cash, Add funds and Withdraw" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">02 / Funds</figcaption></figure>
+    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/add-funds.jpg" alt="Pocket Add funds by UPI" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">03 / Add funds</figcaption></figure>
+  </div>
+</section>
+
+<!-- FULL LENGTH -->
+<section class="pt-sec" data-screen-label="10 Full length" data-pt-pad style="background:#050506">
+  <div data-rv class="pt-head"><h2 class="pt-h2">Full length</h2><p class="pt-small">Home, a stock, a fund and the SIP calculator, top to bottom. The long screens are where the hierarchy gets tested.</p></div>
+  <div class="pt-scroll" style="align-items:flex-start;gap:32px">
+    <figure data-rv style="margin:0;flex:1 0 250px"><div class="pt-tall"><img src="pocket-prototype/tall-home.jpg" alt="Pocket Home, full length" width="590" height="2519" loading="lazy"></div><figcaption class="pt-mono pt-cap">Home</figcaption></figure>
+    <figure data-rv style="margin:80px 0 0;flex:1 0 250px"><div class="pt-tall"><img src="pocket-prototype/tall-stock.jpg" alt="Pocket stock overview, full length" width="590" height="3805" loading="lazy"></div><figcaption class="pt-mono pt-cap">Stock overview</figcaption></figure>
+    <figure data-rv style="margin:30px 0 0;flex:1 0 250px"><div class="pt-tall"><img src="pocket-prototype/tall-fund.jpg" alt="Pocket mutual fund page, full length" width="590" height="4302" loading="lazy"></div><figcaption class="pt-mono pt-cap">Fund page</figcaption></figure>
+    <figure data-rv style="margin:130px 0 0;flex:1 0 250px"><div class="pt-tall"><img src="pocket-prototype/tall-calc.jpg" alt="Pocket SIP calculator, full length" width="590" height="1926" loading="lazy"></div><figcaption class="pt-mono pt-cap">SIP calculator</figcaption></figure>
+  </div>
+</section>
+
+<!-- DARK / LIGHT -->
+<section data-screen-label="11 Dark and light" style="border-top:1px solid #1B1B1E">
+  <div data-pt-split style="display:grid;grid-template-columns:1fr 1fr">
+    <div data-pt-pad style="background:#0A0A0A;padding:110px 40px;display:flex;flex-direction:column;align-items:center;gap:28px">
+      <figure data-rv style="margin:0;width:min(320px,100%)"><img class="pt-phone" src="pocket-prototype/watchlist.jpg" alt="Pocket Watchlist in dark theme" width="786" height="1704" loading="lazy"></figure>
+      <div class="pt-mono" style="color:#A1A1AA">Dark · default</div>
+    </div>
+    <div class="pt-light" data-pt-pad style="background:#F5F5F3;padding:110px 40px;display:flex;flex-direction:column;align-items:center;gap:28px">
+      <figure data-rv style="margin:0;width:min(320px,100%)"><img class="pt-phone" src="pocket-prototype/watchlist-light.jpg" alt="Pocket Watchlist in light theme" width="786" height="1704" loading="lazy"></figure>
+      <div class="pt-mono" style="color:#52525B">Light</div>
+    </div>
+  </div>
+</section>
+
+<!-- TEST -->
+<section class="pt-sec" data-screen-label="12 Usability test" data-pt-pad style="background:#050506">
+  <div data-rv class="pt-head">
+    <h2 class="pt-h2">Usability test</h2>
+    <p class="pt-small" style="max-width:44ch">Eight personas, built from 2026 NSE, SEBI and AMFI figures, each worked through their own tasks. A simulated expert walkthrough, not sessions with real people.</p>
+  </div>
+  <div data-pt-stats style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin:96px auto 0;max-width:1200px">
+    <div data-rv><div style="font-weight:500;font-stretch:125%;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em">26<span style="color:#52525B">/32</span></div><div class="pt-mono" style="margin-top:16px">Tasks finished</div></div>
+    <div data-rv><div style="font-weight:500;font-stretch:125%;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em;color:#C8FF00">12</div><div class="pt-mono" style="margin-top:16px">Issues found</div></div>
+    <div data-rv><div style="font-weight:500;font-stretch:125%;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em">8</div><div class="pt-mono" style="margin-top:16px">Personas</div></div>
+    <div data-rv><div style="font-weight:500;font-stretch:125%;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em">9</div><div class="pt-mono" style="margin-top:16px">Flows walked</div></div>
+  </div>
+  <div data-pt-found style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin:104px auto 0;max-width:1200px">
+    <div data-rv style="border-top:1px solid #2E2E34;padding-top:20px"><div class="pt-mono" style="color:#FF5A4F">Found</div><p style="margin:10px 0 0;font-size:17px;line-height:1.45">"I picked Intraday because it sounded faster."</p><div class="pt-mono" style="margin-top:18px;color:#C8FF00">Fixed</div><p class="pt-small" style="margin:8px 0 0">Delivery by default, with one plain line under the toggle.</p></div>
+    <div data-rv style="border-top:1px solid #2E2E34;padding-top:20px"><div class="pt-mono" style="color:#FF5A4F">Found</div><p style="margin:10px 0 0;font-size:17px;line-height:1.45">"Swiping just skips it."</p><div class="pt-mono" style="margin-top:18px;color:#C8FF00">Fixed</div><p class="pt-small" style="margin:8px 0 0">A "Hear chart as a list" button and keys that step through points.</p></div>
+    <div data-rv style="border-top:1px solid #2E2E34;padding-top:20px"><div class="pt-mono" style="color:#FF5A4F">Found</div><p style="margin:10px 0 0;font-size:17px;line-height:1.45">"6.94% and 6.87%. Which one do I get?"</p><div class="pt-mono" style="margin-top:18px;color:#C8FF00">Fixed</div><p class="pt-small" style="margin:8px 0 0">The bond page now says which rate is the interest paid.</p></div>
+  </div>
+  <p class="pt-small" style="margin:72px auto 0;max-width:1200px;color:#71717A">Next: two groups of five real investors and traders, and a check on physical Android and iOS devices.</p>
+</section>
+
+<!-- CLOSING -->
+<section data-screen-label="Closing" data-pt-pad style="padding:140px 80px 120px;text-align:center">
+  <div data-rv style="display:flex;justify-content:center"><x-import component-from-global-scope="PocketDesignSystem_7dd6f8.AppIcon" size="{{ n96 }}" hint-size="96px,96px"></x-import></div>
+  <a data-rv href="/pocket-app/" style="display:inline-flex;align-items:center;min-height:44px;margin-top:36px;font-weight:600;font-size:16px">Back to the Pocket mobile app case study →</a>
+</section>
+
+</div>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this._t = setTimeout(() => this.arm(), 250);
+  }
+  componentWillUnmount() { clearTimeout(this._t); if (this._io) this._io.disconnect(); }
+  arm() {
+    const root = document.querySelector('[data-pt-root]');
+    if (!root || root.hasAttribute('data-armed')) return;
+    root.setAttribute('data-armed', '1');
+    const h = window.innerHeight || 800;
+    const els = Array.from(root.querySelectorAll('[data-rv]')).filter(el => el.getBoundingClientRect().top > h);
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(22px)'; el.style.transition = 'opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1)'; });
+    this._io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      this._io.unobserve(e.target);
+      const sib = Array.from(e.target.parentElement.children).filter(c => c.hasAttribute('data-rv'));
+      setTimeout(() => show(e.target), Math.min(Math.max(0, sib.indexOf(e.target)) * 80, 400));
+    }), { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => this._io.observe(el));
+    setTimeout(() => { this._io.disconnect(); els.forEach(show); }, 8000);
+  }
+  renderVals() {
+    return { n24: 24, n96: 96 };
+  }
+}
+</script>
+</body>
+</html>
