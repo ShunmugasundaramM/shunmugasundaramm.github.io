@@ -37,7 +37,7 @@ img{display:block;max-width:100%}
 a{color:#C8FF00;text-decoration:none}
 a:hover{color:#B8EB00}
 a:focus-visible,button:focus-visible{outline:2px solid #C8FF00;outline-offset:3px}
-.pt-root{max-width:1440px;margin:0 auto}
+.pt-root{width:100%}
 .pt-sec{position:relative;padding:130px 80px;border-top:1px solid #1B1B1E;overflow:hidden}
 .pt-mono{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#71717A}
 .pt-small{font-size:14px;line-height:1.6;color:#A1A1AA}
@@ -46,7 +46,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #C8FF00;outline-offset:3p
 .pt-phone{display:block;width:100%;height:auto;border-radius:11.2%/5.2%;border:5px solid #1B1B1E;box-shadow:0 0 0 1px #34343A,0 50px 120px rgba(0,0,0,0.65);background:#0A0A0A}
 .pt-light .pt-phone{border-color:#D9D9D6;box-shadow:0 0 0 1px #C4C4C0,0 40px 90px rgba(0,0,0,0.18)}
 .pt-glow{position:absolute;left:50%;top:50%;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(200,255,0,0.26),rgba(200,255,0,0.06) 60%,transparent 72%)}
-.pt-ghost{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;font-weight:900;font-stretch:125%;letter-spacing:0.02em;line-height:1;color:rgba(255,255,255,0.045);-webkit-text-stroke:1px rgba(255,255,255,0.09);pointer-events:none;user-select:none}
+.pt-ghost{position:absolute;left:50%;transform:translate(-50%,-50%);max-width:100%;overflow:hidden;white-space:nowrap;font-weight:900;font-stretch:125%;letter-spacing:0.02em;line-height:1;color:rgba(255,255,255,0.045);-webkit-text-stroke:1px rgba(255,255,255,0.09);pointer-events:none;user-select:none}
 .pt-head{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:40px;max-width:1200px;margin:0 auto}
 .pt-head p{margin:0;max-width:38ch;justify-self:end}
 .pt-feat{position:relative;display:grid;grid-template-columns:1fr minmax(300px,340px) 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto}
@@ -99,9 +99,9 @@ a:focus-visible,button:focus-visible{outline:2px solid #C8FF00;outline-offset:3p
 <div data-pt-root class="pt-root">
 
 <!-- HERO -->
-<section data-screen-label="Cover" data-pt-pad style="position:relative;overflow:hidden;padding:40px 80px 72px;min-height:1000px;display:flex;flex-direction:column">
+<section data-screen-label="Cover" data-pt-pad style="position:relative;overflow:hidden;padding:40px max(80px,calc((100vw - 1280px)/2)) 72px;min-height:1000px;display:flex;flex-direction:column">
   <div class="pt-glow" style="width:900px;height:900px;top:54%;animation:ptRise 1.2s ease both"></div>
-  <div class="pt-ghost" aria-hidden="true" style="top:22%;font-size:clamp(110px,19vw,290px)">POCKET</div>
+  <div class="pt-ghost" aria-hidden="true" style="top:52%;font-size:min(15vw,215px)">POCKET</div>
 
   <div data-pt-meta style="position:relative;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;align-items:center;animation:ptRise .8s cubic-bezier(.16,1,.3,1) both">
     <x-import component-from-global-scope="PocketDesignSystem_7dd6f8.Wordmark" size="{{ n24 }}" hint-size="120px,26px"></x-import>
