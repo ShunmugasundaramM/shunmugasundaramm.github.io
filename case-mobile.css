@@ -1,0 +1,279 @@
+/* Phone layout for case studies built as fixed 1440px canvases.
+   Applies below 900px only; above that SiteHeader scales the canvas to fit as before.
+   A page opts in with data-cs-mobile on its root element. */
+@media (max-width: 899px) {
+  [data-cs-mobile] { width: auto !important; max-width: 100% !important; overflow-x: clip !important; }
+  [data-cs-mobile] section { height: auto !important; min-height: 0 !important; padding-left: 20px !important; padding-right: 20px !important; padding-top: 64px !important; padding-bottom: 64px !important; }
+  [data-cs-mobile] * { max-width: 100%; }
+  [data-cs-mobile] img, [data-cs-mobile] svg { height: auto; }
+  [data-cs-mobile] [style*="grid-template-columns"] { grid-template-columns: minmax(0, 1fr) !important; }
+  [data-cs-mobile] [style*="grid-template-columns:repeat(4"], [data-cs-mobile] [style*="grid-template-columns:repeat(5"], [data-cs-mobile] [style*="grid-template-columns:repeat(6"],
+  [data-cs-mobile] [style*="grid-template-columns: repeat(4"], [data-cs-mobile] [style*="grid-template-columns: repeat(5"], [data-cs-mobile] [style*="grid-template-columns: repeat(6"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  [data-cs-mobile] [style*="grid-column"] { grid-column: auto !important; }
+  [data-cs-mobile] [style*="display:flex"], [data-cs-mobile] [style*="display: flex"] { flex-wrap: wrap; }
+  /* Absolutely placed content joins the normal flow; round glows and hidden decorations stay put. */
+  [data-cs-mobile] :is([style*="position:absolute"], [style*="position: absolute"]):not([style*="border-radius:50%"]):not([style*="border-radius: 50%"]):not([aria-hidden="true"]):not([data-cs-keep] *) { position: relative !important; inset: auto !important; transform: none !important; width: auto !important; height: auto !important; margin: 0 0 16px !important; }
+  [data-cs-mobile] h1 { font-size: clamp(34px, 9.5vw, 44px) !important; line-height: 1.06 !important; }
+  [data-cs-mobile] h2 { font-size: clamp(26px, 7.4vw, 32px) !important; line-height: 1.12 !important; }
+  [data-cs-mobile] h3 { font-size: clamp(19px, 5.4vw, 22px) !important; }
+  [data-cs-mobile] p { font-size: max(15px, min(1em, 17px)); }
+  [data-cs-mobile] [style*="font-size:36px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 36px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:37px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 37px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:38px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 38px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:39px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 39px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:40px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 40px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:41px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 41px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:42px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 42px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:43px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 43px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:44px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 44px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:45px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 45px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:46px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 46px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:47px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 47px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:48px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 48px"]{font-size:26px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:49px"]{font-size:27px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 49px"]{font-size:27px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:50px"]{font-size:28px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 50px"]{font-size:28px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:51px"]{font-size:28px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 51px"]{font-size:28px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:52px"]{font-size:29px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 52px"]{font-size:29px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:53px"]{font-size:29px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 53px"]{font-size:29px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:54px"]{font-size:30px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 54px"]{font-size:30px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:55px"]{font-size:30px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 55px"]{font-size:30px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:56px"]{font-size:31px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 56px"]{font-size:31px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:57px"]{font-size:31px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 57px"]{font-size:31px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:58px"]{font-size:32px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 58px"]{font-size:32px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:59px"]{font-size:32px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 59px"]{font-size:32px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:60px"]{font-size:33px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 60px"]{font-size:33px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:61px"]{font-size:34px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 61px"]{font-size:34px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:62px"]{font-size:34px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 62px"]{font-size:34px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:63px"]{font-size:35px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 63px"]{font-size:35px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:64px"]{font-size:35px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 64px"]{font-size:35px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:65px"]{font-size:36px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 65px"]{font-size:36px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:66px"]{font-size:36px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 66px"]{font-size:36px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:67px"]{font-size:37px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 67px"]{font-size:37px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:68px"]{font-size:37px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 68px"]{font-size:37px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:69px"]{font-size:38px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 69px"]{font-size:38px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:70px"]{font-size:38px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 70px"]{font-size:38px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:71px"]{font-size:39px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 71px"]{font-size:39px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:72px"]{font-size:40px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 72px"]{font-size:40px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:73px"]{font-size:40px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 73px"]{font-size:40px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:74px"]{font-size:41px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 74px"]{font-size:41px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:75px"]{font-size:41px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 75px"]{font-size:41px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:76px"]{font-size:42px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 76px"]{font-size:42px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:77px"]{font-size:42px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 77px"]{font-size:42px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:78px"]{font-size:43px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 78px"]{font-size:43px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:79px"]{font-size:43px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 79px"]{font-size:43px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:80px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 80px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:81px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 81px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:82px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 82px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:83px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 83px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:84px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 84px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:85px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 85px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:86px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 86px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:87px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 87px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:88px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 88px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:89px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 89px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:90px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 90px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:91px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 91px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:92px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 92px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:93px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 93px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:94px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 94px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:95px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 95px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:96px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 96px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:97px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 97px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:98px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 98px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:99px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 99px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:100px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 100px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:101px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 101px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:102px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 102px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:103px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 103px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:104px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 104px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:105px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 105px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:106px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 106px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:107px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 107px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:108px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 108px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:109px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 109px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:110px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 110px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:111px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 111px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:112px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 112px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:113px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 113px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:114px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 114px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:115px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 115px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:116px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 116px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:117px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 117px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:118px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 118px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:119px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 119px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:120px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 120px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:121px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 121px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:122px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 122px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:123px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 123px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:124px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 124px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:125px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 125px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:126px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 126px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:127px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 127px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:128px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 128px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:129px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 129px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:130px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 130px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:131px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 131px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:132px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 132px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:133px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 133px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:134px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 134px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:135px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 135px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:136px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 136px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:137px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 137px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:138px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 138px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:139px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 139px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:140px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 140px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:141px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 141px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:142px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 142px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:143px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 143px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:144px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 144px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:145px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 145px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:146px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 146px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:147px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 147px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:148px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 148px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:149px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 149px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:150px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 150px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:151px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 151px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:152px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 152px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:153px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 153px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:154px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 154px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:155px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 155px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:156px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 156px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:157px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 157px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:158px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 158px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:159px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 159px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size:160px"]{font-size:44px !important;line-height:1.12 !important}
+  [data-cs-mobile] [style*="font-size: 160px"]{font-size:44px !important;line-height:1.12 !important}
+
+  /* Exhibits marked data-cs-keep (diagrams built from positioned parts) keep their layout and scale like a picture. */
+  [data-cs-mobile] :has(> [data-cs-keep]) { padding: 16px !important; overflow: hidden !important; }
+  [data-cs-mobile] [data-cs-keep], [data-cs-mobile] [data-cs-keep] * { max-width: none !important; }
+  [data-cs-mobile] [data-cs-keep] { zoom: .546; }
+}
+@media (max-width: 700px) { [data-cs-mobile] [data-cs-keep] { zoom: .372; } }
+@media (max-width: 500px) { [data-cs-mobile] [data-cs-keep] { zoom: .303; } }
+@media (max-width: 420px) { [data-cs-mobile] [data-cs-keep] { zoom: .263; } }
+@media (max-width: 374px) { [data-cs-mobile] [data-cs-keep] { zoom: .215; } }

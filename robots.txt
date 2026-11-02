@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shunmugasundaramm.github.io/sitemap.xml

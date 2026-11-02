@@ -22,9 +22,14 @@ html{scroll-padding-top:80px}
 html[data-theme="light"] img[src*="wordmark-white"]{filter:brightness(0)}
 @keyframes pf-rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @keyframes pf-slide{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+:focus-visible{outline:2px solid var(--pf-acc);outline-offset:3px}
+.pf-skip{position:fixed;left:12px;top:-64px;z-index:1100;padding:10px 18px;border-radius:999px;background:var(--pf-acc);color:var(--pf-accInk);font:600 14px 'Inter Tight',system-ui,sans-serif;text-decoration:none;transition:top .15s}
+.pf-skip:focus{top:12px}
+#main:focus{outline:none}
 </style>
 </helmet>
-<header style="position:sticky;top:0;z-index:1000;backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);background:color-mix(in oklab,var(--pf-bg) 78%,transparent);border-bottom:1px solid var(--pf-line);font-family:'Inter Tight',system-ui,sans-serif;color:var(--pf-ink)">
+<a href="#main" class="pf-skip">Skip to content</a>
+<headerstyle="position:sticky;top:0;z-index:1000;backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);background:color-mix(in oklab,var(--pf-bg) 92%,transparent);border-bottom:1px solid var(--pf-line);font-family:'Inter Tight',system-ui,sans-serif;color:var(--pf-ink)">
 <div style="max-width:1280px;margin:0 auto;height:68px;padding:0 clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:24px">
 <a href="{{ homeHref }}" aria-label="Shunmugasundaram, home" style="display:flex;align-items:center;min-height:44px;flex-shrink:1;min-width:0"><img src="brand/wordmark-white-2400.png" alt="Shunmugasundaram" style="width:min(323px,calc(100vw - 168px));height:auto;display:block;filter:var(--pf-logo)"></a>
 <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
@@ -105,7 +110,9 @@ class Component extends DCLogic {
     if (!vw) { requestAnimationFrame(() => this.fit()); return; }
     document.querySelectorAll(sel).forEach(el => {
       if (el.parentElement && el.parentElement.closest(sel)) return;
-      const z = Math.min(1, vw / 1440);
+      // Pages with their own phone layout opt out of scaling below 900px.
+      const phoneLayout = vw < 900 && (el.hasAttribute('data-cs-mobile') || el.hasAttribute('data-fit-desktop'));
+      const z = phoneLayout ? 1 : Math.min(1, vw / 1440);
       el.style.zoom = z < 1 ? String(z) : '';
     });
   }

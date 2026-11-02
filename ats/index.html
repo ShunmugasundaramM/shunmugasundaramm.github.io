@@ -6,12 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ATS Share Brokers: web and app · Shunmugasundaram M</title>
 <!-- Social previews -->
-<meta name="description" content="Website and sign-up experience for a stock broking house.">
+<meta name="description" content="Seventy-eight pages, one system: a full-service brokerage website for ATS Share Brokers, with market data, calculators, account forms and legal pages.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Shunmugasundaram M">
 <meta property="og:title" content="ATS Share Brokers: web and app · Shunmugasundaram M">
-<meta property="og:description" content="Website and sign-up experience for a stock broking house.">
+<meta property="og:description" content="Seventy-eight pages, one system: a full-service brokerage website for ATS Share Brokers, with market data, calculators, account forms and legal pages.">
 <meta property="og:url" content="https://shunmugasundaramm.github.io/ats/">
+<link rel="canonical" href="https://shunmugasundaramm.github.io/ats/">
 <meta property="og:image" content="https://shunmugasundaramm.github.io/og/ats.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -41,10 +42,11 @@
   @keyframes atCard { from { opacity:0; transform:translateY(58px); } to { opacity:1; transform:none; } }
   @media (prefers-reduced-motion: reduce) { * { animation:none !important; } }
 </style>
+<link rel="stylesheet" href="/case-mobile.css">
 </helmet>
 <dc-import name="SiteHeader" current="Projects" hint-size="100%,68px"></dc-import>
 
-<div data-at-root style="width:1440px; margin:0 auto; background:#FFFFFF; font-family:'Poppins', system-ui, sans-serif; color:#202124; -webkit-font-smoothing:antialiased; line-height:1.5; overflow-x:clip;">
+<div role="main" id="main" tabindex="-1" data-at-root data-cs-mobile style="width:1440px; margin:0 auto; background:#FFFFFF; font-family:'Poppins', system-ui, sans-serif; color:#202124; -webkit-font-smoothing:antialiased; line-height:1.5; overflow-x:clip;">
 
   <section data-screen-label="Cover" style="position:relative; height:1080px; background:#141517; overflow:hidden;">
     <div style="position:absolute; top:-260px; right:-200px; width:900px; height:900px; border-radius:50%; background:radial-gradient(closest-side, rgba(52,168,83,0.30), transparent 70%);"></div>
@@ -90,7 +92,7 @@
         <span style="margin-left:12px; height:21px; flex:1; max-width:250px; border-radius:6px; background:#26292D; display:flex; align-items:center; padding:0 11px; font-size:12px; color:#8A8C90;">atsshares.com</span>
       </div>
       <div style="height:740px; overflow:hidden; background:#FFFFFF;">
-        <img src="ats/home-2880.png" alt="ATS Share Brokers home page" style="width:100%; display:block;">
+        <img src="ats/home-2880.webp" alt="ATS Share Brokers home page" style="width:100%; display:block;">
       </div>
     </div>
 
@@ -164,7 +166,7 @@
         <span style="margin-left:12px; height:23px; flex:1; max-width:260px; border-radius:6px; background:#FFFFFF; border:1px solid #E6E6E6; display:flex; align-items:center; padding:0 11px; font-size:12px; color:#707070;">atsshares.com</span>
       </div>
       <div data-at-static style="height:760px; overflow:hidden; position:relative; background:#FFFFFF;">
-        <img src="ats/home-2880.png" alt="ATS Share Brokers home page, full length" style="width:100%; aspect-ratio:2880 / 6488; display:block;">
+        <img src="ats/home-2880.webp" alt="ATS Share Brokers home page, full length" style="width:100%; aspect-ratio:2880 / 6488; display:block;">
       </div>
       <div style="display:flex; align-items:center; gap:14px; padding:14px 18px; border-top:1px solid #E6E6E6; background:#FAFAFA;">
         <span style="font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#707070; white-space:nowrap;">Full page</span>
@@ -401,7 +403,7 @@
     </div>
   </section>
 
-  <section data-screen-label="10 Outcome" style="padding:130px 100px; background:#34A853; color:#FFFFFF;">
+  <section data-screen-label="10 Outcome" style="padding:130px 100px; background:#1A6E34; color:#FFFFFF;">
     <div style="max-width:880px;">
       <div style="font-size:12px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.82); margin-bottom:26px;">10 · Outcome</div>
       <h2 style="font-size:54px; line-height:1.06; letter-spacing:-0.03em; font-weight:700; margin:0;">The kit was the deliverable. The pages were the proof.</h2>
@@ -758,7 +760,7 @@ class Component extends DCLogic {
         { src: 'ats/markets.svg', ar: '1920 / 2761', label: 'Markets', title: 'Market overview', body: 'Indices, gainers and losers on one screen, with amber marking the live session.' },
         { src: 'ats/research.svg', ar: '1920 / 2631', label: 'Research', title: 'Performance report', body: 'Every published call, scored. Filters sit above the table rather than in a sidebar.' },
         { src: 'ats/morning-note.svg', ar: '1920 / 4871', label: 'Research', title: 'Morning note', body: 'A long-form daily read, set at the same measure as the legal pages.' },
-        { src: 'ats/full-view.png', ar: '3840 / 9466', label: 'Editorial', title: 'Blog post, full view', body: 'A recommendation rationale running to two thousand words, with comments and a reply form under it.' },
+        { src: 'ats/full-view.webp', ar: '3840 / 9466', label: 'Editorial', title: 'Blog post, full view', body: 'A recommendation rationale running to two thousand words, with comments and a reply form under it.' },
         { src: 'ats/research-pie.svg', ar: '1920 / 3136', label: 'Research', title: 'Allocation breakdown', body: 'The one place a chart earns its space, because the split is the whole point.' }
       ],
       toolScreens: [

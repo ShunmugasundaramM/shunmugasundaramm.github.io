@@ -6,12 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pocket Design System · Shunmugasundaram M</title>
 <!-- Social previews -->
-<meta name="description" content="Tokens, components and patterns that keep the Pocket trading apps consistent.">
+<meta name="description" content="56 components and one lime accent: the working library behind Pocket&#x27;s trading app and web platform, with tokens, live components and accessibility rules.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Shunmugasundaram M">
 <meta property="og:title" content="Pocket Design System · Shunmugasundaram M">
-<meta property="og:description" content="Tokens, components and patterns that keep the Pocket trading apps consistent.">
+<meta property="og:description" content="56 components and one lime accent: the working library behind Pocket&#x27;s trading app and web platform, with tokens, live components and accessibility rules.">
 <meta property="og:url" content="https://shunmugasundaramm.github.io/pocket-design-system/">
+<link rel="canonical" href="https://shunmugasundaramm.github.io/pocket-design-system/">
 <meta property="og:image" content="https://shunmugasundaramm.github.io/og/pocket-design-system.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -38,13 +39,13 @@ a{color:#C8FF00;text-decoration:none}
 a:hover{color:#B8EB00}
 a:focus-visible,button:focus-visible{outline:2px solid #C8FF00;outline-offset:3px}
 @keyframes pdRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-@media (max-width:900px){[data-pd-pad]{padding-left:24px !important;padding-right:24px !important}[data-pd-2],[data-pd-3],[data-pd-4],[data-pd-row]{grid-template-columns:1fr !important}[data-pd-h1]{font-size:52px !important}}
+@media (max-width:900px){[data-pd-pad]{padding-left:24px !important;padding-right:24px !important}[data-pd-2],[data-pd-3],[data-pd-4],[data-pd-row]{grid-template-columns:1fr !important}[data-pd-h1]{font-size:52px !important}[data-pd-2]>*,[data-pd-3]>*,[data-pd-row]>*{min-width:0}[data-pd-root] :is([style*="font-size:64px"],[style*="font-size: 64px"]){font-size:40px !important}[data-pd-root] :is([style*="font-size:52px"],[style*="font-size: 52px"]){font-size:36px !important}}
 @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
 </style>
 </helmet>
 <dc-import name="SiteHeader" current="Projects" hint-size="100%,68px"></dc-import>
 
-<div data-pd-root style="max-width:1440px;margin:0 auto">
+<div role="main" id="main" tabindex="-1" data-pd-root data-fit-desktop style="max-width:1440px;margin:0 auto">
 
 <section data-screen-label="Cover" data-pd-pad style="position:relative;overflow:hidden;padding:56px 100px 96px;min-height:860px;display:flex;flex-direction:column">
   <div style="position:absolute;right:-180px;top:-160px;width:720px;height:720px;border-radius:50%;background:radial-gradient(closest-side,rgba(200,255,0,0.16),transparent 70%)"></div>
@@ -166,7 +167,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #C8FF00;outline-offset:3p
   <div data-pd-3 style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px;margin-top:56px">
     <sc-for list="{{ groups }}" as="g" hint-placeholder-count="11">
       <div data-rv style="padding:22px 0;border-top:1px solid #2E2E2E">
-        <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="font-size:19px;font-weight:700">{{ g.name }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#71717A;white-space:nowrap">{{ g.where }}</span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="font-size:19px;font-weight:700">{{ g.name }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#A1A1AA;white-space:nowrap">{{ g.where }}</span></div>
         <p style="margin:8px 0 0;font-size:15px;line-height:1.55;color:#A1A1AA">{{ g.items }}</p>
       </div>
     </sc-for>
