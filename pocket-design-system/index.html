@@ -40,7 +40,7 @@ a{color:#C8FF00;text-decoration:none}
 a:hover{color:#B8EB00}
 a:focus-visible,button:focus-visible{outline:2px solid #C8FF00;outline-offset:3px}
 @keyframes pdRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-@media (max-width:900px){[data-pd-pad]{padding-left:24px !important;padding-right:24px !important}[data-pd-2],[data-pd-3],[data-pd-4],[data-pd-row]{grid-template-columns:1fr !important}[data-pd-h1]{font-size:52px !important}[data-pd-2]>*,[data-pd-3]>*,[data-pd-row]>*{min-width:0}[data-pd-root] :is([style*="font-size:64px"],[style*="font-size: 64px"]){font-size:40px !important}[data-pd-root] :is([style*="font-size:52px"],[style*="font-size: 52px"]){font-size:36px !important}}
+@media (max-width:900px){[data-pd-pad]{padding-left:24px !important;padding-right:24px !important}[data-pd-2],[data-pd-3],[data-pd-4],[data-pd-row]{grid-template-columns:1fr !important}[data-pd-h1]{font-size:min(52px,9.6vw) !important}[data-pd-inks]{flex-wrap:wrap}[data-pd-inks]>*{flex:1 0 20% !important;padding:8px !important;font-size:11px !important;height:72px !important}[data-pd-2]>*,[data-pd-3]>*,[data-pd-row]>*{min-width:0}[data-pd-root] :is([style*="font-size:64px"],[style*="font-size: 64px"]){font-size:40px !important}[data-pd-root] :is([style*="font-size:52px"],[style*="font-size: 52px"]){font-size:36px !important}}
 @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
 </style>
 </helmet>
@@ -93,7 +93,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #C8FF00;outline-offset:3p
     <div data-rv style="border-radius:20px;background:#FFB020;color:#0A0A0A;padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end"><div style="font-weight:700;font-size:17px">Amber</div><div style="font-family:'IBM Plex Mono',monospace;font-size:13px;margin-top:4px">#FFB020 · nudges</div></div>
     <div data-rv style="border-radius:20px;background:#3DA9FC;color:#0A0A0A;padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end"><div style="font-weight:700;font-size:17px">Sky</div><div style="font-family:'IBM Plex Mono',monospace;font-size:13px;margin-top:4px">#3DA9FC · info</div></div>
   </div>
-  <div data-rv style="display:flex;margin-top:12px;border-radius:16px;overflow:hidden;border:1px solid #2E2E2E">
+  <div data-rv data-pd-inks style="display:flex;margin-top:12px;border-radius:16px;overflow:hidden;border:1px solid #2E2E2E">
     <sc-for list="{{ inks }}" as="k" hint-placeholder-count="10">
       <div style="flex:1;min-width:0;height:96px;background:{{ k.hex }};padding:12px;display:flex;flex-direction:column;justify-content:flex-end;color:{{ k.fg }};font-family:'IBM Plex Mono',monospace;font-size:12px"><span style="font-weight:600">{{ k.name }}</span><span style="opacity:0.8">{{ k.hex }}</span></div>
     </sc-for>

@@ -126,7 +126,7 @@
       <sc-for list="{{ ruler }}" as="r" hint-placeholder-count="23">
         <figure style="margin:0; background:#FFFFFF; display:flex; flex-direction:column;">
           <img src="{{ r.src }}" alt="{{ r.alt }}" loading="lazy" style="width:100%; display:block; aspect-ratio:1366 / 768;">
-          <figcaption style="display:flex; gap:10px; align-items:baseline; padding:12px 14px; border-top:1px solid #EDEAE4; font-size:12px; line-height:1.4;">
+          <figcaption data-pk-cap style="display:flex; gap:10px; align-items:baseline; padding:12px 14px; border-top:1px solid #EDEAE4; font-size:12px; line-height:1.4;">
             <span style="font-weight:700; color:{{ r.numColor }}; font-variant-numeric:tabular-nums;">{{ r.nn }}</span>
             <span style="flex:1; color:#3A3936;">{{ r.alt }}</span>
             <span style="font-weight:700; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:{{ r.numColor }}; white-space:nowrap;">{{ r.fateLabel }}</span>

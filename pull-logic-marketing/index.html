@@ -40,15 +40,15 @@ a:focus-visible{outline:2px solid #FFAE33;outline-offset:3px;border-radius:6px}
 @keyframes liNum{0%,12.4%{transform:translateY(0)}12.5%,24.9%{transform:translateY(-15px)}25%,37.4%{transform:translateY(-30px)}37.5%,49.9%{transform:translateY(-45px)}50%,62.4%{transform:translateY(-60px)}62.5%,74.9%{transform:translateY(-75px)}75%,87.4%{transform:translateY(-90px)}87.5%,100%{transform:translateY(-105px)}}
 @media (max-width:1000px){[data-pm-pad]{padding-left:28px !important;padding-right:28px !important}[data-pm-head]{grid-template-columns:auto 1fr !important}[data-pm-tag]{display:none !important}[data-pm-two],[data-pm-li],[data-pm-index],[data-pm-foot4]{grid-template-columns:1fr !important}[data-pm-four]{grid-template-columns:1fr 1fr !important}[data-pm-h1]{font-size:52px !important}}
 @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
-@media (max-width:600px){[data-pm-root] h2{font-size:clamp(30px,9vw,52px) !important;overflow-wrap:anywhere}}
+@media (max-width:600px){[data-pm-root] h2{font-size:clamp(30px,9vw,52px) !important;overflow-wrap:anywhere}[data-pm-navlabel]{display:none !important}[data-pm-pager]{scrollbar-width:none;margin-left:-6px !important}}
 </style>
 </helmet>
 <dc-import name="SiteHeader" current="Projects" hint-size="100%,68px"></dc-import>
 
 <nav aria-label="Sections" style="position:sticky;top:68px;z-index:90;height:54px;display:flex;align-items:center;gap:20px;padding:0 24px;background:rgba(9,9,11,0.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.10)">
-  <span style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap"><i style="width:9px;height:9px;border-radius:2px;background:#FFAE33;display:block"></i>Pull Logic · Design Work</span>
-  <span style="font-size:12px;color:#8A8890;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ nowLabel }}</span>
-  <span style="margin-left:auto;display:flex;gap:2px;overflow-x:auto">
+  <span data-pm-navlabel style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap"><i style="width:9px;height:9px;border-radius:2px;background:#FFAE33;display:block"></i>Pull Logic · Design Work</span>
+  <span data-pm-navlabel style="font-size:12px;color:#8A8890;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ nowLabel }}</span>
+  <span data-pm-pager style="margin-left:auto;display:flex;gap:2px;overflow-x:auto;min-width:0">
     <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="11">
       <a href="{{ n.href }}" title="{{ n.title }}" style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:{{ n.fg }};background:{{ n.bg }};padding:6px 8px;border-radius:6px;font-variant-numeric:tabular-nums">{{ n.num }}</a>
     </sc-for>

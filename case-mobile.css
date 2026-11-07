@@ -269,7 +269,7 @@
   [data-cs-mobile] [style*="font-size: 160px"]{font-size:44px !important;line-height:1.12 !important}
 
   /* Exhibits marked data-cs-keep (diagrams built from positioned parts) keep their layout and scale like a picture. */
-  [data-cs-mobile] :has(> [data-cs-keep]) { padding: 16px !important; overflow: hidden !important; }
+  [data-cs-mobile] :has(> [data-cs-keep]:only-child) { padding: 16px !important; overflow: hidden !important; }
   [data-cs-mobile] [data-cs-keep], [data-cs-mobile] [data-cs-keep] * { max-width: none !important; }
   [data-cs-mobile] [data-cs-keep] { zoom: .546; }
 }
@@ -277,3 +277,26 @@
 @media (max-width: 500px) { [data-cs-mobile] [data-cs-keep] { zoom: .303; } }
 @media (max-width: 420px) { [data-cs-mobile] [data-cs-keep] { zoom: .263; } }
 @media (max-width: 374px) { [data-cs-mobile] [data-cs-keep] { zoom: .215; } }
+
+/* Tags set by site-shell.js on phones: desktop gutters inside sections, side offsets, grid dividers. */
+@media (max-width: 899px) {
+  [data-cs-mobile] [data-csm-pad="flat"] { padding-left: 0 !important; padding-right: 0 !important; }
+  [data-cs-mobile] [data-csm-pad="box"] { padding-left: 20px !important; padding-right: 20px !important; }
+  [data-cs-mobile] [data-csm-mx] { margin-left: 0 !important; margin-right: 0 !important; }
+  [data-cs-mobile] [data-csm-rows] { row-gap: 20px !important; }
+  [data-cs-mobile] [data-csm-pad="divl"] { padding-left: 16px !important; padding-right: 0 !important; }
+  [data-cs-mobile] [data-csm-gap] { row-gap: 32px !important; }
+  [data-cs-mobile] [data-csm-first] { border-left: 0 !important; padding-left: 0 !important; }
+}
+@media (max-width: 899px) {
+  [data-cs-mobile] [data-cs-hide] { display: none !important; }
+  /* KYC audit ruler: 23 ticks stay on one line */
+  [data-cs-mobile] [data-pk-ruler] [style*="display:flex"], [data-cs-mobile] [data-pk-ruler] [style*="display: flex"] { flex-wrap: nowrap !important; gap: 2px !important; }
+  [data-cs-mobile] [data-pk-ruler] [data-pk-num] { font-size: 8px !important; letter-spacing: -.02em; }
+}
+@media (max-width: 899px) {
+  /* KYC screen board: caption text gets the full width, the fate label drops under it */
+  [data-cs-mobile] [data-pk-cap] { flex-wrap: wrap !important; gap: 4px 8px !important; padding: 10px 12px !important; }
+  [data-cs-mobile] [data-pk-cap] > span:nth-child(2) { flex: 1 1 70% !important; }
+  [data-cs-mobile] [data-pk-cap] > span:last-child { flex-basis: 100% !important; }
+}
