@@ -211,6 +211,7 @@ a{color:var(--pf-acc);text-decoration:none}a:hover{color:var(--pf-ink)}
 <i class="ph ph-arrow-up-right" style="font-size:18px;color:var(--pf-acc)"></i>
 </div>
 <p style="margin:0;font-size:15px;line-height:1.55;color:var(--pf-mute);text-wrap:pretty">{{ p.desc }}</p>
+<sc-if value="{{ p.hasResult }}" hint-placeholder-val="{{ true }}"><p style="margin:2px 0 0;padding-top:10px;border-top:1px solid var(--pf-line);font-size:14px;line-height:1.5;color:var(--pf-ink);font-weight:500;text-wrap:pretty"><span style="color:var(--pf-acc);font-weight:600">Result · </span>{{ p.result }}</p></sc-if>
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px">
 <sc-for list="{{ p.tags }}" as="t" hint-placeholder-count="2">
 <span style="font-size:13px;font-weight:500;padding:6px 12px;border-radius:999px;border:1px solid var(--pf-line);color:var(--pf-mute)">{{ t }}</span>
@@ -496,7 +497,7 @@ class Component extends DCLogic {
     if (false) { this.fetchedMeta = true; this.loadMeta(videos.map(v => v.id).filter(Boolean)); }
     const isHome = this.props.mode !== 'projects';
     const HOME = ['LeadSquared Healthcare CRM','Pocket Mobile App','Clear Cover Insurance'];
-    const projects = (D.projects || []).filter(p => isHome ? HOME.includes(p.title) : (filter === 'All' || p.cat === filter)).map((p, i) => { const big = false; return { ...p, pos: p.pos || 'top', monoDisplay: p.img ? 'none' : 'grid', span: big ? 'span 2' : 'auto', ar: big ? 'auto' : '16/10', fl: big ? '1' : 'none' }; });
+    const projects = (D.projects || []).filter(p => isHome ? HOME.includes(p.title) : (filter === 'All' || p.cat === filter)).map((p, i) => { const big = false; return { ...p, hasResult: !!p.result, pos: p.pos || 'top', monoDisplay: p.img ? 'none' : 'grid', span: big ? 'span 2' : 'auto', ar: big ? 'auto' : '16/10', fl: big ? '1' : 'none' }; });
     const set = (k) => (e) => this.setState(s => { const fieldErr = { ...(s.fieldErr || {}) }; delete fieldErr[k]; const left = Object.keys(fieldErr).length; return { form: { ...s.form, [k]: e.target.value }, fieldErr, err: !s.err || !left ? '' : left === 1 ? 'One field needs attention.' : left + ' fields need attention.' }; });
     const fe = this.state.fieldErr || {};
     const v = this.state.video;
