@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Owner App Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: one reading column with instrument-panel labels; dark navy device mockups sit in sideways-scrolling rows. */
+:root{
+  --ink:#14202b; --muted:#566574; --paper:#f4f6f8; --panel:#ffffff; --line:#d5dce3;
+  --accent:#1d4fd7; --accent-soft:#e3eafc; --warn:#a8610a; --warn-soft:#fdf0d9; --bad:#b3261e; --bad-soft:#fbe4e2; --ok:#1c7c4a; --ok-soft:#dff3e7;
+  --display:"IBM Plex Sans Condensed","Arial Narrow",sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#e6ecf2; --muted:#9aa9b8; --paper:#0f161d; --panel:#17212b; --line:#2b3947;
+    --accent:#7da2ff; --accent-soft:#1c2a4d; --warn:#f0b35a; --warn-soft:#3a2a10; --bad:#ff8d85; --bad-soft:#3d1a18; --ok:#6fd49b; --ok-soft:#13301f;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e6ecf2; --muted:#9aa9b8; --paper:#0f161d; --panel:#17212b; --line:#2b3947;
+  --accent:#7da2ff; --accent-soft:#1c2a4d; --warn:#f0b35a; --warn-soft:#3a2a10; --bad:#ff8d85; --bad-soft:#3d1a18; --ok:#6fd49b; --ok-soft:#13301f;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(34px,6vw,56px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(26px,4vw,34px);font-weight:600}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.read{max-width:68ch}
+.muted{color:var(--muted)}
+nav.top{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;gap:18px;overflow-x:auto;padding-top:10px;padding-bottom:10px;white-space:nowrap}
+nav.top a{font-family:var(--mono);font-size:12px;text-decoration:none;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+nav.top a:hover{color:var(--accent)}
+header.hero{padding:56px 0 36px;border-bottom:1px solid var(--line)}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.lede{font-size:19px;color:var(--muted);margin-top:18px;max-width:62ch}
+.notice{margin-top:22px;padding:12px 14px;border-left:4px solid var(--warn);background:var(--warn-soft);font-size:14px;max-width:72ch}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:28px}
+.meta div{border-top:2px solid var(--ink);padding-top:8px}
+.meta b{display:block;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:500}
+.meta span{font-size:15px}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.stack-lg{display:flex;flex-direction:column;gap:30px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
+.card h3{margin-bottom:8px}
+.card p{font-size:15px;color:var(--muted)}
+.big{font-family:var(--display);font-weight:700;font-size:40px;line-height:1;color:var(--ink)}
+.stat small{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted);text-transform:uppercase;letter-spacing:.05em;vertical-align:middle}
+.tag.ok{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.tag.warn{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.tag.bad{background:var(--bad-soft);color:var(--bad);border-color:transparent}
+.tag.acc{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:760px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:500;background:var(--paper)}
+tr:last-child td{border-bottom:0}
+td.nf{color:var(--muted)}
+td.hl{background:var(--accent-soft)}
+ol.num,ul.tight{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.finding{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.finding .n{font-family:var(--display);font-weight:700;font-size:28px;color:var(--accent);line-height:1}
+.finding h3{margin-bottom:6px}
+.finding p{font-size:15px;color:var(--muted)}
+.finding .ev{margin-top:8px;font-size:13px;font-family:var(--mono);color:var(--muted)}
+.hmw{font-family:var(--display);font-size:22px;font-weight:600;padding:14px 0;border-top:1px solid var(--line)}
+.mock-row{display:flex;gap:28px;overflow-x:auto;padding:8px 4px 24px;align-items:flex-start}
+.mock{flex:0 0 auto;display:flex;flex-direction:column;gap:12px;width:272px}
+.mock.wide{width:min(780px,88vw);flex:none}
+.mock figcaption{font-size:14px;color:var(--muted)}
+.mock figcaption b{color:var(--ink);display:block;font-family:var(--display);font-size:17px;font-weight:600;margin-bottom:2px}
+figure{margin:0}
+/* Device screens: one fixed dark navy palette, on purpose. */
+.phone{--n0:#08122a;--n1:#0e1d42;--n2:#16295a;--n3:#223a74;--tx:#eaf0ff;--tx2:#9fb2dc;--blue:#5b8cff;--amb:#f5b041;--grn:#3ddc97;--red:#ff6b6b;
+  width:272px;height:566px;border-radius:34px;border:8px solid #04080f;background:var(--n0);color:var(--tx);overflow:hidden;position:relative;font-family:var(--body);font-size:12.5px;line-height:1.4;box-shadow:0 12px 32px rgba(5,10,25,.35);display:flex;flex-direction:column}
+.p-status{display:flex;justify-content:space-between;padding:9px 18px 2px;font-size:10px;font-weight:600;color:var(--tx2)}
+.p-body{flex:1;padding:8px 14px 10px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.p-nav{display:flex;justify-content:space-around;padding:9px 6px 13px;background:var(--n1);border-top:1px solid var(--n2);font-size:10px;color:var(--tx2)}
+.p-nav .on{color:var(--blue);font-weight:600}
+.p-card{background:var(--n1);border:1px solid var(--n2);border-radius:16px;padding:11px 12px}
+.p-h{font-family:var(--display);font-weight:600;font-size:21px;line-height:1.1}
+.p-sub{color:var(--tx2);font-size:11.5px}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:600;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.chip.ok{background:rgba(61,220,151,.16);color:var(--grn)}.chip.warn{background:rgba(245,176,65,.16);color:var(--amb)}.chip.bad{background:rgba(255,107,107,.16);color:var(--red)}.chip.info{background:rgba(91,140,255,.2);color:#9db9ff}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor;display:inline-block}
+.gauges{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.gauge{background:var(--n1);border:1px solid var(--n2);border-radius:14px;padding:9px 8px;text-align:left}
+.gauge b{display:block;font-family:var(--display);font-size:25px;line-height:1;font-weight:700}
+.gauge span{font-size:9.5px;color:var(--tx2);text-transform:uppercase;letter-spacing:.05em}
+.gauge.amb b{color:var(--amb)}.gauge.red b{color:var(--red)}
+.p-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.p-act{background:var(--n1);border:1px solid var(--n2);border-radius:14px;padding:8px 2px;text-align:center;font-size:10px;font-weight:500}
+.p-act i{display:block;width:24px;height:24px;border-radius:50%;background:var(--n3);margin:0 auto 4px;position:relative}
+.p-act i::after{content:"";position:absolute;inset:7px;border:2px solid var(--blue);border-radius:3px}
+.p-act.dim{opacity:.5}
+.btn{display:block;text-align:center;font-weight:600;border-radius:14px;padding:11px;font-size:12.5px}
+.btn.pri{background:var(--blue);color:#06112b}.btn.sec{background:transparent;border:1px solid var(--n3);color:var(--tx)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.list-i{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--n2)}
+.list-i:first-child{border-top:0}
+.bar{height:6px;border-radius:3px;background:var(--n2);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--blue)}
+.tl{display:flex;flex-direction:column;gap:0}
+.tl div{display:grid;grid-template-columns:18px 1fr auto;gap:8px;align-items:start;padding:6px 0;position:relative}
+.tl div::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--n3);margin-top:4px;position:relative;z-index:1}
+.tl div.done::before{background:var(--grn)}
+.tl div.now::before{background:var(--blue);box-shadow:0 0 0 4px rgba(91,140,255,.25)}
+.slot{border:1px solid var(--n3);border-radius:12px;padding:8px 6px;text-align:center;font-size:11px}
+.slot.sel{background:var(--blue);color:#06112b;border-color:var(--blue);font-weight:600}
+.slot small{display:block;font-size:9px;color:var(--grn)}
+.slot.sel small{color:#06112b}
+.tog{width:30px;height:17px;border-radius:9px;background:var(--n3);position:relative;flex:none}
+.tog::after{content:"";position:absolute;top:2px;left:2px;width:13px;height:13px;border-radius:50%;background:#fff}
+.tog.on{background:var(--blue)}.tog.on::after{left:15px}
+.plan{border:1.5px solid var(--n3);border-radius:14px;padding:9px 11px}
+.plan.best{border-color:var(--blue);background:var(--n2)}
+.steps{display:flex;gap:4px;margin:6px 0}
+.steps span{flex:1;height:4px;border-radius:2px;background:var(--n3)}
+.steps span.on{background:var(--grn)}.steps span.bad{background:var(--red)}
+/* Head unit */
+.hu{border:10px solid #04080f;border-radius:22px;background:#08122a;color:#eaf0ff;aspect-ratio:16/8.6;display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:12px;padding:14px;font-size:13px;box-shadow:0 12px 32px rgba(5,10,25,.4);overflow:hidden}
+.hu .tile{background:#0e1d42;border:1px solid #16295a;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.hu .t-h{font-family:var(--display);font-size:22px;font-weight:600;line-height:1.1}
+.hu .small{color:#9fb2dc;font-size:12px}
+.hu .bigbtn{background:#5b8cff;color:#06112b;border-radius:14px;padding:12px;text-align:center;font-weight:600;font-size:15px;min-height:48px}
+.hu .ghost{background:#16295a;border-radius:14px;padding:12px;text-align:center;font-weight:500;min-height:48px}
+.hu .span2{grid-row:span 2}
+.hu .num{font-family:var(--display);font-size:34px;font-weight:700;line-height:1}
+.hu .num.amb{color:#f5b041}
+.callouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:6px}
+.callouts div{font-size:14px;color:var(--muted);border-left:3px solid var(--accent);padding-left:10px}
+.callouts b{color:var(--ink)}
+.diag{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;overflow-x:auto}
+.diag svg{min-width:760px;width:100%;height:auto;display:block}
+svg text{font-family:var(--body)}
+.sw{display:flex;gap:10px;flex-wrap:wrap}
+.sw div{width:92px;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--panel);font-size:11px;font-family:var(--mono)}
+.sw i{display:block;height:44px}
+.sw span{display:block;padding:5px 7px;color:var(--muted)}
+.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.road .col{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:10px;padding:16px}
+.road .col h3{margin-bottom:10px}
+.src{font-size:14px}
+.src li{margin-bottom:6px;overflow-wrap:anywhere}
+footer{padding:36px 0 60px;color:var(--muted);font-size:14px}
+@media (min-width:900px){.src{columns:2;column-gap:32px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Sections"><div class="wrap">
+  <a href="#summary">Summary</a><a href="#landscape">App landscape</a><a href="#compare">Side by side</a><a href="#findings">Findings</a><a href="#framing">Framing</a><a href="#system">System</a><a href="#design">Design</a><a href="#model">Free vs premium</a><a href="#validate">Validation</a><a href="#roadmap">Roadmap</a><a href="#sources">Sources</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">UX case study · Connected car ownership · India</div>
+  <h1>One app for the whole life of a Maruti car</h1>
+  <p class="lede">A Maruti owner with a Suzuki Connect car today needs at least two apps: one for the car and one for service. This study maps that split, finds where owners get stuck, and proposes one owner experience across the phone and the head unit.</p>
+  <p class="notice"><b>Independent concept.</b> This is not a Suzuki or Maruti Suzuki project. Every screen is my own design with sample data, and no Suzuki screenshots, logos or artwork are used. Research is secondary: public pages, store listings and a Maruti service video, read in November 2026. I have not used the apps on a real car and have not interviewed owners yet, so findings are hypotheses with a plan to test them in section 09.</p>
+  <div class="meta">
+    <div><b>Brief</b><span>Iterate a friction-free car-ownership UX through Suzuki Connect: phone app and in-car head unit</span></div>
+    <div><b>Role</b><span>UX research, problem framing, UX strategy, UI design</span></div>
+    <div><b>Method</b><span>Desk research, app landscape map, review mining, proto-personas, concept screens</span></div>
+    <div><b>Date</b><span>13 Nov 2026</span></div>
+  </div>
+</div></header>
+
+<section id="summary"><div class="wrap stack-lg">
+  <div><div class="sec-label">01 · Summary</div><h2>What I found and what I would change</h2></div>
+  <div class="grid g3">
+    <div class="card"><h3>The owner has to run several apps</h3><p>Maruti lists Suzuki Connect, the new Maruti Suzuki app, a legacy Rewards app and five Smartplay and parts apps. Ratings run from 2.6 to 4.8. Tata chose the opposite and merged its apps into one in iRA 2.0.</p></div>
+    <div class="card"><h3>The same friction repeats in each app</h3><p>Sign-in and activation fail in both: "No Records Found" for unregistered numbers in one, an OTP loop in the other. Failures end with a phone number or an email address.</p></div>
+    <div class="card"><h3>The car knows things the service app does not</h3><p>Odometer, health check and location live in Suzuki Connect. Service reminders, estimates and insurance alerts live in the other app. Joining them is the opportunity.</p></div>
+  </div>
+  <div class="card">
+    <h3>Six design moves, shown in sections 07 and 08</h3>
+    <ol class="num muted" style="font-size:15px">
+      <li><b style="color:var(--ink)">One sign-in, one car.</b> The car layer appears only when the car has Suzuki Connect.</li>
+      <li><b style="color:var(--ink)">Home shows the three numbers an owner needs:</b> range, kilometres to service, days to insurance.</li>
+      <li><b style="color:var(--ink)">Honest commands.</b> Four states and a reason when the car cannot be reached.</li>
+      <li><b style="color:var(--ink)">Service that uses the car's data,</b> shows fees before you commit, and tracks the workshop live.</li>
+      <li><b style="color:var(--ink)">The same timeline on the head unit,</b> with a driving mode that shows less.</li>
+      <li><b style="color:var(--ink)">A free care layer and a premium car layer,</b> with calm, clear states when a car has no device or its plan has ended.</li>
+    </ol>
+  </div>
+</div></section>
+
+<section id="landscape"><div class="wrap stack-lg">
+  <div><div class="sec-label">02 · App landscape</div><h2>Where the owner's tasks live today</h2>
+  <p class="read muted" style="margin-top:12px">Ratings are from the Google Play listings I opened in Chrome on 13 Nov 2026 unless marked. Features are as the developer describes them. I have not tested the apps on a car.</p></div>
+  <div class="scroll"><table>
+    <thead><tr><th>App</th><th>Play rating</th><th>What it does</th><th>Updated</th></tr></thead>
+    <tbody>
+      <tr><td><b>Suzuki Connect</b></td><td>4.8 · 56.3K reviews · 10L+</td><td>Remote operations, live location, alerts, trips, driving score, Alexa skill. Needs the telematics device.</td><td>20 Aug 2026</td></tr>
+      <tr><td><b>Maruti Suzuki</b> (new owner app)</td><td>4.6 · 61.2K reviews · 10L+</td><td>Service booking, cost calculator, estimate approval, live service updates, roadside assistance, challan, PUC and insurance alerts, parking, accessories, car buying, secondary user.</td><td>5 Nov 2026</td></tr>
+      <tr><td><b>Maruti Suzuki Rewards</b> (older owner app)</td><td>About 4.0 to 4.4 · 43.7K ratings*</td><td>Service booking and records, cost estimates, insurance tracking, documents, rewards. Still listed.</td><td>May 2026*</td></tr>
+      <tr><td>Smartplay Studio, Remote, Pro Sync, Smart Play Pro</td><td>2.9, 3.5, 2.6, 3.3</td><td>Infotainment companion apps, listed under the same developer.</td><td class="nf">Not checked</td></tr>
+      <tr><td>Parts Kart</td><td>3.3</td><td>Parts ordering, listed under the same developer.</td><td class="nf">Not checked</td></tr>
+    </tbody></table></div>
+  <p class="muted" style="font-size:13px">* Third-party trackers (AppBrain, AppGoblin, ApkCombo). The Rewards figures vary between them.</p>
+
+  <div class="card">
+    <h3>One task, five routes: booking a service</h3>
+    <p style="margin-bottom:12px">A Google search for "book Maruti Suzuki service" returns an AI summary that lists three ways to book, and Maruti's own videos show two more. The steps differ in each, so an owner has to choose a route before they start.</p>
+    <div class="scroll"><table style="min-width:640px">
+      <thead><tr><th>Route</th><th>What the owner does</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td><b>Website, Arena or Nexa page</b></td><td>Enter name and mobile, verify an OTP, link the car by registration or VIN, choose service type, choose workshop pick-up or doorstep pick-up and drop, pick a dealer and a Morning, Afternoon or Evening slot, then confirm. The summary lists eight steps.</td><td>Google AI summary</td></tr>
+        <tr><td><b>Maruti Suzuki app</b></td><td>Log in, pick the car, choose service type, pick a low-rush slot, tap Book. The summary lists five steps. Maruti's own Short promotes "One Click Booking".</td><td>Google AI summary · Maruti video</td></tr>
+        <tr><td><b>Rewards or Care app (older)</b></td><td>The same summary names the older app as a route too, so owners may still be using it.</td><td>Google AI summary</td></tr>
+        <tr><td><b>WhatsApp chatbot</b></td><td>Message a service line, choose "Book a Service", then enter details, workshop and slot.</td><td>Google AI summary</td></tr>
+        <tr><td><b>Phone</b></td><td>Search Google for the nearest service centre and call to book.</td><td>Maruti video, 27 Oct 2026</td></tr>
+      </tbody></table></div>
+    <p class="muted" style="font-size:13px;margin-top:10px">The Google summary is machine-written and I have not confirmed each step against Maruti's pages, so treat the step counts as indicative. Even so, the pattern is clear: the same job is split across web, two apps, chat and phone, and the car's own data is not part of any of them.</p>
+  </div>
+
+  <div class="diag">
+    <svg viewBox="0 0 900 300" role="img" aria-label="Today the owner uses separate apps for the car and for service. Proposed: one app with a car layer and a care layer.">
+      <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--muted)"/></marker></defs>
+      <g font-size="14" fill="var(--ink)">
+        <text x="20" y="28" font-weight="600" font-family="IBM Plex Sans Condensed" font-size="18">Today</text>
+        <rect x="20" y="44" width="190" height="64" rx="10" fill="var(--panel)" stroke="var(--line)"/><text x="115" y="72" text-anchor="middle" font-weight="600">Suzuki Connect</text><text x="115" y="92" text-anchor="middle" fill="var(--muted)" font-size="12">the car: remote, trips, alerts</text>
+        <rect x="230" y="44" width="190" height="64" rx="10" fill="var(--panel)" stroke="var(--line)"/><text x="325" y="72" text-anchor="middle" font-weight="600">Maruti Suzuki app</text><text x="325" y="92" text-anchor="middle" fill="var(--muted)" font-size="12">care: service, insurance, roadside</text>
+        <rect x="20" y="124" width="190" height="52" rx="10" fill="var(--panel)" stroke="var(--line)" stroke-dasharray="5 4"/><text x="115" y="155" text-anchor="middle" fill="var(--muted)">Rewards (older app)</text>
+        <rect x="230" y="124" width="190" height="52" rx="10" fill="var(--panel)" stroke="var(--line)" stroke-dasharray="5 4"/><text x="325" y="155" text-anchor="middle" fill="var(--muted)">Smartplay apps, Parts Kart</text>
+        <text x="220" y="215" text-anchor="middle" fill="var(--bad)" font-size="13">Separate sign-ins, separate car records, two support routes</text>
+        <text x="480" y="28" font-weight="600" font-family="IBM Plex Sans Condensed" font-size="18">Proposed</text>
+        <rect x="480" y="44" width="400" height="190" rx="14" fill="var(--accent-soft)" stroke="var(--accent)"/>
+        <text x="500" y="70" font-weight="600" fill="var(--accent)">One owner app · one sign-in · one car record</text>
+        <rect x="500" y="84" width="170" height="130" rx="10" fill="var(--panel)" stroke="var(--line)"/><text x="585" y="112" text-anchor="middle" font-weight="600">Care layer</text><text x="585" y="136" text-anchor="middle" fill="var(--muted)" font-size="12">every Maruti car</text><text x="585" y="156" text-anchor="middle" fill="var(--muted)" font-size="12">service, insurance, PUC</text><text x="585" y="176" text-anchor="middle" fill="var(--muted)" font-size="12">roadside, documents</text>
+        <rect x="690" y="84" width="170" height="130" rx="10" fill="var(--panel)" stroke="var(--line)"/><text x="775" y="112" text-anchor="middle" font-weight="600">Car layer</text><text x="775" y="136" text-anchor="middle" fill="var(--muted)" font-size="12">cars with Suzuki Connect</text><text x="775" y="156" text-anchor="middle" fill="var(--muted)" font-size="12">remote, location, trips</text><text x="775" y="176" text-anchor="middle" fill="var(--muted)" font-size="12">live car data</text>
+        <text x="680" y="262" text-anchor="middle" fill="var(--ok)" font-size="13">Care reads the car's odometer and health; the head unit shows the same timeline</text>
+      </g>
+      <path d="M430 110 L474 110" stroke="var(--muted)" stroke-width="2" marker-end="url(#ar)"/>
+    </svg>
+  </div>
+
+  <h3>Competitor benchmark: who already combines care and car</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Capability</th><th>Suzuki Connect</th><th>Maruti Suzuki app</th><th>Tata iRA 2.0</th><th>Toyota Connect</th><th>Honda Connect</th></tr></thead>
+    <tbody>
+      <tr><td><b>Service booking</b></td><td class="nf">Not found</td><td>Yes, One Click Booking</td><td>Yes</td><td>Yes</td><td>Digital pick-up and drop</td></tr>
+      <tr><td><b>Live service status</b></td><td class="nf">Not found</td><td>Yes</td><td class="nf">Not found</td><td class="nf">Not found</td><td class="nf">Not found</td></tr>
+      <tr><td><b>Insurance, PUC alerts</b></td><td class="nf">Not found</td><td>Yes</td><td class="nf">Not found</td><td class="nf">Not found</td><td class="nf">Not found</td></tr>
+      <tr><td><b>Roadside help</b></td><td>24x7 emergency assistance (Counterpoint)</td><td>Yes, with live tracking</td><td>Yes</td><td>Yes</td><td class="nf">Not found</td></tr>
+      <tr><td><b>Remote controls, location</b></td><td>Yes</td><td class="nf">Not listed</td><td>Yes</td><td>Yes</td><td class="nf">Not found</td></tr>
+      <tr><td><b>Trips, driving score</b></td><td>Yes</td><td class="nf">Not listed</td><td>Yes</td><td>Owner says missing</td><td class="nf">Not found</td></tr>
+      <tr class="hl"><td><b>Care and car in one app</b></td><td>No</td><td>No</td><td>Yes: "one customer app"</td><td class="nf">Not found</td><td class="nf">Not found</td></tr>
+    </tbody></table></div>
+  <p class="muted" style="font-size:13px">"Not found" means my sources did not mention it, not that it is absent. Hyundai, Kia and MG are left out here because my sources describe their remote features, not their service flows.</p>
+</div></section>
+
+<section id="compare"><div class="wrap stack-lg">
+  <div><div class="sec-label">03 · Side by side</div><h2>The two real apps, compared with my concept</h2>
+  <p class="read muted" style="margin-top:12px">Observed from each app's Google Play promotional screenshots and descriptions on 13 Nov 2026. These are marketing images with sample data, not the live apps, so layouts may differ in use. I describe them in words and reproduce none of them.</p></div>
+  <div class="scroll"><table style="min-width:900px">
+    <thead><tr><th>Dimension</th><th>Suzuki Connect</th><th>Maruti Suzuki app</th><th>My concept</th></tr></thead>
+    <tbody>
+      <tr><td><b>Main job</b></td><td>Control and watch the car</td><td>Buy, service and manage a Maruti car: test drive, accessories, service, challans, parking</td><td>One owner app: care for the car and control it</td></tr>
+      <tr><td><b>Home screen</b></td><td>Car-first. Screenshots lead with remote operations, then live dashboard parameters on a dark screen with a car view.</td><td>Sales-led. A greeting and search box, "Top offerings" such as Book Test Drive and Book a Car, quick actions (test drive, dealer locator, callback, quote), and a banner for metro tickets.</td><td>Status-led: range, kilometres to service and days to insurance, then a short "Next up" list</td></tr>
+      <tr><td><b>Navigation</b></td><td>Bottom bar with several icon tabs</td><td>Home, My Car, Account</td><td>Car, Service, Trips, Me</td></tr>
+      <tr><td><b>Visual style</b></td><td>Dark navy with glowing blue, map-heavy screens</td><td>Light, bright home with a car photo and a white-and-blue brand look. The service booking screen is dark. Driving essentials use soft red, green and blue cards.</td><td>One dark navy language. Colour only for state: green done, amber soon, red act now.</td></tr>
+      <tr><td><b>Live car data</b></td><td>Yes: location, polygon geofence, trips, dashboard values</td><td>Not shown</td><td>Yes, and it feeds service reminders and bookings</td></tr>
+      <tr><td><b>Service booking</b></td><td>Not shown</td><td>Pick the car, see the due periodic service with dates, a "rush day" marker, Edit booking and Book now</td><td>Same flow plus the car's health check, a maximum price and approval of extra jobs</td></tr>
+      <tr><td><b>Challans, FASTag, PUC</b></td><td>Not shown</td><td>Three status cards: unpaid challans, FASTag balance and active, PUCC active</td><td>One "Papers and people" view with dates, renewals and who has access</td></tr>
+      <tr><td><b>When something fails</b></td><td>Reviews report failed commands and lost connection; the listing shows no failure design</td><td>Reviews report OTP loops and support by phone or email</td><td>Four-state commands with a reason, in-app support chat</td></tr>
+    </tbody></table></div>
+  <div class="grid g3">
+    <div class="card"><h3>What the real apps do well</h3><p>Suzuki Connect has a strong, clear car view and rich live data. The Maruti Suzuki app covers many owner tasks in a few cards, and flags rush days when booking.</p></div>
+    <div class="card"><h3>What neither does</h3><p>Neither connects the car's own data to service, or shows the owner one list of what needs attention. Neither designs for the moment something fails.</p></div>
+    <div class="card"><h3>The risk to avoid</h3><p>The Maruti Suzuki app's home leans toward selling cars and accessories. My version keeps the owner's own car at the centre and leaves shopping a tap away.</p></div>
+  </div>
+</div></section>
+
+<section id="findings"><div class="wrap stack-lg">
+  <div><div class="sec-label">04 · Findings</div><h2>Seven problems worth solving</h2>
+  <p class="read muted" style="margin-top:12px">Evidence labels say how much I could verify. "Official" is a Maruti page. "Reviews" are a few store reviews I read, so none of these is a measured rate.</p></div>
+  <div>
+    <div class="finding"><div class="n">1</div><div><h3>Remote commands fail without an explanation <span class="tag bad">Reviews</span></h3><p>A 31 Oct 2026 Play review says lock often shows "unsuccessful" and location often drops to "connectivity lost". A 2022 review with 229 helpful votes says live tracking sometimes does not work, which matters most to owners worried about theft.</p><div class="ev">Suzuki Connect Play listing</div></div></div>
+    <div class="finding"><div class="n">2</div><div><h3>Sign-in and activation break in both apps <span class="tag bad">Official, reviews</span></h3><p>Maruti's subscribe page says a number not registered with Maruti cannot subscribe, shown as "No Records Found". A 23 Oct 2026 review of the Maruti Suzuki app describes about 20 OTP attempts that loop and disconnect, ending with a phone booking. Both apps need the owner's number to match the car record.</p><div class="ev">Maruti subscribe page · Maruti Suzuki Play listing</div></div></div>
+    <div class="finding"><div class="n">3</div><div><h3>Renewal can dead-end <span class="tag warn">Reviews</span></h3><p>A 4 Sep 2026 review describes a lapsed plan, then a payment step that lands on a blank page and a "checking your previous transaction" loop. Plan prices (₹2,899, 5,299, 7,799) are on one page, but a reviewer still expects to pay "over 9000".</p><div class="ev">Suzuki Connect Play listing · Maruti subscribe page</div></div></div>
+    <div class="finding"><div class="n">4</div><div><h3>Costs surprise owners at purchase and at the workshop <span class="tag warn">Reviews</span></h3><p>October and November 2026 reviews of the Maruti Suzuki app describe an accessory bought in the app that the dealer said did not fit the car, a long delivery gap, and fitting charges not shown when ordering. The in-app cost calculator exists but the checkout does not carry that clarity.</p><div class="ev">Maruti Suzuki Play listing</div></div></div>
+    <div class="finding"><div class="n">5</div><div><h3>Support always ends at a phone number <span class="tag warn">Reviews</span></h3><p>Developer replies in both apps point to toll-free numbers or an email address, including for payment and renewal failures. Nothing in the replies I read opens a ticket in the app.</p><div class="ev">Both Play listings</div></div></div>
+    <div class="finding"><div class="n">6</div><div><h3>Care and car data are split <span class="tag acc">Inferred</span></h3><p>The service app sends alerts for PUC and insurance and estimates for service. The car app holds the odometer, health check and location. I found nothing that shows one feeding the other, so service reminders cannot use real kilometres from the car.</p><div class="ev">Both Play listings</div></div></div>
+    <div class="finding"><div class="n">7</div><div><h3>Data use is not explained in plain words <span class="tag acc">Official, market</span></h3><p>Both Play listings say the app may share personal info with third parties; the Maruti Suzuki app lists financial info as well. Deloitte India found 72% of consumers worry about vehicle-location data and 73% about device data. India's DPDP Rules, published Nov 2025, bring consent and erasure duties from about May 2027.</p><div class="ev">Play data safety · Deloitte India via Autocar Pro · DPDP summaries</div></div></div>
+  </div>
+  <div>
+    <h3 style="margin-bottom:8px">What owners say beyond the apps</h3>
+    <p class="read muted" style="margin-bottom:14px">Older forum posts, complaint sites and survey reports. These are signals, not measured rates, and several are years old.</p>
+    <div class="grid g2">
+      <div class="card"><span class="tag ok">Strengths</span><h3 style="margin-top:10px">Owners trust the service network</h3>
+        <ul class="tight muted" style="font-size:15px">
+          <li>JD Power ranked Maruti first for dealer service satisfaction for an 11th year running, scoring 849 against an industry average of 812. The study is old; Hyundai led in 2017 and I found no 2026 ranking.</li>
+          <li>A 2018 Team-BHP owner praised the escalation process: a genuine complaint gets action.</li>
+          <li>A Feb 2025 CarDekho review of a Baleno service was very positive and called the centre clean and efficient.</li>
+        </ul></div>
+      <div class="card"><span class="tag bad">Frictions</span><h3 style="margin-top:10px">The pain is time, cost and the digital steps</h3>
+        <ul class="tight muted" style="font-size:15px">
+          <li>JD Power says owners want service done faster after drop-off, with doorstep service and alternative transport. Clear, frequent contact from the service advisor matters more each year.</li>
+          <li>A 2021 Team-BHP post calls Nexa's digital service process time-consuming and over-dependent on process steps.</li>
+          <li>Complaint-site posts describe bills that differ from the work listed, and a booked service with no slot offered for days. These are unverified single accounts.</li>
+          <li>A forum comparison describes several visits for the same complaint.</li>
+        </ul></div>
+    </div>
+    <div class="grid g2" style="margin-top:16px">
+      <div class="card"><h3>Owners already ask for one app</h3><p>An iOS review of the older Rewards app asks to add a second car so all service history sits in one place. Another reviewer likes saving insurance for renewal, booking appointments, asking for roadside help and storing documents with expiry dates. Others call that app slow with an outdated look, and an April 2026 Play review reports no service history and failed booking.</p></div>
+      <div class="card"><h3>Suzuki Connect has little public owner discussion</h3><p>Beyond the Play reviews I found no recent forum threads. Maruti's phone menu routes Suzuki Connect on one option and subscription enquiries on another, and its own pages give the feature count as both "over 40" and "60+". A global Smartcar survey (Europe and US, so only a proxy) found 76% of owners had not subscribed to any paid connected service and 61% felt theirs lacked features. Owners most often asked for emergency help, maintenance and tracking, and navigation.</p></div>
+    </div>
+  </div>
+  <div class="card"><h3>Reading the high ratings honestly</h3><p>Suzuki Connect holds 4.8 and the Maruti Suzuki app 4.6. A high average can hide a vocal minority, and I have no figures on how often commands fail or how many owners renew. Those are the first things to measure.</p></div>
+</div></section>
+
+<section id="framing"><div class="wrap stack-lg">
+  <div><div class="sec-label">05 · Problem framing</div><h2>Who this is for and what they are trying to do</h2></div>
+  <div class="card"><h3>Problem statement</h3><p style="font-size:17px;color:var(--ink)">Maruti owners, more than half of them first-time buyers, must switch between apps with separate sign-ins and separate car records, and each app fails into a phone call. They cannot trust one place to tell them the truth about their car and its next due date.</p></div>
+  <div class="grid g3">
+    <div class="card"><span class="tag acc">Proto-persona · hypothesis</span><h3 style="margin-top:10px">Anita, 34</h3><p><b style="color:var(--ink)">Gurugram, working parent.</b> Wants to know the car is locked in a basement and to book service without calling. Comfortable with apps, short on time.</p></div>
+    <div class="card"><span class="tag acc">Proto-persona · hypothesis</span><h3 style="margin-top:10px">Ramesh, 52</h3><p><b style="color:var(--ink)">Tier-2 city, first car.</b> Worried about theft and missed insurance dates. Prefers Hindi, expects a call to fix things, and will not read long screens. His son's number is on the invoice.</p></div>
+    <div class="card"><span class="tag acc">Proto-persona · hypothesis</span><h3 style="margin-top:10px">Karan, 29</h3><p><b style="color:var(--ink)">Bengaluru, new-tech buyer.</b> Compares the app with Hyundai and Kia. Wants one login and software that keeps improving. EV needs would be checked with Suzuki.</p></div>
+  </div>
+  <div>
+    <h3 style="margin-bottom:8px">Jobs to be done</h3>
+    <ul class="tight muted">
+      <li>When I park somewhere I do not trust, help me <b style="color:var(--ink)">know the car is secure</b>.</li>
+      <li>When service is due, help me <b style="color:var(--ink)">book, approve and pay</b> without calling anyone.</li>
+      <li>When a date is coming, help me <b style="color:var(--ink)">stay legal and covered</b>.</li>
+      <li>When someone else drives, help me <b style="color:var(--ink)">share access</b> and take it back.</li>
+    </ul>
+  </div>
+  <div>
+    <h3 style="margin-bottom:6px">How might we</h3>
+    <div class="hmw">…let an owner sign in once and see every task for their car?</div>
+    <div class="hmw">…use the car's own data to say when service is really due?</div>
+    <div class="hmw">…make every failure explain itself and offer a next step in the app?</div>
+    <div class="hmw">…show every fee before the owner commits to a booking or a purchase?</div>
+  </div>
+  <div class="grid g2">
+    <div class="card"><h3>Scenario 1 · Service day</h3><p>Home says "Service in 480 km". Anita books a quiet slot, drops the car, sees "Inspection" on her phone, approves one extra job, and pays at pick-up. The car's health check is attached to the booking.</p></div>
+    <div class="card"><h3>Scenario 2 · Insurance week</h3><p>Ramesh's son is the number on the invoice. He is added as a car user and gets the reminder too, so the date no longer depends on one phone.</p></div>
+    <div class="card"><h3>Scenario 3 · Basement lock</h3><p>Anita locks from the lift. The app says "Not confirmed, car last seen 6 min ago" and offers to notify her when the car connects.</p></div>
+    <div class="card"><h3>Scenario 4 · Into the car</h3><p>Karan picks a service slot at his desk. In the car, the head unit shows the next due item and offers to navigate to the workshop.</p></div>
+  </div>
+</div></section>
+
+<section id="system"><div class="wrap stack-lg">
+  <div><div class="sec-label">06 · System thinking</div><h2>How the pieces connect, and why commands fail</h2>
+  <p class="read muted" style="margin-top:12px">This is my working model from general telematics knowledge, not from Suzuki documents. Engineering would need to confirm it.</p></div>
+  <div class="diag">
+    <svg viewBox="0 0 880 250" role="img" aria-label="Command path from phone app to cloud to telematics unit to vehicle network to doors, with head unit linked to cloud">
+      <defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--muted)"/></marker></defs>
+      <g font-size="14" fill="var(--ink)">
+        <rect x="10" y="90" width="130" height="70" rx="10" fill="var(--panel)" stroke="var(--line)"/><text x="75" y="120" text-anchor="middle" font-weight="600">Owner app</text><text x="75" y="140" text-anchor="middle" fill="var(--muted)" font-size="12">owner taps Lock</text>
+        <rect x="190" y="90" width="130" height="70" rx="10" fill="var(--panel)" stroke="var(--line)"/><text x="255" y="120" text-anchor="middle" font-weight="600">Cloud</text><text x="255" y="140" text-anchor="middle" fill="var(--muted)" font-size="12">queues command</text>
+        <rect x="370" y="90" width="150" height="70" rx="10" fill="var(--panel)" stroke="var(--line)"/><text x="445" y="120" text-anchor="middle" font-weight="600">Telematics unit</text><text x="445" y="140" text-anchor="middle" fill="var(--muted)" font-size="12">SIM, GPS, may sleep</text>
+        <rect x="570" y="90" width="130" height="70" rx="10" fill="var(--panel)" stroke="var(--line)"/><text x="635" y="120" text-anchor="middle" font-weight="600">Vehicle network</text><text x="635" y="140" text-anchor="middle" fill="var(--muted)" font-size="12">CAN bus</text>
+        <rect x="745" y="90" width="125" height="70" rx="10" fill="var(--panel)" stroke="var(--line)"/><text x="807" y="120" text-anchor="middle" font-weight="600">Body control</text><text x="807" y="140" text-anchor="middle" fill="var(--muted)" font-size="12">locks the doors</text>
+        <rect x="190" y="195" width="130" height="46" rx="10" fill="var(--accent-soft)" stroke="var(--accent)"/><text x="255" y="224" text-anchor="middle" font-weight="600">Head unit</text>
+        <rect x="370" y="195" width="150" height="46" rx="10" fill="var(--accent-soft)" stroke="var(--accent)"/><text x="445" y="224" text-anchor="middle" font-weight="600">Care records</text>
+      </g>
+      <g stroke="var(--muted)" stroke-width="2" fill="none" marker-end="url(#ar2)">
+        <path d="M140 125 L186 125"/><path d="M320 125 L366 125"/><path d="M520 125 L566 125"/><path d="M700 125 L741 125"/><path d="M255 195 L255 164"/><path d="M370 218 L324 218"/>
+      </g>
+      <g font-size="12" fill="var(--bad)"><text x="345" y="72" text-anchor="middle" font-weight="600">Failure zone 1</text><text x="345" y="87" text-anchor="middle" font-size="11">no signal, unit asleep</text>
+      <text x="545" y="72" text-anchor="middle" font-weight="600">Failure zone 2</text><text x="545" y="87" text-anchor="middle" font-size="11">car rejects or never confirms</text></g>
+      <text x="700" y="224" font-size="12" fill="var(--muted)" text-anchor="middle">Odometer and health reach the care records</text>
+    </svg>
+  </div>
+  <div class="grid g2">
+    <div class="card"><h3>Command states the app should show</h3>
+      <ol class="num muted" style="font-size:15px"><li><b style="color:var(--ink)">Sent.</b> The phone reached the cloud.</li><li><b style="color:var(--ink)">Reached your car.</b> The unit received it.</li><li><b style="color:var(--ink)">Done.</b> The car confirmed, with a time.</li><li><b style="color:var(--ink)">Could not finish.</b> With a reason and a next step.</li></ol></div>
+    <div class="card"><h3>Design principles</h3>
+      <ol class="num muted" style="font-size:15px"><li>Show data age before data.</li><li>Never claim success the car did not confirm.</li><li>Show every fee before commitment.</li><li>One sign-in, one car record.</li><li>Consent in plain words, in the owner's language.</li></ol></div>
+  </div>
+</div></section>
+
+<section id="design"><div class="wrap stack-lg">
+  <div><div class="sec-label">07 · UI concepts</div><h2>Eight phone screens and one head unit</h2>
+  <p class="read muted" style="margin-top:12px">Original concept screens with sample data and invented prices. Scroll sideways. Controls the car does not support are dimmed with a reason, not hidden.</p></div>
+
+  <div>
+    <h3 style="margin-bottom:10px">Visual language</h3>
+    <div class="sw">
+      <div><i style="background:#08122a"></i><span>Night #08122A</span></div>
+      <div><i style="background:#0e1d42"></i><span>Panel #0E1D42</span></div>
+      <div><i style="background:#5b8cff"></i><span>Signal #5B8CFF</span></div>
+      <div><i style="background:#3ddc97"></i><span>Done #3DDC97</span></div>
+      <div><i style="background:#f5b041"></i><span>Soon #F5B041</span></div>
+      <div><i style="background:#ff6b6b"></i><span>Act #FF6B6B</span></div>
+    </div>
+    <p class="muted" style="margin-top:10px;font-size:14px;max-width:70ch">A dark navy base keeps the family feel of Suzuki's own blue without copying it. Large condensed numerals work like an instrument cluster. Colour means state only: green done, amber soon, red act now.</p>
+  </div>
+
+  <div class="mock-row" role="group" aria-label="Phone concept screens">
+
+    <figure class="mock">
+      <div class="phone" aria-label="Home screen concept">
+        <div class="p-status"><span>9:41</span><span>5G ▮▮▮</span></div>
+        <div class="p-body">
+          <div class="row"><div><div class="p-sub">Good evening, Anita</div><div class="p-h">My Victoris</div></div><span class="chip ok"><i class="dot"></i>Seen 12 s ago</span></div>
+          <div class="p-card" style="padding:8px 10px">
+            <svg viewBox="0 0 240 86" width="100%" role="img" aria-label="Generic car outline"><path d="M14 64 L22 44 Q28 32 44 30 L90 26 Q104 10 130 10 L168 12 Q186 16 198 34 L222 42 Q232 46 232 60 L232 66 L14 66 Z" fill="#16295a" stroke="#5b8cff" stroke-width="2"/><circle cx="60" cy="68" r="13" fill="#04080f"/><circle cx="60" cy="68" r="5" fill="#5b8cff"/><circle cx="184" cy="68" r="13" fill="#04080f"/><circle cx="184" cy="68" r="5" fill="#5b8cff"/><path d="M100 30 L104 16 L130 14 L132 30 Z M140 30 L138 14 L166 16 L182 32 Z" fill="#0e1d42" stroke="#5b8cff" stroke-width="1.5"/></svg>
+            <div class="row"><span class="p-sub">Parked · Sector 54</span><span class="chip info">Locked 6:12 pm</span></div>
+          </div>
+          <div class="gauges">
+            <div class="gauge"><b>312</b><span>km range</span></div>
+            <div class="gauge amb"><b>480</b><span>km to service</span></div>
+            <div class="gauge red"><b>9</b><span>days to insurance</span></div>
+          </div>
+          <div class="p-actions">
+            <div class="p-act"><i></i>Lock</div><div class="p-act"><i></i>Find car</div><div class="p-act"><i></i>Book</div><div class="p-act dim"><i></i>Climate</div>
+          </div>
+          <div class="p-card">
+            <div class="row"><b>Next up</b><span class="p-sub">Tue 18 Nov</span></div>
+            <div class="list-i"><span>Service at Sector 18 workshop</span><span class="chip info">Booked</span></div>
+            <div class="list-i"><span>Renew insurance</span><span class="chip bad">Act</span></div>
+          </div>
+        </div>
+        <div class="p-nav"><span class="on">Car</span><span>Service</span><span>Trips</span><span>Me</span></div>
+      </div>
+      <figcaption><b>Home: three numbers and one list</b>One sign-in covers care and car. The freshness chip says how old the car's data is. Climate is dimmed because this model does not support it.</figcaption>
+    </figure>
+
+    <figure class="mock">
+      <div class="phone" aria-label="Command failure concept">
+        <div class="p-status"><span>9:43</span><span>5G ▮▮▯</span></div>
+        <div class="p-body" style="gap:12px">
+          <div class="p-h" style="margin-top:6px">Lock car</div>
+          <div class="p-card">
+            <div class="row"><b>Sent</b><span class="chip ok">Done</span></div>
+            <div class="row" style="margin-top:8px"><b>Reached your car</b><span class="chip bad">Not yet</span></div>
+            <div class="steps"><span class="on"></span><span class="bad"></span><span></span></div>
+          </div>
+          <div class="p-card" style="border-color:#7a3340">
+            <div class="p-h" style="font-size:18px">We could not reach your car</div>
+            <p class="p-sub" style="margin-top:4px">It last checked in 6 minutes ago in a low-signal spot. It may still be unlocked.</p>
+          </div>
+          <div class="btn pri">Try again</div>
+          <div class="btn sec">Tell me when it connects</div>
+          <div class="p-card"><div class="row"><span class="p-sub">Last known state</span><b>Unlocked, 6:07 pm</b></div></div>
+          <div class="p-sub" style="text-align:center">Still stuck? <b style="color:#9db9ff">Chat with support in the app</b><br>Hindi or English</div>
+        </div>
+        <div class="p-nav"><span class="on">Car</span><span>Service</span><span>Trips</span><span>Me</span></div>
+      </div>
+      <figcaption><b>A command that did not land</b>Three honest stages, a plain reason, the last known state and two ways forward. Support opens in the app instead of sending the owner to a phone number.</figcaption>
+    </figure>
+
+    <figure class="mock">
+      <div class="phone" aria-label="Book service concept">
+        <div class="p-status"><span>9:52</span><span>5G ▮▮▮</span></div>
+        <div class="p-body">
+          <div><div class="p-h">Book service</div><div class="p-sub">Victoris · 9,520 km</div></div>
+          <div class="p-card">
+            <div class="row"><b>Car health check</b><span class="chip ok">Attached</span></div>
+            <div class="p-sub" style="margin-top:2px">Battery healthy · no fault codes seen. Shared with the workshop only for this booking.</div>
+          </div>
+          <div class="p-sub">Workshop · Sector 18, 4.2 km</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+            <div class="slot">Tue<br>9:00 am<small>Quiet</small></div>
+            <div class="slot sel">Tue<br>11:30 am<small>Quiet</small></div>
+            <div class="slot">Wed<br>10:00 am</div>
+          </div>
+          <div class="p-card">
+            <b>Estimate</b>
+            <div class="list-i"><span>Regular service</span><span>₹3,800</span></div>
+            <div class="list-i"><span>Parts, if needed</span><span>₹0 to 1,300</span></div>
+            <div class="list-i"><span>GST</span><span>included</span></div>
+            <div class="row" style="margin-top:4px"><b>You pay at most</b><b style="font-size:16px">₹5,100</b></div>
+            <div class="p-sub">Sample figures. Extra work needs your approval first.</div>
+          </div>
+          <div class="btn pri">Book Tue 11:30 am</div>
+        </div>
+        <div class="p-nav"><span>Car</span><span class="on">Service</span><span>Trips</span><span>Me</span></div>
+      </div>
+      <figcaption><b>Book: the car's data and a ceiling price</b>The health check travels with the booking. Quiet slots are marked. The estimate shows a maximum and says that extra work needs approval.</figcaption>
+    </figure>
+
+    <figure class="mock">
+      <div class="phone" aria-label="Workshop live status concept">
+        <div class="p-status"><span>1:08</span><span>5G ▮▮▮</span></div>
+        <div class="p-body">
+          <div class="row"><div><div class="p-h">In service</div><div class="p-sub">Sector 18 workshop · ready by 4 pm</div></div></div>
+          <div class="p-card">
+            <div class="tl">
+              <div class="done"><span>Car received</span><span class="p-sub">11:34</span></div>
+              <div class="done"><span>Inspection done</span><span class="p-sub">12:20</span></div>
+              <div class="now"><span><b>Needs your approval</b></span><span class="chip warn">1 item</span></div>
+              <div><span class="p-sub">Work in progress</span><span></span></div>
+              <div><span class="p-sub">Ready for pick-up</span><span></span></div>
+            </div>
+          </div>
+          <div class="p-card">
+            <b>Extra work found</b>
+            <div class="row" style="margin-top:6px"><div>Front brake pads<div class="p-sub">Worn to 3 mm. Photo from the workshop.</div></div><b>₹1,280</b></div>
+            <div class="row" style="margin-top:8px"><span class="p-sub">Approve this job</span><div class="tog on"></div></div>
+            <div class="row" style="margin-top:6px"><span class="p-sub">Call me first</span><div class="tog"></div></div>
+          </div>
+          <div class="row"><span class="p-sub">New total</span><b style="font-size:16px">₹5,080</b></div>
+          <div class="btn pri">Confirm</div>
+          <div class="btn sec">Message the service advisor</div>
+        </div>
+        <div class="p-nav"><span>Car</span><span class="on">Service</span><span>Trips</span><span>Me</span></div>
+      </div>
+      <figcaption><b>Workshop status and approval</b>Maruti's app lists live updates and remote estimate approval; this concept makes each extra job a decision with a reason, a photo and a new total.</figcaption>
+    </figure>
+
+    <figure class="mock">
+      <div class="phone" aria-label="Care wallet concept">
+        <div class="p-status"><span>10:15</span><span>5G ▮▮▮</span></div>
+        <div class="p-body">
+          <div><div class="p-h">Papers and people</div><div class="p-sub">Everything legal for your car</div></div>
+          <div class="p-card">
+            <div class="list-i"><div><b>Insurance</b><div class="p-sub">Renews 22 Nov</div></div><span class="chip bad">9 days</span></div>
+            <div class="list-i"><div><b>Pollution check (PUC)</b><div class="p-sub">Valid to 14 Jan</div></div><span class="chip warn">62 days</span></div>
+            <div class="list-i"><div><b>Registration (RC)</b><div class="p-sub">Valid</div></div><span class="chip ok">OK</span></div>
+          </div>
+          <div class="btn pri">Renew insurance</div>
+          <div class="p-card">
+            <div class="row"><b>People with access</b><span class="p-sub">2 of 5</span></div>
+            <div class="list-i"><div>Rakesh (son)<div class="p-sub">Reminders and location</div></div><span class="chip info">Full</span></div>
+            <div class="list-i"><div>Workshop<div class="p-sub">Health check, until 18 Nov</div></div><span class="chip warn">Ends in 5 d</span></div>
+          </div>
+          <div class="p-card"><div class="row"><b>Your data</b><span style="color:#9db9ff;font-size:11px;font-weight:600">See what is shared</span></div><div class="p-sub">Choose who sees your location and for how long. Remove anyone anytime.</div></div>
+        </div>
+        <div class="p-nav"><span>Car</span><span>Service</span><span>Trips</span><span class="on">Me</span></div>
+      </div>
+      <figcaption><b>Papers and people</b>Dates, documents and everyone with access in one place. Access to the workshop ends on its own, and the owner can see it.</figcaption>
+    </figure>
+
+    <figure class="mock">
+      <div class="phone" aria-label="Renewal concept">
+        <div class="p-status"><span>10:20</span><span>5G ▮▮▮</span></div>
+        <div class="p-body">
+          <div class="p-h" style="margin-top:4px">Your car plan ends 18 Jun</div>
+          <div class="p-card">
+            <b>What it did for you</b>
+            <div class="row" style="margin-top:6px"><span>Trips recorded</span><b>412</b></div>
+            <div class="row"><span>Alerts sent</span><b>37</b></div>
+            <div class="row"><span>Times you found your car</span><b>9</b></div>
+            <div class="p-sub" style="margin-top:4px">Sample numbers. Real ones come from your car.</div>
+          </div>
+          <div class="plan"><div class="row"><b>1 year</b><b>₹2,899</b></div><div class="p-sub">₹242 a month</div></div>
+          <div class="plan"><div class="row"><b>2 years</b><b>₹5,299</b></div><div class="p-sub">₹221 a month</div></div>
+          <div class="plan best"><div class="row"><b>3 years</b><b>₹7,799</b></div><div class="p-sub">₹217 a month · lowest per month</div></div>
+          <div class="btn pri">Pay with UPI</div>
+          <div class="p-sub">If payment stays pending we keep your plan on for 48 hours and message you. Your trips stay viewable for 90 days if you do not renew.</div>
+        </div>
+        <div class="p-nav"><span>Car</span><span>Service</span><span>Trips</span><span class="on">Me</span></div>
+      </div>
+      <figcaption><b>Renewal that proves value</b>Prices are from Maruti's subscribe page as read in Nov 2026. The 48-hour hold and 90-day read-only period are my proposals for the business to decide.</figcaption>
+    </figure>
+
+    <figure class="mock">
+      <div class="phone" aria-label="Car tab without a device concept">
+        <div class="p-status"><span>10:30</span><span>5G ▮▮▮</span></div>
+        <div class="p-body">
+          <div><div class="p-h" style="margin-top:4px">My Swift</div><div class="p-sub">Service, papers and roadside help are ready</div></div>
+          <div class="p-card" style="border-color:#2c4a95">
+            <div class="p-h" style="font-size:18px">Add Suzuki Connect to this car</div>
+            <p class="p-sub" style="margin-top:4px">Lock, find and keep an eye on your car from this app.</p>
+            <div class="list-i"><span>Lock and find your car</span><span class="chip info">Included</span></div>
+            <div class="list-i"><span>Live location and alerts</span><span class="chip info">Included</span></div>
+            <div class="list-i"><span>Trips and driving score</span><span class="chip info">Included</span></div>
+            <div class="p-sub" style="margin-top:4px">Fitted at a Maruti showroom. Plans on the current subscribe page include 3 free years with the device.</div>
+          </div>
+          <div class="btn pri">Find a showroom to fit it</div>
+          <div class="btn sec">I already have the device</div>
+          <div class="p-card"><div class="row"><b>Everything else works</b><span class="chip ok">Free</span></div><div class="p-sub" style="margin-top:2px">Service, insurance dates, papers and roadside help do not need the device.</div></div>
+        </div>
+        <div class="p-nav"><span class="on">Car</span><span>Service</span><span>Trips</span><span>Me</span></div>
+      </div>
+      <figcaption><b>No device: an invitation, not a lock</b>The car tab explains what the device adds and where to get it. It does not show greyed-out controls, and it says plainly that the rest of the app is free.</figcaption>
+    </figure>
+
+    <figure class="mock">
+      <div class="phone" aria-label="Plan ended concept">
+        <div class="p-status"><span>10:34</span><span>5G ▮▮▮</span></div>
+        <div class="p-body">
+          <div class="row"><div><div class="p-h" style="margin-top:4px">My Victoris</div><div class="p-sub">Car plan ended 18 Jun</div></div><span class="chip warn">Plan ended</span></div>
+          <div class="p-card" style="border-color:#7a5a1a">
+            <div class="p-h" style="font-size:18px">Remote controls are off</div>
+            <p class="p-sub" style="margin-top:4px">Renew to lock, find and track your car again.</p>
+          </div>
+          <div class="p-card">
+            <b>Still works</b>
+            <div class="list-i"><span>Roadside help and SOS</span><span class="chip ok">On</span></div>
+            <div class="list-i"><span>Service and approvals</span><span class="chip ok">On</span></div>
+            <div class="list-i"><span>Insurance, PUC, papers</span><span class="chip ok">On</span></div>
+          </div>
+          <div class="p-card">
+            <div class="row"><b>Last known</b><span class="p-sub">18 Jun, 6:41 pm</span></div>
+            <div class="p-sub" style="margin-top:2px">Parked near Sector 54. Trips stay viewable until 16 Sep.</div>
+          </div>
+          <div class="btn pri">Renew from ₹217 a month</div>
+          <div class="p-sub" style="text-align:center">Lowest per-month price, on the 3-year plan</div>
+        </div>
+        <div class="p-nav"><span class="on">Car</span><span>Service</span><span>Trips</span><span>Me</span></div>
+      </div>
+      <figcaption><b>Plan ended: what stays, what pauses</b>Safety and care keep working. Last known data stays readable for 90 days (my proposal). Renewal is offered once, with the lowest monthly price.</figcaption>
+    </figure>
+  </div>
+
+  <figure class="mock wide" style="gap:14px">
+    <div class="hu" role="img" aria-label="Head unit concept screen, parked state">
+      <div class="tile span2">
+        <div class="small">Tuesday 18 Nov</div>
+        <div class="t-h">Service at Sector 18 workshop</div>
+        <div class="small">Booked 11:30 am · 21 min away</div>
+        <div class="bigbtn" style="margin-top:auto">Navigate there</div>
+        <div class="ghost">Reschedule on phone</div>
+      </div>
+      <div class="tile"><div class="small">To service</div><div class="num amb">480 km</div><div class="small">Car health: all good</div></div>
+      <div class="tile"><div class="small">Insurance</div><div class="num" style="color:#ff6b6b">9 days</div><div class="ghost">Remind me on phone</div></div>
+      <div class="tile"><div class="small">Last trip</div><div class="t-h">18.4 km · score 82</div><div class="small">Details on your phone</div></div>
+      <div class="tile"><div class="small">Quick</div><div class="ghost">Share my ETA</div><div class="ghost">Roadside help</div></div>
+    </div>
+    <figcaption><b>Head unit, parked</b>The first tile continues what the owner started on the phone. Numbers are large; text is short; touch targets are 48 px and up. While driving the screen collapses to navigation, media and one alert slot.</figcaption>
+    <div class="callouts">
+      <div><b>Same timeline.</b> "9 days" is the same item as in the phone's Home and Me tabs.</div>
+      <div><b>Driving mode.</b> Non-driving items hide. An alert is one line or voice, never stacked cards.</div>
+      <div><b>Voice first.</b> Hindi and English commands for next due, share ETA and roadside, to test with real speakers.</div>
+    </div>
+  </figure>
+</div></section>
+
+<section id="model"><div class="wrap stack-lg">
+  <div><div class="sec-label">08 · Free and premium, and the risks</div><h2>One app, two layers: what is free, what is paid, what can go wrong</h2>
+  <p class="read muted" style="margin-top:12px">This is my proposal for how a merged app could be split. The split and the plan states are for Maruti's business to decide; the risks come from the evidence in sections 02 to 04 and from my own reasoning, not from Maruti data.</p></div>
+
+  <div class="grid g2">
+    <div class="card" style="border-top:4px solid var(--ok)"><span class="tag ok">Free · care layer · every Maruti car</span>
+      <ul class="tight muted" style="font-size:15px;margin-top:12px">
+        <li>Service history, booking, live workshop status, approvals</li>
+        <li>Insurance, PUC and registration dates, challan and FASTag status</li>
+        <li>Documents and who has access to the car</li>
+        <li><b style="color:var(--ink)">Safety, always free:</b> roadside help, SOS and recall notices</li>
+        <li>Plan state and support chat</li>
+      </ul></div>
+    <div class="card" style="border-top:4px solid var(--accent)"><span class="tag acc">Premium · car layer · cars with Suzuki Connect</span>
+      <ul class="tight muted" style="font-size:15px;margin-top:12px">
+        <li>Remote controls</li>
+        <li>Live location, geofence and tow-away alerts</li>
+        <li>Trips and driving score</li>
+        <li>Alert and trip history</li>
+        <li>Free for the first 3 years with the device, then ₹2,899 to ₹7,799 on the current plans</li>
+      </ul></div>
+  </div>
+  <p class="muted" style="font-size:14px;max-width:70ch"><b style="color:var(--ink)">Rule of thumb:</b> only features that cost money to run every month sit behind the paywall. Nothing that is free today moves behind it. Safety stays free so the paywall never feels like a ransom.</p>
+
+  <div>
+    <h3 style="margin-bottom:10px">What each owner sees, by plan state</h3>
+    <div class="scroll"><table style="min-width:720px">
+      <thead><tr><th>State</th><th>Care layer</th><th>Car layer</th><th>What the app says</th></tr></thead>
+      <tbody>
+        <tr><td><b>No device</b></td><td>Full</td><td>Not shown as locked. One calm card.</td><td>"Add Suzuki Connect to lock, find and track your car from here."</td></tr>
+        <tr><td><b>Free years</b></td><td>Full</td><td>Full</td><td>"Free until 18 Jun 2029" in the Me tab, so the end is never a surprise.</td></tr>
+        <tr><td><b>Paid and active</b></td><td>Full</td><td>Full</td><td>Renewal date and what the plan did for the owner.</td></tr>
+        <tr><td><b>Expired</b></td><td>Full</td><td>Remote controls off. Last known data stays readable for 90 days (my proposal).</td><td>"Your car plan ended. Renew to lock and track again. Roadside help still works."</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:10px">Pros and cons of merging</h3>
+    <div class="grid g2">
+      <div class="card"><span class="tag ok">Pros</span>
+        <ul class="tight muted" style="font-size:15px;margin-top:12px">
+          <li>One sign-in and one record of the car, so the sign-in problems are fixed once.</li>
+          <li>Car data (odometer, health) feeds service reminders and bookings.</li>
+          <li>A free care layer brings owners back monthly, giving the premium layer more chances to prove its value before renewal.</li>
+          <li>One support route, one design style, one notification system.</li>
+          <li>Fits the head unit idea: one story across phone and car. Tata took the same route with iRA 2.0.</li>
+        </ul></div>
+      <div class="card"><span class="tag bad">Cons</span>
+        <ul class="tight muted" style="font-size:15px;margin-top:12px">
+          <li>Migration risk: both apps' users must move with their plans and history. One complaint says trip data stopped updating after the 2022 app migration; it is a single case.</li>
+          <li>One outage can block service booking and remote lock at the same time.</li>
+          <li>The app can bloat and slow down, and its home can drift toward selling.</li>
+          <li>Two teams, two data systems and two billing set-ups must be joined.</li>
+          <li>More data in one place raises the stakes under India's DPDP rules.</li>
+        </ul></div>
+    </div>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:10px">Where owners could get stuck, and the guard for each</h3>
+    <div class="scroll"><table style="min-width:760px">
+      <thead><tr><th>Risk</th><th>What the owner feels</th><th>Guard in the design</th></tr></thead>
+      <tbody>
+        <tr><td><b>Locked tab with no reason</b></td><td>"The app is broken."</td><td>Say why in plain words: not on your car, or plan ended. Say what still works.</td></tr>
+        <tr><td><b>Unclear plan state</b></td><td>"Am I paying or not?"</td><td>One plan card with state and end date, always in the Me tab.</td></tr>
+        <tr><td><b>Ownership edge cases</b></td><td>"My son's number is on the invoice." "I sold the car and still see it."</td><td>Link a car with a dealer-issued code, add family users, and include a transfer-of-ownership flow that clears the old owner's location history.</td></tr>
+        <tr><td><b>One login, one failure point</b></td><td>"I cannot sign in, so I lose everything."</td><td>Fallback sign-in with a dealer code, plus in-app support chat.</td></tr>
+        <tr><td><b>Slow on cheap phones and weak networks</b></td><td>"It never loads."</td><td>Light first screen, cached care data that works with no signal, performance budget tested on low-end Android.</td></tr>
+        <tr><td><b>Notification overload</b></td><td>"Too many alerts, so I mute them all."</td><td>Rank by urgency, group care and car alerts, let owners mute by type.</td></tr>
+        <tr><td><b>Paywall backlash</b></td><td>"They took away what I had."</td><td>Keep today's free features free. Only add paid value, never move free value.</td></tr>
+        <tr><td><b>Language and age</b></td><td>"I cannot read this."</td><td>Hindi and English at launch, large text, short sentences, tested with owners over 50.</td></tr>
+      </tbody></table></div>
+  </div>
+</div></section>
+
+<section id="validate"><div class="wrap stack-lg">
+  <div><div class="sec-label">09 · Validation plan</div><h2>How I would test this, and how we would know it worked</h2></div>
+  <div class="grid g2">
+    <div class="card"><h3>Primary research, 4 weeks</h3>
+      <ul class="tight muted" style="font-size:15px">
+        <li><b style="color:var(--ink)">Interviews:</b> 5 to 8 owners per persona, in Hindi and English, about the last time a command failed or a booking went wrong.</li>
+        <li><b style="color:var(--ink)">App walk-throughs:</b> watch owners sign in and book a service in both current apps, and log every stall.</li>
+        <li><b style="color:var(--ink)">Field test:</b> lock, locate and share in basements, malls and highways with a Suzuki Connect car, timing each command.</li>
+        <li><b style="color:var(--ink)">Dealer and service desk visits</b> to watch activation and approval.</li>
+        <li><b style="color:var(--ink)">Review mining:</b> code 500 store reviews from both apps into the seven themes and size them.</li>
+      </ul></div>
+    <div class="card"><h3>Usability test, 3 to 5 users per round</h3>
+      <ol class="num muted" style="font-size:15px">
+        <li>Sign in with your number and find your car.</li>
+        <li>Lock the car. It did not work. What next?</li>
+        <li>Book a service for Tuesday and say what you will pay at most.</li>
+        <li>The workshop found extra work. Decide what to do.</li>
+        <li>Find your insurance date and add your son as a user.</li>
+      </ol>
+      <p style="margin-top:10px">Someone other than the designer facilitates. Record completion, time on task, errors and a short SUS score.</p></div>
+  </div>
+  <div class="card"><h3>Proposed measures (targets to agree with Product)</h3>
+    <div class="scroll" style="margin-top:8px"><table style="min-width:620px">
+      <thead><tr><th>Measure</th><th>Why</th><th>How</th></tr></thead>
+      <tbody>
+        <tr><td>First-try sign-in success</td><td>Both apps break here today</td><td>Funnel: number entered, OTP sent, OTP verified, car found</td></tr>
+        <tr><td>First-attempt command success</td><td>Core reliability</td><td>Event log: sent, reached, done, failed with reason code</td></tr>
+        <tr><td>Service booking completion</td><td>Care value</td><td>Funnel from "Service in 480 km" to confirmed slot</td></tr>
+        <tr><td>Approval time for extra work</td><td>Workshop throughput</td><td>Minutes from request to decision</td></tr>
+        <tr><td>Renewal completion rate</td><td>Revenue and trust</td><td>Funnel: renewal page, payment start, payment success</td></tr>
+        <tr><td>Support calls per 1,000 active users</td><td>Cost of unclear failures</td><td>Call reasons tagged by app event</td></tr>
+        <tr><td>SUS score</td><td>Overall usability</td><td>Quarterly test with 10 users</td></tr>
+      </tbody></table></div>
+    <p style="margin-top:12px"><b style="color:var(--ink)">A/B candidates:</b> failure-message wording, estimate shown as a maximum or a range, renewal page with and without the value summary.</p>
+  </div>
+</div></section>
+
+<section id="roadmap"><div class="wrap stack-lg">
+  <div><div class="sec-label">10 · Roadmap</div><h2>What to ship first</h2>
+  <p class="read muted" style="margin-top:12px">Written as slices a Product trio could pick up in agile sprints. Effort needs engineering input. I do not know how the two apps are owned or whether a shared account exists.</p></div>
+  <div class="road">
+    <div class="col"><h3>Now · stop the stalls</h3><ul class="tight muted" style="font-size:15px"><li>Sign-in fix: let a family member link a car with a code</li><li>Freshness chip and four-state commands</li><li>Renewal page fix with a 48-hour hold</li><li>Show fitting charges before checkout</li><li>One plan card, and clear no-device and plan-ended states</li></ul></div>
+    <div class="col"><h3>Next · join care and car</h3><ul class="tight muted" style="font-size:15px"><li>One home with range, service and insurance numbers</li><li>Car data attached to service bookings</li><li>Workshop status with approval cards</li><li>Value summary before renewal</li></ul></div>
+    <div class="col"><h3>Later · one experience</h3><ul class="tight muted" style="font-size:15px"><li>Head unit tile and driving mode</li><li>In-app support chat in Hindi and English</li><li>Consent centre aligned to DPDP duties</li><li>Review of the five companion apps</li></ul></div>
+  </div>
+  <div class="card"><h3>What I would want to learn first</h3><p>Is the main failure weak coverage, the unit sleeping, or the app's status handling? Do owners see the two apps as one product or as two? Which of the seven problems do owners rank highest? The answers decide the order above.</p></div>
+  <div class="card"><h3>Limits of this study</h3><p>I viewed the apps only through public store text, reviews and Maruti's videos. I did not see the apps' own screens in use, so I describe no layout of the current apps. Reddit, Quora and Facebook were not reachable, so owner voice rests on a small review sample. Some figures come from single secondary sources and are marked.</p></div>
+</div></section>
+
+<section id="sources"><div class="wrap stack-lg">
+  <div><div class="sec-label">11 · Sources</div><h2>Where the facts came from</h2>
+  <p class="read muted" style="margin-top:12px">Read in November 2026. Where sources conflicted I used the official page and flagged the rest.</p></div>
+  <ul class="src tight">
+    <li><a href="https://play.google.com/store/apps/details?id=com.msil.suzukiconnect_generation_2&hl=en_IN">Suzuki Connect, Google Play</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.maruti.icp&hl=en_IN">Maruti Suzuki owner app, Google Play</a></li>
+    <li><a href="https://apps.apple.com/in/app/id6692616543">Maruti Suzuki owner app, App Store</a></li>
+    <li><a href="https://apps.apple.com/in/app/id1508484230">Maruti Suzuki Rewards, App Store</a></li>
+    <li><a href="https://www.appbrain.com/app/maruti-suzuki/com.marutisuzuki.rewards">AppBrain: Maruti Suzuki Rewards listing (third party)</a></li>
+    <li>Google search AI summary for "book Maruti Suzuki service", screenshots supplied by the author, 13 Nov 2026 (machine-written, unverified)</li>
+    <li><a href="https://www.youtube.com/shorts/DRXSEHDUwVk">Maruti Suzuki Service: One Click Booking (Short, 23 Oct 2026)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=mHACJ6SsArg">Maruti Suzuki Service: booking via Google search (27 Oct 2026)</a></li>
+    <li><a href="https://www.marutisuzuki.com/corporate/technology/suzuki-connect">Maruti Suzuki: Suzuki Connect</a></li>
+    <li><a href="https://www.marutisuzuki.com/corporate/technology/suzuki-connect/subscribe">Maruti Suzuki: plans and activation</a></li>
+    <li><a href="https://www.marutisuzuki.com/service/book-service-appointment">Maruti Suzuki: book a service appointment</a></li>
+    <li><a href="https://www.business-standard.com/article/companies/maruti-tops-jd-power-customer-satisfaction-list-110102900214_1.html">Business Standard: JD Power dealer service ranking</a></li>
+    <li><a href="https://www.autocarpro.in/news-national/hyundaikeepingcustomershappyjdpowercsistudy-26824?amp=1">Autocar Pro: JD Power 2017 study</a></li>
+    <li><a href="https://www.team-bhp.com/news/maruti-nexas-cumbersome-digital-car-service-process">Team-BHP: Nexa's digital service process</a></li>
+    <li><a href="https://www.team-bhp.com/forum/indian-car-scene/194351-why-i-chose-maruti.html">Team-BHP: Why I chose Maruti</a></li>
+    <li><a href="https://voxya.com/stories/?p=2075">Voxya: common Maruti complaints (aggregator, unverified)</a></li>
+    <li><a href="https://app.sensortower.com/api/ios/apps/1508484230?country=IN">Sensor Tower: Rewards app iOS reviews</a></li>
+    <li><a href="https://www.auto123.com/en/news/amp/vehicle-owners-rejecting-connected-subscriptions/72523/">Auto123: Smartcar subscription study</a></li>
+    <li><a href="https://www.autocarpro.in/news/maruti-says-small-car-demand-is-back-share-of-1st-time-buyers-at-54-percent-133843">Autocar Pro: first-time buyer share</a></li>
+    <li><a href="https://www.counterpointresearch.com/insight/automakers-offering-featurerich-connected-car-services-in-india-to-beat-competition">Counterpoint: connected cars in India</a></li>
+    <li><a href="https://www.autocarpro.in/news/95-indian-consumers-open-to-paying-for-sdv-features-131246">Autocar Pro: Deloitte privacy and payment figures</a></li>
+    <li><a href="https://www.deloitte.com/in/en/about/press-room/about-95-percent-of-indian-consumers-are-willing-to-pay-for-software-defined-vehicles.html">Deloitte India: software-defined vehicles study</a></li>
+    <li><a href="https://www.scconline.com/blog/post/2025/12/26/digital-personal-data-protection-rules-2025-key-highlights/">SCC Online: DPDP Rules 2025</a></li>
+    <li><a href="https://apps.apple.com/in/app/id6444427831">Tata iRA 2.0, App Store</a></li>
+    <li><a href="https://www.team-bhp.com/news/toyota-hyryders-connected-car-tech-thoughts-after-months-usage">Team-BHP: Toyota Hyryder connected tech</a></li>
+    <li><a href="https://www.mobilityoutlook.com/news/honda-cars-india-introduces-new-features-to-its-connect-app/">Mobility Outlook: Honda Connect</a></li>
+  </ul>
+</div></section>
+
+<footer><div class="wrap">Independent concept by a designer exploring automotive UX. Suzuki, Maruti Suzuki and Suzuki Connect are trademarks of their owners and are used only to name the subject of the study.</div></footer>
+</body>
+</html>
