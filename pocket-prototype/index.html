@@ -31,288 +31,328 @@
 <link rel="stylesheet" href="_ds/pocket-design-system-7dd6f8a1-6c1c-466c-895d-0fecaecbd8a4/tokens/spacing.css">
 <link rel="stylesheet" href="_ds/pocket-design-system-7dd6f8a1-6c1c-466c-895d-0fecaecbd8a4/tokens/effects.css">
 <script src="_ds/pocket-design-system-7dd6f8a1-6c1c-466c-895d-0fecaecbd8a4/_ds_bundle.js"></script>
-<title>Pocket Prototype and Usability Test, Shunmugasundaram M</title>
-<style>
+<title>Pocket Prototype and Usability Test, Shunmugasundaram M</title><style>
 html,body{margin:0;padding:0;background:#0A0A0A;color:#FFFFFF;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
-*{box-sizing:border-box}
-img{display:block;max-width:100%}
-a{color:#C8FF00;text-decoration:none}
-a:hover{color:#B8EB00}
-a:focus-visible,button:focus-visible{outline:2px solid #C8FF00;outline-offset:3px}
-.pt-root{width:100%}
-.pt-sec{position:relative;padding:130px 80px;border-top:1px solid #1B1B1E;overflow:hidden}
-.pt-mono{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#A1A1AA}
-.pt-small{font-size:14px;line-height:1.6;color:#A1A1AA}
-.pt-h2{margin:0;font-weight:500;font-stretch:125%;font-size:32px;line-height:1.1;letter-spacing:-0.02em}
-.pt-list{font-size:15px;line-height:1.9;color:#D4D4D8}
-.pt-phone{display:block;width:100%;height:auto;border-radius:11.2%/5.2%;border:5px solid #1B1B1E;box-shadow:0 0 0 1px #34343A,0 50px 120px rgba(0,0,0,0.65);background:#0A0A0A}
-.pt-light .pt-phone{border-color:#D9D9D6;box-shadow:0 0 0 1px #C4C4C0,0 40px 90px rgba(0,0,0,0.18)}
-.pt-glow{position:absolute;left:50%;top:50%;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(200,255,0,0.26),rgba(200,255,0,0.06) 60%,transparent 72%)}
-.pt-ghost{position:absolute;left:50%;transform:translate(-50%,-50%);max-width:100%;overflow:hidden;white-space:nowrap;font-weight:900;font-stretch:125%;letter-spacing:0.02em;line-height:1;color:rgba(255,255,255,0.045);-webkit-text-stroke:1px rgba(255,255,255,0.09);pointer-events:none;user-select:none}
-.pt-head{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:40px;max-width:1200px;margin:0 auto}
-.pt-head p{margin:0;max-width:38ch;justify-self:end}
-.pt-feat{position:relative;display:grid;grid-template-columns:1fr minmax(300px,340px) 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto}
-.pt-trio{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px;max-width:1040px;margin:96px auto 0}
-.pt-trio > figure:nth-child(2){margin-top:-64px !important}
-.pt-quad{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px;max-width:1200px;margin:96px auto 0}
-.pt-quad > figure:nth-child(even){margin-top:56px !important}
-.pt-cap{margin-top:20px}
-.pt-scroll{position:relative;display:flex;gap:28px;overflow-x:auto;padding:12px 4px 28px;margin:96px auto 0;max-width:1240px;scroll-snap-type:x proximity}
-.pt-scroll > *{flex:1 0 200px;scroll-snap-align:start}
-.pt-scroll::-webkit-scrollbar{height:6px}.pt-scroll::-webkit-scrollbar-thumb{background:#2A2A30;border-radius:3px}
-.pt-tall{position:relative;max-height:1100px;overflow:hidden;border-radius:28px}
-.pt-tall::after{content:"";position:absolute;left:0;right:0;bottom:0;height:260px;background:linear-gradient(to bottom,rgba(10,10,10,0),#0A0A0A);pointer-events:none}
-.pt-tall img{width:100%;height:auto;border-radius:28px;border:1px solid #2A2A30}
-.pt-bar{border-radius:18px;background:#16161A;border:1px solid #26262C;padding:16px 22px;display:flex;flex-direction:column;gap:3px;min-height:68px;justify-content:center}
-.pt-bar b{font-size:17px;font-weight:600}
-.pt-bar span{font-size:13px;color:#A1A1AA}
-@keyframes ptRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-@keyframes ptFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@media (max-width:1100px){.pt-quad{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:900px){
-  .pt-sec{padding:96px 24px !important}
-  [data-pt-pad]{padding-left:24px !important;padding-right:24px !important}
-  [data-pt-hero]{grid-template-columns:1fr !important;grid-template-rows:auto !important;row-gap:36px !important}
-  [data-pt-hero] > *{grid-column:1 !important;grid-row:auto !important;justify-self:start !important;text-align:left !important}
-  [data-pt-hero] > div:nth-child(2){width:min(300px,78vw) !important;justify-self:center !important}
-  [data-pt-hero] h1{max-width:none !important;margin-top:24px !important}
-  [data-pt-hero] p{max-width:34ch !important;margin-top:0 !important}
-  [data-pt-meta]{grid-template-columns:1fr 1fr !important;row-gap:10px !important}
-  [data-pt-meta] > *:nth-child(even){text-align:right !important}
-  .pt-head,.pt-feat{grid-template-columns:1fr !important;gap:48px !important}
-  .pt-head p,.pt-feat > div{justify-self:start !important}
-  .pt-feat > figure{width:min(320px,100%);margin:0 auto !important}
-  .pt-trio{grid-template-columns:1fr !important;gap:48px !important;margin-top:56px}
-  .pt-trio > figure{margin-top:0 !important;max-width:320px;margin-left:auto !important;margin-right:auto !important;width:100%}
-  .pt-quad{gap:24px !important;margin-top:56px}
-  .pt-quad > figure:nth-child(even){margin-top:0 !important}
-  .pt-scroll{margin-top:56px}
-  [data-pt-stats]{grid-template-columns:repeat(2,minmax(0,1fr)) !important;row-gap:40px !important}
-  [data-pt-split]{grid-template-columns:1fr !important}
-  [data-pt-bar]{margin-left:0 !important;width:100% !important}
-  [data-pt-found]{grid-template-columns:1fr !important}
-  .pt-ghost{top:34% !important}
-}
-@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+:root{--bg:#0A0A0A;--accent:#C8FF00;--font-body:'Archivo',system-ui,sans-serif;--font-display:'Archivo',system-ui,sans-serif;--font-mono:'IBM Plex Mono',ui-monospace,monospace}
+a{color:#C8FF00;text-decoration:none} a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #C8FF00;outline-offset:3px;border-radius:6px}
+header a,footer a{min-height:44px;display:inline-flex;align-items:center}
+img{max-width:100%}
+::selection{background:#C8FF00;color:#0A0A0A}
 </style>
-</helmet>
+<style>
+/* ---------- Pocket case study, redesign (cs2) ---------- */
+.cs2{--ink:#0A0A0A;--surface:#141414;--rule:#2E2E2E;--text:#FFFFFF;--muted:#A1A1AA;--lime:#C8FF00;--bull:#00E676;--bear:#FF3B30;
+  --wide:'Archivo',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;color:var(--text)}
+main.cs2 > *{animation:none !important}
+.cs2 *{box-sizing:border-box}
+.cs2 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.cs2 h1,.cs2 h2,.cs2 .h{font-family:var(--wide);font-stretch:125%;font-weight:800;letter-spacing:-0.03em;margin:0}
+.cs2 p{font-size:18px;line-height:1.6;margin:0;max-width:62ch}
+.cs2 .muted{color:var(--muted)}
+.cs2 .num{font-family:var(--mono);font-feature-settings:"tnum" 1;letter-spacing:-0.02em}
+.cs2 section.ch{padding:clamp(72px,10vw,144px) 0 0;scroll-margin-top:80px}
+.cs2 section > .wrap > h2{font-size:clamp(32px,4.2vw,56px);line-height:1.05;max-width:20ch}
+.cs2 section > .wrap > h2 + p{margin-top:20px}
+
+/* chapter index (desktop rail) */
+.cs2-rail{position:fixed;left:16px;top:50%;transform:translateY(-50%);z-index:20;display:none;background:rgba(10,10,10,.92);border-radius:14px;padding:8px 6px 8px 10px;box-shadow:inset 0 0 0 1px #1F1F1F}
+.cs2-rail ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.cs2-rail a{display:grid;grid-template-columns:18px auto;align-items:center;min-height:36px;padding:0 10px 0 0;color:#71717A;font-size:13px;line-height:1.2;text-decoration:none;border-radius:8px}
+.cs2-rail a:hover{color:var(--text);text-decoration:none}
+.cs2-rail a .n{font-family:var(--mono);font-size:12px}
+.cs2-rail a .t{max-width:0;overflow:hidden;white-space:nowrap;opacity:0;transition:max-width .25s ease,opacity .2s ease}
+.cs2-rail:hover a .t,.cs2-rail:focus-within a .t{max-width:170px;opacity:1}
+.cs2-rail a[aria-current="true"]{color:var(--lime)}
+@media (min-width:1360px){.cs2-rail{display:block}}
+
+/* hero */
+.cs2 .hero{padding:clamp(40px,6vw,88px) 0 0}
+.cs2 .hero .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:end}
+.cs2 .hero .kicker{font-size:16px;color:var(--muted);margin:0 0 24px;display:flex;align-items:center;gap:12px}
+.cs2 .hero .kicker img{height:22px;width:auto;border-radius:0}
+.cs2 .hero h1{font-size:clamp(40px,4.8vw,70px);line-height:1.02;max-width:14ch}
+.cs2 .hero h1 + p{margin-top:28px;font-size:20px}
+.cs2 .phones{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end}
+.cs2 .phones figure{margin:0}
+.cs2 .phones img{display:block;width:100%;height:auto;border-radius:28px;border:1px solid #1F1F1F}
+.cs2 .phones figure:last-child{transform:translateY(-48px)}
+.cs2 .phones figcaption{font-size:14px;line-height:1.4;color:var(--muted);margin-top:12px}
+.cs2 .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:clamp(48px,6vw,80px) 0 0;padding:24px 0 0;border-top:1px solid var(--rule)}
+.cs2 .facts dt{font-size:14px;color:var(--muted);margin:0 0 6px}
+.cs2 .facts dd{margin:0;font-size:17px;line-height:1.45}
+
+/* 1: figures */
+.cs2 .figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(40px,5vw,64px);border-top:1px solid var(--rule)}
+.cs2 .fig{padding:28px 24px 32px 0;border-bottom:1px solid var(--rule)}
+.cs2 .fig + .fig{padding-left:24px;border-left:1px solid var(--rule)}
+.cs2 .fig:nth-child(3n+1){padding-left:0;border-left:0}
+.cs2 .fig .v{font-family:var(--mono);font-size:clamp(36px,4vw,52px);line-height:1;letter-spacing:-0.04em;font-weight:500}
+.cs2 .fig .v.bear{color:var(--bear)}
+.cs2 .fig .l{font-size:17px;line-height:1.4;margin-top:14px;font-weight:600}
+.cs2 .fig .d{font-size:15px;line-height:1.5;color:var(--muted);margin-top:8px}
+.cs2 .fig .s{font-size:13px;color:#71717A;margin-top:14px}
+.cs2 .so{margin-top:40px;padding-left:20px;border-left:3px solid var(--lime);font-size:20px;max-width:58ch}
+
+/* 2: problems */
+.cs2 .problems{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;border-top:1px solid var(--rule)}
+.cs2 .problems li{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:24px;padding:24px 0;border-bottom:1px solid var(--rule)}
+.cs2 .problems .p{font-family:var(--wide);font-stretch:112%;font-weight:700;font-size:clamp(20px,2vw,26px);line-height:1.2}
+.cs2 .problems .e{font-size:17px;line-height:1.55;color:var(--muted)}
+.cs2 .comp{margin-top:clamp(56px,7vw,96px)}
+.cs2 .comp h3{font-size:22px;margin:0 0 8px}
+.cs2 .comp-scroll{overflow-x:auto;margin-top:24px}
+.cs2 table.brokers{width:100%;min-width:760px;border-collapse:collapse;font-size:15px;line-height:1.5}
+.cs2 table.brokers th,.cs2 table.brokers td{text-align:left;vertical-align:top;padding:16px 16px 16px 0;border-bottom:1px solid var(--rule)}
+.cs2 table.brokers thead th{padding-bottom:20px}
+.cs2 table.brokers thead img{height:24px;width:auto;border-radius:0}
+.cs2 table.brokers tbody th{font-weight:600;color:var(--muted);width:150px}
+.cs2 table.brokers td{color:#D4D4D8}
+
+/* 3: personas */
+.cs2 .people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.4vw,32px);margin-top:clamp(40px,5vw,64px)}
+.cs2 .person{display:flex;flex-direction:column;gap:16px;padding-top:20px;border-top:3px solid var(--text)}
+.cs2 .person .who{font-family:var(--wide);font-stretch:125%;font-weight:800;font-size:26px;line-height:1.1;letter-spacing:-0.02em}
+.cs2 .person .role{font-size:15px;color:var(--lime)}
+.cs2 .person .meta{font-size:15px;color:var(--muted);line-height:1.45}
+.cs2 .person h3{font-size:15px;font-weight:700;margin:6px 0 0}
+.cs2 .person ul{margin:0;padding:0 0 0 18px;font-size:15px;line-height:1.5;color:#D4D4D8}
+.cs2 .person ul li + li{margin-top:6px}
+.cs2 .person .gives{margin-top:auto;padding-top:16px;border-top:1px solid var(--rule);font-size:15px;line-height:1.5}
+.cs2 .person .basis{font-size:13px;line-height:1.5;color:#71717A}
+.cs2 blockquote.quote{margin:clamp(48px,6vw,80px) 0 0;max-width:30ch;font-family:var(--wide);font-stretch:112%;font-weight:700;font-size:clamp(24px,2.8vw,36px);line-height:1.2}
+.cs2 blockquote.quote footer{font-family:var(--font-body);font-stretch:100%;font-weight:400;font-size:15px;color:var(--muted);margin-top:12px}
+.cs2 details.art{margin-top:clamp(48px,6vw,80px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.cs2 details.art > summary{list-style:none;cursor:pointer;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:17px;font-weight:600}
+.cs2 details.art > summary::-webkit-details-marker{display:none}
+.cs2 details.art > summary::after{content:"+";font-family:var(--mono);font-size:24px;color:var(--lime)}
+.cs2 details.art[open] > summary::after{content:"−"}
+.cs2 details.art > summary:focus-visible{outline:2px solid var(--lime);outline-offset:4px;border-radius:4px}
+.cs2 .artefacts h2{font-size:clamp(26px,2.8vw,36px) !important}
+.cs2 .artefacts > section{border-top:0 !important}
+
+/* 4: decision ledger (the one lime band) */
+.cs2 section.ledger{background:var(--lime);color:var(--ink);margin-top:clamp(72px,10vw,144px);padding:clamp(64px,8vw,112px) 0}
+.cs2 section.ledger h2{color:var(--ink)}
+.cs2 section.ledger p{color:#1F2A00}
+.cs2 .note{width:100%;border-collapse:collapse;margin-top:clamp(40px,5vw,56px);color:var(--ink)}
+.cs2 .note thead th{text-align:left;font-size:14px;font-weight:600;padding:0 20px 14px 0;border-bottom:2px solid var(--ink)}
+.cs2 .note td{vertical-align:top;padding:24px 20px 24px 0;border-bottom:1px solid rgba(10,10,10,.28)}
+.cs2 .note .for{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.cs2 .note .find{font-size:16px;line-height:1.5;max-width:34ch}
+.cs2 .note .find .src{display:block;font-size:13px;margin-top:8px;color:#3A4A00}
+.cs2 .note .dec b{display:block;font-family:var(--wide);font-stretch:112%;font-weight:800;font-size:clamp(19px,1.8vw,23px);line-height:1.15;margin-bottom:8px}
+.cs2 .note .dec span{font-size:16px;line-height:1.5}
+.cs2 .note .shot{width:132px;padding-right:0}
+.cs2 .note .shot img{display:block;width:132px;height:auto;border-radius:14px;border:1px solid rgba(10,10,10,.35)}
+.cs2 .note .shot .none{display:block;font-size:13px;line-height:1.4;color:#3A4A00}
+
+/* 5: build */
+.cs2 .build-block{margin-top:clamp(40px,5vw,64px)}
+.cs2 .build-block h3{font-size:24px;margin:0 0 12px}
+.cs2 .btn{display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;background:var(--lime);color:var(--ink);font-size:15px;font-weight:700;text-decoration:none}
+.cs2 .btn:hover{background:#B8EB00;text-decoration:none}
+
+/* 6: testing */
+.cs2 .score{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(40px,5vw,56px);border-top:1px solid var(--rule)}
+.cs2 .score > div{padding:24px 16px 24px 0;border-bottom:1px solid var(--rule)}
+.cs2 .score .v{font-family:var(--mono) !important;font-weight:500;font-size:clamp(34px,3.6vw,48px);line-height:1;letter-spacing:-0.04em}
+.cs2 .score .v small{font-size:.5em;color:var(--muted)}
+.cs2 .score .l{font-size:15px;color:var(--muted);margin-top:10px}
+.cs2 .fixes{list-style:none;margin:clamp(40px,5vw,56px) 0 0;padding:0}
+.cs2 .fixes li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid var(--rule)}
+.cs2 .fixes .q{font-family:var(--wide);font-stretch:112%;font-weight:700;font-size:20px;line-height:1.3}
+.cs2 .fixes .f{font-size:17px;line-height:1.5;color:#D4D4D8}
+.cs2 .fixes .f b{color:var(--bull);font-weight:600}
+.cs2 .shipped{margin-top:clamp(64px,8vw,112px)}
+.cs2 .shipped h3{font-family:var(--wide);font-stretch:112%;font-size:clamp(22px,2.2vw,28px);font-weight:800;margin:0}
+.cs2 .shipped h3 + p{margin-top:12px}
+.cs2 .shelf{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,1fr);gap:16px;overflow-x:auto;padding:24px 0 8px;scroll-snap-type:x mandatory}
+.cs2 .shelf figure{margin:0;scroll-snap-align:start}
+.cs2 .shelf img{display:block;width:100%;height:auto;border-radius:22px;border:1px solid #1F1F1F}
+.cs2 .shelf figcaption{font-size:14px;line-height:1.4;color:var(--muted);margin-top:10px}
+.cs2 .next{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.cs2 .btn.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--rule)}
+.cs2 .btn.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--lime);background:transparent}
+.cs2 .sources{margin-top:clamp(72px,10vw,144px);padding:40px 0 clamp(64px,8vw,104px);border-top:1px solid var(--rule)}
+.cs2 .sources h2{font-size:22px;font-stretch:112%}
+.cs2 .sources ol{margin:16px 0 0;padding:0 0 0 20px;columns:2;column-gap:40px;font-size:14px;line-height:1.6;color:var(--muted)}
+
+/* phones and tablets */
+@media (max-width:900px){
+  .cs2 .hero .grid{grid-template-columns:1fr}
+  .cs2 .phones{max-width:520px}
+  .cs2 .figs{grid-template-columns:1fr 1fr}
+  .cs2 .fig:nth-child(3n+1){padding-left:24px;border-left:1px solid var(--rule)}
+  .cs2 .fig:nth-child(2n+1){padding-left:0;border-left:0}
+  .cs2 .people{grid-template-columns:1fr}
+  .cs2 .score{grid-template-columns:1fr 1fr}
+  .cs2 .sources ol{columns:1}
+}
+@media (max-width:640px){
+  .cs2 p{font-size:17px}
+  .cs2 .facts{grid-template-columns:1fr;gap:16px}
+  .cs2 .figs{grid-template-columns:1fr}
+  .cs2 .fig,.cs2 .fig + .fig{padding-left:0;border-left:0}
+  .cs2 .problems li,.cs2 .fixes li{grid-template-columns:1fr;gap:8px}
+  .cs2 .phones figure:last-child{transform:translateY(-24px)}
+  .cs2 .note thead{display:none}
+  .cs2 .note,.cs2 .note tbody,.cs2 .note tr,.cs2 .note td{display:block;width:100%}
+  .cs2 .note tr{padding:20px 0;border-bottom:1px solid rgba(10,10,10,.28)}
+  .cs2 .note td{border:0;padding:4px 0}
+  .cs2 .note .shot{width:auto}
+  .cs2 .note .for::before{content:"For "}
+  .cs2 .note .shot img{width:120px;margin-top:8px}
+}
+@media (prefers-reduced-motion:reduce){.cs2-rail a .t{transition:none}}
+</style>
+<style>
+.cs2 .steps{list-style:none;margin:clamp(40px,5vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--rule)}
+.cs2 .steps li{padding:20px 16px 20px 0;border-right:1px solid var(--rule);padding-left:16px}
+.cs2 .steps li:first-child{padding-left:0}
+.cs2 .steps li:last-child{border-right:0}
+.cs2 .steps .k{font-family:var(--mono);font-size:13px;color:#71717A}
+.cs2 .steps .t{font-weight:700;font-size:17px;line-height:1.3;margin-top:10px}
+.cs2 .steps .d{font-size:14px;line-height:1.45;color:var(--muted);margin-top:6px}
+.cs2 .steps li.here .k,.cs2 .steps li.here .t{color:var(--lime)}
+.cs2 .steps li.here{box-shadow:inset 0 3px 0 var(--lime)}
+.cs2 .flow{margin-top:clamp(56px,7vw,96px)}
+.cs2 .flow h3{font-family:var(--wide);font-stretch:112%;font-weight:800;font-size:clamp(22px,2.4vw,30px);line-height:1.15;margin:0;max-width:24ch}
+.cs2 .flow h3 + p{margin-top:12px}
+.cs2 .flow .feat{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.cs2 .flow .feat li{font-size:14px;line-height:1;padding:9px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--rule);color:#D4D4D8}
+.cs2 .shelf.fixed{grid-auto-columns:minmax(200px,240px)}
+.cs2 .themes{display:grid;grid-template-columns:repeat(2,minmax(0,280px));gap:24px;margin-top:24px}
+.cs2 .themes figure{margin:0}
+.cs2 .themes img{display:block;width:100%;height:auto;border-radius:22px;border:1px solid #1F1F1F}
+.cs2 .themes figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+.cs2 .tall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:start;margin-top:24px}
+.cs2 .tall figure{margin:0}
+.cs2 .tall img{display:block;width:100%;height:auto;border-radius:22px;border:1px solid #1F1F1F}
+.cs2 .tall figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+.cs2 section.test{background:var(--lime);color:var(--ink);margin-top:clamp(72px,10vw,144px);padding:clamp(64px,8vw,112px) 0}
+.cs2 section.test h2{color:var(--ink)}
+.cs2 section.test p{color:#1F2A00}
+.cs2 section.test .score{border-top-color:var(--ink)}
+.cs2 section.test .score > div{border-bottom-color:rgba(10,10,10,.28)}
+.cs2 section.test .score .v small,.cs2 section.test .score .l{color:#3A4A00}
+.cs2 .log{width:100%;border-collapse:collapse;margin-top:clamp(40px,5vw,56px);color:var(--ink)}
+.cs2 .log thead th{text-align:left;font-size:14px;font-weight:600;padding:0 24px 14px 0;border-bottom:2px solid var(--ink)}
+.cs2 .log td{vertical-align:top;padding:24px 24px 24px 0;border-bottom:1px solid rgba(10,10,10,.28);width:50%}
+.cs2 .log .q{font-family:var(--wide);font-stretch:112%;font-weight:800;font-size:clamp(20px,2vw,26px);line-height:1.2}
+.cs2 .log .f{font-size:17px;line-height:1.5}
+.cs2 .pair{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;margin-top:clamp(72px,10vw,120px);padding:32px 0 clamp(64px,8vw,104px);border-top:1px solid var(--rule)}
+.cs2 .pair p{font-size:20px}
+@media (max-width:900px){
+  .cs2 .steps{grid-template-columns:1fr 1fr}
+  .cs2 .steps li{border-right:0;padding-left:0;border-bottom:1px solid var(--rule)}
+  .cs2 .tall{grid-template-columns:1fr 1fr}
+  .cs2 .pair{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .cs2 .steps{grid-template-columns:1fr}
+  .cs2 .log thead{display:none}
+  .cs2 .log,.cs2 .log tbody,.cs2 .log tr,.cs2 .log td{display:block;width:100%}
+  .cs2 .log tr{padding:20px 0;border-bottom:1px solid rgba(10,10,10,.28)}
+  .cs2 .log td{border:0;padding:4px 0}
+  .cs2 .log td.f::before{content:"Fixed: ";font-weight:700}
+  .cs2 .themes{grid-template-columns:1fr 1fr;gap:12px}
+}
+</style></helmet>
 <dc-import name="SiteHeader" current="Projects" hint-size="100%,68px"></dc-import>
+<div style="width:100%;overflow-x:clip">
 
-<div role="main" id="main" tabindex="-1" data-pt-root class="pt-root">
+<main id="main" tabindex="-1" class="cs2">
+<nav class="cs2-rail" aria-label="Chapters"><ol><li><a href="#where"><span class="n">1</span><span class="t">Where this fits</span></a></li><li><a href="#flows"><span class="n">2</span><span class="t">The flows</span></a></li><li><a href="#long"><span class="n">3</span><span class="t">Long screens, two themes</span></a></li><li><a href="#tested"><span class="n">4</span><span class="t">What testing found</span></a></li></ol></nav>
+<section class="hero"><div class="wrap">
+<div class="grid">
+<div>
+<p class="kicker">Pocket, part two: the prototype and the test</p>
+<h1>Twenty-six of 32 test tasks finished in the first test.</h1>
+<p class="muted">I turned Pocket’s hi-fi screens into a prototype on live NSE prices, with paper trading and no real money. Then eight research personas worked through nine key flows to find what still got in the way.</p>
+</div>
+<div class="phones">
+<figure><img src="pocket-prototype/home.jpg" alt="Pocket Home in the prototype" width="393" height="852" fetchpriority="high"><figcaption>Home on live prices</figcaption></figure>
+<figure><img src="pocket-prototype/order-placed.jpg" alt="Buy order placed, waiting to fill" width="393" height="852"><figcaption>An order that says it hasn’t filled yet</figcaption></figure>
+</div>
+</div>
+<dl class="facts">
+<div><dt>Role</dt><dd>Designed, prototyped and tested</dd></div>
+<div><dt>Scope</dt><dd>Nine key flows on live NSE data, 2026</dd></div>
+<div><dt>Result</dt><dd>26 of 32 tasks finished; every serious problem fixed</dd></div>
+</dl>
+</div></section>
 
-<!-- HERO -->
-<section data-screen-label="Cover" data-pt-pad style="position:relative;overflow:hidden;padding:40px max(80px,calc((100vw - 1280px)/2)) 72px;min-height:1000px;display:flex;flex-direction:column">
-  <div class="pt-glow" style="width:900px;height:900px;top:54%;animation:ptRise 1.2s ease both"></div>
-  <div class="pt-ghost" aria-hidden="true" style="top:52%;font-size:min(15vw,215px)">POCKET</div>
+<section class="ch" id="where"><div class="wrap">
+<h2>Where this fits</h2>
+<p class="muted">Pocket went from research to a tappable app in six steps. The <a href="pocket-app/">Mobile App case study</a> covers the research and what it changed. This page covers the last step.</p>
+<ol class="steps"><li class=""><div class="k">1</div><div class="t">Research</div><div class="d">Brokers, 2026 market data and personas</div></li><li class=""><div class="k">2</div><div class="t">Brand and content rules</div><div class="d">Wordmark, lime accent, plain voice</div></li><li class=""><div class="k">3</div><div class="t">Flows and wireframes</div><div class="d">29 rounds, a shorter KYC</div></li><li class=""><div class="k">4</div><div class="t">Design system</div><div class="d">17 components, WCAG AA built in</div></li><li class=""><div class="k">5</div><div class="t">Hi-fi screens</div><div class="d">Dark and light themes</div></li><li class="here"><div class="k">6</div><div class="t">Prototype and test</div><div class="d">Live data, 8 personas, 12 issues found</div></li></ol>
+</div></section>
 
-  <div data-pt-meta style="position:relative;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;align-items:center;animation:ptRise .8s cubic-bezier(.16,1,.3,1) both">
-    <x-import component-from-global-scope="PocketDesignSystem_7dd6f8.Wordmark" size="{{ n24 }}" hint-size="120px,26px"></x-import>
-    <span class="pt-mono" style="text-align:center">Mobile app</span>
-    <span class="pt-mono" style="text-align:center">Fintech · India</span>
-    <span class="pt-mono" style="text-align:right">2026</span>
-  </div>
+<section class="ch" id="flows"><div class="wrap">
+<h2>The flows people tested</h2>
+<p class="muted">Each flow below is in the prototype and was part of the test. They run in the order a new investor meets them, from opening an account to moving money.</p>
+<div class="flow" id="f-account"><h3>Ten steps to an account, one per screen</h3><p class="muted">Mobile number, DigiLocker, a ₹1 UPI bank check and Aadhaar eSign. A shorter KYC that saves as you go.</p><div class="shelf fixed" role="region" tabindex="0" aria-label="Screens, scrolls sideways"><figure><img src="pocket-prototype/sign-in.jpg" alt="Sign in" loading="lazy" width="393" height="852"><figcaption>Sign in</figcaption></figure><figure><img src="pocket-prototype/kyc-mobile.jpg" alt="Step 1: mobile number" loading="lazy" width="393" height="852"><figcaption>Step 1: mobile number</figcaption></figure><figure><img src="pocket-prototype/kyc-digilocker.jpg" alt="Step 4: DigiLocker" loading="lazy" width="393" height="852"><figcaption>Step 4: DigiLocker</figcaption></figure><figure><img src="pocket-prototype/kyc-bank.jpg" alt="Step 6: bank by ₹1" loading="lazy" width="393" height="852"><figcaption>Step 6: bank by ₹1</figcaption></figure><figure><img src="pocket-prototype/kyc-esign.jpg" alt="Step 10: eSign" loading="lazy" width="393" height="852"><figcaption>Step 10: eSign</figcaption></figure></div></div><div class="flow" id="f-stock"><h3>Every price is one tap deep</h3><p class="muted">A live price, a chart you can drag across to read any day, and the day’s range at a glance.</p><ul class="feat"><li>Live NSE price</li><li>Drag to scrub the chart</li><li>Hear chart as a list</li><li>Day and 52-week range</li></ul><div class="shelf fixed" role="region" tabindex="0" aria-label="Screens, scrolls sideways"><figure><img src="pocket-prototype/home.jpg" alt="Home" loading="lazy" width="393" height="852"><figcaption>Home</figcaption></figure><figure><img src="pocket-prototype/watchlist.jpg" alt="Watchlist" loading="lazy" width="393" height="852"><figcaption>Watchlist</figcaption></figure><figure><img src="pocket-prototype/stock-overview.jpg" alt="Stock overview" loading="lazy" width="393" height="852"><figcaption>Stock overview</figcaption></figure></div></div><div class="flow" id="f-options"><h3>An option chain you can read</h3><p class="muted">Switch between indices and MCX, read OI or the Greeks, and build a strategy straight from the chain.</p><ul class="feat"><li>Indices and MCX in one list</li><li>OI and Greeks as tabs</li><li>Build a strategy from the chain</li><li>The SEBI risk line, up front</li></ul><div class="shelf fixed" role="region" tabindex="0" aria-label="Screens, scrolls sideways"><figure><img src="pocket-prototype/option-chain.jpg" alt="NIFTY option chain" loading="lazy" width="393" height="852"><figcaption>NIFTY option chain</figcaption></figure></div></div><div class="flow" id="f-trade"><h3>Say what it costs before it costs</h3><p class="muted">MTF shows interest per day before you buy. Order types explain themselves. A waiting order says how far the price is from filling.</p><div class="shelf fixed" role="region" tabindex="0" aria-label="Screens, scrolls sideways"><figure><img src="pocket-prototype/buy-pad-mtf.jpg" alt="Buy pad with MTF interest per day" loading="lazy" width="393" height="852"><figcaption>Buy pad with MTF interest per day</figcaption></figure><figure><img src="pocket-prototype/order-types.jpg" alt="Order types in plain words" loading="lazy" width="393" height="852"><figcaption>Order types in plain words</figcaption></figure><figure><img src="pocket-prototype/order-placed.jpg" alt="Placed is not filled" loading="lazy" width="393" height="852"><figcaption>Placed is not filled</figcaption></figure></div></div><div class="flow" id="f-funds"><h3>Funds and SIPs without the jargon</h3><p class="muted">Browse by collection, read a fund’s three-year story on one chart, and see what a monthly SIP could become.</p><div class="shelf fixed" role="region" tabindex="0" aria-label="Screens, scrolls sideways"><figure><img src="pocket-prototype/mf-discover.jpg" alt="Discover" loading="lazy" width="393" height="852"><figcaption>Discover</figcaption></figure><figure><img src="pocket-prototype/mf-fund.jpg" alt="Fund page" loading="lazy" width="393" height="852"><figcaption>Fund page</figcaption></figure><figure><img src="pocket-prototype/calc-sip.jpg" alt="SIP calculator" loading="lazy" width="393" height="852"><figcaption>SIP calculator</figcaption></figure></div></div><div class="flow" id="f-risk"><h3>Exit fast, stop when you need to</h3><p class="muted">Exit all sits at the top of Positions. The kill switch pauses trading for a day, a week or until you say.</p><div class="shelf fixed" role="region" tabindex="0" aria-label="Screens, scrolls sideways"><figure><img src="pocket-prototype/positions.jpg" alt="Positions" loading="lazy" width="393" height="852"><figcaption>Positions</figcaption></figure><figure><img src="pocket-prototype/exit-all.jpg" alt="Exit all" loading="lazy" width="393" height="852"><figcaption>Exit all</figcaption></figure><figure><img src="pocket-prototype/kill-switch.jpg" alt="Kill switch" loading="lazy" width="393" height="852"><figcaption>Kill switch</figcaption></figure></div></div><div class="flow" id="f-ipo"><h3>IPOs and research calls, losses included</h3><p class="muted">An IPO timeline you can read at a glance, and research calls that show the full track record.</p><div class="shelf fixed" role="region" tabindex="0" aria-label="Screens, scrolls sideways"><figure><img src="pocket-prototype/ipo-list.jpg" alt="IPOs" loading="lazy" width="393" height="852"><figcaption>IPOs</figcaption></figure><figure><img src="pocket-prototype/ipo-detail.jpg" alt="IPO detail" loading="lazy" width="393" height="852"><figcaption>IPO detail</figcaption></figure><figure><img src="pocket-prototype/research-call.jpg" alt="Research call" loading="lazy" width="393" height="852"><figcaption>Research call</figcaption></figure><figure><img src="pocket-prototype/track-record.jpg" alt="Track record" loading="lazy" width="393" height="852"><figcaption>Track record</figcaption></figure></div></div><div class="flow" id="f-money"><h3>Know what you have, move money simply</h3><p class="muted">Returns after charges, with XIRR beside them. Cash, collateral and where every rupee moved today.</p><div class="shelf fixed" role="region" tabindex="0" aria-label="Screens, scrolls sideways"><figure><img src="pocket-prototype/portfolio.jpg" alt="Portfolio" loading="lazy" width="393" height="852"><figcaption>Portfolio</figcaption></figure><figure><img src="pocket-prototype/funds.jpg" alt="Funds" loading="lazy" width="393" height="852"><figcaption>Funds</figcaption></figure><figure><img src="pocket-prototype/add-funds.jpg" alt="Add funds" loading="lazy" width="393" height="852"><figcaption>Add funds</figcaption></figure></div></div>
+</div></section>
 
-  <div data-pt-hero style="position:relative;flex:1;display:grid;grid-template-columns:1fr minmax(300px,350px) 1fr;grid-template-rows:1fr auto;column-gap:40px;align-items:center;margin-top:40px">
-    <h1 style="grid-column:1;grid-row:1;align-self:start;margin:70px 0 0;max-width:9ch;font-weight:500;font-stretch:125%;font-size:clamp(44px,5vw,72px);line-height:1.02;letter-spacing:-0.035em;animation:ptRise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.1s">Made to be tapped.</h1>
+<section class="ch" id="long"><div class="wrap">
+<h2>Long screens and two themes</h2>
+<p class="muted">The long screens are where the hierarchy gets tested: Home, a stock, a fund and the SIP calculator, top to bottom. The prototype also runs in light.</p>
+<div class="tall">
+<figure><img src="pocket-prototype/tall-home.jpg" alt="Home, full length" loading="lazy"><figcaption>Home</figcaption></figure>
+<figure><img src="pocket-prototype/tall-stock.jpg" alt="Stock overview, full length" loading="lazy"><figcaption>Stock overview</figcaption></figure>
+<figure><img src="pocket-prototype/tall-fund.jpg" alt="Fund page, full length" loading="lazy"><figcaption>Fund page</figcaption></figure>
+<figure><img src="pocket-prototype/tall-calc.jpg" alt="SIP calculator, full length" loading="lazy"><figcaption>SIP calculator</figcaption></figure>
+</div>
+<div class="themes">
+<figure><img src="pocket-prototype/watchlist.jpg" alt="Watchlist in the dark theme" loading="lazy"><figcaption>Dark, the default</figcaption></figure>
+<figure><img src="pocket-prototype/watchlist-light.jpg" alt="Watchlist in the light theme" loading="lazy"><figcaption>Light</figcaption></figure>
+</div>
+</div></section>
 
-    <div style="grid-column:2;grid-row:1 / span 2;align-self:center;animation:ptRise 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.2s">
-      <div style="animation:ptFloat 7s ease-in-out infinite"><img class="pt-phone" src="pocket-prototype/home.jpg" alt="Pocket Home screen: portfolio value with cash and Add funds, products and most bought stocks" width="786" height="1704"></div>
-    </div>
+<section class="test" id="tested"><div class="wrap">
+<h2>What testing found</h2>
+<p>Eight personas, built from 2026 NSE, SEBI and AMFI figures, each worked through their own tasks. This was a simulated expert walkthrough, not sessions with real people.</p>
+<div class="score">
+<div><div class="v">26<small>/32</small></div><div class="l">Tasks finished</div></div>
+<div><div class="v">12</div><div class="l">Issues found</div></div>
+<div><div class="v">8</div><div class="l">Personas</div></div>
+<div><div class="v">9</div><div class="l">Flows walked</div></div>
+</div>
+<table class="log">
+<thead><tr><th scope="col">What a persona said</th><th scope="col">What changed</th></tr></thead>
+<tbody>
+<tr><td class="q">“I picked Intraday because it sounded faster.”</td><td class="f">Delivery is the default, with one plain line under the toggle.</td></tr>
+<tr><td class="q">“Swiping just skips it.”</td><td class="f">A “Hear chart as a list” button, and keys that step through points.</td></tr>
+<tr><td class="q">“6.94% and 6.87%. Which one do I get?”</td><td class="f">The bond page now says which rate is the interest paid.</td></tr>
+</tbody></table>
+<p style="margin-top:32px">Next: two groups of five real investors and traders, and a check on physical Android and iOS devices.</p>
+</div></section>
 
-    <p class="pt-small" style="grid-column:3;grid-row:1;align-self:start;margin:80px 0 0;max-width:28ch;justify-self:end;animation:ptRise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.3s">Pocket is a stock and mutual fund app for India. 276 hi-fi screens, now a working prototype on live market data.</p>
-
-    <div style="grid-column:1;grid-row:2;align-self:end;animation:ptRise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.4s"><div class="pt-mono">Project type</div><div style="margin-top:8px;font-size:15px;color:#D4D4D8">Prototype and usability test</div></div>
-    <div style="grid-column:3;grid-row:2;align-self:end;justify-self:end;animation:ptRise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.45s"><div class="pt-mono">Main features</div><div style="margin-top:8px;font-size:15px;line-height:1.7;color:#D4D4D8">Live NSE prices<br>Paper trading, no real money<br>Nine key flows<br>Readable at 200% text</div></div>
-  </div>
-</section>
-<dl class="cs-glance" aria-label="Project at a glance" style="--cs-w:1200px"><div><dt>Role</dt><dd>Designed, prototyped and tested</dd></div><div><dt>Scope</dt><dd>9 key flows on live NSE data · 2026</dd></div><div class="cs-result"><dt>Result</dt><dd>26 of 32 test tasks completed; every serious problem resolved</dd></div></dl>
-
-
-<!-- PROCESS -->
-<section class="pt-sec" data-screen-label="01 Process" data-pt-pad>
-  <div data-rv class="pt-head">
-    <h2 class="pt-h2">Process</h2>
-    <p class="pt-small">Research to a tappable app, in seven steps. This case study covers the last one.</p>
-  </div>
-  <div style="display:flex;flex-direction:column;gap:12px;margin:72px auto 0;max-width:1200px">
-    <div data-rv data-pt-bar class="pt-bar" style="width:46%;margin-left:0"><b>Research</b><span>Seven brokers · two personas</span></div>
-    <div data-rv data-pt-bar class="pt-bar" style="width:38%;margin-left:10%"><b>Brand and content rules</b><span>Wordmark · lime accent · plain voice</span></div>
-    <div data-rv data-pt-bar class="pt-bar" style="width:40%;margin-left:18%"><b>Flows and wireframes</b><span>19 rounds · shorter KYC</span></div>
-    <div data-rv data-pt-bar class="pt-bar" style="width:40%;margin-left:30%"><b>Design system</b><span>17 components · WCAG AA built in</span></div>
-    <div data-rv data-pt-bar class="pt-bar" style="width:36%;margin-left:42%"><b>Hi-fi screens</b><span>276 screens · dark and light</span></div>
-    <div data-rv data-pt-bar class="pt-bar" style="width:46%;margin-left:54%;background:linear-gradient(120deg,#1E2A05,#4F6B00 60%,#C8FF00);border-color:#6B8F00"><b style="color:#fff">Prototype and test</b><span style="color:#E4F6A8">Live data · 8 personas · 12 issues found</span></div>
-  </div>
-</section>
-
-<!-- STOCK OVERVIEW -->
-<section class="pt-sec" data-screen-label="02 Stock overview" data-pt-pad style="background:#050506">
-  <div class="pt-glow" style="width:780px;height:780px;opacity:.9"></div>
-  <div class="pt-feat">
-    <div data-rv><div class="pt-mono">02 / Stock overview</div><h2 class="pt-h2" style="margin-top:16px">Every price,<br>one tap deep</h2><p class="pt-small" style="margin:20px 0 0;max-width:30ch">A live price, a chart you can drag across to read any day, and the day's range at a glance.</p></div>
-    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/stock-overview.jpg" alt="Pocket stock overview with live price and chart" width="786" height="1704" loading="lazy"></figure>
-    <div data-rv style="justify-self:end"><div class="pt-mono">Main features</div><div class="pt-list" style="margin-top:12px">Live NSE price<br>Drag to scrub the chart<br>Hear chart as a list<br>Day and 52-week range</div></div>
-  </div>
-</section>
-
-<!-- OPTIONS -->
-<section class="pt-sec" data-screen-label="03 Options" data-pt-pad>
-  <div class="pt-glow" style="width:780px;height:780px;opacity:.8"></div>
-  <div class="pt-feat">
-    <div data-rv><div class="pt-mono">03 / Options</div><h2 class="pt-h2" style="margin-top:16px">The option chain,<br>readable</h2><p class="pt-small" style="margin:20px 0 0;max-width:30ch">Switch between indices and MCX, read OI or the Greeks, and build a strategy straight from the chain.</p></div>
-    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/option-chain.jpg" alt="Pocket NIFTY option chain with weekly and monthly expiries, OI and Greek tabs, and the spot line" width="786" height="1704" loading="lazy"></figure>
-    <div data-rv style="justify-self:end"><div class="pt-mono">Main features</div><div class="pt-list" style="margin-top:12px">Indices and MCX in one list<br>OI and Greeks as tabs<br>Build a strategy from the chain<br>The SEBI risk line, up front</div></div>
-  </div>
-</section>
-
-<!-- TRADE -->
-<section class="pt-sec" data-screen-label="04 Trade" data-pt-pad style="background:#050506">
-  <div data-rv class="pt-head"><h2 class="pt-h2">Say what it costs,<br>before it costs</h2><p class="pt-small">MTF shows interest per day before you buy. Order types explain themselves. A waiting order says how far the price is from filling.</p></div>
-  <div class="pt-trio">
-    <div class="pt-glow" style="width:900px;height:600px;opacity:.5"></div>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/buy-pad-mtf.jpg" alt="Pocket buy pad with MTF and interest per day" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">01 / Buy pad, MTF</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/order-types.jpg" alt="Pocket order types explained in plain language" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">02 / Order types</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/order-placed.jpg" alt="Pocket order placed screen explaining that a limit order is waiting to fill" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">03 / Placed is not filled</figcaption></figure>
-  </div>
-</section>
-
-<!-- MUTUAL FUNDS -->
-<section class="pt-sec" data-screen-label="05 Mutual funds" data-pt-pad>
-  <div data-rv class="pt-head"><h2 class="pt-h2">Funds and SIPs,<br>without the jargon</h2><p class="pt-small">Browse by collection, read a fund's three-year story on one chart, and see what a monthly SIP could become.</p></div>
-  <div class="pt-trio">
-    <div class="pt-glow" style="width:900px;height:600px;opacity:.5"></div>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/mf-discover.jpg" alt="Pocket mutual funds discover screen" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">01 / Discover</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/mf-fund.jpg" alt="Pocket mutual fund page with a three-year chart" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">02 / Fund page</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/calc-sip.jpg" alt="Pocket SIP calculator with sliders and donut" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">03 / SIP calculator</figcaption></figure>
-  </div>
-</section>
-
-<!-- ACCOUNT OPENING -->
-<section class="pt-sec" data-screen-label="06 Open an account" data-pt-pad style="background:#050506">
-  <div data-rv class="pt-head"><h2 class="pt-h2">Ten steps<br>to an account</h2><p class="pt-small">Mobile number, DigiLocker, a ₹1 UPI bank check and Aadhaar eSign. A shorter KYC, one step per screen.</p></div>
-  <div class="pt-scroll">
-    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/sign-in.jpg" alt="Pocket sign in, with Open a free account" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Sign in</figcaption></figure>
-    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/kyc-mobile.jpg" alt="Pocket KYC step 1, mobile number" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Step 1 · Mobile</figcaption></figure>
-    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/kyc-digilocker.jpg" alt="Pocket KYC step 4, DigiLocker" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Step 4 · DigiLocker</figcaption></figure>
-    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/kyc-bank.jpg" alt="Pocket KYC step 6, bank check by 1 rupee UPI" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Step 6 · Bank by ₹1</figcaption></figure>
-    <figure data-rv style="margin:0"><img class="pt-phone" src="pocket-prototype/kyc-esign.jpg" alt="Pocket KYC step 10, Aadhaar eSign" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Step 10 · eSign</figcaption></figure>
-  </div>
-</section>
-
-<!-- RISK CONTROLS -->
-<section class="pt-sec" data-screen-label="07 Risk controls" data-pt-pad>
-  <div data-rv class="pt-head"><h2 class="pt-h2">Exit fast.<br>Stop when you need to.</h2><p class="pt-small">Exit all sits at the top of Positions. The kill switch pauses trading for a day, a week or until you say.</p></div>
-  <div class="pt-trio">
-    <div class="pt-glow" style="width:900px;height:600px;opacity:.5"></div>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/positions.jpg" alt="Pocket positions with Exit all" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">01 / Positions</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/exit-all.jpg" alt="Pocket exit all positions" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">02 / Exit all</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/kill-switch.jpg" alt="Pocket kill switch to pause trading" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">03 / Kill switch</figcaption></figure>
-  </div>
-</section>
-
-<!-- MORE TO INVEST IN -->
-<section class="pt-sec" data-screen-label="08 IPOs and research" data-pt-pad style="background:#050506">
-  <div data-rv class="pt-head"><h2 class="pt-h2">IPOs and<br>research calls</h2><p class="pt-small">An IPO timeline you can read at a glance, and research calls that show the track record, including the losses.</p></div>
-  <div class="pt-quad">
-    <div class="pt-glow" style="width:1000px;height:600px;opacity:.45"></div>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/ipo-list.jpg" alt="Pocket IPO list" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">IPOs</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/ipo-detail.jpg" alt="Pocket IPO detail with timeline" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">IPO detail</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/research-call.jpg" alt="Pocket research call with entry, target and stop loss" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Research call</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/track-record.jpg" alt="Pocket research track record" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">Track record</figcaption></figure>
-  </div>
-</section>
-
-<!-- PORTFOLIO AND MONEY -->
-<section class="pt-sec" data-screen-label="09 Portfolio and money" data-pt-pad>
-  <div data-rv class="pt-head"><h2 class="pt-h2">Know what you have.<br>Move money simply.</h2><p class="pt-small">Returns after charges with XIRR beside them. Cash, collateral and where every rupee moved today.</p></div>
-  <div class="pt-trio">
-    <div class="pt-glow" style="width:900px;height:600px;opacity:.5"></div>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/portfolio.jpg" alt="Pocket Portfolio with holdings and XIRR" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">01 / Portfolio</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/funds.jpg" alt="Pocket Funds with available cash, Add funds and Withdraw" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">02 / Funds</figcaption></figure>
-    <figure data-rv style="margin:0;position:relative"><img class="pt-phone" src="pocket-prototype/add-funds.jpg" alt="Pocket Add funds by UPI" width="786" height="1704" loading="lazy"><figcaption class="pt-mono pt-cap">03 / Add funds</figcaption></figure>
-  </div>
-</section>
-
-<!-- FULL LENGTH -->
-<section class="pt-sec" data-screen-label="10 Full length" data-pt-pad style="background:#050506">
-  <div data-rv class="pt-head"><h2 class="pt-h2">Full length</h2><p class="pt-small">Home, a stock, a fund and the SIP calculator, top to bottom. The long screens are where the hierarchy gets tested.</p></div>
-  <div class="pt-scroll" style="align-items:flex-start;gap:32px">
-    <figure data-rv style="margin:0;flex:1 0 250px"><div class="pt-tall"><img src="pocket-prototype/tall-home.jpg" alt="Pocket Home, full length" width="590" height="2552" loading="lazy"></div><figcaption class="pt-mono pt-cap">Home</figcaption></figure>
-    <figure data-rv style="margin:80px 0 0;flex:1 0 250px"><div class="pt-tall"><img src="pocket-prototype/tall-stock.jpg" alt="Pocket stock overview, full length" width="590" height="3805" loading="lazy"></div><figcaption class="pt-mono pt-cap">Stock overview</figcaption></figure>
-    <figure data-rv style="margin:30px 0 0;flex:1 0 250px"><div class="pt-tall"><img src="pocket-prototype/tall-fund.jpg" alt="Pocket mutual fund page, full length" width="590" height="4302" loading="lazy"></div><figcaption class="pt-mono pt-cap">Fund page</figcaption></figure>
-    <figure data-rv style="margin:130px 0 0;flex:1 0 250px"><div class="pt-tall"><img src="pocket-prototype/tall-calc.jpg" alt="Pocket SIP calculator, full length" width="590" height="1926" loading="lazy"></div><figcaption class="pt-mono pt-cap">SIP calculator</figcaption></figure>
-  </div>
-</section>
-
-<!-- DARK / LIGHT -->
-<section data-screen-label="11 Dark and light" style="border-top:1px solid #1B1B1E">
-  <div data-pt-split style="display:grid;grid-template-columns:1fr 1fr">
-    <div data-pt-pad style="background:#0A0A0A;padding:110px 40px;display:flex;flex-direction:column;align-items:center;gap:28px">
-      <figure data-rv style="margin:0;width:min(320px,100%)"><img class="pt-phone" src="pocket-prototype/watchlist.jpg" alt="Pocket Watchlist in dark theme" width="786" height="1704" loading="lazy"></figure>
-      <div class="pt-mono" style="color:#A1A1AA">Dark · default</div>
-    </div>
-    <div class="pt-light" data-pt-pad style="background:#F5F5F3;padding:110px 40px;display:flex;flex-direction:column;align-items:center;gap:28px">
-      <figure data-rv style="margin:0;width:min(320px,100%)"><img class="pt-phone" src="pocket-prototype/watchlist-light.jpg" alt="Pocket Watchlist in light theme" width="786" height="1704" loading="lazy"></figure>
-      <div class="pt-mono" style="color:#52525B">Light</div>
-    </div>
-  </div>
-</section>
-
-<!-- TEST -->
-<section class="pt-sec" data-screen-label="12 Usability test" data-pt-pad style="background:#050506">
-  <div data-rv class="pt-head">
-    <h2 class="pt-h2">Usability test</h2>
-    <p class="pt-small" style="max-width:44ch">Eight personas, built from 2026 NSE, SEBI and AMFI figures, each worked through their own tasks. A simulated expert walkthrough, not sessions with real people.</p>
-  </div>
-  <div data-pt-stats style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin:96px auto 0;max-width:1200px">
-    <div data-rv><div style="font-weight:500;font-stretch:125%;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em">26<span style="color:#8A8A93">/32</span></div><div class="pt-mono" style="margin-top:16px">Tasks finished</div></div>
-    <div data-rv><div style="font-weight:500;font-stretch:125%;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em;color:#C8FF00">12</div><div class="pt-mono" style="margin-top:16px">Issues found</div></div>
-    <div data-rv><div style="font-weight:500;font-stretch:125%;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em">8</div><div class="pt-mono" style="margin-top:16px">Personas</div></div>
-    <div data-rv><div style="font-weight:500;font-stretch:125%;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em">9</div><div class="pt-mono" style="margin-top:16px">Flows walked</div></div>
-  </div>
-  <div data-pt-found style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin:104px auto 0;max-width:1200px">
-    <div data-rv style="border-top:1px solid #2E2E34;padding-top:20px"><div class="pt-mono" style="color:#FF5A4F">Found</div><p style="margin:10px 0 0;font-size:17px;line-height:1.45">"I picked Intraday because it sounded faster."</p><div class="pt-mono" style="margin-top:18px;color:#C8FF00">Fixed</div><p class="pt-small" style="margin:8px 0 0">Delivery by default, with one plain line under the toggle.</p></div>
-    <div data-rv style="border-top:1px solid #2E2E34;padding-top:20px"><div class="pt-mono" style="color:#FF5A4F">Found</div><p style="margin:10px 0 0;font-size:17px;line-height:1.45">"Swiping just skips it."</p><div class="pt-mono" style="margin-top:18px;color:#C8FF00">Fixed</div><p class="pt-small" style="margin:8px 0 0">A "Hear chart as a list" button and keys that step through points.</p></div>
-    <div data-rv style="border-top:1px solid #2E2E34;padding-top:20px"><div class="pt-mono" style="color:#FF5A4F">Found</div><p style="margin:10px 0 0;font-size:17px;line-height:1.45">"6.94% and 6.87%. Which one do I get?"</p><div class="pt-mono" style="margin-top:18px;color:#C8FF00">Fixed</div><p class="pt-small" style="margin:8px 0 0">The bond page now says which rate is the interest paid.</p></div>
-  </div>
-  <p class="pt-small" style="margin:72px auto 0;max-width:1200px;color:#A1A1AA">Next: two groups of five real investors and traders, and a check on physical Android and iOS devices.</p>
-</section>
-
-<!-- CLOSING -->
-<section data-screen-label="Closing" data-pt-pad style="padding:140px 80px 120px;text-align:center">
-  <div data-rv style="display:flex;justify-content:center"><x-import component-from-global-scope="PocketDesignSystem_7dd6f8.AppIcon" size="{{ n96 }}" hint-size="96px,96px"></x-import></div>
-  <a data-rv href="/pocket-app/" style="display:inline-flex;align-items:center;min-height:44px;margin-top:36px;font-weight:600;font-size:16px">Back to the Pocket mobile app case study →</a>
-</section>
+<div class="wrap"><div class="pair">
+<p>See the research that shaped these screens, and the decisions it forced.</p>
+<a class="btn" href="pocket-app/">Read the Mobile App case study</a>
+</div></div>
+</main>
 
 </div>
 <dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  componentDidMount() {
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    this._t = setTimeout(() => this.arm(), 250);
-  }
-  componentWillUnmount() { clearTimeout(this._t); if (this._io) this._io.disconnect(); }
-  arm() {
-    const root = document.querySelector('[data-pt-root]');
-    if (!root || root.hasAttribute('data-armed')) return;
-    root.setAttribute('data-armed', '1');
-    const h = window.innerHeight || 800;
-    const els = Array.from(root.querySelectorAll('[data-rv]')).filter(el => el.getBoundingClientRect().top > h);
-    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
-    els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(22px)'; el.style.transition = 'opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1)'; });
+  renderVals(){ return {}; }
+  componentDidMount(){
+    const links = [...document.querySelectorAll('.cs2-rail a')];
+    if (!links.length || typeof IntersectionObserver === 'undefined') return;
+    const byId = Object.fromEntries(links.map(a => [a.getAttribute('href').slice(1), a]));
     this._io = new IntersectionObserver(es => es.forEach(e => {
       if (!e.isIntersecting) return;
-      this._io.unobserve(e.target);
-      const sib = Array.from(e.target.parentElement.children).filter(c => c.hasAttribute('data-rv'));
-      setTimeout(() => show(e.target), Math.min(Math.max(0, sib.indexOf(e.target)) * 80, 400));
-    }), { rootMargin: '0px 0px -8% 0px' });
-    els.forEach(el => this._io.observe(el));
-    setTimeout(() => { this._io.disconnect(); els.forEach(show); }, 8000);
+      links.forEach(a => a.removeAttribute('aria-current'));
+      const a = byId[e.target.id]; if (a) a.setAttribute('aria-current', 'true');
+    }), { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(byId).forEach(id => { const el = document.getElementById(id); if (el) this._io.observe(el); });
   }
-  renderVals() {
-    return { n24: 24, n96: 96 };
-  }
+  componentWillUnmount(){ this._io && this._io.disconnect(); }
 }
 </script>
 </body>
