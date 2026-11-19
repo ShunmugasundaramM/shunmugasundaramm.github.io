@@ -184,7 +184,7 @@ main.cs2 > *{animation:none !important}
 /* chapter index (desktop rail) */
 .cs2-rail{position:fixed;left:16px;top:50%;transform:translateY(-50%);z-index:20;display:none;background:rgba(10,10,10,.92);border-radius:14px;padding:8px 6px 8px 10px;box-shadow:inset 0 0 0 1px #1F1F1F}
 .cs2-rail ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
-.cs2-rail a{display:grid;grid-template-columns:18px auto;align-items:center;min-height:36px;padding:0 10px 0 0;color:#71717A;font-size:13px;line-height:1.2;text-decoration:none;border-radius:8px}
+.cs2-rail a{display:grid;grid-template-columns:18px auto;align-items:center;min-height:36px;padding:0 10px 0 0;color:#8A8A93;font-size:13px;line-height:1.2;text-decoration:none;border-radius:8px}
 .cs2-rail a:hover{color:var(--text);text-decoration:none}
 .cs2-rail a .n{font-family:var(--mono);font-size:12px}
 .cs2-rail a .t{max-width:0;overflow:hidden;white-space:nowrap;opacity:0;transition:max-width .25s ease,opacity .2s ease}
@@ -217,7 +217,7 @@ main.cs2 > *{animation:none !important}
 .cs2 .fig .v.bear{color:var(--bear)}
 .cs2 .fig .l{font-size:17px;line-height:1.4;margin-top:14px;font-weight:600}
 .cs2 .fig .d{font-size:15px;line-height:1.5;color:var(--muted);margin-top:8px}
-.cs2 .fig .s{font-size:13px;color:#71717A;margin-top:14px}
+.cs2 .fig .s{font-size:13px;color:#8A8A93;margin-top:14px}
 .cs2 .so{margin-top:40px;padding-left:20px;border-left:3px solid var(--lime);font-size:20px;max-width:58ch}
 
 /* 2: problems */
@@ -245,7 +245,7 @@ main.cs2 > *{animation:none !important}
 .cs2 .person ul{margin:0;padding:0 0 0 18px;font-size:15px;line-height:1.5;color:#D4D4D8}
 .cs2 .person ul li + li{margin-top:6px}
 .cs2 .person .gives{margin-top:auto;padding-top:16px;border-top:1px solid var(--rule);font-size:15px;line-height:1.5}
-.cs2 .person .basis{font-size:13px;line-height:1.5;color:#71717A}
+.cs2 .person .basis{font-size:13px;line-height:1.5;color:#8A8A93}
 .cs2 blockquote.quote{margin:clamp(48px,6vw,80px) 0 0;max-width:30ch;font-family:var(--wide);font-stretch:112%;font-weight:700;font-size:clamp(24px,2.8vw,36px);line-height:1.2}
 .cs2 blockquote.quote footer{font-family:var(--font-body);font-stretch:100%;font-weight:400;font-size:15px;color:var(--muted);margin-top:12px}
 .cs2 details.art{margin-top:clamp(48px,6vw,80px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
@@ -302,6 +302,7 @@ main.cs2 > *{animation:none !important}
 .cs2 .btn.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--lime);background:transparent}
 .cs2 .sources{margin-top:clamp(72px,10vw,144px);padding:40px 0 clamp(64px,8vw,104px);border-top:1px solid var(--rule)}
 .cs2 .sources h2{font-size:22px;font-stretch:112%}
+.cs2 .sources a{display:inline-block;padding:5px 0}
 .cs2 .sources ol{margin:16px 0 0;padding:0 0 0 20px;columns:2;column-gap:40px;font-size:14px;line-height:1.6;color:var(--muted)}
 
 /* phones and tablets */
@@ -313,7 +314,8 @@ main.cs2 > *{animation:none !important}
   .cs2 .fig:nth-child(2n+1){padding-left:0;border-left:0}
   .cs2 .people{grid-template-columns:1fr}
   .cs2 .score{grid-template-columns:1fr 1fr}
-  .cs2 .sources ol{columns:1}
+  .cs2 .sources a{display:inline-block;padding:5px 0}
+.cs2 .sources ol{columns:1}
 }
 @media (max-width:640px){
   .cs2 p{font-size:17px}
@@ -393,7 +395,7 @@ main.cs2 > *{animation:none !important}
 <div class="meta">24, Indore. First job in IT services. Investing for 8 months.</div>
 <div><h3>Wants to</h3><ul><li>Start a ₹2,000 SIP and not have to think about it</li><li>Understand what she owns without a finance degree</li><li>Build an emergency fund before anything risky</li></ul></div>
 <div><h3>Gets stuck on</h3><ul><li>Every fund page shows twenty numbers and no answer</li><li>Friends forward stock tips on WhatsApp she can’t verify</li><li>Doesn’t know if a red day means she did something wrong</li></ul></div>
-<div class="gives"><b>What Pocket gives them.</b> A plain first-fund path, SIPs from ₹500, and a portfolio that explains a down day in one line.</div>
+<div class="gives"><b>What Pocket gives them.</b> A plain first-fund path, SIPs from ₹100, and a portfolio that explains a down day in one line.</div>
 <div class="basis">Based on: under-30s are 59% of new registrations and 1 in 4 investors is a woman (NSE, 2026). The average SIP ticket is about ₹3,000 (AMFI, Aug 2026).</div></article><article class="person"><div><div class="who">Rohit Verma</div><div class="role">The weekly options trader</div></div>
 <div class="meta">29, Lucknow. Runs a mobile accessories shop. Trades weekly options.</div>
 <div><h3>Wants to</h3><ul><li>Make back last quarter’s losses</li><li>Place orders fast on expiry day</li><li>Pay less in charges</li></ul></div>
@@ -425,7 +427,7 @@ main.cs2 > *{animation:none !important}
 </ul>
 </div>
 <div style="background:#141414;border-radius:24px;overflow:hidden">
-<div style="background:#FF3B30;padding:16px;text-align:center;font-family:var(--font-mono);font-weight:500;font-size:12px;letter-spacing:0.09em;text-transform:uppercase;color:#fff">Challenges</div>
+<div style="background:#FF3B30;padding:16px;text-align:center;font-family:var(--font-mono);font-weight:500;font-size:12px;letter-spacing:0.09em;text-transform:uppercase;color:#0A0A0A">Challenges</div>
 <ul style="margin:0;padding:clamp(22px,2.2vw,34px);list-style:none;display:flex;flex-direction:column;gap:18px;font-size:clamp(15px,1.2vw,19px);line-height:1.4">
 <li style="display:flex;gap:14px"><span style="width:6px;height:6px;border-radius:999px;background:#C8FF00;flex:none;margin-top:9px"></span>Decision-Making Confusion</li>
 <li style="display:flex;gap:14px"><span style="width:6px;height:6px;border-radius:999px;background:#C8FF00;flex:none;margin-top:9px"></span>Market Analysis Complexity</li>
@@ -436,7 +438,7 @@ main.cs2 > *{animation:none !important}
 </ul>
 </div>
 <div style="background:#141414;border-radius:24px;overflow:hidden">
-<div style="background:#4285F4;padding:16px;text-align:center;font-family:var(--font-mono);font-weight:500;font-size:12px;letter-spacing:0.09em;text-transform:uppercase;color:#fff">Behaviors</div>
+<div style="background:#4285F4;padding:16px;text-align:center;font-family:var(--font-mono);font-weight:500;font-size:12px;letter-spacing:0.09em;text-transform:uppercase;color:#0A0A0A">Behaviors</div>
 <ul style="margin:0;padding:clamp(22px,2.2vw,34px);list-style:none;display:flex;flex-direction:column;gap:18px;font-size:clamp(15px,1.2vw,19px);line-height:1.4">
 <li style="display:flex;gap:14px"><span style="width:6px;height:6px;border-radius:999px;background:#C8FF00;flex:none;margin-top:9px"></span>Mobile App Preference</li>
 <li style="display:flex;gap:14px"><span style="width:6px;height:6px;border-radius:999px;background:#C8FF00;flex:none;margin-top:9px"></span>Information-Seeking Behavior</li>
@@ -604,7 +606,7 @@ main.cs2 > *{animation:none !important}
 <p>Each row is one finding and the decision it forced. The screen is where it shipped.</p>
 <table class="note">
 <thead><tr><th scope="col">For</th><th scope="col">Finding</th><th scope="col">Decision</th><th scope="col">Screen</th></tr></thead>
-<tbody><tr><td class="for">Aditi</td><td class="find">Under-30s are 59% of new registrations, and the average SIP ticket is about ₹3,000.<span class="src">NSE Market Pulse, 2026; AMFI, Aug 2026</span></td><td class="dec"><b>Start small, start with a fund</b><span>SIPs from ₹500 and a guided first fund come before stock screens on Home.</span></td><td class="shot"><img src="pocket-prototype/mf-discover.jpg" alt="Mutual funds: a first SIP and collections before single stocks" loading="lazy" width="132" height="286"></td></tr><tr><td class="for">Rohit</td><td class="find">91% of individual F&amp;O traders lost money in FY25, ₹1.1 lakh each on average.<span class="src">SEBI study via Business Standard</span></td><td class="dec"><b>Say the odds before options</b><span>F&amp;O stays off until the user opts in. Every options ticket shows SEBI’s loss figures and the full charges.</span></td><td class="shot"><img src="pocket/shipped/297-kyc-segments.jpg" alt="Pick what to trade: F&amp;O needs a choice and shows the SEBI loss figure" loading="lazy" width="132" height="286"></td></tr><tr><td class="for">Rohit</td><td class="find">“Hidden charges only show up in the contract note.”<span class="src">From the Rohit composite, built from press coverage and posts on X</span></td><td class="dec"><b>Show real P&amp;L</b><span>Portfolio and order confirmations show profit or loss after brokerage, STT and GST.</span></td><td class="shot"><img src="pocket-prototype/positions.jpg" alt="Positions: P&amp;L today, open and booked" loading="lazy" width="132" height="286"></td></tr><tr><td class="for">Rohit</td><td class="find">“Who will take responsibility for my loss due to Zerodha’s freeze?”<span class="src">An X user during an outage, quoted by Business Standard</span></td><td class="dec"><b>Be honest when it breaks</b><span>A status banner explains outages in plain words and says what happens to open orders.</span></td><td class="shot"><span class="none">No app screen yet</span></td></tr><tr><td class="for">Suresh</td><td class="find">“Small grey text and crowded screens.” Older savers are moving out of fixed deposits; individuals now hold 18.6% of NSE-listed market cap.<span class="src">Suresh composite; NSE, 2026</span></td><td class="dec"><b>Readable by default</b><span>Body text at 15px minimum, a larger-text setting, and plain English that explains every term the first time.</span></td><td class="shot"><span class="none">No app screen yet</span></td></tr><tr><td class="for">Suresh</td><td class="find">Fake apps, calls that impersonate brokers, and paid tip channels recur in coverage.<span class="src">Al Jazeera, on Telegram tip channels and SEBI action</span></td><td class="dec"><b>Prove it’s the real app</b><span>SEBI registration on every screen footer and a verified-caller check in Account.</span></td><td class="shot"><span class="none">No app screen yet</span></td></tr></tbody>
+<tbody><tr><td class="for">Aditi</td><td class="find">Under-30s are 59% of new registrations, and the average SIP ticket is about ₹3,000.<span class="src">NSE Market Pulse, 2026; AMFI, Aug 2026</span></td><td class="dec"><b>Start small, start with a fund</b><span>SIPs from ₹100 and a guided first fund come before stock screens on Home.</span></td><td class="shot"><img src="pocket-prototype/mf-discover.jpg" alt="Mutual funds: a first SIP and collections before single stocks" loading="lazy" width="132" height="286"></td></tr><tr><td class="for">Rohit</td><td class="find">91% of individual F&amp;O traders lost money in FY25, ₹1.1 lakh each on average.<span class="src">SEBI study via Business Standard</span></td><td class="dec"><b>Say the odds before options</b><span>F&amp;O stays off until the user opts in. Every options ticket shows SEBI’s loss figures and the full charges.</span></td><td class="shot"><img src="pocket/shipped/297-kyc-segments.jpg" alt="Pick what to trade: F&amp;O needs a choice and shows the SEBI loss figure" loading="lazy" width="132" height="286"></td></tr><tr><td class="for">Rohit</td><td class="find">“Hidden charges only show up in the contract note.”<span class="src">From the Rohit composite, built from press coverage and posts on X</span></td><td class="dec"><b>Show real P&amp;L</b><span>Portfolio and order confirmations show profit or loss after brokerage, STT and GST.</span></td><td class="shot"><img src="pocket-prototype/positions.jpg" alt="Positions: P&amp;L today, open and booked" loading="lazy" width="132" height="286"></td></tr><tr><td class="for">Rohit</td><td class="find">“Who will take responsibility for my loss due to Zerodha’s freeze?”<span class="src">An X user during an outage, quoted by Business Standard</span></td><td class="dec"><b>Be honest when it breaks</b><span>A status banner explains outages in plain words and says what happens to open orders.</span></td><td class="shot"><span class="none">No app screen yet</span></td></tr><tr><td class="for">Suresh</td><td class="find">“Small grey text and crowded screens.” Older savers are moving out of fixed deposits; individuals now hold 18.6% of NSE-listed market cap.<span class="src">Suresh composite; NSE, 2026</span></td><td class="dec"><b>Readable by default</b><span>Body text at 15px minimum, a larger-text setting, and plain English that explains every term the first time.</span></td><td class="shot"><span class="none">No app screen yet</span></td></tr><tr><td class="for">Suresh</td><td class="find">Fake apps, calls that impersonate brokers, and paid tip channels recur in coverage.<span class="src">Al Jazeera, on Telegram tip channels and SEBI action</span></td><td class="dec"><b>Prove it’s the real app</b><span>SEBI registration on every screen footer and a verified-caller check in Account.</span></td><td class="shot"><span class="none">No app screen yet</span></td></tr></tbody>
 </table>
 </div></section>
 
@@ -652,7 +654,7 @@ main.cs2 > *{animation:none !important}
 </div>
 <div class="next">
 <a class="btn" href="pocket-prototype/">See the prototype and test</a>
-<a class="btn ghost" href="pocket-design-system/">See the design system</a>
+<a class="btn ghost" href="pocket-brand/">See the brand identity</a>
 </div>
 
 <div class="sources"><h2>Sources</h2><ol><li><a href="https://www.millenniumpost.in/business/indias-median-investor-age-drops-to-33-years-from-38-years-nse-report-671485" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">NSE Market Pulse (via Millennium Post), Aug 2026</a></li><li><a href="https://openthemagazine.com/business/monsoon-risk-younger-investor-base-skewed-trading-activity-define-nse-outlook-nse-data" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">NSE outlook (via Open Magazine), Jun 2026</a></li><li><a href="https://kotakinsights.substack.com/p/nse-ipo-market-infrastructure-financialisation" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">Kotak Insights, NSE investor growth, Sept 2026</a></li><li><a href="https://www.sahi.com/news/nse-unique-client-codes-hit-26-crore-as-june-demat-additions-bounce-to-2-5-million-3932-PE1_COR" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">NSE unique investors and demat additions (Sahi), Jul 2026</a></li><li><a href="https://www.bajajbroking.in/share-market-news/investor-accounts-at-nse-soar-past-25-crore-mark-adding-1-crore-in-just-two-months" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">NSE 25 crore accounts, SIP and ownership data (Bajaj Broking), Feb 2026</a></li><li><a href="https://thepamphlet.in/equity-mutual-fund-inflows-jump-19-in-august-sips-cross-10-crore-accounts/" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">AMFI August 2026 flows (The Pamphlet)</a></li><li><a href="https://vrid.in/mutual_fund_insights" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">AMFI SIP tracker (Vrid), Aug 2026</a></li><li><a href="https://www.business-standard.com/amp/markets/news/net-losses-of-traders-in-fo-widens-in-fy25-sebi-study-125070701221_1.html" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">SEBI FY25 F&O study (Business Standard), Jul 2025</a></li><li><a href="https://www.moneylife.in/article/106-lakh-crore-lost-by-individual-traders-in-fo-in-fy2425-govt-confirms-sebi-action-on-4-entities-for-market-abuse/79124.html" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">F&O losses confirmed in Parliament (Moneylife), Dec 2025</a></li><li><a href="https://www.business-standard.com/amp/markets/news/zerodha-faces-another-tech-snag-users-complain-for-losing-money-in-trades-124062100374_1.html" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">Zerodha outage and user complaints on X (Business Standard)</a></li><li><a href="https://www.business-standard.com/topic/zerodha" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">Broker client exits in H1 2025 (Business Standard)</a></li><li><a href="https://www.aljazeera.com/economy/2022/7/28/social-media-gurus-prey-on-indias-small-retail-investors" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#52525B">Telegram tip channels and SEBI action (Al Jazeera)</a></li></ol></div>
