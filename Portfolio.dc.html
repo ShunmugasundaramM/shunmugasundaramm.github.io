@@ -31,6 +31,9 @@ a{color:var(--pf-acc);text-decoration:none}a:hover{color:var(--pf-ink)}
 @keyframes pf-arc0{from{stroke-dasharray:0.00 238.76}to{stroke-dasharray:59.69 238.76}}@keyframes pf-orb0{from{transform:rotate(0deg)}to{transform:rotate(90deg)}}@keyframes pf-arc1{from{stroke-dasharray:59.69 238.76}to{stroke-dasharray:119.38 238.76}}@keyframes pf-orb1{from{transform:rotate(90deg)}to{transform:rotate(180deg)}}@keyframes pf-arc2{from{stroke-dasharray:119.38 238.76}to{stroke-dasharray:179.07 238.76}}@keyframes pf-orb2{from{transform:rotate(180deg)}to{transform:rotate(270deg)}}@keyframes pf-arc3{from{stroke-dasharray:179.07 238.76}to{stroke-dasharray:238.76 238.76}}@keyframes pf-orb3{from{transform:rotate(270deg)}to{transform:rotate(360deg)}}@keyframes pf-cursor{0%{left:18%;top:92%;opacity:0}10%{opacity:1}25%,34%{left:18%;top:81%;transform:scale(1)}29%{transform:scale(.7)}55%,64%{left:49%;top:81%;transform:scale(1)}59%{transform:scale(.7)}85%,100%{left:80%;top:52%;opacity:1}}@keyframes pf-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@media (prefers-reduced-motion: reduce){[data-float] *{animation:none!important}}@keyframes pf-fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(-40px,30px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+@media (max-width:440px){.pf-filters{gap:2px !important;padding:4px !important}.pf-filters button{padding:0 11px !important;font-size:13px !important}}
+.pf-filters::-webkit-scrollbar{display:none}
 </style>
 </helmet>
 <div style="min-height:100dvh;position:relative;overflow-x:clip">
@@ -186,9 +189,9 @@ a{color:var(--pf-acc);text-decoration:none}a:hover{color:var(--pf-ink)}
 <sc-if value="{{ isAll }}" hint-placeholder-val="{{ false }}"><h1 data-reveal style="margin:0;font-family:Michroma,sans-serif;font-weight:400;font-size:clamp(24px,2.8vw,36px);line-height:1.18;letter-spacing:-.01em">{{ worksTitle }}</h1></sc-if>
 <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}"><a href="/projects/" style="min-height:44px;padding:0 22px;border-radius:999px;border:1px solid var(--pf-line);background:var(--pf-card);color:var(--pf-ink);font-weight:600;font-size:15px;display:flex;align-items:center;gap:10px;transition:border-color .2s" style-hover="border-color:var(--pf-acc);color:var(--pf-acc)">View all projects<i class="ph ph-arrow-right"></i></a></sc-if>
 <sc-if value="{{ isAll }}" hint-placeholder-val="{{ false }}">
-<div role="group" aria-label="Filter projects" style="display:flex;flex-wrap:wrap;gap:6px;padding:5px;border:1px solid var(--pf-line);border-radius:999px;background:var(--pf-card)">
+<div role="group" aria-label="Filter projects" class="pf-filters" style="display:flex;flex-wrap:nowrap;gap:6px;padding:5px;border:1px solid var(--pf-line);border-radius:999px;background:var(--pf-card);max-width:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch">
 <sc-for list="{{ filters }}" as="f" hint-placeholder-count="4">
-<button type="button" aria-pressed="{{ f.on }}" onClick="{{ f.pick }}" style="min-height:44px;padding:0 18px;border:0;border-radius:999px;background:{{ f.bg }};color:{{ f.fg }};font:600 14px 'Inter Tight',sans-serif;cursor:pointer;white-space:nowrap;transition:background .25s,color .25s">{{ f.label }}</button>
+<button type="button" aria-pressed="{{ f.on }}" onClick="{{ f.pick }}" style="min-height:44px;padding:0 18px;border:0;border-radius:999px;background:{{ f.bg }};color:{{ f.fg }};font:600 14px 'Inter Tight',sans-serif;cursor:pointer;white-space:nowrap;flex:none;transition:background .25s,color .25s">{{ f.label }}</button>
 </sc-for>
 </div>
 <p aria-live="polite" style="position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">{{ filterStatus }}</p>
