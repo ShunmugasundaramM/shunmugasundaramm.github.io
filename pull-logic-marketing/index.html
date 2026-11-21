@@ -118,7 +118,7 @@ a:focus-visible{outline:2px solid #FFAE33;outline-offset:3px;border-radius:6px}
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px"><sc-for list="{{ b.chips }}" as="c" hint-placeholder-count="3"><span style="font-size:12px;font-weight:600;color:#A7A5AC;border:1px solid rgba(255,255,255,0.16);border-radius:999px;padding:6px 14px">{{ c }}</span></sc-for></div></div>
     <span data-pm-tag style="text-align:right;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8A8890;line-height:1.7;padding-top:10px;white-space:pre-line">{{ b.tag }}</span>
   </div>
-  <img data-zoom src="{{ b.img }}" alt="{{ b.alt }}" style="width:100%;cursor:zoom-in">
+  <img data-zoom loading="lazy" src="{{ b.img }}" alt="{{ b.alt }}" style="width:100%;aspect-ratio:auto 3 / 2;cursor:zoom-in">
   <div style="margin-top:14px;display:flex;align-items:center;gap:8px;font-size:13px;color:#8A8890"><span style="width:6px;height:6px;border-radius:2px;background:#FFAE33;display:block"></span>{{ b.cap }}</div>
 </section>
 </sc-for>
@@ -145,7 +145,7 @@ a:focus-visible{outline:2px solid #FFAE33;outline-offset:3px;border-radius:6px}
   </div>
   <div data-pm-four style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;align-items:start">
     <sc-for list="{{ sheets }}" as="sh" hint-placeholder-count="4">
-      <div><div style="aspect-ratio:1 / 1.414;background:#FFFFFF;overflow:hidden;box-shadow:0 40px 100px -40px rgba(0,0,0,0.75);transition:transform .45s cubic-bezier(.22,1,.36,1)" style-hover="transform:translateY(-10px)"><img data-zoom src="{{ sh.img }}" alt="{{ sh.alt }}" style="width:100%;height:100%;object-fit:cover;object-position:top;cursor:zoom-in"></div><div style="margin-top:14px;display:flex;align-items:center;gap:8px;font-size:13px;color:#8A8890"><span style="width:6px;height:6px;border-radius:2px;background:#FFAE33;display:block;flex:none"></span>{{ sh.cap }}</div></div>
+      <div><div style="aspect-ratio:1 / 1.414;background:#FFFFFF;overflow:hidden;box-shadow:0 40px 100px -40px rgba(0,0,0,0.75);transition:transform .45s cubic-bezier(.22,1,.36,1)" style-hover="transform:translateY(-10px)"><img data-zoom loading="lazy" src="{{ sh.img }}" alt="{{ sh.alt }}" style="width:100%;aspect-ratio:auto 3 / 2;height:100%;object-fit:cover;object-position:top;cursor:zoom-in"></div><div style="margin-top:14px;display:flex;align-items:center;gap:8px;font-size:13px;color:#8A8890"><span style="width:6px;height:6px;border-radius:2px;background:#FFAE33;display:block;flex:none"></span>{{ sh.cap }}</div></div>
     </sc-for>
   </div>
 </section>
@@ -158,7 +158,7 @@ a:focus-visible{outline:2px solid #FFAE33;outline-offset:3px;border-radius:6px}
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px"><sc-for list="{{ b.chips }}" as="c" hint-placeholder-count="3"><span style="font-size:12px;font-weight:600;color:#A7A5AC;border:1px solid rgba(255,255,255,0.16);border-radius:999px;padding:6px 14px">{{ c }}</span></sc-for></div></div>
     <span data-pm-tag style="text-align:right;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8A8890;line-height:1.7;padding-top:10px;white-space:pre-line">{{ b.tag }}</span>
   </div>
-  <img data-zoom src="{{ b.img }}" alt="{{ b.alt }}" style="width:100%;cursor:zoom-in">
+  <img data-zoom loading="lazy" src="{{ b.img }}" alt="{{ b.alt }}" style="width:100%;aspect-ratio:auto 3 / 2;cursor:zoom-in">
   <div style="margin-top:14px;display:flex;align-items:center;gap:8px;font-size:13px;color:#8A8890"><span style="width:6px;height:6px;border-radius:2px;background:#FFAE33;display:block"></span>{{ b.cap }}</div>
 </section>
 </sc-for>
@@ -180,7 +180,7 @@ a:focus-visible{outline:2px solid #FFAE33;outline-offset:3px;border-radius:6px}
         <div style="padding:11px 13px 10px;font-size:12px;line-height:1.5">Order tracking tells you what changed. It does not tell you what to do next. <b>8 slides</b> on the gap. <span style="color:#5E5E5E">#supplychain #distribution</span></div>
         <div style="position:relative;aspect-ratio:1080 / 1350;overflow:hidden;background:#0D0D0F">
           <div style="position:absolute;top:0;left:0;height:100%;display:flex;width:800%;animation:liSwipe 15.2s cubic-bezier(.65,0,.35,1) infinite">
-            <sc-for list="{{ liSlides }}" as="l" hint-placeholder-count="8"><img src="{{ l.img }}" alt="{{ l.alt }}" style="width:12.5%;height:100%;object-fit:cover"></sc-for>
+            <sc-for list="{{ liSlides }}" as="l" hint-placeholder-count="8"><img loading="lazy" src="{{ l.img }}" alt="{{ l.alt }}" style="width:12.5%;height:100%;object-fit:cover"></sc-for>
           </div>
           <div style="position:absolute;right:9px;bottom:9px;background:rgba(0,0,0,0.72);color:#FFFFFF;font-size:12px;font-weight:600;border-radius:4px;padding:0 7px;height:21px;overflow:hidden;line-height:15px;padding-top:3px"><div style="animation:liNum 15.2s steps(1,end) infinite"><sc-for list="{{ liSlides }}" as="l" hint-placeholder-count="8"><div style="height:15px">{{ l.count }}</div></sc-for></div></div>
         </div>
@@ -190,7 +190,7 @@ a:focus-visible{outline:2px solid #FFAE33;outline-offset:3px;border-radius:6px}
     </div>
     <div data-pm-four style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px">
       <sc-for list="{{ liStills }}" as="l" hint-placeholder-count="7">
-        <div><div style="border-radius:9px;overflow:hidden;border:1px solid rgba(255,255,255,0.10);box-shadow:0 30px 70px -40px rgba(0,0,0,0.7);aspect-ratio:1080 / 1350"><img data-zoom src="{{ l.img }}" alt="{{ l.alt }}" style="width:100%;height:100%;object-fit:cover;cursor:zoom-in"></div><div style="font-size:12px;font-weight:700;letter-spacing:0.14em;color:#8A8890;margin-top:10px">{{ l.n }}</div></div>
+        <div><div style="border-radius:9px;overflow:hidden;border:1px solid rgba(255,255,255,0.10);box-shadow:0 30px 70px -40px rgba(0,0,0,0.7);aspect-ratio:1080 / 1350"><img data-zoom loading="lazy" src="{{ l.img }}" alt="{{ l.alt }}" style="width:100%;height:100%;object-fit:cover;cursor:zoom-in"></div><div style="font-size:12px;font-weight:700;letter-spacing:0.14em;color:#8A8890;margin-top:10px">{{ l.n }}</div></div>
       </sc-for>
     </div>
   </div>
@@ -206,7 +206,7 @@ a:focus-visible{outline:2px solid #FFAE33;outline-offset:3px;border-radius:6px}
   </div>
   <div style="display:grid;gap:26px;max-width:1040px">
     <sc-for list="{{ banners }}" as="e" hint-placeholder-count="3">
-      <div><div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.10);box-shadow:0 34px 80px -40px rgba(0,0,0,0.7)"><img data-zoom src="{{ e.img }}" alt="{{ e.alt }}" style="width:100%;height:auto;cursor:zoom-in"></div><div style="margin-top:14px;display:flex;align-items:center;gap:8px;font-size:13px;color:#8A8890"><span style="width:6px;height:6px;border-radius:2px;background:#FFAE33;display:block"></span>{{ e.cap }}</div></div>
+      <div><div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.10);box-shadow:0 34px 80px -40px rgba(0,0,0,0.7)"><img data-zoom loading="lazy" src="{{ e.img }}" alt="{{ e.alt }}" style="width:100%;aspect-ratio:auto 3 / 2;height:auto;cursor:zoom-in"></div><div style="margin-top:14px;display:flex;align-items:center;gap:8px;font-size:13px;color:#8A8890"><span style="width:6px;height:6px;border-radius:2px;background:#FFAE33;display:block"></span>{{ e.cap }}</div></div>
     </sc-for>
   </div>
 </section>
@@ -221,7 +221,7 @@ a:focus-visible{outline:2px solid #FFAE33;outline-offset:3px;border-radius:6px}
   </div>
   <div style="display:grid;gap:34px">
     <sc-for list="{{ b.imgs }}" as="im" hint-placeholder-count="1">
-      <div><img data-zoom src="{{ im.img }}" alt="{{ im.alt }}" style="width:100%;border-radius:6px;cursor:zoom-in"><div style="margin-top:14px;display:flex;align-items:center;gap:8px;font-size:13px;color:#8A8890"><span style="width:6px;height:6px;border-radius:2px;background:#FFAE33;display:block"></span>{{ im.cap }}</div></div>
+      <div><img data-zoom loading="lazy" src="{{ im.img }}" alt="{{ im.alt }}" style="width:100%;aspect-ratio:auto 3 / 2;border-radius:6px;cursor:zoom-in"><div style="margin-top:14px;display:flex;align-items:center;gap:8px;font-size:13px;color:#8A8890"><span style="width:6px;height:6px;border-radius:2px;background:#FFAE33;display:block"></span>{{ im.cap }}</div></div>
     </sc-for>
   </div>
 </section>
